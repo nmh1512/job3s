@@ -28,41 +28,21 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
     #RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
-RewriteRule ^huong-dan.html$ /home/guide.php [NE,L]
-RewriteRule ^tong-quan.html$ /home/tong_quan/overview.php [NE,L]
-RewriteRule ^du-an.html$ /home/du_an/project.php [NE,L]
-RewriteRule ^them-du-an.html$ /home/du_an/add_project.php [NE,L]
-RewriteRule ^chinh-sua-du-an.html$ /home/du_an/edit_project.php [NE,L]
-RewriteRule ^thong-tin-du-an.html$ /home/du_an/project_information.php [NE,L]
-RewriteRule ^thong-so-du-an.html$ /home/du_an/project_parameters.php [NE,L]
-RewriteRule ^danh-muc-cong-trinh.html$ /home/du_an/category_project.php [NE,L]
-RewriteRule ^thiet-ke-thi-cong.html$ /home/du_an/project_design.php [NE,L]
-RewriteRule ^tien-do-du-an.html$ /home/tien_do_du_an/project_progress.php [NE,L]
-RewriteRule ^chi-tiet-tien-do-du-an.html$ /home/tien_do_du_an/details_progress.php [NE,L]
-RewriteRule ^tong-muc-dau-tu.html$ /home/tong_muc_dau_tu/investment.php [NE,L]
-RewriteRule ^chi-tiet-tong-muc-dau-tu.html$ /home/tong_muc_dau_tu/details_investment.php [NE,L]
-RewriteRule ^tao-tong-muc-dau-tu.html$ /home/tong_muc_dau_tu/add_investment.php [NE,L]
 
+#trang
 
-RewriteRule ^danh-sach-hop-dong.html$ /home/hop_dong/list_contract.php [NE,L]
-RewriteRule ^chi-tiet-hop-dong.html$ /home/hop_dong/detail_contract.php [NE,L]
-RewriteRule ^tao-hop-dong.html$ /home/hop_dong/add_contract.php [NE,L]
-RewriteRule ^chinh-sua-hop-dong.html$ /home/hop_dong/edit_contract.php [NE,L]
-RewriteRule ^danh-sach-de-nghi.html$ /home/hop_dong/list_suggestions.php [NE,L]
-RewriteRule ^chi-tiet-de-nghi-tam-ung.html$ /home/hop_dong/detail_suggestions_advance.php [NE,L]
-RewriteRule ^chi-tiet-de-nghi-thanh-toan.html$ /home/hop_dong/detail_suggestions_pay.php [NE,L]
-RewriteRule ^tao-de-nghi-tam-ung.html$ /home/hop_dong/add_suggestions_advance.php [NE,L]
-RewriteRule ^tao-de-nghi-thanh-toan.html$ /home/hop_dong/add_suggestions_pay.php [NE,L]
-RewriteRule ^chinh-sua-de-nghi-tam-ung.html$ /home/hop_dong/edit_suggestions_advance.php [NE,L]
-RewriteRule ^chinh-sua-de-nghi-thanh-toan.html$ /home/hop_dong/edit_suggestions_pay.php [NE,L]
+#authen ứng viên
+RewriteRule ^authen/dang-nhap-ung-vien.html$ /home/authen/login_uv.php [NE,L]
+RewriteRule ^authen/dang-ky-ung-vien.html$ /home/authen/register_uv.php [NE,L]
+RewriteRule ^authen/quen-mat-khau-ung-vien.html$ /home/authen/forgot_uv.php [NE,L]
+RewriteRule ^authen/thay-doi-mat-khau-ung-vien.html$ /home/authen/change_password_uv.php [NE,L]
 
-RewriteRule ^danh-sach-ho-so.html$ /home/ho_so/list_profile.php [NE,L]
-RewriteRule ^tao-ho-so.html$ /home/ho_so/add_profile.php [NE,L]
-RewriteRule ^chinh-sua-ho-so.html$ /home/ho_so/edit_profile.php [NE,L]
-RewriteRule ^chi-tiet-ho-so.html$ /home/ho_so/detail_profile.php [NE,L]
+#authen nhà tuyển dụng
+RewriteRule ^authen/dang-nhap-nha-tuyen-dung.html$ /home/authen/login_ntd.php [NE,L]
+RewriteRule ^authen/dang-ky-nha-tuyen-dung.html$ /home/authen/register_ntd.php [NE,L]
+RewriteRule ^authen/quen-mat-khau-nha-tuyen-dung.html$ /home/authen/forgot_ntd.php [NE,L]
+RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung.html$ /home/authen/change_password_ntd.php [NE,L]
 
-RewriteRule ^bao-cao-tai-chinh.html$ /home/bao_cao/report_fin.php [NE,L]
-RewriteRule ^chi-tiet-so-quy.html$ /home/bao_cao/detail_fund.php [NE,L]
-RewriteRule ^bao-cao-cong-trinh.html$ /home/bao_cao/report_cons.php [NE,L]
-RewriteRule ^chi-tiet-bao-cao-thi-cong.html$ /home/bao_cao/detail_cons.php [NE,L]
+#cv
+RewriteRule ^cv$ /home/cv/list_cv.php [NE,L]
 
