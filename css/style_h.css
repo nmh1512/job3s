@@ -1,338 +1,115 @@
-.khoi_danhsach_hd {padding: 20px 20px 26px;}
-.img_search {top: 6px; right: 7px;}
-.huongdan{padding-left: 6px;}
-.header_title {font-weight: 500;}
-.khoi_danhsach_hd_top > *{font-weight: 500;}
-.khoi_chung {box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 20px; background: #ffffff;}
-.input_loc{border: 1px solid #474747; border-radius: 5px; height: 36px; font-size: 16px; padding: 0 10px;}
-.khoi_timkiem{margin-top: 12px;}
-.search_hd{width: 69.5%;}
-.khoi_date{width: 31.5%;}
-.khoi_loc select {width: 200px;}
-.khoi_loc .select_loc {margin-right: 20px;}
-.khoi_select2 .select2-container--default .select2-selection--single {border: 1px solid #474747; border-radius: 5px; height: 36px; font-size: 16px;}
-.khoi_form .select2-container--default .select2-selection--single{padding: 0 10px;}
-.khoi_select2 .select2-container--default .select2-selection--single .select2-selection__rendered {line-height: 33px;}
-.khoi_loc .loc_trangthai {width: 164px;}
-.khoi_select2 .select2-container--default .select2-selection--single .select2-selection__arrow {top: 17px;}
-.btn_add {border-radius: 5px; font-size: 15px; height: 36px; width: 137px; font-weight: 500; border: 0; cursor: pointer;}
-.btn_add img {padding-right: 5px;}
-.bangchung {width: 100%; overflow-x: auto; border-radius: 10px;border: 1px solid #474747}
-.bang_hopdong {width: 1447px; font-size: 15px;}
-.bangchung thead tr:first-child th:last-child{border-right: 0;}
-.bangchung thead tr th {height: 36px; background-color: #EAEAEA; border-right: 1px solid #474747; font-size: 15px; font-weight: 400;}
-.bangchung table {border-collapse: collapse;}
-.bangchung tr td {height: 40px; font-size: 15px;}
-.bang_hopdong thead tr th:last-child {border: 0;}
-.bangchung tbody tr {border: 0;}
-.thao_tac {padding: 0 12px;}
-.link_chinhsua {height: 16px;}
+body{color: #4A4A4A;}
+header{background: url(../images/background_header.png); background-size: 100%; height: 625px;}
+.nav_header{padding: 25px 68px 15px; }
+header nav ul li{display: inline-block; font-weight: 500;}
+a{color: #4A4A4A;}
+.nav_header_items li {margin-left: 16;}
+.nav_header_items {padding-right: 30px;border-right: 1px solid #007580; line-height: 24px;}
+.nav_header_items a{padding: 12px 15px 11px; border-radius: 100px;}
+.nav_header_items a:hover{background: rgba(255, 255, 255, 0.68); color: #007580;}
 
-.khoi_hd_top {padding: 20px 0 10px 26px; border-bottom: 2px solid #474747;}
-.khoi_hd_top h1 {padding-left: 16px;}
-.khoi_chitiet_hd_noidung {padding: 20px 20px 30px;}
-.chitiet_hd_item .de_muc {width: 200px; font-weight: 500;}
-.chitiet_hd_item {padding-top: 16px;}
-.chitiet_hd_item:first-child {padding-top: 0;}
-.khoi_chitiet_hd_noidung_khoicon1 {padding-bottom: 50px; border-bottom: 1px dashed #474747;}
-.khoi_chitiet_hd_noidung_khoicon2 {padding: 20px 0 50px; border-bottom: 1px dashed #474747;}
-.khoi_chitiet_hd_noidung_khoicon3{padding: 20px 0 60px; border-bottom: 1px dashed #474747;}
-.khoi_chitiet_hd_noidung_khoicon4 {padding: 20px 0 42px; border-bottom: 1px dashed #474747;}
-.khoi_chitiet_hd_noidung .khoi_btn button {margin-left: 20px;}
-.bang_hmcv{width: 1219px;}
-.bang_hmcv thead tr th {text-align: center;}
-.bang_hmcv thead tr th:last-child {border: 0;}
-.bang_hmcv thead tr:first-child th:last-child {border-bottom: 1px solid #474747;}
-.row_parent td:first-child {padding-left: 16px; font-weight: 500;}
-.row_child td:first-child {padding-left: 33px;}
-.bang_hmcv .tong_gtri, .bang_khtt .tong_gtri{padding-left: 33px;}
+header .account li{ margin-left: 16px;}
 
-.bang_ycbl {width: 934px;}
-.bang_ycbl thead tr:first-child th:nth-child(2) {border-bottom: 1px solid #474747;}
-.bang_ycbl tr td:first-child {padding-left: 16px;}
+.account .sign_in {color: #007580; border: 1px solid #007580; border-radius: 100px; text-align: center; padding: 11px 20px; cursor: pointer; position: relative;}
+.account .login a {padding: 11px 20px;}
+.account .login a:hover {color: #ffffff; border-radius: 100px; background: #007580;}
+.signin_choose{z-index: 100;;filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.2));border-radius: 10px; background: #ffffff; width: 172px; position: absolute; right: 0; top: 50px; display: none;}
+.candicate_signin{border-radius: 10px 10px 0 0;}
+.employer_signin{border-radius: 0 0 10px 10px;}
+.signin_choose a{padding-left: 16px; height: 42px; }
+.signin_choose a:hover{background: #E5FDFF;}
+.signin_choose a p {padding-left: 11px;}
 
+.banner_header{padding: 0 68px; height: calc(100% - 86px);}
+.banner_header_search{box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);border-radius: 10px; padding: 20px; width: 613px;}
+.banner_header_left{margin-top: 145px;}
+.banner_header_left h1 {margin-bottom: 25px; color: #007580;}
+.banner_header_left h1 span {color: #FF9900;}
+.banner_header_right{position: relative;}
+input, select{outline: 0; border: 0;}
 
-.bang_khtt{width: 1465px;}
-.bang_khtt tr th:last-child{border-right: 0;}
-.bang_khtt tr:first-child th:last-child{border-bottom: 1px solid #474747;}
+.search_item{padding: 0 10px 0 41px;height: 52px; display: flex; align-items: center; width: 38.5%;}
+.search_item:first-child{border-right: 1px solid #999999;}
+.img_search_item{left: 15px; top: 35%;}
+.search_job_name{border-radius: 10px 0 0 10px;}
+.search_container {font-size: 16px;}
 
-.khoi_form{padding: 20px 20px 30px;}
-.khoi_form .khoi_input {width: 447px;}
-.khoi_form .khoi_input_100 {width: 100%;}
-.khoi_form .khoi_input h4 {padding-bottom: 5px; font-weight: 500;}
-.khoi_form .khoi_select2 {padding-bottom: 16px;}
-.khoi_form .khoi_select2 .select2-container .select2-selection--single .select2-selection__rendered{padding-left: 5px;}
-.khung_doc {background: #CCCCCC;border: 1px solid #474747; border-radius: 5px;height: 36px;width: 447px; font-size: 16px; outline: none; padding: 0 15px;}
-.khung_input {border: 1px solid #474747; border-radius: 5px;height: 36px;width: 447px; font-size: 16px; outline: none; padding: 0 15px;}
-.gt_vat {height: 36px;}
-.khung_input_nho {width: 197px;}
-.khoi_form .form_khoi1{padding-bottom: 34px; border-bottom: 1px dashed #474747;}
-.khoi_form .form_khoi2{padding: 20px 0 34px; border-bottom: 1px dashed #474747;}
-.khoi_form .form_khoi3{padding: 20px 0 60px; border-bottom: 1px dashed #474747;}
-.khoi_form .form_khoi4, .khoi_form .form_khoi5{padding: 20px 0 50px; border-bottom: 1px dashed #474747;}
+.banner_header_search .select2-container--default .select2-selection--single{border: 0;}
+.select2-container--open .select2-dropdown{border: 1px solid #999999;filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));border-radius: 10px;}
+.banner_header_search .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{background: #007580 !important; color: #ffffff;}
+.btn_search_job{background: #007580;cursor: pointer;border-radius: 0px 10px 10px 0px; color: #ffffff; border: 0; height: 100%; width: 133px ; font-weight: 700;}
+.btn_search_job:hover{background: #005E66;}
 
-.select2.select2-container {height: 36px;}
-.form_khoi2 h4:first-child{padding-bottom: 20px;}
+.key_trend {bottom: 0; left: 0; padding: 0 0 67px 68px;}
+.key_trend h4 {font-size: 18px; font-weight: 400; margin-right: 17px;}
+.list_key li{display: inline-block; margin-left: 10px; font-size: 16px;background: rgba(255, 255, 255, 0.4);box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);border-radius: 100px; text-align: center; padding: 8px 12px 7px; color: #595959; cursor: pointer;}
+.img_girl{bottom: 0; right: 10%;}
+.img_like{right: 3%; top: 30%;}
+.img_confirm{top: 19%; left: 27%;}
 
-.form_khoi3 .bang_hmcv {width: 1268px;}
-.form_khoi3 .bang_hmcv tbody td, .form_khoi5 .bang_khtt tbody td, .form_khoi4 .bang_ycbl tbody td {padding: 0 10px;}
+.members{width: 170px; padding: 15px; background-color: rgba(255, 255, 255, 0.68);box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);border-radius: 10px; right: 0; bottom: 13%;}
+.members > div {height: 40px;}
+.members h4 {padding-bottom: 10px;}
 
-.input_table{border: 1px solid #474747;border-radius: 5px;height: 26px; width: 100%; outline: none; padding: 0 10px;}
-.form_khoi4 .bang_ycbl thead tr:first-child th:nth-child(3) {border-bottom: 1px solid #474747;}
-.form_khoi4 .bang_ycbl thead tr:first-child th:nth-child(2) {border-bottom: 0}
-.form_khoi5 .bang_khtt{width: 1495px;}
+.members_z_index1 {z-index: 1;}
+.members_z_index2 {z-index: 2; left: 25px;}
+.members_z_index3 {z-index: 3; left: 50px;}
+.members_z_index4 {z-index: 4; left: 75px;}
+.members_z_index5 {z-index: 5; left: 100px;}
 
-.form_khoi3 .tong_gtri:first-child, 
-.form_khoi5 .tong_gtri:first-child {padding-left: 33px;}
-.form_khoi5 .tong_gtri:last-child {padding-left: 100px;}
-.back_tb {top: 20%; left: 15px;margin-left: 0px !important;}
-.next_tb {top: 20%;right: 15px;margin-right: 0px !important;}
-.buttonnn {height: 36px; width: 120px; border-radius: 5px; border: 0;font-weight: 500; font-size: 15px;}
-.form_khoi_btn .buttonnn {margin-left: 20px;}
-.color_white {color: #ffffff;}
-.popup_tao_denghi{width: 500px; height: 204px; padding: 60px 30px 50px; position: absolute; z-index: 1001; top: 25%; left: 50% ; transform: translate(-50%,-50%); background-color: #ffffff;}
-.bg_popup {background-color: rgba(0,0,0,0.5); width: 100%; height: 100%; }
-.khoi_popup {width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 9999999;}
-.popup_tao_denghi h2 {color: #4c5bd4; padding-bottom: 30px;}
-.popup_tao_denghi a {width: 200px; height: 36px; border-radius: 6px;}
+.chat_btn{background: #009638; border-radius: 10px 10px 0px 0px; position: fixed; bottom: 0; right: 0; color: #ffffff; width: 132px; height: 42px; font-weight: 500; z-index: 100;}
+.back_to_top{position: fixed; bottom: 54px; right: 10px; z-index: 100; border-radius: 50%; background-color: rgb(204, 251, 255, 0.68); width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;}
+.back_to_top:hover{background-color: rgb(204, 251, 255)}
 
-.bang_denghi{width: 1199px;}
-.popup_tao_thanhcong {padding: 40px 50px; background: #ffffff; width: 500px; height: 310px; position: absolute; z-index: 1001; top: 50%; left: 50% ; transform: translate(-50%,-50%);}
-.popup_tao_thanhcong p {margin: 36px 0;}
-.popup_tao_thanhcong a {border-radius: 6px;}
+.download_container{padding: 48px 0 37px; width: 75%; margin: 0 auto;}
+.download_container_content{width: 45%;}
+.download_container_content ul li::before{content: url('../images/checked_green.svg'); padding-right: 10px; vertical-align: middle;}
+.download_container_content ul li{padding-bottom: 16px;}
+.download_container_content ul {margin-top: 24px;}
 
-.bang_hoso {width: 1848px;}
-.inputfile {overflow: hidden;position: absolute;z-index: -1;}
-.inputfile + label {font-size: 15px;color: white;background-color: #4c5bd4;display: inline-block;cursor: pointer;width: 152px; height: 36px; border-radius: 5px; display: flex; align-items: center; justify-content: center;} 
+.url_download a{background: #007580;border-radius: 100px; color: #ffffff; font-weight: 500; height: 42px; padding: 0 20px 0 21px;}
+.url_download a::before{content: url(../images/download_icon.svg); height: 16px; vertical-align: middle; padding-right: 6px;}
+.url_download{margin-top: 20px;}
 
-.khoi_border_chung {border-radius: 5px; border: 1px solid #474747; height: 36px;}
-.file_dinhkem p{padding: 7px 15px 9px;}
-.tb_views > div:not(.tb_acitve) {display: none;}
-.bangchinh1{width:100%;overflow:hidden;overflow-x:scroll;border-radius:10px 10px 0 0; margin-top: 22px;}
-.bang_baocao1{width:1258px;border-collapse:collapse}
-.bangchinh1 table tr:first-child th{background-color:#4c5bd4;color:#fff;font-weight:400!important;font-family:Roboto-medium,sans-serif}
-.th_con{height:30px;border-right:1px solid #fff;display:flex;align-items:center;justify-content:center}
-.bangchinh1 table tr{height:40px; border: 0;}
-.bangchinh1 table tr:nth-child(2n){background-color:#eee}
-.bangchinh1 table tr td{padding: 0 14px;border-right: 1px solid #bbb;font-size: 14px;}
-.bang_baocao1 th:last-child .th_con,.bangchinh1 table tr td:last-child{border: 0;}
-.elipsis1{overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 1;display: -webkit-box;-webkit-box-orient: vertical;}
-.acitve_ns > span{color: var(--blue-2A);}
-.khoi_chitiet_soquy{padding: 20px 10px 28px;}
-.thongso_soquy{border-bottom:1px solid #474747;padding-bottom:20px}
-.thongso_soquy_khoicon{width:33%;min-height:114px;margin-right:20px;padding:15px 10px 15px 15px}
-.box_shadow{background:#fff;    box-shadow: 0 0 10px rgb(0 0 0 / 10%);;border-radius:10px}
-.thongso_soquy_khoicon h4,.thongtin_soquy_khoicon h4{font-size:16px; font-weight: 500;}
-.thongso_soquy_khoicon span{font-size:26px;font-weight:500;text-align:right;margin-top:35px}
-.thongtin_soquy{padding:20px 20px 0;border-bottom:1px dashed #000}
-.thongtin_soquy_khoicon{padding-bottom:20px}
-.thongtin_soquy h4{width:40%}
-.thongtin_soquy_khoicon p{width:60%}
-.lichsu_giaodich{padding-top:10px}
-.lichsu_giaodich_header{margin-bottom:20px}
-.lichsu_giaodich_header h3{width:23%; font-weight: 500;}
-.lichsu_giaodich_khoichon{width:77%;justify-content:right}
-.lichsu_giaodich_header .khungdate{height: 36px;width:31.5%;border:1px solid #666;border-radius:5px;padding:10px;background-position:95% 50%;background:#fff}
-.bang_lichsu_giaodich table{width:1246px;border-collapse:collapse;margin-bottom:2px}
-.nutxacnhan_soquy{justify-content:flex-end;margin-top:20px}
-.thongso_soquy_khoicon:last-child{margin: 0;}
-.lichsu_giaodich_khoichon .select2-container{width:46%!important;margin-right:15px}
-.lichsu_giaodich_khoichon span.select2-selection.select2-selection--single{border:1px solid #474747;border-radius:5px;font-size:16px;height:36px!important}
-.lichsu_giaodich_khoichon .select2-container--default .select2-selection--single .select2-selection__rendered{line-height:35px}
-.lichsu_giaodich_khoichon .select2-container--default .select2-selection--single .select2-selection__arrow{top:17px}
-.bang_lichsu_giaodich_table tfoot td{border: 0 !important;background-color: #4c5bd4; color: #ffffff; font-weight: 500;}
-.pd_b_0 {border-bottom: 0 !important;}
-.popup_chontime {border-radius: 10px;background: #ffffff; width: 500px  ; position: absolute; z-index: 1001; top: 50%; left: 50% ; transform: translate(-50%,-50%);}
-.popup_chontime .closetable{    position: absolute;width: 17px;height: 17px; right: 20px;}
-.popup_chontime .top{width: 100%;height: 54px; border-radius: 10px 10px 0 0;}
-.popup_chontime .body_popup {padding: 5px 20px 25px;}
-.popup_chontime .body_popup .ngay{margin-top: 15px;}
-.popup_chontime .body_popup .ngay p{font-weight: 500;}
-.popup_chontime .body_popup .ngay input{width: 100%; padding: 0 10px;}
-.butt_date {margin-top: 25px;}
-.wh14 {width: 14px;height: 14px;}
-.butt_date button:first-child{margin-right: 68px;}
-.pd_b_5im {padding-bottom: 5px !important;}
-.h_inret {height: inherit !important;}
-.bd_bf_3 {position: relative;width: fit-content !important;}
-.bd_bf_3 > .border_sc {position: absolute;width: 60px;height: 3px; border-radius: 100px;left: 0px; bottom: 0;transition: all .4s ease;background-color: var(--bg-blue);}
-/* .bd_bf_3::before {content: ""; position: absolute;left: 0;bottom: 0;background-color: rgba(204, 204, 204, 0.48); height: 3px;; border-radius: 100px; width: 100%;} */
-.khoi_bc_ct .search{width: 39%;}
-.khoi_bc_ct .khoi_select2{width: 29.5%;}
-.khoi_bc_ct .khoi_select2 .select2.select2-container{width: 100% !important;}
-.pd_b_5 {padding-bottom: 5px;}
-.bd_0im {border: 0 !important;}
-.bg_ds_tra{background-color: transparent !important;box-shadow: none !important;}
-.child_p > td:nth-child(2) {padding-left: 25px !important;}
-.bang_ctr tr {height: 50px !important;}
-.bang_ctr .th_con {height: 42px !important;}
-.bang_ctr .bang_baocao1 {width: 933px;}
-.img_avt {width: 26px; height: 26px;border-radius: 50%; object-fit: cover; margin-right: 10px;}
-.bang_ctr table tr:nth-child(2n) {background: #ffffff;}
-.bang_ctr table tr td {border-bottom: 1px solid #bbb;}
-.bang_ctr table tr td:last-child{border-bottom: 1px solid #bbb;}
-.bang_ctr table tr:last-child td{border-bottom: 0;}
-.font_500 {font-weight: 500;}
-.pd_tb_17 {padding-top: 17px;padding-bottom: 17px;}
-.bang_chitiet{width: 100%;border-radius: 10px;background: #FFF;box-shadow: 0 0 10px rgb(0 0 0 / 10%);}
-.bang_chitiet .tieude {padding: 15px 20px;border-radius: 10px 10px 0 0;}
-.noidung_duoi .khoilon{padding: 0 20px;}
-.noidung_duoi .khoilon .khoi_con{border-bottom: 1px dashed #ccc;    font-size: 14px;}
-.bctc_detail .khoilon .khoi_con .cacmuc{width: 95px;}
-.cacmuc{font-size: 14px;margin-right: 20px;}
-.cacketqua{font-size: 14px;}
-.clorchung{color: #474747 !important;}
-.khoidanhmuc {width: 100%;display: flex;align-items: center; margin-top: 5px;flex-wrap: wrap;}
-.khoidanhmuc .khoidanhmuccon{margin-top: 15px;position: relative;height: 23px;display: flex;justify-content: center;padding-bottom: 20px;border-bottom: 3px solid rgba(204,204,204,0.48);padding: 0 15px;}   
-.khoidanhmuc .khoidanhmuccon .tendanhmuccon{text-decoration: none;}
-.chuxanhdam{color: #2a38a2!important;}
-.khoidanhmuc .khoidanhmuccon .border-active{background: #2a38a2;}
-.khoidanhmuc .khoidanhmuccon .border{position: absolute;width: 60px;height: 3px;border-radius: 100px;bottom: -3px;}
-.khoibang{width: 100%!important;background: #FFF;box-shadow: 0 0 10px rgb(0 0 0 / 10%);position: relative;}
-.khoibang .bangchung{width: 100%;overflow: hidden;border-radius: 10px 10px 0 0!important;height: auto;overflow-x: scroll;}
-.bctc_add_cv .bangchung .bangchinh{width: 1679px;}
-.khoibang .bangchung .bangchinh{    border-collapse: collapse;border-radius: 10px;}
-.bctc_add_cv .bangchung .bangchinh tr:nth-child(odd), .bctc_add_vt .bangchung .bangchinh tr:nth-child(odd){background: unset;}
-.khoibang .bangchung .bangchinh tr{    height: 50px;}
-.khoibang .bangchung .bangchinh tr:first-child th{border: unset;font-weight: 400!important;font-family: Roboto-medium,sans-serif;}
-.khoibang .bangchung .bangchinh tr th{background-color: #4c5bd4;color: #fff;font-size: 16px;}
-.bctc_add_cv table tr th:first-child{    width: 60px;}
-.khoibang .bangchung .bangchinh td, th{text-align: center;} 
-.khoibang .bangchung .bangchinh tr td{padding: 0 10px; font-size: 14px; border: 1px solid #ccc;}
-.khoibang .bangchung .bangchinh tbody:last-child{    border-bottom: 1px solid #ccc;}
-.pre_q, .next_q, .pre_qct, .pre_qa, .pre_qat, .pre_qtab, .preeee, .prok, .pre_qtabt, .pre_qcta{    width: 36px;height: 36px; border-radius: 50%;background: rgba(255, 255, 255, 0.86);cursor: pointer;box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); position: absolute;margin-left: 15px;}
-.bctc_add_cv .bangchung .bangchinh{    width: 1679px;}
-.bctc_add_file .bangchung .bangchinh{width: 100%;}
-.bctc_add_vt .bangchung .bangchinh{width: 1427px;}
-.icon_date {right: 17px;}
-.is-invalid .icon_date {top: unset;background-color: transparent;}
-.is-invalid input {background-color: #faebd7ba !important;}
-/*  */
-.khoi_input.is-invalid {display: flex;flex-direction: column;}
-.khoi_input.is-invalid .error {order: 5;}
-.khoi_select2 .is-invalid .select2-container--default .select2-selection--single {border-color: var(--cl-red);}
-.chitiet_hd_item .de_muc {flex-shrink: 0;}
+.new_works{background: #fafafa; padding-bottom: 44px;}
+.new_works_header{padding: 44px 68px 40px; position: relative;}
+.new_works_header h1{padding-bottom: 16px;}
+.new_works_header .list_works {position: absolute; right: 62px; bottom: 12%;}
+.new_works_header .list_works a{border-radius: 8px; padding: 10px 16px; margin-right: 6px; color: #007580;}
+.active_work {background: #007580; color: #ffffff !important;}
 
-@media screen and (max-width: 1335px) {
-    :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #add_hs, #edit_sug_pay, #edit_profile) .form_khoi1 .khoi_input, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #add_hs, #edit_sug_pay, #edit_profile) .form_khoi2 .khoi_input {width: calc(50% - 20px);}
-    :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #add_hs, #edit_sug_pay, #edit_profile) :is(.form_khoi1,.form_khoi2) .khoi_input .select2.select2-container, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #add_hs, #edit_sug_pay, #edit_profile) .form_khoi1 .khoi_input input, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #edit_sug_pay) .form_khoi2 .khoi_input input {width: 100% !important;}
-    :is(#add_hs, #edit_profile) .im_w100 {width: 100% !important;}
-}
+.new_works_header .list_works a:hover{background-color: #007580; color: #ffffff;}
+/* .new_works_content {flex-wrap: wrap;} */
+.new_works_content_container{margin: 0 auto; width: 1257px;}
 
-@media screen  and (max-width: 1024px){
-    .search_hd {width: 70.5%;margin-right: 20px;}
-    .thongso_soquy_khoicon:not(:last-child) {margin-right: 30px;}
-    .lichsu_giaodich_khoichon > div {margin-left: 0;width: 230px;}
-    .lichsu_giaodich_header {align-items: center;margin-bottom: 10px;}
-    .lichsu_giaodich_header > h3 {font-size: 18px;line-height: 21px;}
-    .bang_lichsu_giaodich {margin-top: 10px;}
-    /* ------------------ */
-    .khoi_bc_ct .khoi_select2,.khoi_timkiem .date {width: 28.4%;}
-    .khoi_timkiem .date {margin-left: 0px;}
+.new_works_content_item{width: 31.3% !important; margin: 12px;position: relative;;padding: 15px 50px 15px 15px;background: #FFFFFF;border: 1px solid #DCDCDC;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);border-radius: 10px;}
+.content_job{padding-left: 10px; width: 81%;}
+.content_job span::before{content: url(../images/calendar.svg); height: 14px; vertical-align: middle; margin-right: 6px;}
+.content_job a{color: #009638;}
+.content_job a::before{content: url(../images/chat.svg); height: 14px; vertical-align: middle; margin-right: 5px;}
+.img_flag{position: absolute; top: 0; right: 0; padding: 15.5px 17.5px}
+.content_job p {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.info_job > div{border-radius: 100px; padding: 5px 12px; margin-right: 10px;}
+.info_job .info_job_location{background-color: #E8E7FD;}
+.info_job .info_job_offer{background-color: #FFE0B3;}
 
-    :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #edit_profile) .form_khoi1 .khoi_input, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #edit_profile) .form_khoi2 .khoi_input {width: calc(50% - 20px);}
-    :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #edit_profile) .form_khoi1 .khoi_input .select2.select2-container, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence, #edit_profile) .form_khoi1 .khoi_input input, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence) .form_khoi2 .khoi_input input {width: 100% !important;}
-}
+.new_works .slick-list.draggable{width: 100%;}
+.slick-list {width: 100%;}
 
-@media screen and (max-width: 854px) {
-    .khoi_input h4 {padding-bottom: 5px !important;}
-    .mb_ds_hd > .date {flex: 1;}
-    .mb_ds_hd ~ .khoi_loc_cha .select_loc .select2.select2-container{width: 164px !important;}
-    .mb_ds_hd ~ .khoi_loc_cha .select_loc:nth-child(2) {margin-right: 14px;}
-    .pd_lr_mghd {padding-left: 20px;padding-right: 20px;}
-}
+.new_works_content_container .img_arrow{border-radius: 50%; background-color: rgba(238, 238, 238, 0.68);width: 42px;height: 42px; z-index: 10;} 
+.new_works_content_container .slick-prev{padding: 11px 16px 11px 15px; left: -8px;}
+.new_works_content_container .slick-next{padding: 11px 15px 11px 16px; right: -8px;}
+.new_works_content_container .slick-dots li{height: 12px; width: 12px; background: #EEEEEE; border-radius: 50%;}
+.new_works_content_container .slick-dots .slick-active{background: #007580; }
+.see_all {border: 1px solid #007580;border-radius: 100px; width: 140px; height: 42px; margin: 0 auto;}
+.see_all::after{content: url(../images/next_small.svg); margin-left: 11px; height: 16.5px; vertical-align: middle;}
+.see_all_container{padding-top: 15px;}
 
-@media screen and (max-width: 768px) {
-    /* bao cao */
-    .search_hd {width: 59.5%;}
-    .thongso_soquy {flex-wrap: wrap;padding-bottom: 50px;}
-    .thongso_soquy > .thongso_soquy_khoicon {width: calc(50% - 44px);margin-top: 30px;}
-    .thongso_soquy > .thongso_soquy_khoicon:is(:first-child, :nth-child(2)) {margin-top: 0;}
-    .thongso_soquy > .thongso_soquy_khoicon:nth-child(1n) {margin-right: 44px;margin-left: 0;}
-    .thongso_soquy > .thongso_soquy_khoicon:nth-child(2n) {margin-left: 44px;margin-right: 0;}
-    .thongtin_soquy {padding-bottom: 30px;}
-    .lichsu_giaodich {padding-top: 20px;}
-    .bang_lichsu_giaodich {margin-top: 20px;}
-    /* -------------- */
-    .khoi_timkiem {flex-wrap: wrap;}
-    .khoi_bc_ct .search {width: 100%;flex-shrink: 0;margin-bottom: 10px;margin-right: 0;}
-    .khoi_bc_ct .khoi_select2, .khoi_timkiem .date {width: calc(50% - 10px);}
-    .bang_ctr {margin-top: 20px;}
-    /* bao cao */
+.banner_cv {padding-left: 30px; padding-right: 40px; background: #F5FEFF; height: 240px;}
+.banner_create_cv_text {padding-top: 30px;}
+.banner_middle_1{width: 1230px; margin:48px auto;}
+.banner_middle_1_cv{width: 812px; margin-right: 24px;}
+.banner_create_cv{margin-bottom: 24px;}
+.banner_middle_1_chat{width: 394px;}
 
-    :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence,#edit_sug_pay, #add_hs, #edit_profile) .form_khoi1 .khoi_input, :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence,#edit_sug_pay, #add_hs, #edit_profile) .form_khoi2 .khoi_input {width: calc(50% - 44px);}
-    :is(#add_contact, #edit_contact) .form_khoi1 .khoi_input input.khung_input_nho:first-child {width: 60px !important;}
-    :is(#add_contact, #edit_contact,#add_sug_pay) .form_khoi1 .khoi_input input.khung_input_nho:first-child::placeholder {color: transparent;}
-    :is(#add_contact, #edit_contact, #add_sug_advence,#add_sug_pay, #edit_sug_advence) .form_khoi1 .khoi_input input.khung_input_nho:first-child ~ .d_flex.align_c {display: none;}
-    :is(#add_contact, #edit_contact) .form_khoi1 .khoi_input input.khung_input_nho:last-child {margin-left: 43px;}
-    .chitiet_hd_item > div {flex-direction: column;}
-    .chitiet_hd_item .de_muc {margin-bottom: 8px;}
-}
-
-@media screen and (max-width: 640px) {
-    .pd0 {padding-left: 0;padding-right: 0;}
-    .khoi_chung {background-color: transparent;box-shadow: none;}
-    .khoi_danhsach_hd_top {border-bottom: 1px solid var(--text-md);padding-bottom: 9px;align-items: center;}
-    .header_title {font-size: 18px;line-height: 21px;}
-    .khoi_timkiem {flex-direction: column;margin-top: 20px;}
-    .khoi_timkiem > div {margin-left: 0;margin-right: 0;}
-    .khoi_timkiem > div + div {margin-top: 10px;}
-    .search_hd {width: 100%;}
-    .search_hd > input {background-color: transparent;}
-    /* ---------------- */
-    .khoi_bc_ct .khoi_select2, .khoi_timkiem .date {width: 100%;margin-left: 0;margin-right: 0;}
-    .khoi_bc_ct .search {margin-bottom: 0px;}
-    .khoi_bc_ct {padding-top: 4px;}
-    .mb_white {background-color: var(--white);}
-    .bang_ctr {box-shadow: 0px 4px 4px 0px #00000040;border-radius: 10px;}
-    .khoi_chung {padding-left: 0;padding-right: 0;}
-    .khoi_danhsach_hd {padding-top: 4px;}
-    .khoi_danhsach_hd_top,.khoi_timkiem,.mb_lr20,.khoi_timkiem  ~ .paging  {padding-left: 20px;padding-right: 20px;}
-    .mb_ds_hd {padding-left: 0px;padding-right: 0px;}
-    .mb_ds_hd ~ .khoi_loc_cha {flex-direction: column;}
-    .mb_ds_hd ~ .khoi_loc_cha > .khoi_loc {flex-direction: column;}
-    .mb_ds_hd ~ .khoi_loc_cha > .khoi_btn_add {margin-top: 10px;display: flex;justify-content: flex-end;}
-    .mb_ds_hd ~ .khoi_loc_cha > .khoi_loc > div {width: 100% !important;}
-    .mb_ds_hd ~ .khoi_loc_cha > .khoi_loc > div + div {margin-top: 10px;}
-    .mb_ds_hd ~ .khoi_loc_cha .select_loc .select2.select2-container {width: 100% !important; background-color: transparent;}
-    .mb_ds_hd ~ .khoi_loc_cha .select2-container--default .select2-selection--single {background-color: transparent;}
-    .popup_tao_denghi,.popup_tao_thanhcong {width: 436px;}
-    .popup_tao_denghi a {width: 170px;}
-    .khoi_hd_top {padding-top: 4px;}
-}
-
-@media screen and (max-width: 460px) {
-    .khoi_hd_top {padding-top: 4px;}
-    .khoi_chitiet_soquy {padding-left: 20px;padding-right: 20px;}
-    .thongso_soquy {padding-left: 17px;padding-right: 18px;}
-    .thongso_soquy > .thongso_soquy_khoicon {width: 100%; margin-left: 0 !important;margin-right: 0 !important;}
-    .thongso_soquy > .thongso_soquy_khoicon + .thongso_soquy_khoicon {margin-top: 20px !important;}
-    .thongso_soquy {padding-bottom: 20px;}
-    .thongtin_soquy {flex-direction: column;}
-    .thongtin_soquy h4 {width: 50%;}
-    .lichsu_giaodich_header {flex-direction: column;align-items: flex-start;}
-    .lichsu_giaodich_header > h3 {width: auto;} 
-    .lichsu_giaodich_khoichon {margin-top: 10px; width: 100%;flex-direction: column;}
-    .lichsu_giaodich_khoichon > div,.lichsu_giaodich_khoichon .select2-container {width: 100% !important;}
-    .lichsu_giaodich_khoichon > div {margin-top: 10px;}
-    .thongtin_soquy_khoicon {width: 100%;}
-    .lichsu_giaodich_khoichon span.select2-selection.select2-selection--single {background-color: transparent;}
-    .pj0im {padding-left: 0px !important;padding-right: 0px !important;}
-    .mb_ds_hd,.mb_ds_hd ~ .khoi_loc_cha,.mb_ds_hd ~ .mb_pd_tb {padding-left: 20px;padding-right: 20px;}
-    /* hop dong */
-    .khoi_form .form_khoi1 > div{flex-direction: column;}
-    .khoi_form .form_khoi1 > div > div, .khoi_form .khoi_select2 > div {width: 100% !important;}
-    .khoi_form .form_khoi1 > div > div + div, .khoi_form .khoi_select2 > div + div {margin-top: 20px;}
-    :is(#add_contact, #edit_contact) .form_khoi1 .khoi_input input.khung_input_nho:first-child {width: 104px !important;}
-    :is(#add_contact, #edit_contact) .form_khoi1 .khoi_input input.khung_input_nho:last-child {margin-left: 34px;}
-    .khoi_form .khoi_select2 {padding-bottom: 20px;}
-    .khoi_form .khoi_select2 {flex-direction: column;}
-    .khoi_form .khoi_select2 .select2.select2-container {width: 100% !important;}
-    .khoi_chitiet_hd_noidung .khoi_btn button:first-child {margin-left: 0;}
-    .khoi_chitiet_hd_noidung .khoi_btn button + button {margin-left: 10px;}
-    .chitiet_hd_item .de_muc {width: 100%;}
-    :is(#add_sug_advence, #edit_sug_advence) .d_flex.space_b.align_s > span.d_flex.align_c.h_36 {margin-left: 5px;margin-right: 5px;}
-    .popup_tao_denghi,.popup_tao_thanhcong {width: 350px;padding-left: 14px;padding-right: 14px;}
-    .popup_tao_thanhcong {padding-left: 20px;padding-right: 20px;}
-    .popup_tao_denghi a {width: 155px;}
-}
+.box_shadow{box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);border-radius: 10px;}

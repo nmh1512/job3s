@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: Roboto;
     font-display: swap;
@@ -100,6 +104,7 @@ img {object-fit: cover;}
 .mt_12 {margin-top: 12px;}
 .mt_16 {margin-top: 16px;}
 .mt_13 {margin-top: 13px;}
+.mt_14 {margin-top: 14px;}
 .pd_tb3 {padding-top: 3px;padding-bottom: 3px;}
 .imt_flex {display: flex !important;}
 .cl_plh::placeholder {color: var(--text-md);}
@@ -119,6 +124,7 @@ img {object-fit: cover;}
 .mt_59 {margin-top: 59px;}
 .w_50pt{width: 50%;}
 .h_50pt{height: 50%;}
+.pb_5px{padding-bottom: 5px;}
 .pd_20_20_50 {padding: 20px 20px 50px;}
 .txt_left_i {text-align: left !important;}
 .vertalign_center {vertical-align: middle;}
@@ -213,6 +219,7 @@ img {object-fit: cover;}
 .pd_t14_b14 {padding-top: 14px;padding-bottom: 14px;}
 .bg_whitw_2 {background-color: var(--cl-fa);}
 .cl_md {color: var(--text-md);}
+.main_color{color: #007580;}
 .color_grey2 {color: #999999;}
 .color_grey3 {color: #666666;}
 .color_blue {color: #4C5BD4;}
@@ -280,7 +287,7 @@ img {object-fit: cover;}
 .w_49pt {width: 49%;}
 .tlrb_0 {top: 0;left: 0;right: 0;bottom: 0;}
 .pd_ {padding: 10px 30px 8px 20px;}
-.z_index0 {z-index: 0;}
+
 .pd_lr20_b30 {padding-left: 20px;padding-right: 20px;padding-bottom: 30px;}
 .pd_20_b10 {padding: 20px 20px 10px;}
 .bd_b0_lrt1 {border: 1px solid var(--text-md);border-bottom: 0;}
@@ -420,21 +427,21 @@ input[readonly] {background-color: var(--cl-cc);}
 .form_kh_infor::-webkit-scrollbar,
 .main_details_step_mission::-webkit-scrollbar,
 .box_main .col_l::-webkit-scrollbar,
-.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar{border-radius: 5px;width: 8px;height: 8px;}
+
 .box_main_table_list::-webkit-scrollbar-thumb,
 .khoi_bang::-webkit-scrollbar-thumb,
 .khoi_bang_tt_thanh_toan .khoi_thongtin::-webkit-scrollbar-thumb,
 .form_kh_infor::-webkit-scrollbar-thumb,
 .main_details_step_mission::-webkit-scrollbar-thumb,
 .box_main .col_l::-webkit-scrollbar-thumb,
-.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb{background: #B0B0B0;border-radius: 5px;}
+
 .box_main_table_list::-webkit-scrollbar-track,
 .khoi_bang::-webkit-scrollbar-track,
 .khoi_bang_tt_thanh_toan .khoi_thongtin::-webkit-scrollbar-track,
 .form_kh_infor::-webkit-scrollbar-track,
 .main_details_step_mission::-webkit-scrollbar-track,
 .box_main .col_l::-webkit-scrollbar-track,
-.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-track{background: transparent;border-radius: 5px;}
+
 table.table {width: 100%;border-collapse: collapse;border-radius: 10px;box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);background: #FFFFFF;}
 table.table thead tr th {
     background: #EAEAEA;
@@ -554,13 +561,7 @@ table thead tr th.box_input {
 .pagingtion > :is(span + span, a + a) {margin-left: 11px;}
 .pagingtion > :is(span, a) > img {width: 6.05px;height: 11px;display: block;}
 /* --select */
-.select2-container,.select2-container .select2-selection--single {height: 100%;}
-.select2-container--default .select2-selection--single {height: 100%;border-radius: 5px;display: flex;align-items: center;border-color: var(--text-md);}
-.select2-container {height: 100%;}
-.select2-container--default .select2-selection--single .select2-selection__arrow {top: 50%;transform: translateY(-50%);}
-.select2-container--default .select2-selection--single .select2-selection__arrow b {border-color: #999 transparent transparent transparent;}
-.select2-container .select2-selection--single .select2-selection__rendered {display: block;padding-left: 16px;padding-right: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 16px;line-height: 19px;font-weight: 400; color: var(--cl-66);}
-.select2-container--default .select2-selection--single .select2-selection__arrow {right: 12px;}
+
 .select_header-list .slick-track > div {margin-left: 4px;margin-right: 4px;}
 /* --popup  */
 .popup {position: fixed; top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;background-color: rgb(51 51 51 / 10%);display: flex;justify-content:center;align-items:center;}
