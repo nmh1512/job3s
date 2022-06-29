@@ -14,19 +14,22 @@
     <div id="root">
         <div class="authen d_flex bg_white">
             <div class="authen_left pd_25 w_50pt">
-                <a href="#">
-                    <div class="d_flex align_c">
-                        <div class="d_flex align_c mr_5">
-                            <img src="../../images/arr_blue.png" alt="">
+                <div class="fit_content">
+                    <a href="#">
+                        <div class="d_flex align_c">
+                            <div class="d_flex align_c mr_5">
+                                <img src="../../images/arr_blue.png" alt="">
+                            </div>
+                            <span class="font_s16 line_h19 font_w400 cl_primary">Quay lại</span>
                         </div>
-                        <span class="font_s16 line_h19 font_w400 cl_primary">Quay lại</span>
-                    </div>
-                </a>
+                    </a>
+                </div>
+
 
                 <div class="mt_42 pd_lr89">
                     <form onsubmit="return false" action="" method="POST">
                         <h1 class="font_s24 line_h28 font_w700 cl_primary">Quên mật khẩu</h1>
-                        <div class="is_checkemail d_none">
+                        <div class="is_checkemail ">
                             <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_30">Nhập email mà bạn đã sử dụng để đăng kí tài khoản, hệ thống sẽ gửi lại thông tin để cập nhật mật khẩu.</p>
                             <div class="form_group">
                                 <span class="font_s16 line_h19 font_w500 cl_a4">Email</span>
@@ -49,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="check_email mt_40 bg_clE5 pd_15 br_10 d_flex align_s">
+                        <div class="check_email d_none  mt_40 bg_clE5 pd_15 br_10 d_flex align_s">
                             <div class="mr_15">
                                 <img src="../../images/sussess_icon_green.png" alt="">
                             </div>
@@ -64,7 +67,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>

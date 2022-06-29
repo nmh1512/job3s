@@ -16,7 +16,7 @@
             <div class="authen_left pd_25 w_50pt">
                 <div class="mt_42 pd_lr89">
                     <form onsubmit="return false" action="" method="POST">
-                        <div class="is_checkemail ">
+                        <div class="is_checkemail d_none">
                             <h1 class="font_s24 line_h28 font_w700 cl_primary">Tạo lại mật khẩu của bạn</h1>
                             <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_30">Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội việc làm lý tưởng.</p>
                             <div class="form_group">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
 
-                        <div class="change_suss d_none">
+                        <div class="change_suss ">
                             <h2 class="font_s24 line_h28 font_w700 cl_primary">Tạo mật khẩu thành công!</h2>
                             <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_30">Đăng nhập ngay để bắt đầu dựng một hồ sơ nổi bật và nhận được các cơ hội việc làm lý tưởng.</p>
 

@@ -46,3 +46,6 @@ RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung.html$ /home/authen/change_p
 #cv
 RewriteRule ^cv$ /home/cv/list_cv.php [NE,L]
 
+#ntd
+RewriteRule ^(.*).html$ /home/ntd/details_ntd.php [NE,L]
+

@@ -14,17 +14,19 @@
     <div id="root">
         <div class="authen d_flex bg_white">
             <div class="authen_left pd_25 w_50pt">
-                <a href="#">
-                    <div class="d_flex align_c">
-                        <div class="d_flex align_c mr_5">
-                            <img src="../../images/arr_blue.png" alt="">
+                <div class="fit_content">
+                    <a href="#">
+                        <div class="d_flex align_c">
+                            <div class="d_flex align_c mr_5">
+                                <img src="../../images/arr_blue.png" alt="">
+                            </div>
+                            <span class="font_s16 line_h19 font_w400 cl_primary">Quay lại</span>
                         </div>
-                        <span class="font_s16 line_h19 font_w400 cl_primary">Quay lại</span>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
                 <div class="mt_42 pd_lr89">
-                    <form onsubmit="return false" action="" method="POST">
+                    <form id="authe_uv" action="" method="POST">
                         <h1 class="font_s24 line_h28 font_w700 cl_primary">Đăng nhập tài khoản Ứng viên</h1>
                         <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_30">Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội việc làm lý tưởng.</p>
                         <div class="form_group">
@@ -52,7 +54,7 @@
                         </div>
 
                         <div class="form_submit mt_25">
-                            <button class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng nhập</button>
+                            <button type="submit" class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng nhập</button>
                         </div>
 
                         <div class="authen_extend mt_15 d_flex space_b">
@@ -97,9 +99,38 @@
             </div>
         </div>
     </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
         eyeChange('.eye_btn', '#password', 'eye_hidden')
+
+        $('#authe_uv').validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true
+                }
+            },
+            messages: {
+                email: {
+                    required: 'Vui lòng nhập email',
+                    email: 'Trường này phải là email'
+                },
+                password: {
+                    required: 'Vui lòng nhập mật khẩu'
+                }
+            },
+            errorPlacement: function(error, element) {
+                let parent = $(element).parents('.form_group');
+                if (parent.length > 0) {
+                    $(parent).append(error);
+                }
+            },
+        });
     </script>
 </body>
 

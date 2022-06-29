@@ -155,16 +155,18 @@ function Copyied(element, classCopyied) {
       let span = document.createElement("span");
       span.className = "message_copytied";
 
-      span.innerText = "Copy thành công";
+      span.innerText = "Copied";
       element.appendChild(span);
 
       let stTimeOut = setTimeout(() => {
+        clearTimeout(stTimeOut);
         span.style.transition = "all .4s ease";
         span.style.opacity = "0";
         span.style.overflow = "hidden";
       }, 2000);
 
       let removeSpan = setTimeout(() => {
+        clearTimeout(removeSpan);
         span.remove();
       }, 2500);
     };
@@ -237,54 +239,6 @@ function getDatLocation(array) {
   });
 }
 
-function scrollHeader(classSildBar, classContent, classHeader) {
-  function getStyleNumber(element, attri) {
-    let text = window.getComputedStyle(element).getPropertyValue(attri);
-    var number = text.match(/\d/g);
-    number = number.join("");
-
-    return parseInt(number);
-  }
-
-  let sliderBar = document.querySelector(classSildBar);
-  let content = document.querySelector(classContent);
-  let header = document.querySelector(classHeader);
-
-  if (sliderBar && content && header) {
-    let widthBody = document.body.clientWidth;
-    let widthSliderBar = sliderBar.offsetWidth;
-    // let widthContent = content.offsetWidth;
-    let pdLeft = getStyleNumber(content, "padding-left");
-    let pdRight = getStyleNumber(content, "padding-right");
-    let topContent = getStyleNumber(content, "padding-top");
-    let heightHeader = header.clientHeight;
-    let NewPdTop = topContent + heightHeader;
-
-    content.style.paddingTop = `${NewPdTop}px`;
-
-    header.style.position = "fixed";
-    header.style.zIndex = "99";
-    header.style.right = `${pdRight}px`;
-    header.style.left = `${widthSliderBar + pdLeft}px`;
-    header.style.top = `${topContent}px`;
-    header.style.width = `${widthBody - widthSliderBar - pdLeft - pdRight}px`;
-
-    function ScrollFixed() {
-      let top = header.offsetTop;
-      let maxTop = heightHeader + top;
-      let y = window.pageYOffset;
-
-      if (y > maxTop) {
-        header.style.top = `0px`;
-      } else {
-        header.style.top = `${topContent}px`;
-      }
-    }
-
-    window.addEventListener("scroll", ScrollFixed);
-  }
-}
-
 function randomString(classElement, elementPush, maxLength) {
   let elementClick = document.querySelector(classElement);
   let elementPushs = document.querySelector(elementPush);
@@ -326,6 +280,28 @@ function linkSelector(selector) {
     };
   }
 }
+
+function handle_show_popup(arrays) {
+  function singleContent(array) {
+    let element = document.querySelector(array.className);
+    if (element) {
+      if (array.arr === "") {
+        element.innerHTML = array.noidung;
+      } else {
+        element.setAttribute(array.arr, array.noidung);
+      }
+    }
+  }
+  if (Array.isArray(arrays)) {
+    if (arrays.length > 1) {
+      for (let i = 0; i < arrays.length; i++) {
+        singleContent(arrays[i]);
+      }
+    } else {
+      singleContent(arrays[0]);
+    }
+  }
+}
 // job 3s
 
 // ẩn hiện type password
@@ -346,4 +322,9 @@ function eyeChange(selector, selectorInput, classEye) {
       }
     };
   }
+}
+
+function validateEmail(email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  return emailReg.test(email);
 }

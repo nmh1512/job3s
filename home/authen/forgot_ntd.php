@@ -14,14 +14,17 @@
     <div id="root">
         <div class="authen d_flex bg_white">
             <div class="authen_left pd_25 w_50pt">
-                <a href="#">
-                    <div class="d_flex align_c">
-                        <div class="d_flex align_c mr_5">
-                            <img src="../../images/arr_blue.png" alt="">
+                <div class="fit_content">
+                    <a href="#">
+                        <div class="d_flex align_c">
+                            <div class="d_flex align_c mr_5">
+                                <img src="../../images/arr_blue.png" alt="">
+                            </div>
+                            <span class="font_s16 line_h19 font_w400 cl_primary">Quay lại</span>
                         </div>
-                        <span class="font_s16 line_h19 font_w400 cl_primary">Quay lại</span>
-                    </div>
-                </a>
+                    </a>
+                </div>
+
 
                 <div class="mt_42 pd_lr89">
                     <form onsubmit="return false" action="" method="POST">
@@ -64,7 +67,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
