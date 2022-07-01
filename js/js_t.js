@@ -37,33 +37,6 @@ function clickToggleClass(element, listSelectName, className) {
   }
 }
 
-function viewAndClosePopup(idPopup, selectorChild) {
-  // hienpopup(idPopup);
-  showHiddenPopup(idPopup, "hidden");
-  let infor_menu = document.querySelector(idPopup);
-  if (infor_menu) {
-    function hiddenOverlay(e) {
-      // e.stopPropagation();
-      let box_popup_infor_menu = document.querySelector(selectorChild);
-
-      // lấy vị trí của thẻ
-      let minY = box_popup_infor_menu.offsetTop;
-      let minX = box_popup_infor_menu.offsetLeft;
-      let maxY = parseInt(box_popup_infor_menu.clientHeight) + minY;
-      let maxX = parseInt(box_popup_infor_menu.clientWidth) + minX;
-
-      // vị trí con trỏ chuột
-      let tro_x = e.x;
-      let tro_y = e.y;
-
-      if (!(tro_x >= minX && tro_x <= maxX && tro_y >= minY && tro_y <= maxY)) {
-        infor_menu.classList.add("hidden");
-      }
-    }
-    infor_menu.addEventListener("click", hiddenOverlay);
-  }
-}
-
 function activeChangeTable(
   element,
   classList,
@@ -327,4 +300,120 @@ function eyeChange(selector, selectorInput, classEye) {
 function validateEmail(email) {
   var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   return emailReg.test(email);
+}
+
+function viewPopup(selector) {
+  let elm = document.querySelector(selector);
+
+  if (elm) {
+    elm.classList.remove("hidden");
+  }
+  return "";
+}
+
+function viewAndClosePopupUpdate(idPopup, selectorChild, close_popup, selectCancel, resertForm) {
+  viewPopup(idPopup, "hidden");
+  let infor_menu = document.querySelector(idPopup);
+  let box_popup_infor_menu = infor_menu.querySelector(selectorChild);
+  let elmClose = infor_menu.querySelector(close_popup);
+  let cancel = infor_menu.querySelector(selectCancel);
+  let elementForm = infor_menu.querySelector(resertForm);
+
+  if (infor_menu) {
+    if (elmClose) {
+      elmClose.onclick = () => {
+        clearAmintions();
+        resertForm(elementForm);
+      };
+    }
+
+    if(cancel) {
+      cancel.onclick = () => {
+        clearAmintions();
+        resertForm(elementForm);
+      }
+    }
+
+    function hiddenOverlay(e) {
+      // lấy vị trí của thẻ
+      let minY = box_popup_infor_menu.offsetTop;
+      let minX = box_popup_infor_menu.offsetLeft;
+      let maxY = parseInt(box_popup_infor_menu.clientHeight) + minY;
+      let maxX = parseInt(box_popup_infor_menu.clientWidth) + minX;
+
+      // vị trí con trỏ chuột
+      let tro_x = e.x;
+      let tro_y = e.y;
+
+      if (!(tro_x >= minX && tro_x <= maxX && tro_y >= minY && tro_y <= maxY)) {
+        clearAmintions();
+        resertForm(elementForm);
+        return false;
+      }
+    }
+
+    function clearAmintions() {
+      infor_menu.removeEventListener("click", hiddenOverlay);
+      box_popup_infor_menu.classList.add("animation_zoom_out");
+      box_popup_infor_menu.addEventListener("animationend", clearAmintion);
+
+      function clearAmintion() {
+        box_popup_infor_menu.classList.remove("animation_zoom_out");
+        infor_menu.classList.add("hidden");
+        box_popup_infor_menu.removeEventListener("animationend", clearAmintion);
+      }
+    }
+
+    function resertForm(element) {
+      if(element) {
+        element.reset();
+        let fiels = element.querySelectorAll('select[name]');
+        if(fiels) {
+          fiels.forEach(e => {
+            $(e).val(null).trigger("change");
+          })
+        }
+      }
+    }
+    infor_menu.addEventListener("click", hiddenOverlay);
+  }
+
+  return {
+    infor_menu,
+    box_popup_infor_menu,
+    elmClose,
+    cancel
+  }
+}
+
+function ChangeFiles (inputFile, selectorAppend, seletClose) {
+  let files_input = document.querySelectorAll(inputFile);
+  if(files_input) {
+    Array.from(files_input).forEach(e=>{
+      e.onchange = () => {
+        let parent = e.parentElement;
+        let elemeApp = parent.querySelector(selectorAppend);
+        let close = parent.querySelector(seletClose);
+        let files = e.files[0];
+        let placeholder;
+
+        if(elemeApp) {
+          if(files) {
+            placeholder = files.name;
+            close.dataset.file = 0;
+            close.classList.remove('d_none')
+          } else {
+            placeholder = elemeApp.dataset.placeholder || 'Chưa có files nào';
+            close.classList.add('d_none')
+          }
+          elemeApp.innerText = placeholder;
+          close.onclick = () =>{
+            elemeApp.innerText = elemeApp.dataset.placeholder || 'Chưa có files nào';
+            close.classList.add('d_none')
+            close.onclick = () => {}
+          }
+        }
+      }
+    })
+  }
 }

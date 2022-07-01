@@ -47,5 +47,18 @@ RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung.html$ /home/authen/change_p
 RewriteRule ^cv$ /home/cv/list_cv.php [NE,L]
 
 #ntd
-RewriteRule ^(.*).html$ /home/ntd/details_ntd.php [NE,L]
+RewriteRule ^chi-tiet-nha-tuyen-dung.html$ /home/ntd/details_ntd.php [NE,L]
+
+#sau đăng nhập
+
+#tổng quan 
+RewriteRule ^tong-quan/$ /home/tong_quan/index.php [NE,L]
+
+#tin tuyển dụng
+RewriteRule ^tin-tuyen-dung/$ /home/tin_tuyen_dung/list.php [NE,L]
+RewriteRule ^tin-tuyen-dung/dang-tin-tuyen-dung.html$ /home/tin_tuyen_dung/add.php [NE,L]
+RewriteRule ^tin-tuyen-dung/chinh-sua-dang-tin-tuyen-dung.html$ /home/tin_tuyen_dung/edit.php [NE,L]
+
+#quản lý điểm lọc
+RewriteRule ^quan-ly-diem-loc/$ /home/quan_ly_diem_loc/list.php [NE,L]
 
