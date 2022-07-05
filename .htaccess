@@ -39,4 +39,72 @@ RewriteRule ^dich-vu-dang-chay.html$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php 
 RewriteRule ^dich-vu-het-han.html$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
 RewriteRule ^chuyen-vien-cskh.html$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
 
+#trang
+
+#authen ứng viên
+RewriteRule ^authen/dang-nhap-ung-vien.html$ /home/authen/login_uv.php [NE,L]
+RewriteRule ^authen/dang-ky-ung-vien.html$ /home/authen/register_uv.php [NE,L]
+RewriteRule ^authen/quen-mat-khau-ung-vien.html$ /home/authen/forgot_uv.php [NE,L]
+RewriteRule ^authen/thay-doi-mat-khau-ung-vien.html$ /home/authen/change_password_uv.php [NE,L]
+
+#authen nhà tuyển dụng
+RewriteRule ^authen/dang-nhap-nha-tuyen-dung.html$ /home/authen/login_ntd.php [NE,L]
+RewriteRule ^authen/dang-ky-nha-tuyen-dung.html$ /home/authen/register_ntd.php [NE,L]
+RewriteRule ^authen/quen-mat-khau-nha-tuyen-dung.html$ /home/authen/forgot_ntd.php [NE,L]
+RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung.html$ /home/authen/change_password_ntd.php [NE,L]
+
+#cv
+RewriteRule ^cv$ /home/cv/list_cv.php [NE,L]
+
+#ntd
+RewriteRule ^chi-tiet-nha-tuyen-dung.html$ /home/ntd/details_ntd.php [NE,L]
+
+#sau đăng nhập
+
+#tổng quan 
+RewriteRule ^tong-quan/$ /home/tong_quan/index.php [NE,L]
+
+#tin tuyển dụng
+RewriteRule ^tin-tuyen-dung/$ /home/tin_tuyen_dung/list.php [NE,L]
+RewriteRule ^tin-tuyen-dung/dang-tin-tuyen-dung.html$ /home/tin_tuyen_dung/add.php [NE,L]
+RewriteRule ^tin-tuyen-dung/chinh-sua-dang-tin-tuyen-dung.html$ /home/tin_tuyen_dung/edit.php [NE,L]
+
+#quản lý điểm lọc
+RewriteRule ^quan-ly-diem-loc/$ /home/quan_ly_diem_loc/list.php [NE,L]
+
+#đánh giá
+RewriteRule ^danh-gia/$ /home/danh_gia/index.php [NE,L]
+RewriteRule ^danh-gia-ung-vien/$ /home/danh_gia/danh_gia_uv.php [NE,L]
+
+#thay đổi mật khẩu sau đăng nhập
+RewriteRule ^thay-doi-mat-khau/$ /home/thay_doi_mat_khau/index.php [NE,L]
+
+#thu-xin-viec
+RewriteRule ^thu-xin-viec/$ /home/thu_xin_viec/list.php [NE,L]
+RewriteRule ^thu-xin-viec/danh-sach-thu-xin-viec.html$ /home/thu_xin_viec/list_uv.php [NE,L]
+
+#quan lý cv
+RewriteRule ^quan-ly-cv/$ /home/quan_ly_cv/quan_ly_cv.php [NE,L]
+
+#don xin viec
+RewriteRule ^don-xin-viec/danh-sach-don-xin-viec.html$ /home/don_xin_viec/don_xv_uv.php [NE,L]
+
+#so yếu lí lịch
+RewriteRule ^so-yeu-ly-lich/danh-sach-so-yeu-li-lich.html$ /home/so_yeu_li_lich/so_yeu_li_lich.php [NE,L]
+
+#video giới thiệu bản thân
+RewriteRule ^video-gioi-thieu-ban-than/$ /home/video_gioi_thieu_ban_than/video_uv.php [NE,L]
+RewriteRule ^upload-video-gioi-thieu-ban-than/$ /home/video_gioi_thieu_ban_than/upload_video.php [NE,L]
+
+#xác thực tài khoản ứng viên
+RewriteRule ^xac-thuc-tai-khoan-ung-vien/$ /home/xac_thuc_tai_khoan/xt_tk_uv.php [NE,L]
+
+#việc làm đã ứng tuyển
+RewriteRule ^viec-lam-da-ung-tuyen/$ /home/viec_lam_da_ung_tuyen/vl_da_tuyen.php [NE,L]
+RewriteRule ^viec-lam-da-luu/$ /home/viec_lam_da_ung_tuyen/vl_da_luu.php [NE,L]
+
+#ngành nghề tình thành
+RewriteRule ^nganh-nghe-tinh-thanh/$ /home/nganh_nghe_tinh_thanh/nganh_nghe_tt.php [NE,L]
+
+
 RewriteRule ^chi-tiet-ung-vien.html$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]

@@ -1,37 +1,8 @@
-function hiddenHeader(className) {
-  let element = document.querySelector(className);
-
-  if (element) {
-    element.classList.add("hidden");
-  }
-}
-
 function showHiddenPopup(className, classHidden) {
   let element = document.querySelector(className);
 
   if (element) {
     element.classList.toggle(classHidden);
-  }
-}
-
-function toogleLike(element, className) {
-  if (element) {
-    element.classList.toggle(className);
-  }
-}
-
-function onInput(element, className, classActv) {
-  if (element) {
-    let value = element.value.trim();
-    let el = document.querySelector(className);
-
-    if (el) {
-      if (value) {
-        el.classList.remove(classActv);
-      } else {
-        el.classList.add(classActv);
-      }
-    }
   }
 }
 
@@ -51,13 +22,6 @@ function removeClass(selector, classActive) {
   }
 }
 
-function hoverItem(panrentElement, element, className) {
-  let Elements = document.querySelectorAll(panrentElement);
-  if (element && Elements) {
-    element.classList.add(className);
-  }
-}
-
 function clickToggleClass(element, listSelectName, className) {
   let panrentElement = document.querySelector(listSelectName);
 
@@ -69,208 +33,7 @@ function clickToggleClass(element, listSelectName, className) {
         children[i].classList.remove(className);
       }
     }
-
     element.classList.add(className);
-  }
-}
-
-function rmClassColor(
-  element,
-  listSelectName,
-  className,
-  defaultColor,
-  changeColor,
-  classNameHeaders = "",
-  classHeaderView = "",
-  acHeader = "",
-  classContent = "",
-  classContentView = ""
-) {
-  function change(className, clView, acView) {
-    if (className != "") {
-      let elHeader = document.querySelector(className);
-
-      if (elHeader) {
-        let chidren = [...elHeader.children];
-
-        if (chidren) {
-          chidren.forEach((e) => {
-            if (e.classList.contains(clView)) {
-              e.classList.add(acView);
-            } else {
-              if (e.classList.contains(acView)) {
-                e.classList.remove(acView);
-              }
-            }
-          });
-        }
-      }
-    }
-  }
-
-  let panrentElement = document.querySelector(listSelectName);
-
-  if (element && panrentElement) {
-    let children = panrentElement.children;
-
-    // thay đổi phần header ẩn hiện header
-    change(classNameHeaders, classHeaderView, acHeader);
-
-    // thay đổi nội dung
-    change(classContent, classContentView, acHeader);
-
-    //
-    for (let i = 0; i < children.length; i++) {
-      if (children[i].classList.contains(className)) {
-        let elColor = children[i].querySelectorAll("svg path");
-
-        if (elColor) {
-          elColor.forEach((e) => {
-            if (e.getAttribute("stroke")) {
-              e.setAttribute("stroke", defaultColor);
-            } else {
-              e.setAttribute("fill", defaultColor);
-            }
-          });
-        }
-        children[i].classList.remove(className);
-      }
-    }
-    let elChangeColor = element.querySelectorAll("svg path");
-
-    if (elChangeColor) {
-      elChangeColor.forEach((e) => {
-        if (e.getAttribute("stroke")) {
-          e.setAttribute("stroke", changeColor);
-        } else {
-          e.setAttribute("fill", changeColor);
-        }
-      });
-    }
-    element.classList.add(className);
-  }
-}
-
-function showHidden(
-  selectorParent,
-  element,
-  selectorHidden,
-  className,
-  tl1,
-  tl2,
-  img1,
-  img2
-) {
-  let parentEl = document.querySelector(selectorParent);
-  let hiddenEl = document.querySelector(selectorHidden);
-
-  if (parentEl && hiddenEl) {
-    parentEl.classList.toggle(className);
-
-    if (!parentEl.classList.contains(className)) {
-      hiddenEl.style.right = `${0}px`;
-      element.querySelector("span").innerText = tl1;
-      element.querySelector("div img").src = img1;
-    } else {
-      let width = hiddenEl.offsetWidth;
-      hiddenEl.style.right = `-${width}px`;
-      element.querySelector("span").innerText = tl2;
-      element.querySelector("div img").src = img2;
-    }
-  }
-}
-
-function handelLike(element, classActive, changeColor, defaultColor) {
-  if (element) {
-    let path = element.querySelector("svg path");
-
-    if (path) {
-      element.classList.toggle(classActive);
-
-      if (element.classList.contains(classActive)) {
-        path.setAttribute("fill", changeColor);
-        path.setAttribute("stroke", changeColor);
-      } else {
-        path.setAttribute("fill", "");
-        path.setAttribute("stroke", defaultColor);
-      }
-    }
-  }
-}
-
-function sizeTB(className, classW, number, childBl = true) {
-  let elements = document.querySelector(className);
-  let elementW = document.querySelectorAll(classW);
-
-  if (elements && elementW) {
-    let child = childBl ? [...elements.children] : elements;
-
-    if (child) {
-      let index = childBl ? child.length : 1;
-      let iw = number;
-
-      if (childBl) {
-        for (let i = index - number; i <= index - 1; i++) {
-          if (elementW[number - iw]) {
-            elementW[number - iw].style.width = `${child[i].clientWidth}px`;
-            --iw;
-          }
-        }
-      } else {
-        elementW[0].style.width = `${child.clientWidth}px`;
-      }
-    }
-  } else {
-    window.removeEventListener("resize", sizeTB);
-  }
-}
-
-function viewAndClosePopup(idPopup, selectorChild) {
-  // hienpopup(idPopup);
-  showHiddenPopup(idPopup, "hidden");
-  let infor_menu = document.querySelector(idPopup);
-  if (infor_menu) {
-    function hiddenOverlay(e) {
-      // e.stopPropagation();
-      let box_popup_infor_menu = document.querySelector(selectorChild);
-
-      // lấy vị trí của thẻ
-      let minY = box_popup_infor_menu.offsetTop;
-      let minX = box_popup_infor_menu.offsetLeft;
-      let maxY = parseInt(box_popup_infor_menu.clientHeight) + minY;
-      let maxX = parseInt(box_popup_infor_menu.clientWidth) + minX;
-
-      // vị trí con trỏ chuột
-      let tro_x = e.x;
-      let tro_y = e.y;
-
-      if (!(tro_x >= minX && tro_x <= maxX && tro_y >= minY && tro_y <= maxY)) {
-        infor_menu.classList.add("hidden");
-      }
-    }
-    infor_menu.addEventListener("click", hiddenOverlay);
-  }
-}
-
-function handle_show_popup(arrays) {
-  function singleContent(array) {
-    let element = document.querySelector(array.className);
-    if (element) {
-      if (array.arr === "") {
-        element.innerHTML = array.noidung;
-      } else {
-        element.setAttribute(array.arr, array.noidung);
-      }
-    }
-  }
-  if (Array.isArray(arrays)) {
-    if (arrays.length > 1) {
-      for (let i = 0; i < arrays.length; i++) {
-        singleContent(arrays[i]);
-      }
-    } else {
-      singleContent(arrays[0]);
-    }
   }
 }
 
@@ -343,124 +106,6 @@ function onScrollHeader(classHeader, classAdd, startClassPostion) {
   }
 }
 
-function CheckSize(classMaxSize, style) {
-  let elMaxSize = document.querySelector(classMaxSize);
-
-  if (elMaxSize) {
-    let MaxSize = elMaxSize.offsetWidth;
-
-    if (MaxSize) {
-      let childrenElements = [...elMaxSize.children];
-
-      if (childrenElements) {
-        let size = 0;
-        let row = 0;
-        let col = 0;
-        childrenElements.forEach((element) => {
-          childrenSize(element, MaxSize, style);
-        });
-
-        function childrenSize(child, maxSize, style) {
-          let widthChild = child.offsetWidth;
-          let text = window
-            .getComputedStyle(child)
-            .getPropertyValue("margin-left");
-          var number = text.match(/\d/g);
-          number = number.join("");
-
-          size += col == 0 ? widthChild + parseInt(number) : widthChild;
-          console.log(col);
-          if (size > maxSize) {
-            row++;
-            size = 0;
-            col = 0;
-          }
-
-          if (col == 0) {
-            styleElement(child, "margin-left", "0px");
-          }
-
-          if (row > 0) {
-            if (typeof style === "object") {
-              for (let key in style) {
-                styleElement(child, key, style[key]);
-              }
-            }
-          }
-
-          col += 1;
-
-          function styleElement(element, styleName, valueStyle) {
-            element.style[styleName] = valueStyle;
-          }
-        }
-      }
-    }
-  }
-}
-
-function scrollSelector(nextArrow, prevArrow, scrollElement) {
-  let elNext = document.querySelector(nextArrow);
-  let elPrev = document.querySelector(prevArrow);
-  let elementScroll = document.querySelector(scrollElement);
-
-  if (elNext && elPrev && elementScroll) {
-    let oneChild = [...elementScroll.children][0];
-    let widthEl = [...oneChild.children];
-    let isClick = true;
-    let widthChild = widthEl[0].clientWidth;
-    let maxScroll = widthEl.length * widthChild;
-    let scrollX = 0;
-
-    function handelScroll() {
-      let x = elementScroll.scrollLeft;
-      if (x <= maxScroll) {
-        if (isClick === true) {
-          scrollX = x + widthChild;
-        } else {
-          scrollX = x - widthChild;
-        }
-      } else {
-        scrollX = elementScroll.scrollLeftMax;
-      }
-
-      $(elementScroll).animate(
-        {
-          scrollLeft: scrollX,
-        },
-        300
-      );
-    }
-
-    elNext.onclick = function () {
-      isClick = true;
-      handelScroll();
-    };
-
-    elPrev.onclick = function () {
-      isClick = false;
-      handelScroll();
-    };
-  }
-}
-
-function viewScreen(classElementShow, classHidden, pointMin, pointMax) {
-  let elementShow = document.querySelector(classElementShow);
-  if (elementShow) {
-    window.onresize = function () {
-      let x = window.innerWidth;
-
-      if (x >= pointMin && x <= pointMax) {
-        elementShow.classList.remove(classHidden);
-      } else {
-        elementShow.classList.add(classHidden);
-      }
-    };
-  } else {
-    window.onresize = null;
-  }
-}
-
 function Copyied(element, classCopyied) {
   let ElementCopy = document.querySelector(classCopyied);
 
@@ -483,16 +128,18 @@ function Copyied(element, classCopyied) {
       let span = document.createElement("span");
       span.className = "message_copytied";
 
-      span.innerText = "Copy thành công";
+      span.innerText = "Copied";
       element.appendChild(span);
 
       let stTimeOut = setTimeout(() => {
+        clearTimeout(stTimeOut);
         span.style.transition = "all .4s ease";
         span.style.opacity = "0";
         span.style.overflow = "hidden";
       }, 2000);
 
       let removeSpan = setTimeout(() => {
+        clearTimeout(removeSpan);
         span.remove();
       }, 2500);
     };
@@ -565,54 +212,6 @@ function getDatLocation(array) {
   });
 }
 
-function scrollHeader(classSildBar, classContent, classHeader) {
-  function getStyleNumber(element, attri) {
-    let text = window.getComputedStyle(element).getPropertyValue(attri);
-    var number = text.match(/\d/g);
-    number = number.join("");
-
-    return parseInt(number);
-  }
-
-  let sliderBar = document.querySelector(classSildBar);
-  let content = document.querySelector(classContent);
-  let header = document.querySelector(classHeader);
-
-  if (sliderBar && content && header) {
-    let widthBody = document.body.clientWidth;
-    let widthSliderBar = sliderBar.offsetWidth;
-    // let widthContent = content.offsetWidth;
-    let pdLeft = getStyleNumber(content, "padding-left");
-    let pdRight = getStyleNumber(content, "padding-right");
-    let topContent = getStyleNumber(content, "padding-top");
-    let heightHeader = header.clientHeight;
-    let NewPdTop = topContent + heightHeader;
-
-    content.style.paddingTop = `${NewPdTop}px`;
-
-    header.style.position = "fixed";
-    header.style.zIndex = "99";
-    header.style.right = `${pdRight}px`;
-    header.style.left = `${widthSliderBar + pdLeft}px`;
-    header.style.top = `${topContent}px`;
-    header.style.width = `${widthBody - widthSliderBar - pdLeft - pdRight}px`;
-
-    function ScrollFixed() {
-      let top = header.offsetTop;
-      let maxTop = heightHeader + top;
-      let y = window.pageYOffset;
-
-      if (y > maxTop) {
-        header.style.top = `0px`;
-      } else {
-        header.style.top = `${topContent}px`;
-      }
-    }
-
-    window.addEventListener("scroll", ScrollFixed);
-  }
-}
-
 function randomString(classElement, elementPush, maxLength) {
   let elementClick = document.querySelector(classElement);
   let elementPushs = document.querySelector(elementPush);
@@ -640,20 +239,6 @@ function randomString(classElement, elementPush, maxLength) {
   }
 }
 
-function closeResertValue(classResert, addClassAv) {
-  let Elem = document.querySelector(classResert);
-
-  if (Elem) {
-    $(Elem)
-      .children("input")
-      .each((index, element) => {
-        $(element).val("");
-      });
-
-    $(Elem).addClass(addClassAv);
-  }
-}
-
 function linkSelector(selector) {
   let cate_375 = document.querySelector(selector);
   if (cate_375) {
@@ -669,92 +254,53 @@ function linkSelector(selector) {
   }
 }
 
-function changeFile(classEl) {
-  let el = document.querySelector(classEl);
-  let label = document.querySelector('label[for="img_project"]');
-  let img = document.querySelector(".view_img img");
-  let url = [];
-  if (el) {
-    el.onchange = function () {
-      if (url.length > 0) {
-        url.forEach((u) => {
-          URL.revokeObjectURL(u);
-          url.shift();
-        });
+function handle_show_popup(arrays) {
+  function singleContent(array) {
+    let element = document.querySelector(array.className);
+    if (element) {
+      if (array.arr === "") {
+        element.innerHTML = array.noidung;
+      } else {
+        element.setAttribute(array.arr, array.noidung);
       }
-      let urlF = URL.createObjectURL(el.files[0]);
-      url.push(urlF);
-      label.innerText = "Thay đổi ảnh";
-      img.setAttribute("src", URL.createObjectURL(el.files[0]));
+    }
+  }
+  if (Array.isArray(arrays)) {
+    if (arrays.length > 1) {
+      for (let i = 0; i < arrays.length; i++) {
+        singleContent(arrays[i]);
+      }
+    } else {
+      singleContent(arrays[0]);
+    }
+  }
+}
+// job 3s
+
+// ẩn hiện type password
+function eyeChange(selector, selectorInput, classEye) {
+  let btn = document.querySelector(selector);
+  let input = document.querySelector(selectorInput);
+  if (btn && input) {
+    let isClick = false;
+    btn.onclick = () => {
+      if (!isClick) {
+        input.type = "text";
+        isClick = true;
+        btn.classList.add(classEye);
+      } else {
+        input.type = "password";
+        isClick = false;
+        btn.classList.remove(classEye);
+      }
     };
   }
 }
 
-function checkMenuNavigte(object) {
-  let { classListParent, classAcitve, navigate } = object;
-
-  if (classListParent) {
-    let parentNavi = document.querySelector(classListParent);
-
-    if (parentNavi) {
-      let children = parentNavi.querySelectorAll(".khoidanhmuccon");
-      let span = parentNavi.querySelector(".border_sc");
-
-      let leftEl = children[0].offsetLeft;
-      let widthEl = children[0].offsetWidth;
-      let widSpan = span.offsetWidth;
-      let wchange = (widthEl - widSpan) / 2;
-      let parentW = parentNavi.offsetWidth;
-      let childrenW = 0;
-
-      span.style.left = `${leftEl + wchange}px`;
-      children[0].classList.add(classAcitve);
-
-      for (let i = 0; i < children.length; i++) {
-        childrenW += children[i].offsetWidth;
-        if (childrenW > parentW) {
-          console.log(children[0]);
-          let top = children[0].offsetTop;
-          let heightEl = children[0].offsetHeight;
-          let hSan = span.offsetHeight;
-          let topS = top + heightEl - hSan;
-
-          span.style.top = `${topS}px`;
-        }
-      }
-
-      children.forEach((e, index) => {
-        // childrenW += e.offsetWidth;
-        e.onclick = () => {
-          let { listParentTb, classViews, classViewActive } = navigate[index];
-          leftEl = e.offsetLeft;
-          widthEl = e.offsetWidth;
-          widSpan = span.offsetWidth;
-          wchange = (widthEl - widSpan) / 2;
-          if (childrenW > parentW) {
-            let top = e.offsetTop;
-            let heightEl = e.offsetHeight;
-            let hSan = span.offsetHeight;
-            let topS = top + heightEl - hSan;
-
-            span.style.top = `${topS}px`;
-          }
-          span.style.left = `${leftEl + wchange}px`;
-
-          activeChangeTable(
-            e,
-            classListParent,
-            classAcitve,
-            listParentTb,
-            classViews,
-            classViewActive
-          );
-        };
-      });
-    }
-  }
+function validateEmail(email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  return emailReg.test(email);
 }
-
 function AddAppendEl(object, addEventChil = () => {}) {
   let { classEvent, callBack, parentTB, classTable, elementAppen, cloneInput, notFirst} = object;
   let parent = document.querySelector(parentTB);
@@ -787,5 +333,204 @@ function AddAppendEl(object, addEventChil = () => {}) {
         addEventChil(indexCl, appenE, cloneNew ,nodeCloneFile);
       };
     }
+function viewPopup(selector) {
+  let elm = document.querySelector(selector);
+
+  if (elm) {
+    elm.classList.remove("hidden");
+  }
+  return "";
+}
+
+function viewAndClosePopupUpdate(
+  idPopup,
+  selectorChild,
+  close_popup,
+  selectCancel,
+  resertForm
+) {
+  viewPopup(idPopup, "hidden");
+  let infor_menu = document.querySelector(idPopup);
+  let box_popup_infor_menu = infor_menu.querySelector(selectorChild);
+  let elmClose = infor_menu.querySelector(close_popup);
+  let cancel = infor_menu.querySelector(selectCancel);
+  let elementForm = infor_menu.querySelector(resertForm);
+
+  if (infor_menu) {
+    if (elmClose) {
+      elmClose.onclick = () => {
+        clearAmintions();
+        resertForm(elementForm);
+      };
+    }
+
+    if (cancel) {
+      cancel.onclick = () => {
+        clearAmintions();
+        resertForm(elementForm);
+      };
+    }
+
+    function hiddenOverlay(e) {
+      // lấy vị trí của thẻ
+      let minY = box_popup_infor_menu.offsetTop;
+      let minX = box_popup_infor_menu.offsetLeft;
+      let maxY = parseInt(box_popup_infor_menu.clientHeight) + minY;
+      let maxX = parseInt(box_popup_infor_menu.clientWidth) + minX;
+
+      // vị trí con trỏ chuột
+      let tro_x = e.x;
+      let tro_y = e.y;
+
+      if (!(tro_x >= minX && tro_x <= maxX && tro_y >= minY && tro_y <= maxY)) {
+        clearAmintions();
+        resertForm(elementForm);
+        return false;
+      }
+    }
+
+    function clearAmintions() {
+      infor_menu.removeEventListener("click", hiddenOverlay);
+      box_popup_infor_menu.classList.add("animation_zoom_out");
+      box_popup_infor_menu.addEventListener("animationend", clearAmintion);
+
+      function clearAmintion() {
+        box_popup_infor_menu.classList.remove("animation_zoom_out");
+        infor_menu.classList.add("hidden");
+        box_popup_infor_menu.removeEventListener("animationend", clearAmintion);
+      }
+    }
+
+    function resertForm(element) {
+      if (element) {
+        element.reset();
+        let fiels = element.querySelectorAll("select[name]");
+        if (fiels) {
+          fiels.forEach((e) => {
+            $(e).val(null).trigger("change");
+          });
+        }
+      }
+    }
+    infor_menu.addEventListener("click", hiddenOverlay);
+  }
+
+  return {
+    infor_menu,
+    box_popup_infor_menu,
+    elmClose,
+    cancel,
+  };
+}
+
+function DropFiles(elementFiles, callBack = () => {}) {
+  if (elementFiles) {
+    elementFiles.ondrop = function (e) {
+      e.preventDefault();
+      elementFiles.classList.remove('move_file');
+      let files = e.dataTransfer.files[0];
+      callBack(files);
+    };
+
+    elementFiles.ondragover = function (e) {
+      e.preventDefault();
+      elementFiles.classList.add('move_file');
+    };
+
+    elementFiles.ondragleave = function (e) {
+      e.preventDefault();
+      elementFiles.classList.remove('move_file');
+    };
+  }
+}
+
+function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
+  let files_input = document.querySelectorAll(inputFile);
+  let { selecter, isTypeFileVaild, isMaxSize, isDropFile, customMessType, customMessSize,appendError ,isAppenError, classErorr} = dropFiles;
+  let isError = false;
+  let placeholder;
+  if (files_input) {
+    function handelFiles(elemeApp, close, files) {
+      if (elemeApp) {
+        if (files) {
+          let elemError = null;
+          let parentE =  document.querySelector(appendError);
+          let errorE = parentE.querySelector(`.${classErorr}` || '.isvalid');
+
+          if(isAppenError&&errorE==null) {
+            elemError = document.createElement('span');
+            elemError.className = classErorr || 'isvalid';
+          } else {
+            elemError = errorE;
+          }
+          if(isTypeFileVaild) {
+            let type = files.type;
+            type = type.split('/')[1];
+
+            if(!isTypeFileVaild.includes(type)) {
+              isError = true;
+              if(elemError)  elemError.innerText = typeof customMessType === 'function'? customMessType (files, isTypeFileVaild):'file không hợp lệ';
+            } else {
+              isError = false;
+            }
+          }
+
+          if(!isError&&isMaxSize) {
+            let size = files.size;
+            if(size > isMaxSize) {
+              isError = true;
+              if(elemError)  elemError.innerText = typeof customMessSize === 'function'? customMessSize (files, isMaxSize):`file vượt qua giới hạn cho phép`;
+            } else {
+              isError = false;
+            }
+          }
+
+          if(isError&&elemError) {
+            if(errorE==null) parentE.appendChild(elemError);
+            return;
+          } else {
+            if(errorE) {
+              parentE.removeChild(elemError);
+            }
+          }
+          placeholder = files.name;
+          close.dataset.file = 0;
+          close.classList.remove("d_none");
+        } else {
+          placeholder = elemeApp.dataset.placeholder || "Chưa có files nào";
+          close.classList.add("d_none");
+        }
+        elemeApp.innerText = placeholder;
+        close.onclick = () => {
+          elemeApp.innerText =
+            elemeApp.dataset.placeholder || "Chưa có files nào";
+          close.classList.add("d_none");
+          close.onclick = () => {};
+        };
+      }
+    }
+
+    Array.from(files_input).forEach((e) => {
+      e.addEventListener('change',() => {
+        let parent = e.parentElement;
+        let elemeApp = parent.querySelector(selectorAppend);
+        let close = parent.querySelector(seletClose);
+        let files = e.files[0];
+
+        handelFiles(elemeApp, close, files)
+      });
+
+      if (selecter&&isDropFile==true) {
+        let elemeElem = document.querySelector(selecter);
+
+        if (elemeElem) {
+          let elemeApp =  elemeElem.querySelector(selectorAppend);
+          let close = elemeElem.querySelector(seletClose);
+          DropFiles(elemeElem, (files) => {
+            handelFiles(elemeApp, close, files)
+          });
+        }
+      }
+    });
   }
 }
