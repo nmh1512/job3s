@@ -439,6 +439,41 @@ input[readonly]{background: #ffffff;}
 .container_radio input:checked ~ .checkmark:after{display:block}
 .choose_contact {margin-left: 46px;}
 .xacthuc_header {padding: 24px 68px;}
+
+div[role="progressbar"]::before {
+  display: none;
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+div[role="progressbar"] {
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+  /* position: absolute; */
+  height: 50px !important;
+  width: 50px !important;
+  /* --size: 12rem; */
+  --fg: #007580;
+  --bg: #DCDCDC;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  /* display: grid; */
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+  /* right: 29px; */
+}
 .mt_48{margin-top: 48px;}
   div[role="progressbar"] span {
     transform: scale(-1, 1);

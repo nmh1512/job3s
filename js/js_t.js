@@ -301,38 +301,7 @@ function validateEmail(email) {
   var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   return emailReg.test(email);
 }
-function AddAppendEl(object, addEventChil = () => {}) {
-  let { classEvent, callBack, parentTB, classTable, elementAppen, cloneInput, notFirst} = object;
-  let parent = document.querySelector(parentTB);
 
-  if (parent) {
-    let nodeEv = parent.querySelector(classEvent);
-    let tableApp = parent.querySelector(classTable);
-
-    if (nodeEv && tableApp) {
-      let appenE = tableApp.querySelector(elementAppen);
-      let clone = appenE.children[0].cloneNode(true);
-      if(notFirst) {
-        appenE.removeChild(appenE.children[0]);
-      } else {
-        let childrenEl = [...appenE.children];
-        childrenEl.forEach((e, index)=>{
-          addEventChil(index, appenE, e);
-        })
-      }
-
-      nodeEv.onclick = function () {
-        let childrenBd = [...appenE.children];
-        let indexCl = childrenBd.length;
-        let cloneNew = callBack(indexCl, clone);
-        let nodeCloneFile;
-        if(cloneInput) {
-          nodeCloneFile = cloneInput(cloneNew);
-        }
-        appenE.appendChild(cloneNew);
-        addEventChil(indexCl, appenE, cloneNew ,nodeCloneFile);
-      };
-    }
 function viewPopup(selector) {
   let elm = document.querySelector(selector);
 
