@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/slick.css" />
   <link rel="stylesheet" href="../css/slick-theme.css" />
   <link rel="stylesheet" href="../css/style_h.css" />
-  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="../js/scrollreveal.min.js"></script>
 </head>
 
 <body>
@@ -38,14 +38,14 @@
             <li class="login">
               <a href="">Đăng nhập</a>
             </li>
-            <li class="sign_in">
+            <li class="sign_in show_popup_choose" onclick="show_popup_choose(this)">
               Đăng ký
-              <div class="signin_choose">
-                <a href="" class="candicate_signin d_flex align_c">
+              <div class="popup_choose">
+                <a href="" class="popup_choose_top d_flex align_c">
                   <img src="../images/avartar_green.png" alt="" />
                   <p>Ứng viên</p>
                 </a>
-                <a href="" class="employer_signin d_flex align_c">
+                <a href="" class="popup_choose_bot d_flex align_c">
                   <img src="../images/bag_green.png" alt="" />
                   <p>Nhà tuyển dụng</p>
                 </a>
@@ -106,7 +106,7 @@
       </div>
     </div>
   </header>
-  <section>
+  <section class="tile">
     <div class="download_container d_flex align_c space_b">
       <div>
         <img src="../images/two_mobiles.svg" alt="" />
@@ -122,31 +122,31 @@
           <div class="text_c">
             <img src="../images/app_qr.svg" alt="" />
             <div class="url_download">
-              <a class="d_flex align_c flex_center" href="">Tải App tìm việc Job3s</a>
+              <a class="btn_main_color d_flex align_c flex_center" href="">Tải App tìm việc Job3s</a>
             </div>
           </div>
           <div class="text_c">
             <img src="../images/app_qr.svg" alt="" />
             <div class="url_download">
-              <a class="d_flex align_c flex_center" href="">Tải App CV365</a>
+              <a class="btn_main_color d_flex align_c flex_center " href="">Tải App CV365</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section>
+  <section class="tile">
     <div class="new_works">
       <div class="new_works_header">
         <h1 class="main_color">Việc làm mới nhất</h1>
         <p><span>8</span> việc làm mới được đăng ngày hôm nay!</p>
         <div class="list_works d_flex">
           <a class="active_work" href="">Tất cả</a>
-          <a href="">Bất động sản</a>
-          <a href="">Kinh doanh</a>
-          <a href="">Bảo hiểm</a>
-          <a href="">IT</a>
-          <a href="">Nhân sự</a>
+          <a class="" href="">Bất động sản</a>
+          <a class="" href="">Kinh doanh</a>
+          <a class="" href="">Bảo hiểm</a>
+          <a class="" href="">IT</a>
+          <a class="" href="">Nhân sự</a>
         </div>
       </div>
       <div class="new_works_content_container">
@@ -155,7 +155,7 @@
           for ($i = 0; $i < 40; $i++) {
           ?>
 
-            <div class="new_works_content_item">
+            <div class="new_works_content_item ">
               <div>
                 <div class="new_works_content_item_top d_flex">
                   <img src="../images/img_logo.svg" alt="">
@@ -180,7 +180,7 @@
           }
           ?>
         </div>
-        <div class="see_all_container">
+        <div class="see_all_container ">
           <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
         </div>
       </div>
@@ -188,62 +188,279 @@
     </div>
 
   </section>
-  <section>
+  <section class="tile">
     <div class="banner_middle_1 d_flex">
       <div class="banner_middle_1_cv ">
-        <div class="banner_create_cv banner_cv d_flex box_shadow">
-          <div class="banner_create_cv_text">
-            <h2 class="main_color">Tạo CV online ấn tượng</h2>
-            <p>Job3s hiện có 1000+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề.</p>
-            <a href="">Tạo CV ngay</a>
+        <div class="banner_create_cv banner_cv d_flex box_shadow space_b ">
+          <div class="banner_cv_text">
+            <h2 class="main_color mb_15 font_s22">Tạo CV online ấn tượng</h2>
+            <p class="mb_30">Job3s hiện có 1000+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề.</p>
+            <a href="" class="btn_main_color">Tạo CV ngay</a>
           </div>
-          <div class="banner_create_cv_img">
+          <div class="banner_create_cv_img d_flex align_c">
             <img src="../images/cv.svg" alt="">
           </div>
         </div>
-        <div class="banner_upload_cv banner_cv d_flex box_shadow">
-          <div class="banner_upload_cv_text">
-            <h2 class="main_color">Sử dụng CV sẵn có để tìm việc</h2>
-            <p>Cách đơn giản để bắt đầu tìm việc làm tại Job3s, Nhà tuyển dụng sẽ nhìn thấy CV bạn đã tải lên.</p>
-            <a href="">Tải lên CV của bạn</a>
+        <div class="banner_upload_cv banner_cv d_flex box_shadow space_b ">
+          <div class="banner_cv_text">
+            <h2 class="main_color mb_15 font_s22">Sử dụng CV sẵn có để tìm việc</h2>
+            <p class="mb_30">Cách đơn giản để bắt đầu tìm việc làm tại Job3s, Nhà tuyển dụng sẽ nhìn thấy CV bạn đã tải lên.</p>
+            <a href="" class="btn_main_color">Tải lên CV của bạn</a>
           </div>
-          <div class="banner_upload_cv_img">
-            <img src="../images/upload_big.svg" alt="">
-            <img src="../images/cv1.svg" alt="">
+          <div class="banner_upload_cv_img position_r">
+            <img src="../images/upload_big.svg" alt="" class="position_a img_uploadbig">
+            <img src="../images/cv1.svg" alt="" class="position_a img_cv">
           </div>
         </div>
       </div>
-      <div class="banner_middle_1_chat box_shadow">
+      <div class="banner_middle_1_chat box_shadow ">
         <div class="banner_middle_1_chat_header">
-          <h2>Chat với nhà tuyển dụng</h2>
+          <h2 class="font_s22 main_color">Chat với nhà tuyển dụng</h2>
         </div>
         <div class="banner_middle_1_chat_content">
-          <div class="d_flex">
+          <div class="d_flex chat_search align_c flex_center">
             <input type="text" placeholder="Nhập tên nhà tuyển dụng">
-            <div class="btn_search">
-              <img src="../images/search.png" alt="">
+            <div class="btn_search d_flex align_c flex_center cursor_p">
+              <img src="../images/search_white.svg" alt="">
             </div>
           </div>
-          <? for ($i = 0; $i < 20; $i++) { ?>
-            <div class="banner_middle_1_chat_content_text">
-              <div class="banner_middle_1_chat_content_text_item d_flex">
-                <div class="banner_middle_1_chat_content_text_item_img">
-                  <img src="../images/logo_circle.svg" alt="">
-                  <img src="../images/online_dot.svg" alt="">
-                </div>
-                <div>
-                  <h4>Công ty Cổ phần Thanh toán Hưng Hà</h4>
-                  <p>Hồ Chí Minh</p>
+          <div class="banner_middle_1_chat_content_text_container">
+            <? for ($i = 0; $i < 20; $i++) { ?>
+              <div class="banner_middle_1_chat_content_text">
+                <div class="banner_middle_1_chat_content_text_item d_flex">
+                  <div class="banner_middle_1_chat_content_text_item_img position_r">
+                    <img src="../images/logo_circle.svg" alt="">
+                    <img src="../images/online_dot.svg" alt="" class="position_a img_online">
+                  </div>
+                  <div class="pd_l_10 chat_company_info">
+                    <h4 class="pb_5px">Công ty Cổ phần Thanh toán Hưng Hà</h4>
+                    <p>Hồ Chí Minh</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          <? } ?>
+            <? } ?>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
-  <a class="back_to_top"><img src="../images/back_to_top.svg" alt="" /></a>
-  <div class="chat_btn d_flex align_c flex_center cursor_p">Trực tuyến</div>
+  <section class="tile">
+    <div class="new_works">
+      <div class="new_works_header ">
+        <h1 class="main_color">Việc làm hấp dẫn</h1>
+        <p><span>8</span> việc làm mới được đăng ngày hôm nay!</p>
+        <div class="list_works d_flex">
+          <a class="active_work " href="">Tất cả</a>
+          <a class="" href="">Bất động sản</a>
+          <a class="" href="">Kinh doanh</a>
+          <a class="" href="">Bảo hiểm</a>
+          <a class="" href="">IT</a>
+          <a class="" href="">Nhân sự</a>
+        </div>
+      </div>
+      <div class="new_works_content_container">
+        <div class="new_works_content d_flex">
+          <?
+          for ($i = 0; $i < 40; $i++) {
+          ?>
+
+            <div class="new_works_content_item ">
+              <div>
+                <div class="new_works_content_item_top d_flex">
+                  <img src="../images/img_logo.svg" alt="">
+                  <div class="content_job">
+                    <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                    <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    <div class="d_flex space_b">
+                      <span>Hạn nộp: 30/04/2022</span>
+                      <a href="">Chat</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="info_job d_flex mt_15">
+                  <div class="info_job_location">Hà Nội</div>
+                  <div class="info_job_offer">10 -16 triệu</div>
+                </div>
+                <img class="img_flag" src="../images/flag.svg" alt="">
+              </div>
+
+            </div>
+          <?
+          }
+          ?>
+        </div>
+        <div class="see_all_container ">
+          <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="tile">
+
+    <div class="post_news position_r ">
+      <div class="post_news_container d_flex flex_end">
+        <div class="bg_dangtin d_flex flex_end">
+          <div class="bg_dangtin_text">
+            <h1 class="main_color">Đăng tin tuyển dụng miễn phí</h1>
+            <ul>
+              <div class="d_flex">
+                <li>Đăng tin tuyển dụng dễ dàng, không quá 1 phút.</li>
+              </div>
+              <div class="d_flex">
+                <li>Tiếp cận nguồn CV ứng viên khổng lồ, tìm kiếm ứng viên từ kho dữ liệu hơn 1 triệu hồ sơ.</li>
+              </div>
+              <div class="d_flex">
+                <li>Tùy chỉnh các tiêu chí tìm kiếm ứng viên tài năng theo mong muốn: ngành nghề, vị trí tuyển dung, địa điểm làm việc, tính cách ứng viên.</li>
+              </div>
+              <div class="d_flex">
+                <li>Tiết kiệm thời gian tuyển dụng nhân sự.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img src="../images/img_dangtin.svg" alt="" class="position_a img_dangtin">
+      <div class="d_flex align_c flex_center btn_dangtin">
+        <a href="" class="btn_main_color d_flex align_c flex_center">Bắt đầu ngay</a>
+      </div>
+    </div>
+  </section>
+  <section class="tile">
+    <div class="new_works">
+      <div class="new_works_header ">
+        <h1 class="main_color">Việc làm lương cao</h1>
+        <p><span>8</span> việc làm mới được đăng ngày hôm nay!</p>
+        <div class="list_works d_flex">
+          <a class="active_work " href="">Tất cả</a>
+          <a class="" href="">Bất động sản</a>
+          <a class="" href="">Kinh doanh</a>
+          <a class="" href="">Bảo hiểm</a>
+          <a class="" href="">IT</a>
+          <a class="" href="">Nhân sự</a>
+        </div>
+      </div>
+      <div class="new_works_content_container">
+        <div class="new_works_content d_flex">
+          <?
+          for ($i = 0; $i < 40; $i++) {
+          ?>
+
+            <div class="new_works_content_item ">
+              <div>
+                <div class="new_works_content_item_top d_flex">
+                  <img src="../images/img_logo.svg" alt="">
+                  <div class="content_job">
+                    <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                    <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    <div class="d_flex space_b">
+                      <span>Hạn nộp: 30/04/2022</span>
+                      <a href="">Chat</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="info_job d_flex mt_15">
+                  <div class="info_job_location">Hà Nội</div>
+                  <div class="info_job_offer">10 -16 triệu</div>
+                </div>
+                <img class="img_flag" src="../images/flag.svg" alt="">
+              </div>
+
+            </div>
+          <?
+          }
+          ?>
+        </div>
+        <div class="see_all_container  ">
+          <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="tile">
+    <div class="news">
+      <div class="news_header ">
+        <h1 class="main_color">Tin tức tuyển dụng</h1>
+        <p>Tin tức tuyển dụng và sự kiện mới nhất!</p>
+
+      </div>
+      <div class="news_content_container">
+        <div class="news_content d_flex">
+          <?
+          for ($i = 0; $i < 9; $i++) {
+          ?>
+            <div class="news_content_item ">
+              <div class="news_img">
+                <img src="../images/logo.svg" alt="">
+              </div>
+              <div class="news_content_text">
+                <div class="info_news d_flex space_b">
+                  <div class="writer">Nguyễn Hoàng Anh</div>
+                  <div class="date">13/03/2022</div>
+                </div>
+                <h4 class="mt_16 main_color">Hướng Dẫn Viết Mẫu Đơn Xin Nghỉ Việc Của Giáo Viên Chuẩn Nhất.</h4>
+                <p class="mt_12 txt_justify">Mẫu đơn xin nghỉ việc của giáo viên là mẫu đơn dành cho giáo viên có ý định nghỉ việc. Dù nghề giáo viên giáo viên có ý định nghỉ việc dù nghề ...</p>
+                <a href="" class="read_more_news d_flex align_c flex_center main_color see_all m-0">Đọc thêm</a>
+              </div>
+            </div>
+
+          <?
+          }
+          ?>
+        </div>
+        <div class="see_all_container ">
+          <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="tile">
+    <div class="customer">
+      <div class="customer_header ">
+        <h1 class="main_color">Ý kiến khách hàng</h1>
+        <p>Sự hài lòng của bạn là vinh hạnh của chúng tôi!</p>
+
+      </div>
+      <div class="customer_content_container">
+        <div class="customer_content d_flex">
+          <?
+          for ($i = 0; $i < 9; $i++) {
+          ?>
+            <div class="customer_item ">
+              <div class="customer_avt d_flex align_c flex_center">
+                <img src="../images/customer1.png" alt="">
+              </div>
+              <div class="customer_item_text txt_center">
+                <p>Mẫu CV khá đẹp, mình đã tạo rất nhanh, file pdf in ra nét. CV xin việc của Job3s bát ngát vậy, chẳng lo đụng hàng. Thanks các bạn!</p>
+                <img src="../images/5stars.svg" alt="">
+                <div class="info_customer">
+                  <h4 class="main_color">Trần Văn Long</h4>
+                  <p>IT phần cứng - mạng</p>
+                </div>
+              </div>
+            </div>
+
+          <?
+          }
+          ?>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <? include "../includes/footer.php" ?>
+
+  <a class="back_to_top"><img class="border_0" src="../images/back_to_top.svg" alt="" /></a>
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/select2.min.js"></script>
   <script type="text/javascript" src="../js/slick.min.js"></script>
@@ -274,46 +491,46 @@
         }, ],
       });
 
-      // $(".registers_container_content").slick({
-      //   infinite: true,
-      //   rows: 4,
-      //   slidesPerRow: 5,
-      //   responsive: [
-      //     {
-      //       breakpoint: 1025,
-      //       settings: {
-      //         slidesPerRow: 4,
-      //         arrows: true,
-      //         dots: true,
-      //         prevArrow:
-      //           "<img class='a-left control-c prev slick-prev img_arrow' src='../images/newImages/arrow-left.png'>",
-      //         nextArrow:
-      //           "<img class='a-right control-c next slick-next img_arrow' src='../images/newImages/arrow-right.png'>",
-      //       },
-      //     },
-      //     {
-      //       breakpoint: 769,
-      //       settings: {
-      //         slidesPerRow: 3,
-      //         arrows: true,
-      //         dots: true,
-      //         prevArrow:
-      //           "<img class='a-left control-c prev slick-prev img_arrow' src='../images/newImages/arrow-left.png'>",
-      //         nextArrow:
-      //           "<img class='a-right control-c next slick-next img_arrow' src='../images/newImages/arrow-right.png'>",
-      //       },
-      //     },
-      //     {
-      //       breakpoint: 481,
-      //       settings: {
-      //         slidesPerRow: 2,
-      //         arrows: false,
+      $(".news_content").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: true,
+        prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
+        nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
+        responsive: [{
+          breakpoint: 481,
+          settings: {
+            dots: false,
+            arrows: false,
+          },
+        }, ],
+      });
 
-      //         dots: true,
-      //       },
-      //     },
-      //   ],
-      // });
+      $(".customer_content").slick({
+        infinite: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+
+        arrows: true,
+        dots: true,
+        prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
+        nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
+        responsive: [{
+          breakpoint: 481,
+          settings: {
+            dots: false,
+            arrows: false,
+          },
+        }, ],
+      });
+    
+    });
+    ScrollReveal().reveal('.tile', {
+      interval: 16,
+      reset: true
     });
   </script>
 </body>
