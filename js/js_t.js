@@ -311,7 +311,13 @@ function viewPopup(selector) {
   return "";
 }
 
-function viewAndClosePopupUpdate(idPopup, selectorChild, close_popup, selectCancel, resertForm) {
+function viewAndClosePopupUpdate(
+  idPopup,
+  selectorChild,
+  close_popup,
+  selectCancel,
+  resertForm
+) {
   viewPopup(idPopup, "hidden");
   let infor_menu = document.querySelector(idPopup);
   let box_popup_infor_menu = infor_menu.querySelector(selectorChild);
@@ -327,11 +333,11 @@ function viewAndClosePopupUpdate(idPopup, selectorChild, close_popup, selectCanc
       };
     }
 
-    if(cancel) {
+    if (cancel) {
       cancel.onclick = () => {
         clearAmintions();
         resertForm(elementForm);
-      }
+      };
     }
 
     function hiddenOverlay(e) {
@@ -365,13 +371,13 @@ function viewAndClosePopupUpdate(idPopup, selectorChild, close_popup, selectCanc
     }
 
     function resertForm(element) {
-      if(element) {
+      if (element) {
         element.reset();
-        let fiels = element.querySelectorAll('select[name]');
-        if(fiels) {
-          fiels.forEach(e => {
+        let fiels = element.querySelectorAll("select[name]");
+        if (fiels) {
+          fiels.forEach((e) => {
             $(e).val(null).trigger("change");
-          })
+          });
         }
       }
     }
@@ -382,38 +388,118 @@ function viewAndClosePopupUpdate(idPopup, selectorChild, close_popup, selectCanc
     infor_menu,
     box_popup_infor_menu,
     elmClose,
-    cancel
+    cancel,
+  };
+}
+
+function DropFiles(elementFiles, callBack = () => {}) {
+  if (elementFiles) {
+    elementFiles.ondrop = function (e) {
+      e.preventDefault();
+      elementFiles.classList.remove('move_file');
+      let files = e.dataTransfer.files[0];
+      callBack(files);
+    };
+
+    elementFiles.ondragover = function (e) {
+      e.preventDefault();
+      elementFiles.classList.add('move_file');
+    };
+
+    elementFiles.ondragleave = function (e) {
+      e.preventDefault();
+      elementFiles.classList.remove('move_file');
+    };
   }
 }
 
-function ChangeFiles (inputFile, selectorAppend, seletClose) {
+function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
   let files_input = document.querySelectorAll(inputFile);
-  if(files_input) {
-    Array.from(files_input).forEach(e=>{
-      e.onchange = () => {
+  let { selecter, isTypeFileVaild, isMaxSize, isDropFile, customMessType, customMessSize,appendError ,isAppenError, classErorr} = dropFiles;
+  let isError = false;
+  let placeholder;
+  if (files_input) {
+    function handelFiles(elemeApp, close, files) {
+      if (elemeApp) {
+        if (files) {
+          let elemError = null;
+          let parentE =  document.querySelector(appendError);
+          let errorE = parentE.querySelector(`.${classErorr}` || '.isvalid');
+
+          if(isAppenError&&errorE==null) {
+            elemError = document.createElement('span');
+            elemError.className = classErorr || 'isvalid';
+          } else {
+            elemError = errorE;
+          }
+          if(isTypeFileVaild) {
+            let type = files.type;
+            type = type.split('/')[1];
+
+            if(!isTypeFileVaild.includes(type)) {
+              isError = true;
+              if(elemError)  elemError.innerText = typeof customMessType === 'function'? customMessType (files, isTypeFileVaild):'file không hợp lệ';
+            } else {
+              isError = false;
+            }
+          }
+
+          if(!isError&&isMaxSize) {
+            let size = files.size;
+            if(size > isMaxSize) {
+              isError = true;
+              if(elemError)  elemError.innerText = typeof customMessSize === 'function'? customMessSize (files, isMaxSize):`file vượt qua giới hạn cho phép`;
+            } else {
+              isError = false;
+            }
+          }
+
+          if(isError&&elemError) {
+            if(errorE==null) parentE.appendChild(elemError);
+            return;
+          } else {
+            if(errorE) {
+              parentE.removeChild(elemError);
+            }
+          }
+          placeholder = files.name;
+          close.dataset.file = 0;
+          close.classList.remove("d_none");
+        } else {
+          placeholder = elemeApp.dataset.placeholder || "Chưa có files nào";
+          close.classList.add("d_none");
+        }
+        elemeApp.innerText = placeholder;
+        close.onclick = () => {
+          elemeApp.innerText =
+            elemeApp.dataset.placeholder || "Chưa có files nào";
+          close.classList.add("d_none");
+          close.onclick = () => {};
+        };
+      }
+    }
+
+    Array.from(files_input).forEach((e) => {
+      e.addEventListener('change',() => {
         let parent = e.parentElement;
         let elemeApp = parent.querySelector(selectorAppend);
         let close = parent.querySelector(seletClose);
         let files = e.files[0];
-        let placeholder;
 
-        if(elemeApp) {
-          if(files) {
-            placeholder = files.name;
-            close.dataset.file = 0;
-            close.classList.remove('d_none')
-          } else {
-            placeholder = elemeApp.dataset.placeholder || 'Chưa có files nào';
-            close.classList.add('d_none')
-          }
-          elemeApp.innerText = placeholder;
-          close.onclick = () =>{
-            elemeApp.innerText = elemeApp.dataset.placeholder || 'Chưa có files nào';
-            close.classList.add('d_none')
-            close.onclick = () => {}
-          }
+        handelFiles(elemeApp, close, files)
+      });
+
+      if (selecter&&isDropFile==true) {
+        let elemeElem = document.querySelector(selecter);
+
+        if (elemeElem) {
+          let elemeApp =  elemeElem.querySelector(selectorAppend);
+          let close = elemeElem.querySelector(seletClose);
+          DropFiles(elemeElem, (files) => {
+            handelFiles(elemeApp, close, files)
+          });
         }
       }
-    })
+    });
   }
 }

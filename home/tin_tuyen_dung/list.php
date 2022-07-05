@@ -137,7 +137,7 @@
                                     <th>Chức năng</th>
                                 </tr>
                             </thead>
-                            <tbody class="tr_wap d_none">
+                            <tbody class="tr_wap">
                                 <?php
                                 $arrTT = [
                                     [
@@ -167,7 +167,7 @@
                                     ]
                                 ];
                                 ?>
-                                <?php for ($i = 0; $i < 1; $i++) :
+                                <?php for ($i = 0; $i < 10; $i++) :
                                     $index = rand(0, count($arrTT) - 1);
                                     $indexs = rand(0, count($att) - 1);
                                 ?>
@@ -186,7 +186,7 @@
                                         <td class="<?= $att[$indexs]['class'] ?>"><?= $att[$indexs]['txt'] ?></td>
                                         <td>Chưa kích hoạt dịch vụ</td>
                                         <td>
-                                            <div class="d_flex align_c cursor_p position_r hove_tc">
+                                            <div class="d_flex align_c cursor_p position_r hove_tc" data-tab="<?= $i ?>" style="width: fit-content">
                                                 <div class="d_flex align_c mr_6">
                                                     <img src="../../images/3_dots_pri.png" alt="">
                                                 </div>
@@ -236,7 +236,7 @@
                             </tbody>
                         </table>
                         <!-- no result -->
-                        <div class="no_result bg_w">
+                        <div class="no_result bg_w " style="display: none;">
                             <div>
                                 <img src="../../images/no_result.png" alt="">
                             </div>
@@ -299,7 +299,6 @@
             $(elem).click((event) => {
                 event.preventDefault();
                 let objectELemet = viewAndClosePopupUpdate('#del_new_td', '.main_popup', '.close_popup', '.cancel', '.form_check')
-                console.log(objectELemet);
             })
         })
 
@@ -311,27 +310,62 @@
             $(elem).click(() => {
                 // lấy element
                 let children = $(elem).children('.popup_more');
-                let tbody = $(elem).parents('.table').children('tbody')
+                let tbody = $(elem).parents('.table').children('tbody');
+                let tabID = $(elem).data('tab');
+                let childrenTab = $(children).attr('data-tab');
 
-                // lấy chiều cao popup
-                let heightChildren = $(children).outerHeight(true);
+                if (children.length <= 0) {
+                    let chilbody = $("body").children(`.popup_more[data-tab=${tabID}]`);
+                    $(chilbody).slideUp("fast", () => {
+                        console.log($(chilbody))
+                        let prop = $(chilbody).prop("style");
+                        prop.removeProperty("display");
+                        prop.removeProperty("top");
+                        prop.removeProperty("right");
+                        $(chilbody).appendTo($(elem));
+                    });
 
-                // lấy chiều cao thẻ chứa
-                let heightTbody = $(tbody).outerHeight(true);
-                // lấy tạo độ top của thẻ chứa
-                let topTbody = $(tbody).offset().top;
-                // tìm được tọa độ chứa tối đa của thẻ chứa
-                let maxTopTbody = topTbody + heightTbody;
-                // lấy tọa độ của thẻ click
-                let topClick = $(elem).offset().top;
+                } else {
+                    $(children).attr('data-tab', tabID);
+                    $(children).appendTo($('body'));
 
-                let max = (topClick + heightChildren)
+                    let x = $("body").innerWidth();
+                    let y = $("body").innerHeight();
 
-                if (max >= maxTopTbody) {
-                    console.log('Lớn hơn rồi')
+                    // lấy chiều cao popup
+                    let heightChildren = $(children).outerHeight(true);
+
+                    // lấy chiều cao thẻ chứa
+                    let heightTbody = $(tbody).outerHeight(true);
+                    // lấy tạo độ top của thẻ chứa
+                    let topTbody = $(tbody).offset().top;
+                    // tìm được tọa độ chứa tối đa của thẻ chứa
+                    let maxTopTbody = topTbody + heightTbody;
+                    // lấy tọa độ của thẻ click
+                    let topClick = $(elem).offset().top;
+                    let heightClick = $(elem).outerHeight(true);
+                    let leftClick = $(elem).offset().left;
+                    let widthClick = $(elem).outerWidth(true);
+
+                    let rightChild = Math.ceil(x - (leftClick + widthClick));
+
+                    let max = (topClick + heightChildren)
+
+                    if (max >= maxTopTbody) {
+                        $(children).css({
+                            'top': `${topClick - heightChildren - 10}px`,
+                            'right': `${rightChild}px`
+                        });
+                    } else {
+                        $(children).css({
+                            'top': `${topClick + heightClick + 10}px`,
+                            'right': `${rightChild}px`
+                        });
+                    }
+
+                    $(children).slideDown("fast")
                 }
 
-                $(children).slideToggle(300)
             })
         })
     </script>
