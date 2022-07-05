@@ -1,30 +1,42 @@
-    RewriteEngine On    
-    RewriteBase /   
+RewriteEngine On    
+RewriteBase /   
 
-    #order deny,allow
-    #deny from all
-    #allow from 14.162.144.184
-    #allow from 118.70.126.231
-    #allow from 27.3.179.20
-    #allow from 123.24.206.25
-    #allow from 43.239.223.157
-    #allow from 43.239.223.187
-    #allow from 43.239.223.60
-    #allow from 210.245.75.51
-    #allow from 14.248.82.205
-    #allow from 118.70.126.138
-    #allow from 14.232.208.241
+#order deny,allow
+#deny from all
+#allow from 14.162.144.184
+#allow from 118.70.126.231
+#allow from 27.3.179.20
+#allow from 123.24.206.25
+#allow from 43.239.223.157
+#allow from 43.239.223.187
+#allow from 43.239.223.60
+#allow from 210.245.75.51
+#allow from 14.248.82.205
+#allow from 118.70.126.138
+#allow from 14.232.208.241
 
-    RewriteBase /
-    RewriteRule  ^$ home/index.php
-    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteBase /
+RewriteRule  ^$ home/index.php
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-    <IfModule mod_rewrite.c>
-        #RewriteEngine On 
-        #RewriteCond %{HTTPS} off
-        #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-        #RewriteCond %{HTTP_HOST} www\.(.+)$ [NC]
-        #RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-    </IfModule>
+<IfModule mod_rewrite.c>
+    #RewriteEngine On 
+    #RewriteCond %{HTTPS} off
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    #RewriteCond %{HTTP_HOST} www\.(.+)$ [NC]
+    #RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
 
+RewriteRule ^cai-dat.html$ /home/tk_ntd/cai_dat/cai_dat.php [NE,L]
+RewriteRule ^dich-vu-tuyen-dung.html$ /home/tk_ntd/ql_ntd/dich_vu.php [NE,L]
+RewriteRule ^tin-tuyen-dung.html$ /home/tk_ntd/ql_ntd/chitiet_tuyendung.php [NE,L]
+RewriteRule ^cv-ho-tro.html$ /home/tk_ntd/ql_ntd/cv_hotro.php [NE,L]
+RewriteRule ^cv-ung-tuyen.html$ /home/tk_ntd/ql_ntd/list_cv_ungtuyen.php [NE,L]
+RewriteRule ^thong-ke-tuyen-dung.html$ /home/tk_ntd/ql_ntd/thong_ke.php [NE,L]
+RewriteRule ^danh-sach-ung-vien.html$ /home/tk_ntd/ds_ungvien/list_ungvien.php [NE,L]
+RewriteRule ^dich-vu-dang-chay.html$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php [NE,L]
+RewriteRule ^dich-vu-het-han.html$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
+RewriteRule ^chuyen-vien-cskh.html$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
+
+RewriteRule ^chi-tiet-ung-vien.html$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]
