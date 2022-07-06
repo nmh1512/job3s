@@ -107,4 +107,11 @@ RewriteRule ^viec-lam-da-luu/$ /home/viec_lam_da_ung_tuyen/vl_da_luu.php [NE,L]
 #ngành nghề tình thành
 RewriteRule ^nganh-nghe-tinh-thanh/$ /home/nganh_nghe_tinh_thanh/nganh_nghe_tt.php [NE,L]
 
+#
+RewriteRule ^tin-tuyen-dung/chi-tiet-tin-tuyen-dung.html$ /home/tin_tuyen_dung/details_uv.php [NE,L]
+
+#
+RewriteRule ^chi-tiet-ung-vien-ntd.html$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
+
+
 

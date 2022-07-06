@@ -397,7 +397,6 @@ function DropFiles(elementFiles, callBack = () => {}) {
     elementFiles.ondrop = function (e) {
       e.preventDefault();
       elementFiles.classList.remove('move_file');
-      console.log(e.dataTransfer);
       let files = e.dataTransfer.files[0];
       callBack(files);
     };
@@ -502,5 +501,66 @@ function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
         }
       }
     });
+  }
+}
+
+function navigatePopup ({
+  controllList,
+  navigateContentList,
+  defaultActive = 0,
+  customDataList = 'navigate',
+  activeControl= 'active_control',
+  activeNavigate = 'active_navigate'
+}) {
+  let controllELem = document.querySelector(controllList)
+  let contentNVList = document.querySelector(navigateContentList)
+  if (defaultActive == ''||typeof defaultActive == 'string') defaultActive = 0; 
+
+  if(controllELem&&contentNVList) {
+    let chilControl = [...controllELem.children];
+    let chilNavigateList = [...contentNVList.children];
+    let mxLeng = chilControl.length - 1;
+    let ix = 0;
+
+    chilControl.forEach((e, index)=>{
+      e.setAttribute(`data-${customDataList}`, index);
+      chilNavigateList[index].setAttribute(`data-${customDataList || 'navigate'}`, index);
+      if(index == defaultActive) {
+        ix = index;
+      }
+      if(mxLeng == index) {
+        acitveContent(chilControl[ix],controllList,chilNavigateList,activeNavigate)
+        ix = null;
+        mxLeng = null;
+      }
+
+      e.onclick = function () {
+        acitveContent(this,controllList,chilNavigateList,activeNavigate);
+      }
+    })
+
+    function acitveContent (element, listControl, elementList, classActiveList) {
+      if(element&&elementList) {
+        let dataID = element.dataset[customDataList]
+        // remove class control
+        clickToggleClass(element, listControl, activeControl)
+
+        elementList.forEach((e) => {
+          let i = e.dataset[customDataList];
+          if(i != dataID) {
+            console.log(e)
+            e.style.display = 'none'
+            if(classActiveList) {
+              if(e.classList.contains(classActiveList)) e.classList.remove(classActiveList)
+            }
+          } else {
+            e.style.display = 'block';
+            if(classActiveList) {
+              if(!(e.classList.contains(classActiveList))) e.classList.add(classActiveList)
+            }
+          }
+        })
+      }
+    }
   }
 }

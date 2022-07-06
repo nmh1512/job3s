@@ -14,7 +14,7 @@
 <body>
     <div id="root">
         <?php include("../../includes/after_header.php") ?>
-        <div class="container mt_90 bg_f5">
+        <div class="container mt_90 bg_f5 pd_b_48">
             <div class="banner_cv h_400 bg_cv">
                 <div class="content_banner wf_tinhthanh">
                     <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm việc làm <span class="cl_oran">Bán hàng</span> trên <span class="cl_oran">toàn quốc</span></h1>
@@ -25,7 +25,7 @@
                             </div>
                             <input type="text" autocomplete="off" name="sl_tuyen" class="sr_tt rs_input ip_lhd pd_t17_b16 flex_1" placeholder="Bán hàng" />
                         </div>
-                        <div class="d_flex align_c w_100 br_5 custom_select w_248 nganh_nghe bg_w">
+                        <div class="d_flex align_c br_5 custom_select w_248 nganh_nghe bg_w">
                             <div class="icon_add_nn d_flex align_c">
                                 <img src="../../images/adrress_icon.png" alt="">
                             </div>
@@ -204,9 +204,9 @@
                         </form>
                     </div>
 
-                    <div class="cv_hot_job drop_sd br_10 mt_24 bg_w">
-                        <h2 class="font_s22 line_h26 font_w700 cl_primary pd_12_20 bg_f5">Chat với nhà tuyển dụng</h2>
-                        <div class="mess_chat">
+                    <div class="mess_job drop_sd br_10 mt_24 bg_w h_504 d_flex flex_column">
+                        <h2 class="font_s22 line_h26 font_w700 cl_primary pd_12_20 bg_f5 br_ltr10">Chat với nhà tuyển dụng</h2>
+                        <div class="mess_chat flex_1">
                             <div class="mess_chat_box pd_20">
                                 <div class="d_flex bg_w br_100 bd_99">
                                     <input type="text" autocomplete="off" name="sl_tuyen" class="pd_tb11_r18_l19 rs_input ip_lhd w_100 pl_se" placeholder="Nhập tên nhà tuyển dụng" />
@@ -217,16 +217,18 @@
                             </div>
                             <div class="list_mess">
                                 <div class="scroll_mess">
-                                    <div class="item_mess">
-                                        <div class="wh_50 br_50pt bd_ee mr_10 position_r">
-                                            <span class="online is_offline"></span>
-                                            <img src="../../images/txv_mau1.png" alt="" class="img_full br_50pt">
+                                    <?php for ($i = 0; $i < 10; $i++) : ?>
+                                        <div class="item_mess">
+                                            <div class="wh_50 br_50pt bd_ee mr_10 position_r">
+                                                <span class="online is_offline"></span>
+                                                <img src="../../images/txv_mau1.png" alt="" class="img_full br_50pt">
+                                            </div>
+                                            <div>
+                                                <span class="font_s16 line_h19 font_w500 cl_a4">Công ty Cổ phần Thanh ...</span>
+                                                <span class="font_s15 line_h18 font_w400 cl_73 block mt_5">Hồ Chí Minh</span>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <span class="font_s16 line_h19 font_w500 cl_a4">Công ty Cổ phần Thanh ...</span>
-                                            <span class="font_s15 line_h18 font_w400 cl_73 block mt_5">Hồ Chí Minh</span>
-                                        </div>
-                                    </div>
+                                    <?php endfor; ?>
                                 </div>
                             </div>
                         </div>
@@ -257,10 +259,10 @@
                                             </div>
 
                                             <div class="item_infor_new">
-                                                <div class="mr_5 w_16h17">
-                                                    <img src="../../images/time_icon.png" alt="date" class="img_full">
+                                                <div class="mr_5 d_flex align_c">
+                                                    <img src="../../images/inbox_green.png" alt="">
                                                 </div>
-                                                <span class="font_s16 line_h19 font_w400 cl_55">Toàn thời gian</span>
+                                                <span class="font_s16 line_h18 font_w400 cl_green">Chat</span>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +274,7 @@
                             </div>
                         <? endfor; ?>
                     </div>
-                    <div class="paging flex_end">
+                    <div class="paging flex_e">
                         <div class="paging_pages">
                             <span>
                                 <div class="d_flex center_center rota_360">
@@ -297,6 +299,7 @@
                 </div>
             </div>
         </div>
+        <? include("../../includes/footer.php") ?>
     </div>
 
     <script src="../../js/jquery-3.4.1.min.js"></script>
