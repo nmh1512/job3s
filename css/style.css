@@ -236,7 +236,7 @@ img {object-fit: cover;}
 .ml_7 {margin-left: 7px;}
 .ml_15 {margin-left: 15px;}
 .ml_39 {margin-left: 39px;}
-.cl_white {color: var(--white);}
+.cl_white {color: var(--white) !important;}
 .pd_5 {padding: 5px;}
 .line_h21 {line-height: 21px;}
 .line_h24 {line-height: 24px;}
@@ -602,7 +602,7 @@ table thead tr th.box_input {
 .popup_img > img{width: 100%; height: 100%; display: block;}
 .main_popup {border-radius: 8px;}
 
-
+textarea{resize: none;}
 
 .footer_container {background: linear-gradient(180deg, #007580 0%, #00464D 85.83%);border-radius: 68px 68px 0px 0px;padding: 50px 68px 48px; color: #ffffff;}
 footer {background: #FAFAFA; padding-top: 55px;}
