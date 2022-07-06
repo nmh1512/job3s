@@ -10,11 +10,15 @@
   <link rel="stylesheet" href="../css/select2.min.css" />
   <link rel="stylesheet" href="../css/slick.css" />
   <link rel="stylesheet" href="../css/slick-theme.css" />
+  <link rel="stylesheet" href="../css/style_t.css" />
   <link rel="stylesheet" href="../css/style_h.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+<?
+    include "../../../includes/after_header.php";
+    include "../../../includes/slider_bar.php"; ?>
   <section>
     <div class="setting_container main_container">
       <div class="info_company box_shadow_after_login">
@@ -170,17 +174,6 @@
       }
     })
   })
-  
-  // $(".form_btns").magnificPopup({
-  //   delegate: "a",
-  //   removalDelay: 500, //delay removal by X to allow out-animation
-  //   callbacks: {
-  //     beforeOpen: function () {
-  //       this.st.mainClass = this.st.el.attr("data-effect");
-  //     },
-  //   },
-  //   midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-  // });
 
 
 </script>

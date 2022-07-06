@@ -397,6 +397,7 @@ function DropFiles(elementFiles, callBack = () => {}) {
     elementFiles.ondrop = function (e) {
       e.preventDefault();
       elementFiles.classList.remove('move_file');
+      console.log(e.dataTransfer);
       let files = e.dataTransfer.files[0];
       callBack(files);
     };

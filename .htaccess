@@ -38,6 +38,7 @@ RewriteRule ^danh-sach-ung-vien.html$ /home/tk_ntd/ds_ungvien/list_ungvien.php [
 RewriteRule ^dich-vu-dang-chay.html$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php [NE,L]
 RewriteRule ^dich-vu-het-han.html$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
 RewriteRule ^chuyen-vien-cskh.html$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
+RewriteRule ^chi-tiet-ung-vien.html$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]
 
 #trang
 
@@ -107,4 +108,3 @@ RewriteRule ^viec-lam-da-luu/$ /home/viec_lam_da_ung_tuyen/vl_da_luu.php [NE,L]
 RewriteRule ^nganh-nghe-tinh-thanh/$ /home/nganh_nghe_tinh_thanh/nganh_nghe_tt.php [NE,L]
 
 
-RewriteRule ^chi-tiet-ung-vien.html$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]

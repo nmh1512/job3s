@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/select2.min.css" />
     <link rel="stylesheet" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/style_t.css" />
     <link rel="stylesheet" href="../css/slick-theme.css" />
     <link rel="stylesheet" href="../css/style_h.css" />
 
@@ -39,6 +40,9 @@
     </script>
   </head>
   <body>
+  <?
+    include "../../../includes/after_header.php";
+    include "../../../includes/slider_bar.php"; ?>
     <section>
       <div class="tuyendung_container main_container">
         <div class="d_flex align_c space_b btn_header_container">

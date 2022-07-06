@@ -10,10 +10,14 @@
   <link rel="stylesheet" href="../css/select2.min.css" />
   <link rel="stylesheet" href="../css/slick.css" />
   <link rel="stylesheet" href="../css/slick-theme.css" />
+  <link rel="stylesheet" href="../css/style_t.css" />
   <link rel="stylesheet" href="../css/style_h.css" />
 </head>
 
 <body>
+  <?
+  include "../../../includes/after_header.php";
+  include "../../../includes/slider_bar.php"; ?>
   <section>
     <div class="main_container">
       <div class="btn_header_container">
@@ -24,112 +28,88 @@
           <h3 class="font_s18">Chuyên viên chăm sóc tài khoản</h3>
         </div>
         <div class="content_container">
-            <div class="content_item d_flex space_b">
-              <div style="width: 37.5%">
-                <h4 class="mb_8">Liên hệ trực tuyến</h4>
-                <p class="txt_justify">
-                  Trong trường hợp khẩn cấp bạn có thắc mắc hoặc cần tư vấn
-                  những vấn đề về dịch vụ, tài khoản nhà tuyển dụng. Vui lòng
-                  liên hệ trực tiếp đến chuyên viên chăm sóc tài khoản nhà tuyển
-                  dụng.
-                </p>
-              </div>
-              <div class="d_flex w50pt">
-                <div class="member_avatar_container position_r">
-                  <img src="../images/doggo.jpg" alt="" class="member_avatar" />
-                  <div class="member_status position_a btn_main_color">
-                    ONLINE
-                  </div>
-                </div>
-                <div class="info_member_cskh">
-                  <div class="d_flex">
-                    <p>Tên NVCS:</p>
-                    <span class="font_s16 font_w500">Trần Dần</span>
-                  </div>
-                  <div class="d_flex">
-                    <p>Hotline:</p>
-                    <span class="font_s16 font_w500">0978 888 888</span>
-                  </div>
-                  <div class="d_flex">
-                    <p>Email liên hệ:</p>
-                    <span class="font_s16 font_w500"
-                      >job3s.nguyenthilananh@gmail.com</span
-                    >
-                  </div>
-                </div>
-              </div>
+          <div class="content_item d_flex space_b">
+            <div style="width: 37.5%">
+              <h4 class="mb_8">Liên hệ trực tuyến</h4>
+              <p class="txt_justify">
+                Trong trường hợp khẩn cấp bạn có thắc mắc hoặc cần tư vấn
+                những vấn đề về dịch vụ, tài khoản nhà tuyển dụng. Vui lòng
+                liên hệ trực tiếp đến chuyên viên chăm sóc tài khoản nhà tuyển
+                dụng.
+              </p>
             </div>
-            <div class="content_item">
-              <div>
-                <h4 class="mb_8">Gửi yêu cầu tư vấn</h4>
-                <p>
-                  Trong trường hợp bạn muốn được nhận tư vấn, giải đáp thông tin
-                  qua địa chỉ email.<br />
-                  Vui lòng nhập thông tin cần tư vấn.
-                </p>
+            <div class="d_flex w50pt">
+              <div class="member_avatar_container position_r">
+                <img src="../images/doggo.jpg" alt="" class="member_avatar" />
+                <div class="member_status position_a btn_main_color">
+                  ONLINE
+                </div>
               </div>
-              <form action="" class="mt_24" style="width: 47%">
-                <div class="div_input w_100">
-                  <label for="" class="font_w500"
-                    >Tiêu đề<span class="color_red">*</span></label
-                  >
-                  <div class="input_container">
-                    <input type="text" placeholder="Bạn đang thắc mắc?" />
-                  </div>
+              <div class="info_member_cskh">
+                <div class="d_flex">
+                  <p>Tên NVCS:</p>
+                  <span class="font_s16 font_w500">Trần Dần</span>
                 </div>
-                <div class="div_input w_100">
-                  <label for="" class="font_w500"
-                    >Nội dung<span class="color_red">*</span></label
-                  >
-                  <div class="input_container">
-                    <textarea
-                      name=""
-                      id=""
-                      cols="30"
-                      rows="5"
-                      placeholder="Nội dung bạn muốn góp ý hoặc yêu cầu"
-                    ></textarea>
-                  </div>
+                <div class="d_flex">
+                  <p>Hotline:</p>
+                  <span class="font_s16 font_w500">0978 888 888</span>
                 </div>
-                <div class="div_input w_100">
-                  <label for="" class="font_w500"
-                    >Họ và tên<span class="color_red">*</span></label
-                  >
-                  <div class="input_container file_container text_c">
-                    <div class="choose_file">
-                      <p class="gray font_w500">Kéo hoặc thả tệp vào đây</p>
-                      <div
-                        class="upload_file_container d_flex align_c flex_center"
-                      >
-                        <label
-                          class="upload_file bg_orange br_5"
-                          for="upload_file"
-                          ><span>Chọn tệp</span></label
-                        >
-                        <input type="file" id="upload_file" />
-                      </div>
-                      <p class="gray">Dung lượng file không vượt quá 5MB!</p>
-                    </div>
-                    <div class="file_name_container position_r display_none">
-                      <p class="text_l" id="file_name"></p>
-                      <img
-                        src="../images/x_red.svg"
-                        alt=""
-                        class="position_a remove_file cursor_p"
-                      />
-                    </div>
-                  </div>
-                  <p>
-                    ( Hỗ trợ tải lên file: GIF, JPEG, JPG, PNG, BMP, DOC, PDF )
-                  </p>
+                <div class="d_flex">
+                  <p>Email liên hệ:</p>
+                  <span class="font_s16 font_w500">job3s.nguyenthilananh@gmail.com</span>
                 </div>
-                <button type="submit" class="mt_24 see_all btn_xacnhan">
-                  Gửi yêu cầu
-                </button>
-              </form>
+              </div>
             </div>
           </div>
-    
+          <div class="content_item">
+            <div>
+              <h4 class="mb_8">Gửi yêu cầu tư vấn</h4>
+              <p>
+                Trong trường hợp bạn muốn được nhận tư vấn, giải đáp thông tin
+                qua địa chỉ email.<br />
+                Vui lòng nhập thông tin cần tư vấn.
+              </p>
+            </div>
+            <form action="" class="mt_24" style="width: 47%">
+              <div class="div_input w_100">
+                <label for="" class="font_w500">Tiêu đề<span class="color_red">*</span></label>
+                <div class="input_container">
+                  <input type="text" placeholder="Bạn đang thắc mắc?" />
+                </div>
+              </div>
+              <div class="div_input w_100">
+                <label for="" class="font_w500">Nội dung<span class="color_red">*</span></label>
+                <div class="input_container">
+                  <textarea name="" id="" cols="30" rows="5" placeholder="Nội dung bạn muốn góp ý hoặc yêu cầu"></textarea>
+                </div>
+              </div>
+              <div class="div_input w_100">
+                <label for="" class="font_w500">Họ và tên<span class="color_red">*</span></label>
+                <div class="input_container file_container text_c">
+                  <div class="choose_file">
+                    <p class="gray font_w500">Kéo hoặc thả tệp vào đây</p>
+                    <div class="upload_file_container d_flex align_c flex_center">
+                      <label class="upload_file bg_orange br_5" for="upload_file"><span>Chọn tệp</span></label>
+                      <input type="file" id="upload_file" />
+                    </div>
+                    <p class="gray">Dung lượng file không vượt quá 5MB!</p>
+                  </div>
+                  <div class="file_name_container position_r display_none">
+                    <p class="text_l" id="file_name"></p>
+                    <img src="../images/x_red.svg" alt="" class="position_a remove_file cursor_p" />
+                  </div>
+                </div>
+                <p>
+                  ( Hỗ trợ tải lên file: GIF, JPEG, JPG, PNG, BMP, DOC, PDF )
+                </p>
+              </div>
+              <button type="submit" class="mt_24 see_all btn_xacnhan">
+                Gửi yêu cầu
+              </button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -188,6 +168,7 @@
   <script src="../js/select2.min.js"></script>
   <script type="text/javascript" src="../js/slick.min.js"></script>
   <script src="../js/js_h.js"></script>
+  <script src="../js/js_t.js"></script>
   <script>
     $("._filter").select2();
     $(".select_popup").select2();
@@ -203,9 +184,8 @@
       var filename = $(this)
         .val()
         .replace(/C:\\fakepath\\/i, "");
-      $("#file_name").html(filename);
-      $(".choose_file").addClass("display_none");
-      $(".file_name_container").removeClass("display_none");
+      getFileName(filename);
+      
     });
 
     $(".remove_file").click(function() {
@@ -213,6 +193,16 @@
       $(".file_name_container").addClass("display_none");
       $(".choose_file").removeClass("display_none");
     });
+
+    function getFileName (filename) {
+      $("#file_name").html(filename);
+      $(".choose_file").addClass("display_none");
+      $(".file_name_container").removeClass("display_none");
+      console.log($('#upload_file')[0].files[0])
+    }
+    // let fileContainer = document.querySelector('.file_container');
+    var fileContainer = $('.file_container')
+    DropFiles(fileContainer, (f) => getFileName(f.name));  
   </script>
 </body>
 

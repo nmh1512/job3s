@@ -475,6 +475,7 @@ input[readonly] {background-color: var(--cl-cc);}
 .main_details_step_mission::-webkit-scrollbar-track,
 .box_main .col_l::-webkit-scrollbar-track,
 
+
 table.table {width: 100%;border-collapse: collapse;border-radius: 10px;box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);background: #FFFFFF;}
 table.table thead tr th {
     background: #EAEAEA;
@@ -600,3 +601,29 @@ table thead tr th.box_input {
 .popup {position: fixed; top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;background-color: rgba(0,0,0,0.5);;display: flex;justify-content:center;align-items:center;}
 .popup_img > img{width: 100%; height: 100%; display: block;}
 .main_popup {border-radius: 8px;}
+
+
+
+.footer_container {background: linear-gradient(180deg, #007580 0%, #00464D 85.83%);border-radius: 68px 68px 0px 0px;padding: 50px 68px 48px; color: #ffffff;}
+footer {background: #FAFAFA; padding-top: 55px;}
+footer h4{font-weight: 500;}
+.footer{width: 100%;}
+.logo_footer{padding-bottom: 31px;}
+.footer_map{width: 33%;}
+.footer_content:first-child img{padding-right: 6px;}
+.footer_content ul li a{color: #ffffff;}
+.footer_content ul li a:hover{text-decoration: underline;}
+.footer_content:nth-child(n+2) li{padding-bottom: 15px;}
+.footer_content:nth-child(n+3) li:last-child{padding-top: 10px; padding-bottom: 0;}
+.footer_content:nth-child(n+3) li:last-child img{padding-left: 5.5px;}
+.footer_list_content {padding-bottom: 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.42); padding-right: 39px;}
+.footer_bottom{padding-top: 32px;}
+.footer_bottom h4 {padding-bottom: 20px;}
+.footer_bottom h4:last-child{padding-bottom: 15px;}
+.chungnhan{margin-bottom: 20px;}
+.url_download_footer a::before{content: url(../images/download_icon_green.svg); height: 16px; vertical-align: middle; padding-right: 6px;}
+.url_download_footer a{margin-top: 24px;border-radius: 100px;height: 42px; color: #005A63; background: #ffffff; font-weight: 500; padding: 0 20px 0 21px;}
+.footer_download{width: 36%;}
+.footer_download p {padding-bottom: 24px; color: #ffffff;}
+.img_footer_contact{width: 18%;}
+.contact_container img {margin-right: 10px;}
