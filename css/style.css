@@ -96,6 +96,7 @@ img {object-fit: cover;}
 .space_b {justify-content: space-between;}
 .flex_start {justify-content: flex-start;}
 .flex_end {justify-content: flex-end;}
+.flex_right {justify-content: right;}
 .flex_center {justify-content: center;}
 .text_a_j {text-align: justify;}
 .text_a_c {text-align: center;}
@@ -236,7 +237,7 @@ img {object-fit: cover;}
 .ml_7 {margin-left: 7px;}
 .ml_15 {margin-left: 15px;}
 .ml_39 {margin-left: 39px;}
-.cl_white {color: var(--white);}
+.cl_white {color: var(--white) !important;}
 .pd_5 {padding: 5px;}
 .line_h21 {line-height: 21px;}
 .line_h24 {line-height: 24px;}
@@ -256,7 +257,7 @@ img {object-fit: cover;}
 .back_blue {background: #4C5BD4;}
 .back_green {background: #11D800;}
 .back_org {background: #FFA800;}
-.back_red {background: #FF3333;}
+.back_red {background: #FF3333 !important;}
 .back_w {background: #ffffff;}
 .back_grey {background: #474747;}
 .back_grey2 {background: #EBEEF5;}
@@ -303,7 +304,7 @@ img {object-fit: cover;}
 .pd_b_30 {padding-bottom: 30px;}
 .over_hd {overflow: hidden;}
 .position_r {position: relative;}
-.position_a {position: absolute;}
+.position_a {position: absolute !important;}
 .display_none {display: none !important;}
 .just_c_c {justify-content: center;}
 .inline_bl {display: inline-block;}
@@ -602,7 +603,7 @@ table thead tr th.box_input {
 .popup_img > img{width: 100%; height: 100%; display: block;}
 .main_popup {border-radius: 8px;}
 
-
+textarea{resize: none;}
 
 .footer_container {background: linear-gradient(180deg, #007580 0%, #00464D 85.83%);border-radius: 68px 68px 0px 0px;padding: 50px 68px 48px; color: #ffffff;}
 footer {background: #FAFAFA; padding-top: 55px;}
@@ -615,7 +616,7 @@ footer h4{font-weight: 500;}
 .footer_content ul li a:hover{text-decoration: underline;}
 .footer_content:nth-child(n+2) li{padding-bottom: 15px;}
 .footer_content:nth-child(n+3) li:last-child{padding-top: 10px; padding-bottom: 0;}
-.footer_content:nth-child(n+3) li:last-child img{padding-left: 5.5px;}
+.footer_content:nth-child(n+3) li:last-child img{padding-left: 6.5px;}
 .footer_list_content {padding-bottom: 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.42); padding-right: 39px;}
 .footer_bottom{padding-top: 32px;}
 .footer_bottom h4 {padding-bottom: 20px;}

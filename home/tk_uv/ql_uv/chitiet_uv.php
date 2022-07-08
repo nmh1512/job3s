@@ -1387,7 +1387,7 @@
       </div>
     </div>
 
-    <div id="popupXacNhanHuy" class="display_none popupItem">
+    <div id="popupXacNhanHuy" class="display_none popupItem animation_zoom_in">
       <div class="popup_bg dong_popup"></div>
       <div class="popup_content position_a">
         <div class="popup_header position_r">

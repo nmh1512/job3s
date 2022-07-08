@@ -86,7 +86,7 @@
                   <th>Chức năng</th>
                 </thead>
                 <tbody>
-                  <!-- <tr>
+                  <tr>
                     <td class="txt_center">1</td>
                     <td>
                       <div class="d_flex">
@@ -343,7 +343,7 @@
                         </div>
                       </div>
                     </td>
-                  </tr> -->
+                  </tr>
                   <tr>
                     <td colspan="6">
                       <div class="empty_data text_c">

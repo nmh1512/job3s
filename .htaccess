@@ -39,6 +39,16 @@ RewriteRule ^dich-vu-dang-chay.html$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php 
 RewriteRule ^dich-vu-het-han.html$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
 RewriteRule ^chuyen-vien-cskh.html$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
 RewriteRule ^chi-tiet-ung-vien.html$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]
+RewriteRule ^gioi-thieu-chung.html$ /home/about_job3s/gioi_thieu_chung.php [NE,L]
+RewriteRule ^thong-tin-can-biet.html$ /home/about_job3s/thong_tin_can_biet.php [NE,L]
+RewriteRule ^thoa-thuan-su-dung.html$ /home/about_job3s/thoa_thuan_su_dung.php [NE,L]
+RewriteRule ^quy-dinh-bao-mat.html$ /home/about_job3s/quy_dinh_bao_mat.php [NE,L]
+RewriteRule ^so-do-web.html$ /home/about_job3s/so_do_web.php [NE,L]
+RewriteRule ^giai-quyet-tranh-chap.html$ /home/about_job3s/giai_quyet_tranh_chap.php [NE,L]
+RewriteRule ^viec-lam-theo-tinh.html$ /home/about_job3s/viec_lam_theo_tinh.php [NE,L]
+RewriteRule ^viec-lam-theo-nganh-nghe.html$ /home/about_job3s/viec_lam_theo_nghe.php [NE,L]
+RewriteRule ^lien-he.html$ /home/lien_he/lien_he.php [NE,L]
+RewriteRule ^chat.html$ /home/chat/chat.php [NE,L]
 
 #trang
 
