@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
-    <title>Thư xin việc xịn, việc làm chất, ứng tuyển bất cứ nơi đâu</title>
+    <title>Danh sách mẫu Đơn xin việc đẹp nhất hiện nay</title>
 </head>
 
 <body class="bg_f5">
@@ -97,8 +97,8 @@
             <div class="banner_cv h_400 bg_cv">
                 <div class="content_banner wf_tinhthanh">
                     <div class="heading_cv">
-                        <h1 class="font_s28 line_h33 font_w700 cl_primary">Thư xin việc xịn, việc làm chất, ứng tuyển bất cứ nơi đâu</h1>
-                        <p class="font_16 line_h19 font_w400 cl_55 mt_12">1000+ mẫu thư xin việc miễn phí dành riêng cho bạn, chỉ có mặt tại Job3S </p>
+                        <h1 class="font_s28 line_h33 font_w700 cl_primary">Mẫu sơ yếu lý lịch xin việc chuẩn 2022</h1>
+                        <p class="font_16 line_h19 font_w400 cl_55 mt_12">Mẫu sơ yếu lý lịch chuyên nghiệp, hiện đại phù hợp với nhiều ngành nghề</p>
                     </div>
                     <div class="mt_32 d_flex">
                         <div>
@@ -264,7 +264,7 @@
                     </div> -->
                 </div>
                 <div class="cv_right">
-                    <h2 class="font_s24 line_h28 font_w500 cl_primary txt_center">Danh sách mẫu thư xin việc đẹp nhất hiện nay</h2>
+                    <h2 class="font_s24 line_h28 font_w500 cl_primary txt_center">Danh sách mẫu Sơ yếu lý lịch xin việc đẹp nhất hiện nay</h2>
                     <div class="slider_list_cv mt_24 ">
                         <div class="row row_cv">
                             <?php for ($i = 0; $i < 12; $i++) : ?>
@@ -294,7 +294,7 @@
                                                 <span class="font_s16 line_h14 font_w500 currentColor">Xem trước</span>
                                             </button>
 
-                                            <a href="/thu-xin-viec/tao-thu-xin-viec.html" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white">
+                                            <a href="/don-xin-viec/tao-don-xin-viec.html" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white">
                                                 <div class="mr_6 d_flex align_c">
                                                     <img src="../../images/edit_white.png" alt="">
                                                 </div>
