@@ -316,14 +316,15 @@ function viewAndClosePopupUpdate(
   selectorChild,
   close_popup,
   selectCancel,
-  resertForm
+  resertForm,
+  isCloseMain = true,
 ) {
   viewPopup(idPopup, "hidden");
   let infor_menu = document.querySelector(idPopup);
   let box_popup_infor_menu = infor_menu.querySelector(selectorChild);
-  let elmClose = infor_menu.querySelector(close_popup);
-  let cancel = infor_menu.querySelector(selectCancel);
-  let elementForm = infor_menu.querySelector(resertForm);
+  let elmClose = close_popup&&infor_menu.querySelector(close_popup);
+  let cancel = selectCancel&&infor_menu.querySelector(selectCancel);
+  let elementForm = resertForm&&infor_menu.querySelector(resertForm)
 
   if (infor_menu) {
     if (elmClose) {
@@ -381,7 +382,7 @@ function viewAndClosePopupUpdate(
         }
       }
     }
-    infor_menu.addEventListener("click", hiddenOverlay);
+    if(isCloseMain) infor_menu.addEventListener("click", hiddenOverlay);
   }
 
   return {
@@ -389,6 +390,7 @@ function viewAndClosePopupUpdate(
     box_popup_infor_menu,
     elmClose,
     cancel,
+    clearAmintions,
   };
 }
 
@@ -548,7 +550,6 @@ function navigatePopup ({
         elementList.forEach((e) => {
           let i = e.dataset[customDataList];
           if(i != dataID) {
-            console.log(e)
             e.style.display = 'none'
             if(classActiveList) {
               if(e.classList.contains(classActiveList)) e.classList.remove(classActiveList)
@@ -561,6 +562,28 @@ function navigatePopup ({
           }
         })
       }
+    }
+  }
+}
+
+function changeAjax ({
+  listElem,
+  classChange,
+  fucCustom = () => {},
+  callBack = ()=>{}
+}) {
+  let elemPr = document.querySelector(listElem);
+  if(classChange) {
+    let chil = [...elemPr.children];
+
+    if(chil) {
+      chil.forEach((e)=>{
+        e.onclick = function () {
+          clickToggleClass(this, listElem, classChange);
+          if(typeof fucCustom === 'function') fucCustom(this, listElem, classChange)
+          if(typeof callBack === 'function') callBack(this, listElem, classChange)
+        }
+      })
     }
   }
 }

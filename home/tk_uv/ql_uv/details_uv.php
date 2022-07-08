@@ -85,65 +85,9 @@
     </div>
     <!-- đăng nhập -->
 
-    <!-- đăng nhập -->
-    <div class="popup hidden">
-        <div class="main_popup bg_white popup_591 br_20 animation_zoom_in">
-            <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
-                <h3 class="font_s20 line_h23 cl_white font_w700">Báo cáo tin tuyển dụng</h3>
-                <div class="close_popup">
-                    <img src="../../../images/close_white.png" alt="" class="img_full">
-                </div>
-            </div>
-            <div class="conatent_popup pd_48_68">
-                <form onsubmit="return false" action="" method="POST">
-                    <div class="form_group">
-                        <span class="font_s16 line_h19 font_w500 cl_a4">Họ và tên<span class="cl_red">*</span></span>
-                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                            <input type="text" id="email" name="email" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập họ và tên của bạn" />
-                        </div>
-                    </div>
-
-                    <div class="form_group">
-                        <span class="font_s16 line_h19 font_w500 cl_a4">Số điện thoại<span class="cl_red">*</span></span>
-                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                            <input type="text" id="email" name="email" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập số điện thoại của bạn" />
-                        </div>
-                    </div>
-
-
-                    <div class="form_group">
-                        <span class="font_s16 line_h19 font_w500 cl_a4">Địa chỉ email<span class="cl_red">*</span></span>
-                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                            <input type="text" id="email" name="email" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập địa chỉ email của bạn" />
-                        </div>
-                    </div>
-
-                    <div class="form_group">
-                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Nội dung phản hồi<span class="cl_red">*</span></span>
-                        <div class="d_flex align_c mt_8 bd_dc w_100 br_5">
-                            <textarea name="title" id="" class="resert_txt w_100 h_100 pd_11_14 br_5 h_124" placeholder="Bạn vui lòng cung cấp rõ thông tin hoặc bất kỳ bằng chứng(nếu có) để Job3s xử lý trong thời gian sớm nhất"></textarea>
-                        </div>
-                    </div>
-
-
-                    <div class="form_submit mt_25 d_flex align_c">
-                        <button type="button" class="cancel w_50pt btn td_btn btn_huy_upload btn_loctd flex_im center_center cl_primary bg_w bd_td br_5 pd_t12_b11_lr24">
-                            <span class="font_s16 line_h19 font_w500 currentColor">Hủy</span>
-                        </button>
-
-                        <button type="submit" class="btn btn_hover_primary w_50pt ml_25 flex_im center_center br_5 btn_primary cl_white pd_t12_b11_lr24">
-                            <span class="font_s16 line_h19 font_w500 currentColor">Nộp CV</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- đăng nhập -->
-
     <!-- poup xác nhận -->
-    <div class="popup hidden">
-        <div class="main_popup bg_white popup_500 br_20">
+    <div class="popup hidden" id="popup_xh_chat">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
             <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
                 <h3 class="font_s20 line_h23 cl_white font_w700">Xác nhận</h3>
                 <div class="close_popup">
@@ -152,10 +96,10 @@
             </div>
             <div class="conatent_popup">
                 <form onsubmit="return false" action="" method="POST">
-                    <p class="font_s16 line_h19 font_w400 cl_a4 pd_48_24">Bỏ theo dõi sẽ không tiếp tục nhận được thông tin tuyển dụng từ <span class="font_w500">Công ty TNHH Draho Việt Nam.</span></p>
-                    <div class="form_submit d_flex center_center bd_topdc pd_24">
-                        <button class="font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Đóng lại</button>
-                        <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68">Bỏ theo dõi</button>
+                    <p class="font_s16 line_h19 font_w400 cl_a4 pd_48_24 txt_center">Bạn cần sử dụng <span class="font_w500">1 điểm</span> để xem thông tin và chat với ứng viên này?</p>
+                    <div class="form_submit d_flex center_center pd_24 pd_t0">
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Hủy</button>
+                        <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68">Đồng ý</button>
                     </div>
                 </form>
             </div>
@@ -163,212 +107,6 @@
     </div>
     <!-- end poup xác nhận -->
 
-    <!-- poup ứng tuyển-->
-    <div class="popup hidden" id="popup_ut">
-        <div class="main_popup bg_white popup_812 br_20 animation_zoom_in drop_poup">
-            <div class="header_popup position_r d_flex align_c flex_s pd_19_18 pd_lr16 hd_popup bd_bdc">
-                <h3 class="font_s24 line_h28 font_w500 cl_a4">Ứng tuyển <span class="cl_primary">Trưởng phòng Kinh doanh (thu nhập upto 50 triệu)</span></h3>
-                <div class="close_popup">
-                    <img src="../../../images/close_red_nobd.png" alt="">
-                </div>
-            </div>
-            <div class="conatent_popup pd_tlr16_b24 mt_16chil">
-                <form onsubmit="return false" class="form_check" action="" method="POST" enctype="multipart/form-data">
-                    <div>
-                        <div class="nav_popup_ut">
-                            <div class="d_flex align_c">
-                                <div class="d_flex align_c mr_8">
-                                    <img src="../../../images/upload_fill_icon_pri.png" alt="">
-                                </div>
-                                <span class="font_s20 line_h23 font_w500 cl_a4">Tải CV từ máy tính</span>
-                            </div>
-
-                            <div class="d_flex align_c">
-                                <div class="d_flex align_c mr_8">
-                                    <img src="../../../images/laptop_icon_pri.png" alt="">
-                                </div>
-                                <span class="font_s20 line_h23 font_w500 cl_a4">Sử dụng CV online</span>
-                            </div>
-
-                            <div class="d_flex align_c">
-                                <div class="d_flex align_c mr_8">
-                                    <img src="../../../images/qv_icon_pri.png" alt="">
-                                </div>
-                                <span class="font_s20 line_h23 font_w500 cl_a4">Tải lên video giới thiệu</span>
-                            </div>
-                        </div>
-
-                        <div class="uploade_ct_pp pd_24 mh_260">
-                            <div class="item_navigate_uploade d_none">
-                                <span class="font_s16 line_h19 font_w500 cl_a4 block">Tải lên CV của bạn <span class="font_w400 cl_73 font_s15 line_h18">(File hỗ trợ: .doc, .docx, .pdf, .rar dung lượng tối đa 5 MB)</span></span>
-                                <div class="append_error">
-                                    <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
-                                        <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
-                                            <span data-placeholder="Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn" class="append">Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn</span>
-                                            <div class="close_file d_flex align_c cursor_p d_none">
-                                                <img src="../../../images/close_red_nobd.png" alt="">
-                                            </div>
-                                        </span>
-                                        <input type="file" class="files d_none" id="files" name="files">
-                                        <label for="files" class="cursor_p d_flex center_center btn_add_files">
-                                            <img src="../../../images/add_files_pri.png" alt="add_files">
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="list_file_pc mt_16">
-                                    <div class="d_flex space_b align_s">
-                                        <div class="d_flex align_s">
-                                            <input type="radio" name="test" checked class="mr_8 d_none custom_radio_ip" id="radio_1">
-                                            <label for="radio_1" class="custom_radio mr_8"></label>
-                                            <div class="d_flex flex_column">
-                                                <label for="radio_1" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
-                                                <div class="d_flex mt_6 btn_xt align_c">
-                                                    <div class="d_flex align_c mr_6"><img src="../../../images/eve_open.png" alt=""></div>
-                                                    <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d_flex align_c">
-                                            <div class="d_flex align_c mr_6"><img src="../../../images/time_icon.png" alt=""></div>
-                                            <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="d_flex space_b align_s">
-                                        <div class="d_flex align_s">
-                                            <input type="radio" name="test" class="mr_8 d_none custom_radio_ip" id="radio_2">
-                                            <label for="radio_2" class="custom_radio mr_8"></label>
-                                            <div class="d_flex flex_column">
-                                                <label for="radio_2" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
-                                                <div class="d_flex mt_6 btn_xt align_c">
-                                                    <div class="d_flex align_c mr_6"><img src="../../../images/eve_open.png" alt=""></div>
-                                                    <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d_flex align_c">
-                                            <div class="d_flex align_c mr_6"><img src="../../../images/time_icon.png" alt=""></div>
-                                            <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item_navigate_uploade d_none">
-                                <div class="no_cv_online d_none">
-                                    <span class="font_s16 line_h19 font_w400 cl_a4 block">Hiện tại bạn chưa có CV, chúng tôi khuyến khích bạn tạo CV online. Bạn có thể tạo CV dễ dàng và ấn tượng từ các mẫu CV của chúng tôi.</span>
-                                    <div class="d_flex center_center mt_24">
-                                        <a type="submit" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white pd_t12_b11_lr24">
-                                            <div class="d_flex align_c mr_6">
-                                                <img src="../../../images/add_pri.png" alt="">
-                                            </div>
-                                            <span class="font_s16 line_h19 font_w500 currentColor">Tạo CV ngay</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="result_cv_online">
-                                    <div class="list_file_pc">
-                                        <div class="d_flex space_b align_s">
-                                            <div class="d_flex align_s">
-                                                <input type="radio" name="test" checked class="mr_8 d_none custom_radio_ip" id="radio_1">
-                                                <label for="radio_1" class="custom_radio mr_8"></label>
-                                                <div class="d_flex flex_column">
-                                                    <label for="radio_1" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
-                                                    <div class="d_flex lis_fuc">
-                                                        <div class="d_flex mt_6 btn_xt align_c">
-                                                            <div class="d_flex align_c mr_6"><img src="../../../images/eve_open.png" alt=""></div>
-                                                            <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
-                                                        </div>
-
-                                                        <div class="d_flex mt_6 btn_xt align_c">
-                                                            <div class="d_flex align_c mr_6"><img src="../../../images/edit_icon_gray.png" alt=""></div>
-                                                            <span class="font_s14 line_h16 font_w500 cl_a4">Chỉnh sửa</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d_flex align_c">
-                                                <div class="d_flex align_c mr_6"><img src="../../../images/time_icon.png" alt=""></div>
-                                                <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="d_flex space_b align_s">
-                                            <div class="d_flex align_s">
-                                                <input type="radio" name="test" class="mr_8 d_none custom_radio_ip" id="radio_2">
-                                                <label for="radio_2" class="custom_radio mr_8"></label>
-                                                <div class="d_flex flex_column">
-                                                    <label for="radio_2" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
-                                                    <div class="d_flex mt_6 btn_xt align_c">
-                                                        <div class="d_flex align_c mr_6"><img src="../../../images/eve_open.png" alt=""></div>
-                                                        <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d_flex align_c">
-                                                <div class="d_flex align_c mr_6"><img src="../../../images/time_icon.png" alt=""></div>
-                                                <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d_flex flex_start mt_24">
-                                        <a type="submit" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white pd_t12_b11_lr24">
-                                            <div class="d_flex align_c mr_6">
-                                                <img src="../../../images/add_pri.png" alt="">
-                                            </div>
-                                            <span class="font_s16 line_h19 font_w500 currentColor">Tạo CV mới</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="item_navigate_uploade">
-                                <span class="font_s16 line_h19 font_w500 cl_a4 block">Tải lên video giới thiệu của bạn <span class="font_w400 cl_73 font_s15 line_h18">(File hỗ trợ: .mp4 dung lượng tối đa 100 MB)</span></span>
-                                <div class="append_error">
-                                    <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
-                                        <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
-                                            <span data-placeholder="Tải lên video giới thiệu của bạn" class="append">Tải lên video giới thiệu của bạn</span>
-                                            <div class="close_file d_flex align_c cursor_p d_none">
-                                                <img src="../../../images/close_red_nobd.png" alt="">
-                                            </div>
-                                        </span>
-                                        <input type="file" accept="video/*" class="files d_none" id="files" name="files" />
-                                        <label for="files" class="cursor_p d_flex center_center btn_add_files">
-                                            <img src="../../../images/add_files_pri.png" alt="add_files">
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="mt_24">
-                                    <p class="font_s14 line_h20 font_w400 cl_55"><span class="font_w500 cl_oran">Video giới thiệu bản thân</span> là một đoạn video ngắn khoảng từ 30 giây đến 1 phút giới thiệu bản thân với nhà tuyển dụng. Video CV thường gồm các nội dung sau:</p>
-                                    <ul class="vd_popup_cn">
-                                        <li class="cts_style">Thông tin cá nhân</li>
-                                        <li class="cts_style">Kinh nghiệm, thành tích, điểm mạnh</li>
-                                        <li class="cts_style">Mục tiêu công việc</li>
-                                        <li class="cts_style">Thông tin liên hệ (không bắt buộc)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d_flex align_c flex_end list_btn_tt chil_ml0 mt_16">
-                        <button type="button" class="cancel btn td_btn btn_huy_upload btn_loctd flex_im center_center cl_primary bg_w bd_td br_5 pd_t12_b11_lr24">
-                            <span class="font_s16 line_h19 font_w500 currentColor">Hủy</span>
-                        </button>
-
-                        <button type="submit" class="btn btn_hover_primary flex_im center_center br_5 btn_primary cl_white pd_t12_b11_lr24">
-                            <span class="font_s16 line_h19 font_w500 currentColor">Nộp CV</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-    <!-- end poup lọc-->
     <div id="root">
         <? include('../../../includes/after_header.php') ?>
         <div class="container bg_f5 pd_b48 mt_90">
@@ -416,7 +154,7 @@
                         <span class="font_s16 line_h19 font_w500 currentColor">Đánh giá ứng viên</span>
                     </button>
 
-                    <button class="btn hover_chat flex_im m_w142 pd_lr24 center_center cl_green bg_w bg_td bd_chat br_100">
+                    <button class="btn btn_chat hover_chat flex_im m_w142 pd_lr24 center_center cl_green bg_w bg_td bd_chat br_100">
                         <div class="mr_6 d_flex align_c">
                             <!-- <img src="../../../images/ib_green.png" alt="" class="img_full"> -->
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -454,18 +192,18 @@
 
                                 <div class="item_box">
                                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Sở thích</h3>
-                                    <div class="content_cty mt_24">
-                                        <ul>
-                                            <li>Xem phim</li>
-                                            <li>Nghe nhạc</li>
-                                            <li>Đọc sách</li>
+                                    <div class="content_cty mt_24 pd_l12">
+                                        <ul class="cl_55">
+                                            <li class="cs_style_dots">Xem phim</li>
+                                            <li class="cs_style_dots">Nghe nhạc</li>
+                                            <li class="cs_style_dots">Đọc sách</li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div class="item_box">
                                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Mục tiêu</h3>
-                                    <div class="content_cty mt_24">
+                                    <div class="content_cty mt_24 pd_l12">
                                         <p class="font_s16 line_h18 font_w400 cl_a4">
                                             Thiết kế ui trang web, ui ứng dụng, ui bảng điều khiển, thẻ cảm ơn, logo, tờ rơi, tài liệu quảng cáo, biểu ngữ, v.v. Nếu bạn cần bất kỳ sự trợ giúp nào, hãy liên hệ với tôi. Rất mong được làm việc với bạn!
                                         </p>
@@ -522,6 +260,41 @@
                                             <div class="d_flex flex_column pd_l8 edu_content">
                                                 <h3 class="font_s16 line_h20 font_w500 cl_primary">Test of English for International Communication( TOEIC)</h3>
                                                 <span class="font_s16 line_h20 font_w400 cl_55">2021- 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item_box">
+                                    <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Kỹ năng</h3>
+                                    <div class="list_skill mt_24 chil_24 ml_34">
+                                        <div class="item_skill d_flex align_c">
+                                            <div class="d_flex align_c mr_16">
+                                                <span class="font_s16 line_h19 font_w500 cl_73 block mr_4">Figma</span>
+                                                <span class="font_s14 line_h16 font_w400 cl_73">4/5</span>
+                                            </div>
+                                            <div class="d_flex align_c chil_8">
+                                                <!--  -->
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_gray.png" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="item_skill d_flex align_c">
+                                            <div class="d_flex align_c mr_16">
+                                                <span class="font_s16 line_h19 font_w500 cl_73 block mr_4">Figma</span>
+                                                <span class="font_s14 line_h16 font_w400 cl_73">4/5</span>
+                                            </div>
+                                            <div class="d_flex align_c chil_8">
+                                                <!--  -->
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_oran.png" alt="">
+                                                <img src="../../../images/start_gray.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -639,6 +412,39 @@
                                 </div>
                             </div>
 
+
+                            <div class="lis_box_deatls chil_24 mt_24">
+                                <div class="item_box">
+                                    <div class="w_100">
+                                        <img src="../../../images/cv_mts.png" alt="" class="w_100">
+                                    </div>
+
+                                    <div class="d_flex mt_24 chil_ml0 infor_follower pd_t_24">
+                                        <button class="btn td_btn btn_ut hover_td flex_im m_w142 pd_lr24 center_center cl_primary bg_w bg_td bd_td br_100">
+                                            <div class="mr_6 d_flex align_c">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13.6389 15.75H2.36111C1.93382 15.75 1.52403 15.5803 1.22188 15.2781C0.919742 14.976 0.75 14.5662 0.75 14.1389V2.86111C0.75 2.43382 0.919742 2.02403 1.22188 1.72188C1.52403 1.41974 1.93382 1.25 2.36111 1.25H11.2222L15.25 5.27778V14.1389C15.25 14.5662 15.0803 14.976 14.7781 15.2781C14.476 15.5803 14.0662 15.75 13.6389 15.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M12.0282 15.7491V9.30469H3.97266V15.7491" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M3.97266 1.25V5.27778H10.4171" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span class="font_s16 line_h19 font_w500 currentColor">Lưu hồ sơ</span>
+                                        </button>
+
+                                        <button class="btn td_btn hover_sv flex_im m_w142 pd_lr24 center_center cl_oran bg_w bg_td bd_ff99 br_100">
+                                            <div class="mr_6 d_flex align_c">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 10.832V13.9431C15 14.3557 14.8361 14.7514 14.5444 15.0431C14.2527 15.3348 13.857 15.4987 13.4444 15.4987H2.55556C2.143 15.4987 1.74733 15.3348 1.45561 15.0431C1.16389 14.7514 1 14.3557 1 13.9431V10.832" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M4.10938 6.94531L7.99826 10.8342L11.8872 6.94531" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M8 10.8333V1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span class="font_s16 line_h19 font_w500 currentColor">Tải xuống CV</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="lis_box_deatls chil_24 mt_24">
                                 <div class="item_box">
                                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Video giới thiệu bản thân</h3>
@@ -714,7 +520,7 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="d_flex align_s">
                                 <div class="wh_16">
                                     <img src="../../../images/time_oran.png" alt="" class="img_full">
@@ -735,7 +541,7 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="d_flex align_s">
                                 <div class="wh_16">
                                     <img src="../../../images/cap_oran.png" alt="" class="img_full">
@@ -907,6 +713,10 @@
 
         $('.btn_ut').click(function() {
             let objectELemet = viewAndClosePopupUpdate('#popup_ut', '.main_popup', '.close_popup', '.cancel', '.form_check')
+        })
+
+        $('.btn_chat').click(function () {
+            let objectELemet = viewAndClosePopupUpdate('#popup_xh_chat', '.main_popup', '.close_popup', '.cancel', '.form_check')
         })
 
         navigatePopup({
