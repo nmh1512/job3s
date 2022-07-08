@@ -317,7 +317,6 @@
                 if (children.length <= 0) {
                     let chilbody = $("body").children(`.popup_more[data-tab=${tabID}]`);
                     $(chilbody).slideUp("fast", () => {
-                        console.log($(chilbody))
                         let prop = $(chilbody).prop("style");
                         prop.removeProperty("display");
                         prop.removeProperty("top");

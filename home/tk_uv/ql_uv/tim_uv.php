@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/select2.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/style_t.css">
+    <link rel="stylesheet" href="../../../css/select2.min.css">
+    <link rel="stylesheet" href="../../../css/slick.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/style_t.css">
     <title>Danh sách mẫu thư xin việc đẹp nhất hiện nay</title>
 </head>
 
-<body>
+<body class="bg_f5">
     <div id="root">
-        <?php include("../../includes/after_header.php") ?>
+        <?php include("../../../includes/after_header.php") ?>
         <div class="container mt_90 bg_f5 pd_b_48">
-            <div class="banner_cv h_400 bg_cv">
+            <div class="banner_cv mh_428 bg_cv">
                 <div class="content_banner wf_tinhthanh">
-                    <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm việc làm <span class="cl_oran">Bán hàng</span> trên <span class="cl_oran">toàn quốc</span></h1>
+                    <!-- <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm ứng viên</h1> -->
+                    <!-- <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm ứng viên <span class="cl_oran">Bán hàng</span> trên toàn quốc </h1> -->
+                    <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm ứng viên <span class="cl_oran">Bán hàng</span> trên <span class="cl_oran">Hà Nội</span></h1>
                     <div class="search_kv d_flex mt_24">
                         <div class="d_flex align_c pd_lr15 bg_w w_294 br_5">
                             <div class="mr_10 d_flex align_c">
@@ -39,7 +42,7 @@
 
                         <div>
                             <button class="btn hover_oran h_100 btn_hover_primary flex_im align_c br_6 bg_ff99 cl_white pd_t12_b11_lr24">
-                                <span class="font_s16 line_h19 font_w700 currentColor white_s_nw">Tìm việc làm</span>
+                                <span class="font_s16 line_h19 font_w700 currentColor white_s_nw">Tìm ứng viên</span>
                             </button>
                         </div>
                     </div>
@@ -86,10 +89,10 @@
                 </div>
 
                 <div class="img_tt d_flex align_e">
-                    <img src="../../images/banner_tinh_thanh.png" alt="" />
+                    <img src="../../images/banner_uv.png" alt="" />
                 </div>
             </div>
-            <p class="font_s24 line_h28 font_w700 cl_a4 pd_lr68 mt_48">Hiện có <span class="cl_primary">652</span> việc làm mới nhất.</p>
+            <p class="font_s24 line_h28 font_w700 cl_a4 pd_lr68 mt_48">Hiện có <span class="cl_primary">652</span> <span class="cl_oran">ứng viên</span> phù hợp với yêu cầu của bạn.</p>
             <div class="cv_warp d_flex pd_lr68 mt_24">
                 <div class="cv_left">
                     <div class="search_box drop_sd br_10 pd_24 bg_w">
@@ -205,7 +208,7 @@
                     </div>
 
                     <div class="mess_job drop_sd br_10 mt_24 bg_w h_504 d_flex flex_column">
-                        <h2 class="font_s22 line_h26 font_w700 cl_primary pd_12_20 bg_f5 br_ltr10">Chat với nhà tuyển dụng</h2>
+                        <h2 class="font_s22 line_h26 font_w700 cl_primary pd_12_20 bg_f5 br_ltr10">Chat với ứng viên</h2>
                         <div class="mess_chat flex_1">
                             <div class="mess_chat_box pd_20">
                                 <div class="d_flex bg_w br_100 bd_99">
@@ -239,12 +242,12 @@
                         <? for ($i = 0; $i < 20; $i++) : ?>
                             <div class="col_2 item_news bg_w">
                                 <div class="item_news_top">
-                                    <div class="img_news">
-                                        <img src="../../images/img_news_ts.png" alt="">
+                                    <div class="img_news bd_dc">
+                                        <img src="../../images/avt_1.png" alt="">
                                     </div>
                                     <div class="content_news">
-                                        <h3 class="font_s16 line_h19 font_w500 cl_primary pd_r23">Nhân viên kinh doanh bất động sản</h3>
-                                        <span class="font_s16 line_h19 font_w400 cl_73 block mt_5">Công ty Cổ phần Thanh toán Hưng Hà</span>
+                                        <h3 class="font_s16 line_h19 font_w500 cl_primary pd_r23">Nguyễn Đình Mạnh</h3>
+                                        <span class="font_s16 line_h19 font_w400 cl_73 block mt_5">Kỹ sư cầu đường</span>
 
                                         <div class="save_new">
                                             <img src="../../images/save_icon.png" alt="">
@@ -253,9 +256,9 @@
                                         <div class="infor_new d_flex mt_6">
                                             <div class="item_infor_new">
                                                 <div class="mr_5 w_16h17">
-                                                    <img src="../../images/date_icon.png" alt="date" class="img_full">
+                                                    <img src="../../images/time_small_gray.png" alt="date" class="img_full">
                                                 </div>
-                                                <span class="font_s16 line_h19 font_w400 cl_55">Hạn nộp: 30/04/2022</span>
+                                                <span class="font_s16 line_h19 font_w400 cl_55">1 năm kinh nghiệm</span>
                                             </div>
 
                                             <div class="item_infor_new">
@@ -298,15 +301,76 @@
                     </div>
                 </div>
             </div>
+
+            <div class="lr_68 news_recruit mt_48">
+                <div class="box_cty">
+                    <div class="item_box">
+                        <div class="d_flex align_c space_b">
+                            <h3 class="font_s24 line_h18 font_w500 cl_primary">Ứng viên phù hợp</h3>
+                        </div>
+                        <div class="silder_news pd_tb24_slder">
+                            <? for ($i = 0; $i < 20; $i++) : ?>
+                                <div class="item_news bg_w">
+                                    <div class="item_news_top">
+                                        <div class="img_news bd_dc">
+                                            <img src="../../images/avt_1.png" alt="">
+                                        </div>
+                                        <div class="content_news">
+                                            <h3 class="font_s16 line_h19 font_w500 cl_primary pd_r23">Nguyễn Đình Mạnh</h3>
+                                            <span class="font_s16 line_h19 font_w400 cl_73 block mt_5">Kỹ sư cầu đường</span>
+
+                                            <div class="save_new">
+                                                <img src="../../images/save_icon.png" alt="">
+                                            </div>
+
+                                            <div class="infor_new d_flex mt_6">
+                                                <div class="item_infor_new">
+                                                    <div class="mr_5 w_16h17">
+                                                        <img src="../../images/time_small_gray.png" alt="date" class="img_full">
+                                                    </div>
+                                                    <span class="font_s16 line_h19 font_w400 cl_55">1 năm kinh nghiệm</span>
+                                                </div>
+
+                                                <div class="item_infor_new">
+                                                    <div class="mr_5 d_flex align_c">
+                                                        <img src="../../images/inbox_green.png" alt="">
+                                                    </div>
+                                                    <span class="font_s16 line_h18 font_w400 cl_green">Chat</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item_news_bottom d_flex flex_w">
+                                        <span class="bg_kv">Hà Nội</span>
+                                        <span class="bg_money">10 -16 triệu</span>
+                                    </div>
+                                </div>
+                            <? endfor; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <? include("../../includes/footer.php") ?>
+        <? include("../../../includes/footer.php") ?>
     </div>
 
-    <script src="../../js/jquery-3.4.1.min.js"></script>
-    <script src="../../js/select2.min.js"></script>
+    <script src="../../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../../js/slick.min.js"></script>
+    <script src="../../../js/select2.min.js"></script>
     <script>
         $('.select_one').select2({
             width: '100%'
+        })
+
+        $('.silder_news').slick({
+            rows: 1,
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../../images/arrow_prev.png" alt="" class="img_full"></button>`,
+            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`
         })
     </script>
 </body>

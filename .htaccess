@@ -65,7 +65,8 @@ RewriteRule ^authen/quen-mat-khau-nha-tuyen-dung.html$ /home/authen/forgot_ntd.p
 RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung.html$ /home/authen/change_password_ntd.php [NE,L]
 
 #cv
-RewriteRule ^cv$ /home/cv/list_cv.php [NE,L]
+RewriteRule ^mau-cv/$ /home/cv/list_cv.php [NE,L]
+RewriteRule ^mau-cv/dung-cv.html$ /home/cv/add_cv.php [NE,L]
 
 #ntd
 RewriteRule ^chi-tiet-nha-tuyen-dung.html$ /home/ntd/details_ntd.php [NE,L]
@@ -93,15 +94,21 @@ RewriteRule ^thay-doi-mat-khau/$ /home/thay_doi_mat_khau/index.php [NE,L]
 #thu-xin-viec
 RewriteRule ^thu-xin-viec/$ /home/thu_xin_viec/list.php [NE,L]
 RewriteRule ^thu-xin-viec/danh-sach-thu-xin-viec.html$ /home/thu_xin_viec/list_uv.php [NE,L]
+RewriteRule ^thu-xin-viec/tao-thu-xin-viec.html$ /home/thu_xin_viec/add_txv.php [NE,L]
 
 #quan lý cv
 RewriteRule ^quan-ly-cv/$ /home/quan_ly_cv/quan_ly_cv.php [NE,L]
 
 #don xin viec
 RewriteRule ^don-xin-viec/danh-sach-don-xin-viec.html$ /home/don_xin_viec/don_xv_uv.php [NE,L]
+RewriteRule ^don-xin-viec/$ /home/don_xin_viec/list_don_xv.php [NE,L]
+RewriteRule ^don-xin-viec/tao-don-xin-viec.html$ /home/don_xin_viec/add_dxv.php [NE,L]
 
 #so yếu lí lịch
 RewriteRule ^so-yeu-ly-lich/danh-sach-so-yeu-li-lich.html$ /home/so_yeu_li_lich/so_yeu_li_lich.php [NE,L]
+RewriteRule ^so-yeu-ly-lich/$ /home/so_yeu_li_lich/list_syll.php [NE,L]
+RewriteRule ^so-yeu-ly-lich/tao-so-yeu-li-lich.html$ /home/so_yeu_li_lich/add_syll.php [NE,L]
+
 
 #video giới thiệu bản thân
 RewriteRule ^video-gioi-thieu-ban-than/$ /home/video_gioi_thieu_ban_than/video_uv.php [NE,L]
@@ -116,5 +123,13 @@ RewriteRule ^viec-lam-da-luu/$ /home/viec_lam_da_ung_tuyen/vl_da_luu.php [NE,L]
 
 #ngành nghề tình thành
 RewriteRule ^nganh-nghe-tinh-thanh/$ /home/nganh_nghe_tinh_thanh/nganh_nghe_tt.php [NE,L]
+
+#
+RewriteRule ^tin-tuyen-dung/chi-tiet-tin-tuyen-dung.html$ /home/tin_tuyen_dung/details_uv.php [NE,L]
+
+#
+RewriteRule ^chi-tiet-ung-vien-ntd.html$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
+RewriteRule ^tim-ung-vien.html$ /home/tk_uv/ql_uv/tim_uv.php [NE,L]
+
 
 
