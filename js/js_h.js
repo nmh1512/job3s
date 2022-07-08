@@ -1,6 +1,11 @@
 function show_popup_choose(e) {
+  $(".popup_choose").each(function () {
+    if (!$(this).is($(e).find(".popup_choose"))) {
+      $(this).hide();
+    }
+  });
   $(e).toggleClass("bg_white");
-  $(e).find(".popup_choose").toggle();
+  $(e).find(".popup_choose").slideToggle();
 }
 
 $(window).click(function (e) {
@@ -19,18 +24,17 @@ $(window).click(function (e) {
 
 function showPopup(ele) {
   $(ele).removeClass("display_none");
-} 
+}
 $(".dong_popup").each(function () {
   $(this).click(function () {
     var ele = $(this).parents(".popupItem");
     ele.addClass("animation_zoom_out");
-    
+
     ele.on("animationend", function () {
       $(".popupItem").removeClass("animation_zoom_out");
       $(".popup_chung").addClass("display_none");
       ele.addClass("display_none");
-      ele.unbind()
+      ele.unbind();
     });
-    
   });
 });

@@ -15,7 +15,7 @@
   ?>
     <div class="container_about info_com">
       <section>
-        <div class="info_com_banner d_flex p_68 bg_white space_b">
+        <div class="info_com_banner d_flex plr_resp bg_white space_b">
           <div>
             <h1 class="font_s22 main_color">Ứng dụng di động Job3s miễn phí</h1>
             <p class="mt_12">
@@ -52,7 +52,7 @@
       </section>
 
       <section>
-        <div class="bg_fa d_flex flex_end p_48_68 position_r">
+        <div class="bg_fa d_flex flex_end plr_resp ptb_48px position_r">
           <div style="width: 57.5%">
             <h2 class="main_color font_s22">Gửi phản hồi tới Job3s</h2>
             <div class="mt_24">

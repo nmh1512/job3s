@@ -29,7 +29,7 @@
         </div>
         <div class="content_container">
           <div class="content_item d_flex space_b">
-            <div style="width: 37.5%">
+            <div class="w_45pt">
               <h4 class="mb_8">Liên hệ trực tuyến</h4>
               <p class="txt_justify">
                 Trong trường hợp khẩn cấp bạn có thắc mắc hoặc cần tư vấn
@@ -64,7 +64,7 @@
           <div class="content_item">
             <div>
               <h4 class="mb_8">Gửi yêu cầu tư vấn</h4>
-              <p>
+              <p class="w_50pt">
                 Trong trường hợp bạn muốn được nhận tư vấn, giải đáp thông tin
                 qua địa chỉ email.<br />
                 Vui lòng nhập thông tin cần tư vấn.

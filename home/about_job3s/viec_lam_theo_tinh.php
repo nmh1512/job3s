@@ -23,7 +23,7 @@
         </div>
       </section>
       <section>
-        <div class="p_48_68 d_flex flex_w">
+        <div class="plr_resp ptb_48px d_flex flex_w">
           <? for($i = 0; $i < 56; $i++) { ?>
           <div class="w_33pt mb_12">
             <a href="">Hà Nội</a>
@@ -33,7 +33,7 @@
       </section>
     
       <section>
-        <div class="d_flex p_48_68 bg_wb">
+        <div class="d_flex plr_resp ptb_48px bg_wb">
           <div class="w_80pt">
             <h2 class="font_s24 main_color">
               Ứng dụng tìm việc làm Job3s tuyển dụng thông minh

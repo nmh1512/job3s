@@ -20,7 +20,7 @@
         </div>
       </section>
       <section>
-        <div class="p_48_68 d_flex">
+        <div class="plr_resp ptb_48px d_flex">
           <div class="w_33pt">
             <h2>Người tìm việc</h2>
             <ul class="mt_24">
@@ -57,7 +57,7 @@
         </div>
       </section>
       <section>
-        <div class="bg_fa p_48_68 d_flex">
+        <div class="bg_fa plr_resp ptb_48px d_flex">
           <div class="w_33pt">
             <h2>Việc làm theo tỉnh thành</h2>
             <ul class="mt_24">
@@ -102,7 +102,7 @@
         </div>
       </section>
       <section>
-        <div class="d_flex p_48_68 bg_wb">
+        <div class="d_flex plr_resp ptb_48px bg_wb">
           <div class="w_80pt">
             <h2 class="font_s24 main_color">Ứng dụng tìm việc làm Job3s tuyển dụng thông minh</h2>
             <p class="mt_12">

@@ -15,7 +15,7 @@
   ?>
     <div class="container_about info_com">
       <section>
-        <div class="info_com_banner d_flex plr_68 bg_s_green">
+        <div class="info_com_banner d_flex plr_resp bg_s_green">
           <div>
             <h1 class="font_s28">Tìm việc theo cách hoàn toàn mới</h1>
             <p class="mt_12 cl_white">
@@ -48,7 +48,7 @@
       </section>
 
       <section>
-        <div class="p_48_68 bg_f5">
+        <div class="plr_resp ptb_48px bg_f5">
           <div class="box_shadow_after_login pd_24 bg_white">
             <div class="info_header text_c">
               <h2 class="font_s28 main_color">Quy định bảo mật</h2>

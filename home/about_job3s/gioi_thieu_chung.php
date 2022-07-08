@@ -16,7 +16,7 @@
   ?>
   <div class="container_about">
     <section>
-      <div class="d_flex plr_68 gioithieu_header pb_60 pt_15">
+      <div class="d_flex plr_resp gioithieu_header pb_60 pt_15">
         <div class="position_r gioithieu_header_img text_c">
           <img class="position_r" src="../../images/girl_2.png" alt="" />
         </div>
@@ -105,7 +105,7 @@
             uy tín hàng đầu Việt Nam
           </h2>
         </div>
-        <div class="d_flex flex_center box_center w_60pt">
+        <div class="d_flex flex_center box_center">
           <div class="box_shadow_after_login mr_24 about_box p_24_64 w_50pt">
             <div class="about_box_small mb_16 box_center">
               <img src="../../images/eye_skin.png" alt="" />
@@ -142,7 +142,7 @@
       </div>
     </section>
     <section class="pb_60">
-      <div class="d_flex plr_68 pb_55 mt_18">
+      <div class="d_flex plr_resp pb_55 mt_18">
         <div class="gioithieu_header_content w_50pt mr_24">
           <h4 class="mb_8 orange font_w500">Giá trị cốt lõi</h4>
           <h2 class="mb_16 main_color font_s28 font_w500">
@@ -170,7 +170,7 @@
           <img class="position_r z_2" src="../../images/city1.png" alt="" />
         </div>
       </div>
-      <div class="d_flex plr_68">
+      <div class="d_flex plr_resp">
         <div class="position_r text_r w_50pt value_com_img position_r">
           <img class="position_r z_2" src="../../images/city2.png" alt="" />
         </div>

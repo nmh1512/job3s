@@ -48,6 +48,7 @@ RewriteRule ^giai-quyet-tranh-chap.html$ /home/about_job3s/giai_quyet_tranh_chap
 RewriteRule ^viec-lam-theo-tinh.html$ /home/about_job3s/viec_lam_theo_tinh.php [NE,L]
 RewriteRule ^viec-lam-theo-nganh-nghe.html$ /home/about_job3s/viec_lam_theo_nghe.php [NE,L]
 RewriteRule ^lien-he.html$ /home/lien_he/lien_he.php [NE,L]
+RewriteRule ^chat.html$ /home/chat/chat.php [NE,L]
 
 #trang
 
