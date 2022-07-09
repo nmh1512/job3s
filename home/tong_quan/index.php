@@ -18,8 +18,8 @@
             <div class="content wbjsb mt_90 pd_48_24_91">
                 <div class="box_item">
                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Đăng tin tuyển dụng</h3>
-                    <div class="list_td mt_24">
-                        <div class="row">
+                    <div class="list_tds mt_24">
+                        <div class="row row_tq">
                             <div class="col_2 item_td pd_lrt24_b25 bg_clE5">
                                 <div class="w_49h18">
                                     <img src="../../images/logo_small.png" alt="" class="img_full">
