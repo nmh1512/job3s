@@ -1,5 +1,19 @@
 <header id="header" class="before_header">
-    <div class="nav_header d_flex align_c space_b bg_white">
+    <div class="nav_header d_flex align_c space_b bg_white position_r">
+        <div class="nav_menu_btn position_a">
+            <button class="d_flex align_c flex_center bd_cicre wh_42px border_0 bg_wblue"><img src="../images/nav_menu.png" alt=""></button>
+        </div>
+        <div hidden class="nav_resp position_a w_100">
+            <div class="bg_fa pd_20">
+                <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/change_large.svg" alt="">Đăng ký</a>
+                <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/logout.svg" alt="">Đăng nhập</a>
+                <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/hoso.svg" alt="">Hồ sơ & CV</a>
+                <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/seach_green.svg" alt="">Tìm ứng viên</a>
+                <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
+                <a href="" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
+            </div>
+
+        </div>
         <div class="logo">
             <a href=""><img src="../images/logo.svg" alt="" /></a>
         </div>

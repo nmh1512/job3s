@@ -8,8 +8,8 @@
   <title>Trang chủ</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/select2.min.css" />
-  <link rel="stylesheet" href="../css/slick.css" />
   <link rel="stylesheet" href="../css/slick-theme.css" />
+  <link rel="stylesheet" href="../css/slick.css" />
   <link rel="stylesheet" href="../css/style_h.css" />
   <script src="../js/scrollreveal.min.js"></script>
 </head>
@@ -17,6 +17,20 @@
 <body>
   <header id="header">
     <div class="nav_header d_flex align_c space_b">
+      <div class="nav_menu_btn position_a">
+        <button class="d_flex align_c flex_center bd_cicre wh_42px border_0 bg_white"><img src="../images/nav_menu.png" alt=""></button>
+      </div>
+      <div hidden class="nav_resp position_a w_100">
+        <div class="bg_fa pd_20">
+          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/change_large.svg" alt="">Đăng ký</a>
+          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/logout.svg" alt="">Đăng nhập</a>
+          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/hoso.svg" alt="">Hồ sơ & CV</a>
+          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/seach_green.svg" alt="">Tìm ứng viên</a>
+          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
+          <a href="" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
+        </div>
+
+      </div>
       <div class="logo">
         <a href=""><img src="../images/logo.svg" alt="" /></a>
       </div>
@@ -194,7 +208,8 @@
         <div class="banner_create_cv banner_cv d_flex box_shadow space_b ">
           <div class="banner_cv_text">
             <h2 class="main_color mb_15 font_s22">Tạo CV online ấn tượng</h2>
-            <p class="mb_30">Job3s hiện có 1000+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề.</p>
+            <p class="mb_30">Job3s hiện có 1000+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề.
+            </p>
             <a href="" class="btn_main_color">Tạo CV ngay</a>
           </div>
           <div class="banner_create_cv_img d_flex align_c">
@@ -204,7 +219,8 @@
         <div class="banner_upload_cv banner_cv d_flex box_shadow space_b ">
           <div class="banner_cv_text">
             <h2 class="main_color mb_15 font_s22">Sử dụng CV sẵn có để tìm việc</h2>
-            <p class="mb_30">Cách đơn giản để bắt đầu tìm việc làm tại Job3s, Nhà tuyển dụng sẽ nhìn thấy CV bạn đã tải lên.</p>
+            <p class="mb_30">Cách đơn giản để bắt đầu tìm việc làm tại Job3s, Nhà tuyển dụng sẽ nhìn thấy CV
+              bạn đã tải lên.</p>
             <a href="" class="btn_main_color">Tải lên CV của bạn</a>
           </div>
           <div class="banner_upload_cv_img position_r">
@@ -310,10 +326,12 @@
                 <li>Đăng tin tuyển dụng dễ dàng, không quá 1 phút.</li>
               </div>
               <div class="d_flex">
-                <li>Tiếp cận nguồn CV ứng viên khổng lồ, tìm kiếm ứng viên từ kho dữ liệu hơn 1 triệu hồ sơ.</li>
+                <li>Tiếp cận nguồn CV ứng viên khổng lồ, tìm kiếm ứng viên từ kho dữ liệu hơn 1 triệu hồ
+                  sơ.</li>
               </div>
               <div class="d_flex">
-                <li>Tùy chỉnh các tiêu chí tìm kiếm ứng viên tài năng theo mong muốn: ngành nghề, vị trí tuyển dung, địa điểm làm việc, tính cách ứng viên.</li>
+                <li>Tùy chỉnh các tiêu chí tìm kiếm ứng viên tài năng theo mong muốn: ngành nghề, vị trí
+                  tuyển dung, địa điểm làm việc, tính cách ứng viên.</li>
               </div>
               <div class="d_flex">
                 <li>Tiết kiệm thời gian tuyển dụng nhân sự.</li>
@@ -322,7 +340,9 @@
           </div>
         </div>
       </div>
-      <img src="../images/img_dangtin.svg" alt="" class="position_a img_dangtin">
+      <!-- <div class="position_a img_dangtin"> -->
+      <img src="../images/img_dangtin.png" alt="" class="position_a img_dangtin">
+      <!-- </div> -->
       <div class="d_flex align_c flex_center btn_dangtin">
         <a href="" class="btn_main_color d_flex align_c flex_center">Bắt đầu ngay</a>
       </div>
@@ -403,9 +423,13 @@
                   <div class="writer">Nguyễn Hoàng Anh</div>
                   <div class="date">13/03/2022</div>
                 </div>
-                <h4 class="mt_16 main_color">Hướng Dẫn Viết Mẫu Đơn Xin Nghỉ Việc Của Giáo Viên Chuẩn Nhất.</h4>
-                <p class="mt_12 txt_justify">Mẫu đơn xin nghỉ việc của giáo viên là mẫu đơn dành cho giáo viên có ý định nghỉ việc. Dù nghề giáo viên giáo viên có ý định nghỉ việc dù nghề ...</p>
-                <a href="" class="read_more_news d_flex align_c flex_center main_color see_all m-0">Đọc thêm</a>
+                <h4 class="mt_16 main_color">Hướng Dẫn Viết Mẫu Đơn Xin Nghỉ Việc Của Giáo Viên Chuẩn Nhất.
+                </h4>
+                <p class="mt_12 txt_justify">Mẫu đơn xin nghỉ việc của giáo viên là mẫu đơn dành cho giáo
+                  viên có ý định nghỉ việc. Dù nghề giáo viên giáo viên có ý định nghỉ việc dù nghề ...
+                </p>
+                <a href="" class="read_more_news d_flex align_c flex_center main_color see_all m-0">Đọc
+                  thêm</a>
               </div>
             </div>
 
@@ -430,16 +454,17 @@
 
       </div>
       <div class="customer_content_container">
-        <div class="customer_content d_flex">
+        <div class="customer_content news_content d_flex">
           <?
           for ($i = 0; $i < 9; $i++) {
           ?>
-            <div class="customer_item ">
+            <div class="customer_item">
               <div class="customer_avt d_flex align_c flex_center">
                 <img src="../images/customer1.png" alt="">
               </div>
               <div class="customer_item_text txt_center">
-                <p>Mẫu CV khá đẹp, mình đã tạo rất nhanh, file pdf in ra nét. CV xin việc của Job3s bát ngát vậy, chẳng lo đụng hàng. Thanks các bạn!</p>
+                <p>Mẫu CV khá đẹp, mình đã tạo rất nhanh, file pdf in ra nét. CV xin việc của Job3s bát ngát
+                  vậy, chẳng lo đụng hàng. Thanks các bạn!</p>
                 <img src="../images/5stars.svg" alt="">
                 <div class="info_customer">
                   <h4 class="main_color">Trần Văn Long</h4>
@@ -473,65 +498,95 @@
       $(window).scrollTop(0);
     });
 
-    $(document).ready(function() {
+    function slickSlider(data, flag, data2) {
+      var padding = 0;
+      if(flag == true) {
+        padding = '300px';
+      }
       $(".new_works_content").slick({
         infinite: true,
         rows: 6,
-        slidesPerRow: 3,
+        slidesPerRow: data,
         arrows: true,
         dots: true,
+
         prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
         nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
-        responsive: [{
-          breakpoint: 481,
-          settings: {
-            dots: false,
-            arrows: false,
-          },
-        }, ],
-      });
 
+      });
       $(".news_content").slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: data2,
+        slidesToScroll: data2,
         arrows: true,
         dots: true,
+        centerMode: flag,
+        centerPadding: padding,
         prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
         nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
-        responsive: [{
-          breakpoint: 481,
-          settings: {
-            dots: false,
-            arrows: false,
-          },
-        }, ],
       });
+    }
 
-      $(".customer_content").slick({
-        infinite: true,
-        centerMode: true,
-        centerPadding: '0px',
-        slidesToShow: 3,
+    $(document).ready(function() {
+      var ww = $(window).innerWidth();
+      var slide = 0
+      var slide2 = 0
+      var flag = true;
+      if (ww > 1024) {
+        slide = 3
+        flag = false
+        slide2 = 3
+      } else {
+        slide = 2
+        flag = true
+        slide2 = 1
 
-        arrows: true,
-        dots: true,
-        prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
-        nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
-        responsive: [{
-          breakpoint: 481,
-          settings: {
-            dots: false,
-            arrows: false,
-          },
-        }, ],
-      });
-    
+      }
+      slickSlider(slide, flag, slide2)
+
+
+
+
     });
-    ScrollReveal().reveal('.tile', {
-      interval: 16,
-      reset: true
-    });
+    // ScrollReveal().reveal('.tile', {
+    //   interval: 16,
+    //   reset: true
+    // });
+
+    $('.nav_menu_btn button').click(function() {
+      toggleNav()
+    })
+
+    $(window).resize(function() {
+      var w = $(window).innerWidth();
+      var slide = 0;
+      if (w > 1024) {
+        $('.nav_resp').hide();
+        $('.nav_menu_btn button').addClass('.bg_e5_86')
+        $('.nav_menu_btn button').removeClass('bg_white')
+        $('.nav_header').removeClass('bg_white')
+        slide = 3
+      } else {
+        slide = 2
+      }
+      slickSlider(slide)
+    })
+
+    $('.nav_resp').click(function(e) {
+      var t = $(this).children('div').offset().top
+      var h = $(this).children('div').outerHeight()
+      var y = e.offsetY
+      if (t < y || h > y) {
+        toggleNav()
+      }
+    })
+
+    function toggleNav() {
+      $('.nav_resp').slideToggle();
+      $('.nav_menu_btn button').toggleClass('.bg_e5_86')
+      $('.nav_menu_btn button').toggleClass('bg_white')
+      $('.nav_header').toggleClass('bg_white')
+    }
   </script>
 </body>
 

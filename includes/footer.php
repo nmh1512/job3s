@@ -110,7 +110,8 @@
           <h4>Bản đồ đến công ty</h4>
           <img src="../images/map.svg" alt="">
         </div>
-        <div class="footer_download">
+        <div class="d_flex space_b contact_wrapper">
+          <div class="footer_download">
           <h4>Khám phá ứng dụng Job3s</h4>
           <div class="d_flex space_b">
             <div class="text_c">
@@ -124,7 +125,7 @@
               <p>Ứng dụng CV Job3s</p>
               <img src="../images/app_qr.svg" alt="" />
               <div class="url_download_footer">
-                <a class="d_flex align_c flex_center " href="">Tải App CV365</a>
+                <a class="d_flex align_c flex_center " href="">Tải App CV Job3s</a>
               </div>
             </div>
           </div>
@@ -143,6 +144,8 @@
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
     </div>
   </div>
