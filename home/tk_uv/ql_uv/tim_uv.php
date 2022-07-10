@@ -175,9 +175,12 @@
 
                             <div class="cv-group">
                                 <span class="font_s18 line_h22 font_w500 cl_a4">Mức lương mong muốn</span>
-                                <div class="mt_12">
-                                    <div></div>
-                                    <div class="d_flex">
+                                <div class="mt_23">
+                                    <div class="ranger_ml">
+                                        <span style="left: -1px"></span>
+                                        <span style="right: -1px"></span>
+                                    </div>
+                                    <div class="d_flex mt_23">
                                         <div class="w_50pt">
                                             <span class="font_s16 line_h24 font_w400 cl_a4">Từ</span>
                                             <div class="d_flex align_c bd_ec bg_f9 pd_lr15 br_10 mt_5">
@@ -308,7 +311,7 @@
                         <div class="d_flex align_c space_b">
                             <h3 class="font_s24 line_h18 font_w500 cl_primary">Ứng viên phù hợp</h3>
                         </div>
-                        <div class="silder_news pd_tb24_slder">
+                        <div class="silder_news pd_tb24_slder uv_tim">
                             <? for ($i = 0; $i < 20; $i++) : ?>
                                 <div class="item_news bg_w">
                                     <div class="item_news_top">
@@ -370,7 +373,14 @@
             slidesToShow: 3,
             slidesToScroll: 3,
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../../images/arrow_prev.png" alt="" class="img_full"></button>`,
-            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`
+            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`,
+            responsive: [{
+                breakpoint: 1172,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            }]
         })
     </script>
 </body>

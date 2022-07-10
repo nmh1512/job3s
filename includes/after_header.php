@@ -1,4 +1,7 @@
 <header class="header_after">
+    <div class="menu_moblie d_none">
+        <img src="../images/menu_moblie.png" alt="menu">
+    </div>
     <div class="header_after_left">
         <a href="" class="d_flex center_center">
             <svg width="116" height="42" viewBox="0 0 116 42" fill="none" xmlns="http://www.w3.org/2000/svg">

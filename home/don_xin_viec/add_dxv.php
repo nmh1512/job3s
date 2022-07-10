@@ -391,12 +391,6 @@
             width: '100%'
         })
 
-        $('.btn_viewcv').each(function() {
-            $(this).click(function() {
-                let objectELemet = viewAndClosePopupUpdate('#popup_viewcv', '.main_popup', '.close_popup', '.cancel', '.form_check')
-            })
-        })
-
         $('.save_xv').click(function() {
             let objectELemet = viewAndClosePopupUpdate('#save_xv', '.main_popup', '.close_popup', '.cancel', '.form_check');
             let {

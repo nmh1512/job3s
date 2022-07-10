@@ -34,6 +34,16 @@
     </div>
     <!-- end poup xác nhận -->
 
+    <!-- ssusss -->
+    <div class="popup hidden" id="suss_ws_td">
+        <div class="main_popup bg_white fit_content br_16 animation_zoom_in d_flex pd_17_23 align_c">
+            <div class="d_flex align_c mr_9">
+                <img src="../../images/check_susses.png" alt="">
+            </div>
+            <span class="font_s16 line_h19 font_w500 cl_green txt_js">Ngừng hiển thị tin tuyển dụng thành công!</span>
+        </div>
+    </div>
+
     <!-- poup lọc-->
     <div class="popup hidden" id="loc_new_td">
         <div class="main_popup bg_white popup_500 br_20 animation_zoom_in drop_poup">
@@ -134,7 +144,7 @@
                                     <th>Ngày cập nhật<span class="span_thead"></span></th>
                                     <th>Trạng thái<span class="span_thead"></span></th>
                                     <th>Dịch vụ đang sử dụng<span class="span_thead"></span></th>
-                                    <th>Chức năng</th>
+                                    <th class="">Chức năng</th>
                                 </tr>
                             </thead>
                             <tbody class="tr_wap">
@@ -190,7 +200,7 @@
                                                 <div class="d_flex align_c mr_6">
                                                     <img src="../../images/3_dots_pri.png" alt="">
                                                 </div>
-                                                <span class="font_w500 cl_primary">Tùy chỉnh</span>
+                                                <span class="font_w500 cl_primary white_s_nw">Tùy chỉnh</span>
 
                                                 <div class="popup_more">
                                                     <div class="d_flex align_c">
@@ -207,9 +217,9 @@
                                                         <span class="font_s16 line_h19 font_w500 cl_primary">Chỉnh sửa</span>
                                                     </a>
 
-                                                    <div class="d_flex align_c">
+                                                    <div class="d_flex align_c show_hidden_btn">
                                                         <div class="mr_8 d_flex align_c">
-                                                            <img src="../../images/eye_open_pri.png" alt="" class="d_none">
+                                                            <img src="../../images/eye_open_pri.png" alt="" >
                                                             <img src="../../images/eye_close_pri.png" alt="">
                                                         </div>
                                                         <span class="font_s16 line_h19 font_w500 cl_primary">Ngừng hiển thị</span>
@@ -235,6 +245,61 @@
                                 <?php endfor; ?>
                             </tbody>
                         </table>
+
+                        <!-- <div class="box_main_table_function">
+                            <table class="table_function">
+                                <thead>
+                                    <tr class="">
+                                        <th colspan="3">Chức năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <div class="cot_noidung2 text-center">
+                                        <tr>
+                                            <td>
+                                                <a href="/chi-tiet-phieu-chuyen-kho-0.html" class="chon_chucnang chon_chucnang_left">
+                                                    <img src="/images/chitiet_green.png" alt="">
+                                                    <div class="title_chucnang">Chi tiết</div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/chinh-sua-phieu-chuyen-0.html" class="chon_chucnang chon_chucnang_mid">
+                                                    <img src="/images/edit_blue.png" alt="">
+                                                    <div class="title_chucnang">Chỉnh sửa</div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="chon_chucnang chon_chucnang_right inline_blk " onclick="hienpopup('popup_xac_nhan_xoa')">
+                                                    <img src="/images/delete_red.png" alt="">
+                                                    <div class="title_chucnang">Xóa</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/chi-tiet-phieu-chuyen-kho-0.html" class="chon_chucnang chon_chucnang_left">
+                                                    <img src="/images/chitiet_green.png" alt="">
+                                                    <div class="title_chucnang">Chi tiết</div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/chinh-sua-phieu-chuyen-0.html" class="chon_chucnang chon_chucnang_mid">
+                                                    <img src="/images/edit_blue.png" alt="">
+                                                    <div class="title_chucnang">Chỉnh sửa</div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="chon_chucnang chon_chucnang_right inline_blk " onclick="hienpopup('popup_xac_nhan_xoa')">
+                                                    <img src="/images/delete_red.png" alt="">
+                                                    <div class="title_chucnang">Xóa</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> -->
+
+
                         <!-- no result -->
                         <div class="no_result bg_w " style="display: none;">
                             <div>
@@ -302,8 +367,25 @@
             })
         })
 
+        $('.show_hidden_btn').each(function() {
+            $(this).click(()=>{
+                let objectELemet = viewAndClosePopupUpdate('#suss_ws_td', '.main_popup', '.close_popup', '', '', false, true, 1000)
+                let {infor_menu} = objectELemet;
+                $(this).children('div').toggleClass('show_view');
+                if($(this).children('div').hasClass('show_view')) {
+                    $(this).children('span').text('Hiển thị tin');
+                    $('.txt_js').text('Ngừng hiển thị tin tuyển dụng thành công!');
+                } else {
+                    $(this).children('span').text('Ngừng hiển thị');
+                    $('.txt_js').text('Hiển thị tin tuyển dụng thành công!');
+                }
+
+            })
+        })
+
         $('.btn_loctd').click(() => {
-            let objectELemet = viewAndClosePopupUpdate('#loc_new_td', '.main_popup', '.close_popup', '.cancel', '.form_check')
+            let objectELemet = viewAndClosePopupUpdate('#loc_new_td', '.main_popup', '.close_popup', '.cancel', '.form_check');
+
         })
 
         $('.hove_tc').each((i, elem) => {

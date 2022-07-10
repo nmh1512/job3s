@@ -11,7 +11,7 @@
     <title>Danh sách mẫu thư xin việc đẹp nhất hiện nay</title>
 </head>
 
-<body>
+<body class="bg_f5">
     <div id="root">
         <?php include("../../includes/after_header.php") ?>
         <div class="container mt_90 bg_f5 pd_b_48">
@@ -172,9 +172,12 @@
 
                             <div class="cv-group">
                                 <span class="font_s18 line_h22 font_w500 cl_a4">Mức lương mong muốn</span>
-                                <div class="mt_12">
-                                    <div></div>
-                                    <div class="d_flex">
+                                <div class="mt_23">
+                                    <div class="ranger_ml">
+                                        <span style="left: -1px"></span>
+                                        <span style="right: -1px"></span>
+                                    </div>
+                                    <div class="d_flex mt_23">
                                         <div class="w_50pt">
                                             <span class="font_s16 line_h24 font_w400 cl_a4">Từ</span>
                                             <div class="d_flex align_c bd_ec bg_f9 pd_lr15 br_10 mt_5">
