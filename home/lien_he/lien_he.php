@@ -13,7 +13,7 @@
     <?
   include "../../includes/before_header.php"
   ?>
-    <div class="container_about info_com">
+    <div class="container_about info_com contact_page_container">
       <section>
         <div class="info_com_banner d_flex plr_resp bg_white space_b">
           <div>
@@ -53,7 +53,7 @@
 
       <section>
         <div class="bg_fa d_flex flex_end plr_resp ptb_48px position_r">
-          <div style="width: 57.5%">
+          <div class="form_contact">
             <h2 class="main_color font_s22">Gửi phản hồi tới Job3s</h2>
             <div class="mt_24">
               <form action="">

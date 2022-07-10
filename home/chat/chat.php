@@ -278,7 +278,7 @@
     }
   }
 
- 
+
 
 
   Fancybox.bind('[data-fancybox="gallery"]', {
@@ -310,7 +310,10 @@
     },
   });
 
-  $('.list_person_chat_box_item').click(function() {
+  $('.list_person_chat_box_item').click(function(e) {
+    if ($(e.target).closest('label').length == 1 || $('.list_person_chat_box_item').find('label').is(':visible')) {
+      return
+    }
     $.ajax({
       type: 'GET',
       url: '../../ajax/render_box_chat.php',
@@ -318,9 +321,10 @@
       success: function(data) {
         $('.box_chat').html(data)
         $('.box_chat_body > div').on('loadeddata', $('.box_chat_body').scrollTop($('.box_chat_body > div').get(0).scrollHeight))
-        $('html').css('overflow','hidden')
+        $('html').css('overflow', 'hidden')
       }
     })
+
   })
 </script>
 

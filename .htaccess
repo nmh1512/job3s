@@ -28,48 +28,49 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
     #RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
-RewriteRule ^cai-dat.html$ /home/tk_ntd/cai_dat/cai_dat.php [NE,L]
-RewriteRule ^dich-vu-tuyen-dung.html$ /home/tk_ntd/ql_ntd/dich_vu.php [NE,L]
-RewriteRule ^tin-tuyen-dung.html$ /home/tk_ntd/ql_ntd/chitiet_tuyendung.php [NE,L]
-RewriteRule ^cv-ho-tro.html$ /home/tk_ntd/ql_ntd/cv_hotro.php [NE,L]
-RewriteRule ^cv-ung-tuyen.html$ /home/tk_ntd/ql_ntd/list_cv_ungtuyen.php [NE,L]
-RewriteRule ^thong-ke-tuyen-dung.html$ /home/tk_ntd/ql_ntd/thong_ke.php [NE,L]
-RewriteRule ^danh-sach-ung-vien.html$ /home/tk_ntd/ds_ungvien/list_ungvien.php [NE,L]
-RewriteRule ^dich-vu-dang-chay.html$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php [NE,L]
-RewriteRule ^dich-vu-het-han.html$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
-RewriteRule ^chuyen-vien-cskh.html$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
-RewriteRule ^chi-tiet-ung-vien.html$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]
-RewriteRule ^gioi-thieu-chung.html$ /home/about_job3s/gioi_thieu_chung.php [NE,L]
-RewriteRule ^thong-tin-can-biet.html$ /home/about_job3s/thong_tin_can_biet.php [NE,L]
-RewriteRule ^thoa-thuan-su-dung.html$ /home/about_job3s/thoa_thuan_su_dung.php [NE,L]
-RewriteRule ^quy-dinh-bao-mat.html$ /home/about_job3s/quy_dinh_bao_mat.php [NE,L]
-RewriteRule ^so-do-web.html$ /home/about_job3s/so_do_web.php [NE,L]
-RewriteRule ^giai-quyet-tranh-chap.html$ /home/about_job3s/giai_quyet_tranh_chap.php [NE,L]
-RewriteRule ^viec-lam-theo-tinh.html$ /home/about_job3s/viec_lam_theo_tinh.php [NE,L]
-RewriteRule ^viec-lam-theo-nganh-nghe.html$ /home/about_job3s/viec_lam_theo_nghe.php [NE,L]
-RewriteRule ^lien-he.html$ /home/lien_he/lien_he.php [NE,L]
-RewriteRule ^chat.html$ /home/chat/chat.php [NE,L]
+RewriteRule ^cai-dat$ /home/tk_ntd/cai_dat/cai_dat.php [NE,L]
+RewriteRule ^dich-vu-tuyen-dung$ /home/tk_ntd/ql_ntd/dich_vu.php [NE,L]
+RewriteRule ^tin-tuyen-dung$ /home/tk_ntd/ql_ntd/chitiet_tuyendung.php [NE,L]
+RewriteRule ^cv-ho-tro$ /home/tk_ntd/ql_ntd/cv_hotro.php [NE,L]
+RewriteRule ^cv-ung-tuyen$ /home/tk_ntd/ql_ntd/list_cv_ungtuyen.php [NE,L]
+RewriteRule ^thong-ke-tuyen-dung$ /home/tk_ntd/ql_ntd/thong_ke.php [NE,L]
+RewriteRule ^danh-sach-ung-vien$ /home/tk_ntd/ds_ungvien/list_ungvien.php [NE,L]
+RewriteRule ^dich-vu-dang-chay$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php [NE,L]
+RewriteRule ^dich-vu-het-han$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
+RewriteRule ^chuyen-vien-cskh$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
+RewriteRule ^chi-tiet-ung-vien$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]
+RewriteRule ^gioi-thieu-chung$ /home/about_job3s/gioi_thieu_chung.php [NE,L]
+RewriteRule ^thong-tin-can-biet$ /home/about_job3s/thong_tin_can_biet.php [NE,L]
+RewriteRule ^thoa-thuan-su-dung$ /home/about_job3s/thoa_thuan_su_dung.php [NE,L]
+RewriteRule ^quy-dinh-bao-mat$ /home/about_job3s/quy_dinh_bao_mat.php [NE,L]
+RewriteRule ^so-do-web$ /home/about_job3s/so_do_web.php [NE,L]
+RewriteRule ^giai-quyet-tranh-chap$ /home/about_job3s/giai_quyet_tranh_chap.php [NE,L]
+RewriteRule ^viec-lam-theo-tinh$ /home/about_job3s/viec_lam_theo_tinh.php [NE,L]
+RewriteRule ^viec-lam-theo-nganh-nghe$ /home/about_job3s/viec_lam_theo_nghe.php [NE,L]
+RewriteRule ^lien-he$ /home/lien_he/lien_he.php [NE,L]
+RewriteRule ^chat$ /home/chat/chat.php [NE,L]
+RewriteRule ^tin-tuc$ /home/tin_tuc/tin_tuc.php [NE,L]
 
 #trang
 
 #authen ứng viên
-RewriteRule ^authen/dang-nhap-ung-vien.html$ /home/authen/login_uv.php [NE,L]
-RewriteRule ^authen/dang-ky-ung-vien.html$ /home/authen/register_uv.php [NE,L]
-RewriteRule ^authen/quen-mat-khau-ung-vien.html$ /home/authen/forgot_uv.php [NE,L]
-RewriteRule ^authen/thay-doi-mat-khau-ung-vien.html$ /home/authen/change_password_uv.php [NE,L]
+RewriteRule ^authen/dang-nhap-ung-vien$ /home/authen/login_uv.php [NE,L]
+RewriteRule ^authen/dang-ky-ung-vien$ /home/authen/register_uv.php [NE,L]
+RewriteRule ^authen/quen-mat-khau-ung-vien$ /home/authen/forgot_uv.php [NE,L]
+RewriteRule ^authen/thay-doi-mat-khau-ung-vien$ /home/authen/change_password_uv.php [NE,L]
 
 #authen nhà tuyển dụng
-RewriteRule ^authen/dang-nhap-nha-tuyen-dung.html$ /home/authen/login_ntd.php [NE,L]
-RewriteRule ^authen/dang-ky-nha-tuyen-dung.html$ /home/authen/register_ntd.php [NE,L]
-RewriteRule ^authen/quen-mat-khau-nha-tuyen-dung.html$ /home/authen/forgot_ntd.php [NE,L]
-RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung.html$ /home/authen/change_password_ntd.php [NE,L]
+RewriteRule ^authen/dang-nhap-nha-tuyen-dung$ /home/authen/login_ntd.php [NE,L]
+RewriteRule ^authen/dang-ky-nha-tuyen-dung$ /home/authen/register_ntd.php [NE,L]
+RewriteRule ^authen/quen-mat-khau-nha-tuyen-dung$ /home/authen/forgot_ntd.php [NE,L]
+RewriteRule ^authen/thay-doi-mat-khau-nha-tuyen-dung$ /home/authen/change_password_ntd.php [NE,L]
 
 #cv
 RewriteRule ^mau-cv/$ /home/cv/list_cv.php [NE,L]
-RewriteRule ^mau-cv/dung-cv.html$ /home/cv/add_cv.php [NE,L]
+RewriteRule ^mau-cv/dung-cv$ /home/cv/add_cv.php [NE,L]
 
 #ntd
-RewriteRule ^chi-tiet-nha-tuyen-dung.html$ /home/ntd/details_ntd.php [NE,L]
+RewriteRule ^chi-tiet-nha-tuyen-dung$ /home/ntd/details_ntd.php [NE,L]
 
 #sau đăng nhập
 
@@ -78,8 +79,8 @@ RewriteRule ^tong-quan/$ /home/tong_quan/index.php [NE,L]
 
 #tin tuyển dụng
 RewriteRule ^tin-tuyen-dung/$ /home/tin_tuyen_dung/list.php [NE,L]
-RewriteRule ^tin-tuyen-dung/dang-tin-tuyen-dung.html$ /home/tin_tuyen_dung/add.php [NE,L]
-RewriteRule ^tin-tuyen-dung/chinh-sua-dang-tin-tuyen-dung.html$ /home/tin_tuyen_dung/edit.php [NE,L]
+RewriteRule ^tin-tuyen-dung/dang-tin-tuyen-dung$ /home/tin_tuyen_dung/add.php [NE,L]
+RewriteRule ^tin-tuyen-dung/chinh-sua-dang-tin-tuyen-dung$ /home/tin_tuyen_dung/edit.php [NE,L]
 
 #quản lý điểm lọc
 RewriteRule ^quan-ly-diem-loc/$ /home/quan_ly_diem_loc/list.php [NE,L]
@@ -93,21 +94,21 @@ RewriteRule ^thay-doi-mat-khau/$ /home/thay_doi_mat_khau/index.php [NE,L]
 
 #thu-xin-viec
 RewriteRule ^thu-xin-viec/$ /home/thu_xin_viec/list.php [NE,L]
-RewriteRule ^thu-xin-viec/danh-sach-thu-xin-viec.html$ /home/thu_xin_viec/list_uv.php [NE,L]
-RewriteRule ^thu-xin-viec/tao-thu-xin-viec.html$ /home/thu_xin_viec/add_txv.php [NE,L]
+RewriteRule ^thu-xin-viec/danh-sach-thu-xin-viec$ /home/thu_xin_viec/list_uv.php [NE,L]
+RewriteRule ^thu-xin-viec/tao-thu-xin-viec$ /home/thu_xin_viec/add_txv.php [NE,L]
 
 #quan lý cv
 RewriteRule ^quan-ly-cv/$ /home/quan_ly_cv/quan_ly_cv.php [NE,L]
 
 #don xin viec
-RewriteRule ^don-xin-viec/danh-sach-don-xin-viec.html$ /home/don_xin_viec/don_xv_uv.php [NE,L]
+RewriteRule ^don-xin-viec/danh-sach-don-xin-viec$ /home/don_xin_viec/don_xv_uv.php [NE,L]
 RewriteRule ^don-xin-viec/$ /home/don_xin_viec/list_don_xv.php [NE,L]
-RewriteRule ^don-xin-viec/tao-don-xin-viec.html$ /home/don_xin_viec/add_dxv.php [NE,L]
+RewriteRule ^don-xin-viec/tao-don-xin-viec$ /home/don_xin_viec/add_dxv.php [NE,L]
 
 #so yếu lí lịch
-RewriteRule ^so-yeu-ly-lich/danh-sach-so-yeu-li-lich.html$ /home/so_yeu_li_lich/so_yeu_li_lich.php [NE,L]
+RewriteRule ^so-yeu-ly-lich/danh-sach-so-yeu-li-lich$ /home/so_yeu_li_lich/so_yeu_li_lich.php [NE,L]
 RewriteRule ^so-yeu-ly-lich/$ /home/so_yeu_li_lich/list_syll.php [NE,L]
-RewriteRule ^so-yeu-ly-lich/tao-so-yeu-li-lich.html$ /home/so_yeu_li_lich/add_syll.php [NE,L]
+RewriteRule ^so-yeu-ly-lich/tao-so-yeu-li-lich$ /home/so_yeu_li_lich/add_syll.php [NE,L]
 
 
 #video giới thiệu bản thân
@@ -125,11 +126,11 @@ RewriteRule ^viec-lam-da-luu/$ /home/viec_lam_da_ung_tuyen/vl_da_luu.php [NE,L]
 RewriteRule ^nganh-nghe-tinh-thanh/$ /home/nganh_nghe_tinh_thanh/nganh_nghe_tt.php [NE,L]
 
 #
-RewriteRule ^tin-tuyen-dung/chi-tiet-tin-tuyen-dung.html$ /home/tin_tuyen_dung/details_uv.php [NE,L]
+RewriteRule ^tin-tuyen-dung/chi-tiet-tin-tuyen-dung$ /home/tin_tuyen_dung/details_uv.php [NE,L]
 
 #
-RewriteRule ^chi-tiet-ung-vien-ntd.html$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
-RewriteRule ^tim-ung-vien.html$ /home/tk_uv/ql_uv/tim_uv.php [NE,L]
+RewriteRule ^chi-tiet-ung-vien-ntd$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
+RewriteRule ^tim-ung-vien$ /home/tk_uv/ql_uv/tim_uv.php [NE,L]
 
 
 
