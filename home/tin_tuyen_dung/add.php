@@ -230,17 +230,19 @@
                             <div class="form_group">
                                 <h2 class="font_s20 line_h23 font_w700 cl_primary bd_l4 pd_l8">Nội dung chi tiết</h2>
                                 <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Video giới thiệu việc làm (định dạng mp4)</span>
-                                <div class="d_flex align_c mt_5 bd_dc w_100 br_5 space_b">
-                                    <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
-                                        <span data-placeholder="Tải lên video giới thiệu việc làm (Dung lượng tối đa 100MB)" class="append">Tải lên video giới thiệu việc làm (Dung lượng tối đa 100MB)</span>
-                                        <div class="close_file d_flex align_c cursor_p d_none">
-                                            <img src="../../images/close_red_nobd.png" alt="">
-                                        </div>
-                                    </span>
-                                    <input type="file" class="files d_none" id="files" name="files" />
-                                    <label for="files" class="cursor_p d_flex center_center bg_clE5 btn_add_files">
-                                        <img src="../../images/add_files.png" alt="add_files">
-                                    </label>
+                                <div class="append_error">
+                                    <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
+                                        <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
+                                            <span data-placeholder="Tải lên video giới thiệu việc làm (Dung lượng tối đa 100MB)" class="append">Tải lên video từ máy tính của bạn (Dung lượng tối đa 100MB)</span>
+                                            <div class="close_file d_flex align_c cursor_p d_none">
+                                                <img src="../../images/close_red_nobd.png" alt="">
+                                            </div>
+                                        </span>
+                                        <input type="file" accept="video/*" class="files d_none" id="files" name="files" />
+                                        <label for="files" class="cursor_p d_flex center_center btn_add_files">
+                                            <img src="../../images/add_files_pri.png" alt="add_files">
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -302,7 +304,17 @@
             width: '100%',
         })
 
-        ChangeFiles('.files', '.append', '.close_file')
+        ChangeFiles('.files', '.append', '.close_file', {
+            selecter: '.file_drop',
+            appendError: '.append_error',
+            isDropFile: true,
+            isAppenError: true,
+            classErorr: 'error_valid_cus',
+            isTypeFileVaild: ['mp4'],
+            customMessType: (file, type) => `File upload phải là tệp thuộc định dạng: ${type.join(', ')}`,
+            customMessSize: (file, size) => `File " ${file.name} " quá lớn. Kích cỡ tối đa được phép tải lên là 100 MB.`,
+            isMaxSize: 1000000,
+        });
     </script>
 </body>
 

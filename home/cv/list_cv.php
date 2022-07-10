@@ -285,7 +285,7 @@
                                                 <span class="font_s16 line_h14 font_w500 currentColor">Xem trước</span>
                                             </button>
 
-                                            <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white">
+                                            <a href="/mau-cv/dung-cv.html" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white">
                                                 <div class="mr_6 d_flex align_c">
                                                     <img src="../../images/edit_white.png" alt="">
                                                 </div>

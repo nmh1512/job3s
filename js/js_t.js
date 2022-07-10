@@ -37,54 +37,6 @@ function clickToggleClass(element, listSelectName, className) {
   }
 }
 
-function activeChangeTable(
-  element,
-  classList,
-  classNameAv,
-  contentParent,
-  contentView,
-  classCTAC
-) {
-  function change(className, clView, acView) {
-    if (className != "") {
-      let elHeader = document.querySelector(className);
-
-      if (elHeader) {
-        let chidren = [...elHeader.children];
-
-        if (chidren) {
-          chidren.forEach((e) => {
-            if (e.classList.contains(clView)) {
-              e.classList.add(acView);
-              e.style.display = "block";
-            } else {
-              if (e.classList.contains(acView)) {
-                e.classList.remove(acView);
-                e.style.display = "none";
-              }
-            }
-          });
-        }
-      }
-    }
-  }
-  if (element) {
-    let panretClass = document.querySelector(classList);
-
-    if (panretClass) {
-      let chidrenEL = [...panretClass.children];
-
-      chidrenEL.forEach((e) => {
-        if (e.classList.contains(classNameAv)) {
-          e.classList.remove(classNameAv);
-        }
-      });
-
-      element.classList.add(classNameAv);
-      change(contentParent, contentView, classCTAC);
-    }
-  }
-}
 
 function onScrollHeader(classHeader, classAdd, startClassPostion) {
   let header = document.querySelector(classHeader);
@@ -144,72 +96,6 @@ function Copyied(element, classCopyied) {
       }, 2500);
     };
   }
-}
-
-function getDatLocation(array) {
-  let time;
-  function getTime(elementTime) {
-    if (!elementTime) {
-      clearInterval(time);
-    }
-    let date = new Date();
-    let hours = date.getHours();
-    let minute = date.getMinutes();
-    let seconds = date.getSeconds();
-    let determined = "PM";
-
-    if (hours >= 0 && hours <= 11) {
-      determined = "AM";
-    }
-
-    let strhours = `0${hours}`.slice(-2);
-    let strminute = `0${minute}`.slice(-2);
-    let strseconds = `0${seconds}`.slice(-2);
-
-    elementTime.innerText = `${strhours}:${strminute}:${strseconds} ${determined}`;
-  }
-
-  function getDate(elementDate) {
-    let date = new Date();
-
-    let day = date.getDay();
-    let dateO = `0${date.getDate()}`.slice(-2);
-    let month = `0${date.getMonth() + 1}`.slice(-2);
-    let year = `${date.getFullYear()}`;
-
-    if (day === 0) {
-      day = "Chủ nhật";
-    } else {
-      day = `Thứ ${day + 1}`;
-    }
-
-    elementDate.innerText = `${day}, ${dateO}/${month}/${year}`;
-  }
-
-  function getLocation(element) {
-    if (element) {
-      fetch("http://ip-api.com/json/")
-        .then((response) => response.json())
-        .then((data) => {
-          let { city, country } = data;
-          element.innerText = `${city}, ${country}`;
-        });
-    }
-  }
-
-  array.forEach((item) => {
-    if (item.condition == "time") {
-      let timePush = document.querySelector(item.className);
-      time = setInterval(() => getTime(timePush));
-    } else if (item.condition == "date") {
-      let datePush = document.querySelector(item.className);
-
-      getDate(datePush);
-    } else if (item.condition == "location") {
-      let loctionPush = document.querySelector(item.className);
-      getLocation(loctionPush);
-    }
-  });
 }
 
 function randomString(classElement, elementPush, maxLength) {
@@ -318,13 +204,17 @@ function viewAndClosePopupUpdate(
   selectCancel,
   resertForm,
   isCloseMain = true,
+  hiddenTime = false,
+  timeHidden = 1000,
 ) {
   viewPopup(idPopup, "hidden");
   let infor_menu = document.querySelector(idPopup);
   let box_popup_infor_menu = infor_menu.querySelector(selectorChild);
   let elmClose = close_popup&&infor_menu.querySelector(close_popup);
   let cancel = selectCancel&&infor_menu.querySelector(selectCancel);
-  let elementForm = resertForm&&infor_menu.querySelector(resertForm)
+  let elementForm = resertForm&&infor_menu.querySelector(resertForm);
+
+  if(typeof timeHidden!= 'number') timeHidden = 1000;
 
   if (infor_menu) {
     if (elmClose) {
@@ -339,6 +229,14 @@ function viewAndClosePopupUpdate(
         clearAmintions();
         resertForm(elementForm);
       };
+    }
+
+    if(hiddenTime) {
+      let clearTime = setTimeout(()=>{
+        clearTimeout(clearTime)
+        clearAmintions();
+        resertForm(elementForm);
+      }, timeHidden);
     }
 
     function hiddenOverlay(e) {
@@ -587,3 +485,4 @@ function changeAjax ({
     }
   }
 }
+
