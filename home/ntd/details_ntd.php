@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/slick.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style_h.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Chi tiết nhà tuyển dụng</title>
 </head>
@@ -105,7 +106,8 @@
     <!-- end poup xác nhận -->
 
     <div id="root">
-        <div class="container bg_f5 pd_b48">
+        <? include("../../includes/before_header.php") ?>
+        <div class="container bg_f5 pd_b48 mt_90">
             <div class="infor_controll pd_48 d_flex bg_clE5 space_b">
                 <div class="infor_left d_flex">
                     <div class="wh_120 br_16 bd_dc mr_24 fshick position_r">
@@ -115,47 +117,49 @@
                     <div class="infor_ct">
                         <h1 class="font_s28 line_h33 font_w700 cl_primary pd_b12">Công ty Cổ phần Thanh Toán Hưng Hà</h1>
                         <span class="font_s20 line_h23 font_w500 cl_55">Công nghệ thông tin - Viễn thông</span>
-                        <div class="mt_16 d_flex flex_w if_add">
-                            <div class="d_flex">
-                                <div class="d_flex align_c wh_16 mr_8">
-                                    <img src="../../images/adrress_icon.png" alt="icon_addrress" class="img_full">
+                        <div class="d_flex space_b">
+                            <div class="mt_16 d_flex flex_w if_add">
+                                <div class="d_flex">
+                                    <div class="d_flex align_c wh_16 mr_8">
+                                        <img src="../../images/adrress_icon.png" alt="icon_addrress" class="img_full">
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w400 cl_55">Thanh Xuân, Hà Nội</span>
                                 </div>
-                                <span class="font_s16 line_h19 font_w400 cl_55">Thanh Xuân, Hà Nội</span>
-                            </div>
 
-                            <div class="d_flex">
-                                <div class="d_flex align_c wh_16 mr_8">
-                                    <img src="../../images/gg_blobe.png" alt="icon_addrress" class="img_full">
+                                <div class="d_flex">
+                                    <div class="d_flex align_c wh_16 mr_8">
+                                        <img src="../../images/gg_blobe.png" alt="icon_addrress" class="img_full">
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w400 cl_55">Timviec365.vn</span>
                                 </div>
-                                <span class="font_s16 line_h19 font_w400 cl_55">Timviec365.vn</span>
+                            </div>
+                            <div class="infor_follower d_flex align_e">
+                                <button class="btn td_btn hover_td flex_im m_w142 center_center cl_primary bg_w bg_td bd_td br_100">
+                                    <div class="mr_6 d_flex align_c">
+                                        <!-- <img src="../../images/like_fill_white.png" alt=""> -->
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.47654 15.7499H2.30155C1.91699 15.7499 1.54818 15.5971 1.27625 15.3252C1.00433 15.0533 0.851563 14.6845 0.851562 14.2999V9.22495C0.851562 8.84039 1.00433 8.47158 1.27625 8.19965C1.54818 7.92773 1.91699 7.77496 2.30155 7.77496H4.47654M9.55151 6.32497V3.42499C9.55151 2.84814 9.32236 2.29493 8.91447 1.88704C8.50658 1.47915 7.95336 1.25 7.37652 1.25L4.47654 7.77496V15.7499H12.6545C13.0042 15.7539 13.3435 15.6313 13.61 15.4048C13.8764 15.1783 14.052 14.8632 14.1045 14.5174L15.105 7.99246C15.1365 7.78464 15.1225 7.57245 15.0639 7.37059C15.0053 7.16873 14.9035 6.98203 14.7656 6.82341C14.6276 6.6648 14.4569 6.53807 14.2651 6.452C14.0733 6.36593 13.8652 6.32259 13.655 6.32497H9.55151Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Theo dõi</span>
+                                </button>
+
+                                <button class="btn hover_chat flex_im m_w142 center_center cl_green bg_w bg_td bd_chat br_100">
+                                    <div class="mr_6 d_flex align_c">
+                                        <!-- <img src="../../images/ib_green.png" alt=""> -->
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.12122 14.6263L4.52302 13.993C4.33262 13.8722 4.09797 13.8434 3.88405 13.9147L4.12122 14.6263ZM0.75 15.75L0.0384876 15.5128C-0.0513461 15.7823 0.0187957 16.0795 0.21967 16.2803C0.420544 16.4812 0.71767 16.5513 0.987171 16.4615L0.75 15.75ZM1.87374 12.3788L2.58525 12.6159C2.65656 12.402 2.62783 12.1674 2.50703 11.977L1.87374 12.3788ZM8 16.5C12.4183 16.5 16 12.9183 16 8.5H14.5C14.5 12.0899 11.5899 15 8 15V16.5ZM3.71942 15.2595C4.95767 16.0452 6.42686 16.5 8 16.5V15C6.71976 15 5.52808 14.6306 4.52302 13.993L3.71942 15.2595ZM3.88405 13.9147L0.512829 15.0385L0.987171 16.4615L4.3584 15.3378L3.88405 13.9147ZM1.46151 15.9872L2.58525 12.6159L1.16223 12.1416L0.0384876 15.5128L1.46151 15.9872ZM0 8.5C0 10.0731 0.454829 11.5423 1.24045 12.7806L2.50703 11.977C1.86936 10.9719 1.5 9.78024 1.5 8.5H0ZM8 0.5C3.58172 0.5 0 4.08172 0 8.5H1.5C1.5 4.91015 4.41015 2 8 2V0.5ZM16 8.5C16 4.08172 12.4183 0.5 8 0.5V2C11.5899 2 14.5 4.91015 14.5 8.5H16Z" fill="currentColor" />
+                                            <line x1="4.72266" y1="6.94336" x2="11.2782" y2="6.94336" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                            <line x1="4.72266" y1="10.166" x2="8.05599" y2="10.166" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Chat ngay</span>
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="infor_follower d_flex align_e">
-                    <button class="btn td_btn hover_td flex_im m_w142 center_center cl_primary bg_w bg_td bd_td br_100">
-                        <div class="mr_6 d_flex align_c">
-                            <!-- <img src="../../images/like_fill_white.png" alt=""> -->
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.47654 15.7499H2.30155C1.91699 15.7499 1.54818 15.5971 1.27625 15.3252C1.00433 15.0533 0.851563 14.6845 0.851562 14.2999V9.22495C0.851562 8.84039 1.00433 8.47158 1.27625 8.19965C1.54818 7.92773 1.91699 7.77496 2.30155 7.77496H4.47654M9.55151 6.32497V3.42499C9.55151 2.84814 9.32236 2.29493 8.91447 1.88704C8.50658 1.47915 7.95336 1.25 7.37652 1.25L4.47654 7.77496V15.7499H12.6545C13.0042 15.7539 13.3435 15.6313 13.61 15.4048C13.8764 15.1783 14.052 14.8632 14.1045 14.5174L15.105 7.99246C15.1365 7.78464 15.1225 7.57245 15.0639 7.37059C15.0053 7.16873 14.9035 6.98203 14.7656 6.82341C14.6276 6.6648 14.4569 6.53807 14.2651 6.452C14.0733 6.36593 13.8652 6.32259 13.655 6.32497H9.55151Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                        </div>
-                        <span class="font_s16 line_h19 font_w500 currentColor">Theo dõi</span>
-                    </button>
-
-                    <button class="btn hover_chat flex_im m_w142 center_center cl_green bg_w bg_td bd_chat br_100">
-                        <div class="mr_6 d_flex align_c">
-                            <!-- <img src="../../images/ib_green.png" alt=""> -->
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.12122 14.6263L4.52302 13.993C4.33262 13.8722 4.09797 13.8434 3.88405 13.9147L4.12122 14.6263ZM0.75 15.75L0.0384876 15.5128C-0.0513461 15.7823 0.0187957 16.0795 0.21967 16.2803C0.420544 16.4812 0.71767 16.5513 0.987171 16.4615L0.75 15.75ZM1.87374 12.3788L2.58525 12.6159C2.65656 12.402 2.62783 12.1674 2.50703 11.977L1.87374 12.3788ZM8 16.5C12.4183 16.5 16 12.9183 16 8.5H14.5C14.5 12.0899 11.5899 15 8 15V16.5ZM3.71942 15.2595C4.95767 16.0452 6.42686 16.5 8 16.5V15C6.71976 15 5.52808 14.6306 4.52302 13.993L3.71942 15.2595ZM3.88405 13.9147L0.512829 15.0385L0.987171 16.4615L4.3584 15.3378L3.88405 13.9147ZM1.46151 15.9872L2.58525 12.6159L1.16223 12.1416L0.0384876 15.5128L1.46151 15.9872ZM0 8.5C0 10.0731 0.454829 11.5423 1.24045 12.7806L2.50703 11.977C1.86936 10.9719 1.5 9.78024 1.5 8.5H0ZM8 0.5C3.58172 0.5 0 4.08172 0 8.5H1.5C1.5 4.91015 4.41015 2 8 2V0.5ZM16 8.5C16 4.08172 12.4183 0.5 8 0.5V2C11.5899 2 14.5 4.91015 14.5 8.5H16Z" fill="currentColor" />
-                                <line x1="4.72266" y1="6.94336" x2="11.2782" y2="6.94336" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                <line x1="4.72266" y1="10.166" x2="8.05599" y2="10.166" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-
-                        </div>
-                        <span class="font_s16 line_h19 font_w500 currentColor">Chat ngay</span>
-                    </button>
                 </div>
             </div>
 
@@ -174,7 +178,13 @@
                             <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Video giới thiệu công ty</h3>
                             <div class="content_cty mt_24">
                                 <!-- nhúng video -->
-                                <img src="../../images/anh_video_cty.png " alt="">
+                                <!-- <img src="../../images/anh_video_cty.png " alt=""> -->
+                                <div class="video_peolpe mt_16">
+                                    <video controls="" class="img_full br_16">
+                                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,6 +330,7 @@
                 </div>
             </div>
         </div>
+        <? include("../../includes/footer.php") ?>
     </div>
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/slick.min.js"></script>
@@ -340,13 +351,19 @@
         eyeChange('.eye_btn', '#password', 'eye_hidden');
 
         let isCheck = false;
-        $('.td_btn').click(()=>{
-            if(!isCheck) {
+        $('.td_btn').click(() => {
+            if (!isCheck) {
                 $('.td_btn > span').text('Đã theo dõi')
-                $('.td_btn').css({backgroundColor: '#007580', color: 'white'})
+                $('.td_btn').css({
+                    backgroundColor: '#007580',
+                    color: 'white'
+                })
             } else {
                 $('.td_btn > span').text('Theo dõi')
-                $('.td_btn').css({backgroundColor: 'white', color: '#007580'})
+                $('.td_btn').css({
+                    backgroundColor: 'white',
+                    color: '#007580'
+                })
             }
             isCheck = !isCheck;
         })

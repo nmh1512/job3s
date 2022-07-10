@@ -6,90 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/select2.min.css">
+    <link rel="stylesheet" href="../../css/slick.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Danh sách mẫu thư xin việc đẹp nhất hiện nay</title>
 </head>
 
 <body class="bg_f5">
-    <!-- poup ứng tuyển-->
-    <div class="popup hidden" id="popup_viewcv">
-        <div class="main_popup bg_white position_r br_20 animation_zoom_in drop_poup wh_90pt pd_tbl36_r24 d_flex">
-            <div class="poup_left scroll_y">
-                <div class="list_imgcv">
-                    <img src="../../images/mcv1.png" alt="">
-                    <img src="../../images/mcv2.png" alt="">
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="save_xv">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
+                <h3 class="font_s20 line_h23 cl_white font_w700">Lưu cv</h3>
+                <div class="close_popup">
+                    <img src="../../images/close_white.png" alt="">
                 </div>
             </div>
-            <div class="poup_right">
-                <form action="" method="post" class="form_check">
-                    <h2 class="font_s24 line_h28 font_w500 cl_primary">Nhân viên bảo hiểm</h2>
-                    <div class="mt_14 chil_24">
-                        <div class="cv-group">
-                            <span class="font_s18 line_h22 font_w500 cl_a4">Ngôn ngữ</span>
-                            <div class="mt_16 cv_select">
-                                <select name="" id="" class="select_one">
-                                    <option value="">Tiếng Việt</option>
-                                    <option value="">Tiếng Việt2</option>
-                                    <option value="">Tiếng Việt3</option>
-                                    <option value="">Tiếng Việt4</option>
-                                </select>
-                            </div>
+            <div class="conatent_popup pd_tlr32_b24">
+                <form onsubmit="return false" action="" method="POST" class="form_check">
+                    <div class="form_group">
+                        <span class="font_s16 line_h19 font_w500 cl_a4">Tiêu đề đơn xin việc<span class="cl_red">*</span></span>
+                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
+                            <input type="text" id="email" name="email" autocomplete="off" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập tiêu đề đơn xin việc" />
                         </div>
+                    </div>
 
-                        <div class="cv-group">
-                            <span class="font_s18 line_h22 font_w500 cl_a4">Ngành nghề</span>
-                            <div class="mt_16 cv_select">
-                                <select name="" id="" class="select_one">
-                                    <option value="">Nhân viên bảo hiểm</option>
-                                </select>
-                            </div>
-                        </div>
+                    <span class="vd_po">Ví dụ: Đơn xin việc marketing, đơn xin việc bán hàng...</span>
 
-                        <div class="cv-group">
-                            <span class="font_s18 line_h22 font_w500 cl_a4">Font chữ</span>
-                            <div class="mt_16 cv_select">
-                                <select name="" id="" class="select_one">
-                                    <option value="">Roboto</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="cv-group">
-                            <span class="font_s18 line_h22 font_w500 cl_a4">Màu sắc</span>
-                            <div class="list_color_cv mt_16_i">
-                                <span class="color_cv" style="color: #FF823C"></span>
-                                <span class="color_cv" style="color: #40BA77"></span>
-                                <span class="color_cv" style="color: #5D5FEF"></span>
-                            </div>
-                        </div>
-
-
-                        <div class="cv-submit mt_24">
-                            <div class="mt_16chil">
-                                <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im center_center h_42 br_5 w_100 btn_primary cl_white pd_t12_b11_lr24">
-                                    <div class="mr_6 d_flex align_c">
-                                        <img src="../../images/edit_white.png" alt="">
-                                    </div>
-                                    <span class="font_s16 line_h19 font_w500 currentColor">Dùng mẫu này</span>
-                                </a>
-
-
-                                <button type="button" class="cancel btn td_btn btn_loctd flex_im center_center h_42 cl_primary bg_w bd_td br_5 w_100 pd_t12_b11_lr24">
-                                    <span class="font_s16 line_h19 font_w500 currentColor">Đóng lại</span>
-                                </button>
-                            </div>
-                        </div>
+                    <div class="form_submit d_flex center_center mt_24">
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_5">Quay lại</button>
+                        <button class="dong_y btn h_42 m_w140 br_5 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_24">Tiếp tục</button>
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+    <!-- end poup xác nhận -->
 
-            <div class="close_popup close_ppcv">
-                <img src="../../images/close_red_nobd.png" alt="">
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="popup_thong_bao">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
+                <h3 class="font_s20 line_h23 cl_white font_w700">Thông báo</h3>
+                <div class="close_popup">
+                    <img src="../../../images/close_white.png" alt="" class="img_full">
+                </div>
+            </div>
+            <div class="conatent_popup pd_24_32">
+                <form onsubmit="return false" action="" method="POST">
+                    <p class="font_s16 line_h19 font_w400 cl_a4 txt_center">Lần tạo mới <span class="font_w500">Đơn xin việc</span> cuối cùng của bạn chưa được lưu, bạn có muốn khôi phục lại không?</p>
+                    <div class="form_submit d_flex center_center mt_24">
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w120 center_center cl_73 bg_w bg_td bd_73 br_12">Bỏ qua</button>
+                        <button class="btn h_42 m_w120 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_36">Đồng ý</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- end poup lọc-->
+    <!-- end poup xác nhận -->
+
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="popup_ss">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="conatent_popup pd_t32_lrb24">
+                <div class="d_flex center_center flex_column">
+                    <div class="wh_42">
+                        <img src="../../images/check_medium.png" alt="" class="img_full">
+                    </div>
+                    <h3 class="font_s20 line_h23 font_w700 cl_primary mt_16">Lưu đơn thành công!</h3>
+                    <p class="font_s16 line_h19 font_w400 cl_55 mt_8 txt_center">Giờ đây bạn có thể dùng đơn này để ứng tuyển các công việc phù hợp! </p>
+                    <div class="form_submit d_flex center_center mt_16">
+                        <a href="/don-xin-viec/" class="btn flex_im center_center h_42 m_w140 br_5 font_s16 line_h19 font_w700 bg_td cl_white btn_primary">Đóng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end poup xác nhận -->
+
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="popup_waring">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="conatent_popup pd_t32_lrb24">
+                <div class="d_flex center_center flex_column">
+                    <div class="wh_42">
+                        <img src="../../images/warning_medium.png" alt="" class="img_full">
+                    </div>
+                    <h3 class="font_s20 line_h23 font_w700 cl_primary mt_16">Cảnh báo!</h3>
+                    <p class="font_s16 line_h19 font_w400 cl_55 mt_8 txt_center">Các thay đổi bạn đã thực hiện có thể không được lưu</p>
+                    <div class="form_submit d_flex center_center mt_24">
+                        <a href="/don-xin-viec/" class="btn flex_im center_center h_42 m_w140 br_5 font_s16 line_h19 font_w700 bg_td cl_white btn_primary">Rời trang web</a>
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_5 ml_36">Bỏ qua</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end poup xác nhận -->
 
     <div id="root">
         <?php include("../../includes/after_header.php") ?>
@@ -115,8 +128,8 @@
 
                     <div class="item_control_fuc">
                         <span class="font_s16 line_h19 font_w500 cl_55">Màu sắc</span>
-                        <div class="list_color_cv mt_8_i">
-                            <span class="color_cv" style="color: #FF823C"></span>
+                        <div class="list_color_cv mt_8_i mau_js cusr_p">
+                            <span class="color_cv ac_color" style="color: #FF823C"></span>
                             <span class="color_cv" style="color: #40BA77"></span>
                             <span class="color_cv" style="color: #5D5FEF"></span>
                             <span class="color_cv" style="color: #5D5FEF"></span>
@@ -135,7 +148,7 @@
 
                     <div class="item_control_fuc">
                         <span class="font_s16 line_h19 font_w500 cl_55">Cỡ chữ</span>
-                        <div class="list_c w_138 cus_fuc_cv d_flex center_center co_chu">
+                        <div class="list_c w_138 cus_fuc_cv d_flex center_center co_chu co_js">
                             <span class="small_fuc act_ch">A</span>
                             <span class="medium_fuc">A</span>
                             <span class="">A</span>
@@ -144,7 +157,7 @@
 
                     <div class="item_control_fuc">
                         <span class="font_s16 line_h19 font_w500 cl_55">Giãn dòng</span>
-                        <div class="list_c w_138 cus_fuc_cv d_flex center_center co_chu">
+                        <div class="list_c w_138 cus_fuc_cv d_flex center_center co_chu gd_js">
                             <span class="small_fuc act_ch">
                                 <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3.28284 0.717157C3.12663 0.560947 2.87337 0.560947 2.71716 0.717157L0.171573 3.26274C0.0153631 3.41895 0.0153631 3.67222 0.171573 3.82843C0.327783 3.98464 0.581048 3.98464 0.737258 3.82843L3 1.56569L5.26274 3.82843C5.41895 3.98464 5.67222 3.98464 5.82843 3.82843C5.98464 3.67222 5.98464 3.41895 5.82843 3.26274L3.28284 0.717157ZM3.4 6L3.4 1L2.6 1L2.6 6L3.4 6Z" fill="currentColor" />
@@ -175,7 +188,7 @@
                         </div>
                     </div>
 
-                    <div class="item_control_fuc">
+                    <div class="item_control_fuc doi_mau_cv">
                         <span class="font_s16 line_h19 font_w500 cl_55">Đổi mẫu CV</span>
                         <div class="list_c w_138 flex_center">
                             <button class="btn flex_im center_center wh_28 br_50pt">
@@ -184,7 +197,7 @@
                         </div>
                     </div>
 
-                    <div class="item_control_fuc">
+                    <div class="item_control_fuc save_xv">
                         <span class="font_s16 line_h19 font_w500 cl_55">Lưu CV</span>
                         <div class="list_c w_138 flex_center">
                             <button class="btn flex_im center_center wh_28 br_50pt">
@@ -199,82 +212,84 @@
                 <div class="d_flex mt_24">
                     <div class="box_cv_flex">
                         <div class="render_cv">
-                            <img src="../../images/mcv1.png" alt="" class="w_100">
+                            <img src="../../images/cv_dep.png" alt="" class="w_100">
                         </div>
                     </div>
                     <div class="box_cv_right flex_1 ml_36">
-                        <!-- hướng đẫn -->
-                        <div class="box_cv_fuc d_none">
-                            <div class="header_cv_fuc pd_15 bd_bds_dc">
-                                <h3 class="font_s20 line_h20 font_w700 cl_primary txt_center">Hướng dẫn</h3>
+                        <div class="muc_box">
+                            <!-- hướng đẫn -->
+                            <div class="box_cv_fuc d_none">
+                                <div class="header_cv_fuc pd_15 bd_bds_dc">
+                                    <h3 class="font_s20 line_h20 font_w700 cl_primary txt_center">Hướng dẫn</h3>
+                                </div>
+                                <div class="cn_fuc pd_15">
+                                    <ol class="sz_fuc ls_num">
+                                        <li>Điền đầy đủ các thông tin hiển thị trong CV</li>
+                                        <li>Bấm nút <span class="font_w700 cl_a4">Lưu CV</span></li>
+                                        <li>Xem & Tải CV về máy</li>
+                                    </ol>
+                                    <span class="font_s16 line_h20 font_w400 cl_a4 block mt_12">Một số lưu ý chung</span>
+                                    <ul class="sz_fuc cl_a4 mt_8 pd_l12">
+                                        <li class="cs_style_dots">Sắp xếp thời gian theo thứ tự mới -> cũ.</li>
+                                        <li class="cs_style_dots">Ưu tiên những gì quan trọng, có liên quan đến vị trí ứng tuyển lên đầu </li>
+                                        <li class="cs_style_dots">Ngày tháng nên dùng: 01/2016, 01-2016 hoặc Jan 2016</li>
+                                    </ul>
+                                </div>
+                                <div class="lh_fuc d_flex flex_column">
+                                    <span class="font_s16 line_h20 font_w400 cl_a4">Mọi chi tiết vui lòng liên hệ:</span>
+                                    <span class="font_s16 line_h20 font_w400 cl_a4">Email: Timviec365net.@gmail.com</span>
+                                </div>
                             </div>
-                            <div class="cn_fuc pd_15">
-                                <ol class="sz_fuc ls_num">
-                                    <li>Điền đầy đủ các thông tin hiển thị trong CV</li>
-                                    <li>Bấm nút <span class="font_w700 cl_a4">Lưu CV</span></li>
-                                    <li>Xem & Tải CV về máy</li>
-                                </ol>
-                                <span class="font_s16 line_h20 font_w400 cl_a4 block mt_12">Một số lưu ý chung</span>
-                                <ul class="sz_fuc cl_a4 mt_8 pd_l12">
-                                    <li class="cs_style_dots">Sắp xếp thời gian theo thứ tự mới -> cũ.</li>
-                                    <li class="cs_style_dots">Ưu tiên những gì quan trọng, có liên quan đến vị trí ứng tuyển lên đầu </li>
-                                    <li class="cs_style_dots">Ngày tháng nên dùng: 01/2016, 01-2016 hoặc Jan 2016</li>
-                                </ul>
-                            </div>
-                            <div class="lh_fuc d_flex flex_column">
-                                <span class="font_s16 line_h20 font_w400 cl_a4">Mọi chi tiết vui lòng liên hệ:</span>
-                                <span class="font_s16 line_h20 font_w400 cl_a4">Email: Timviec365net.@gmail.com</span>
-                            </div>
-                        </div>
-                        <!-- hướng dẫn -->
+                            <!-- hướng dẫn -->
 
-                        <!-- thông tn các nhân -->
-                        <div class="box_cv_fuc d_none">
-                            <div class="header_cv_fuc pd_15 bd_bds_dc">
-                                <h3 class="font_s20 line_h20 font_w700 cl_primary txt_center">Thông tin cá nhân</h3>
+                            <!-- thông tn các nhân -->
+                            <div class="box_cv_fuc d_none">
+                                <div class="header_cv_fuc pd_15 bd_bds_dc">
+                                    <h3 class="font_s20 line_h20 font_w700 cl_primary txt_center">Thông tin cá nhân</h3>
+                                </div>
+                                <div class="cn_fuc pd_15">
+                                    <ul class="sz_fuc cl_a4 mt_8">
+                                        <li class="cs_style_dots">Viết đầy đủ họ tên của bạn.</li>
+                                        <li class="cs_style_dots">Email cần nghiêm túc nên chứa họ tên bạn.</li>
+                                        <li class="cs_style_dots">Chèn ảnh đại diện:</li>
+                                        <li class="cs_style_dots">Nên: chèn ảnh phù hợp với vị trí ứng tuyển,nhìn thấy khuôn mặt trực diện.</li>
+                                        <li class="cs_style_dots">Không nên: ảnh chỉ nhìn thấy một phần khuôn mặt hoặc quay lưng về phía trước.</li>
+                                        <li class="cs_style_dots">Nếu bạn ứng tuyển cho một số công ty trong nước hoặc các công ty không phải là công ty nước ngoài liên quan đến các nước như Mỹ, Anh bạn cỏ thể thêm một số thông tin cá nhân khác: Ngày sinh, giới tính, tình trạng hôn nhân.</li>
+                                    </ul>
+                                </div>
+                                <div class="lh_fuc d_flex flex_column">
+                                    <span class="font_s16 line_h20 font_w400 cl_a4">Mọi chi tiết vui lòng liên hệ:</span>
+                                    <span class="font_s16 line_h20 font_w400 cl_a4">Email: Timviec365net.@gmail.com</span>
+                                </div>
                             </div>
-                            <div class="cn_fuc pd_15">
-                                <ul class="sz_fuc cl_a4 mt_8">
-                                    <li class="cs_style_dots">Viết đầy đủ họ tên của bạn.</li>
-                                    <li class="cs_style_dots">Email cần nghiêm túc nên chứa họ tên bạn.</li>
-                                    <li class="cs_style_dots">Chèn ảnh đại diện:</li>
-                                    <li class="cs_style_dots">Nên: chèn ảnh phù hợp với vị trí ứng tuyển,nhìn thấy khuôn mặt trực diện.</li>
-                                    <li class="cs_style_dots">Không nên: ảnh chỉ nhìn thấy một phần khuôn mặt hoặc quay lưng về phía trước.</li>
-                                    <li class="cs_style_dots">Nếu bạn ứng tuyển cho một số công ty trong nước hoặc các công ty không phải là công ty nước ngoài liên quan đến các nước như Mỹ, Anh bạn cỏ thể thêm một số thông tin cá nhân khác: Ngày sinh, giới tính, tình trạng hôn nhân.</li>
-                                </ul>
-                            </div>
-                            <div class="lh_fuc d_flex flex_column">
-                                <span class="font_s16 line_h20 font_w400 cl_a4">Mọi chi tiết vui lòng liên hệ:</span>
-                                <span class="font_s16 line_h20 font_w400 cl_a4">Email: Timviec365net.@gmail.com</span>
-                            </div>
-                        </div>
-                        <!-- thông tin cá nhân -->
+                            <!-- thông tin cá nhân -->
 
 
-                        <!-- Nghề nghiệp -->
-                        <div class="box_cv_fuc">
-                            <div class="header_cv_fuc pd_15 bd_bds_dc">
-                                <h3 class="font_s20 line_h20 font_w700 cl_primary txt_center">Mục tiêu nghề nghiệp</h3>
+                            <!-- Nghề nghiệp -->
+                            <div class="box_cv_fuc">
+                                <div class="header_cv_fuc pd_15 bd_bds_dc">
+                                    <h3 class="font_s20 line_h20 font_w700 cl_primary txt_center">Mục tiêu nghề nghiệp</h3>
+                                </div>
+                                <div class="cn_fuc pd_15">
+                                    <span class="font_s16 line_h20 font_w400 cl_a4 block font_w500 mt_12">Nên:</span>
+                                    <ul class="sz_fuc cl_a4 mt_8 pd_l12">
+                                        <li class="cs_style_dots">Vị trí mong muốn ứng tuyển,có thể đề cập đến công ty ứng tuyển.</li>
+                                        <li class="cs_style_dots">Thể hiện kỹ năng, kiến thức chuyên môn bạn có thể áp dụng vào vị trí công việc.</li>
+                                        <li class="cs_style_dots">Có thể phân ra thành mục tiêu ngắn hạn như thành thạo công việc trong vòng…tháng và mục tiêu dài hạn như cơ hội thăng tiến đến một vị trí nào đó.</li>
+                                        <li class="cs_style_dots">Mục tiêu hướng đến lợi ích công ty như tăng doanh số, đẩy mạnh brand, mở rộng tập khách hàng…</li>
+                                    </ul>
+                                    <span class="font_s16 line_h20 font_w400 cl_a4 block font_w500 mt_12">Không nên:</span>
+                                    <ul class="sz_fuc cl_a4 mt_8 pd_l12">
+                                        <li class="cs_style_dots">Viết mục tiêu chung chung như làm việc trong một môi trường năng động, có thể học hỏi được nhiều… hoặc tìm kiếm vị trí phù hợp với bản thân để phát huy hết tất cả những kinh nghiệm, kĩ năng của bản thân…</li>
+                                    </ul>
+                                </div>
+                                <div class="lh_fuc d_flex flex_column">
+                                    <span class="font_s16 line_h20 font_w400 cl_a4">Mọi chi tiết vui lòng liên hệ:</span>
+                                    <span class="font_s16 line_h20 font_w400 cl_a4">Email: Timviec365net.@gmail.com</span>
+                                </div>
                             </div>
-                            <div class="cn_fuc pd_15">
-                                <span class="font_s16 line_h20 font_w400 cl_a4 block font_w500 mt_12">Nên:</span>
-                                <ul class="sz_fuc cl_a4 mt_8 pd_l12">
-                                    <li class="cs_style_dots">Vị trí mong muốn ứng tuyển,có thể đề cập đến công ty ứng tuyển.</li>
-                                    <li class="cs_style_dots">Thể hiện kỹ năng, kiến thức chuyên môn bạn có thể áp dụng vào vị trí công việc.</li>
-                                    <li class="cs_style_dots">Có thể phân ra thành mục tiêu ngắn hạn như thành thạo công việc trong vòng…tháng và mục tiêu dài hạn như cơ hội thăng tiến đến một vị trí nào đó.</li>
-                                    <li class="cs_style_dots">Mục tiêu hướng đến lợi ích công ty như tăng doanh số, đẩy mạnh brand, mở rộng tập khách hàng…</li>
-                                </ul>
-                                <span class="font_s16 line_h20 font_w400 cl_a4 block font_w500 mt_12">Không nên:</span>
-                                <ul class="sz_fuc cl_a4 mt_8 pd_l12">
-                                    <li class="cs_style_dots">Viết mục tiêu chung chung như làm việc trong một môi trường năng động, có thể học hỏi được nhiều… hoặc tìm kiếm vị trí phù hợp với bản thân để phát huy hết tất cả những kinh nghiệm, kĩ năng của bản thân…</li>
-                                </ul>
-                            </div>
-                            <div class="lh_fuc d_flex flex_column">
-                                <span class="font_s16 line_h20 font_w400 cl_a4">Mọi chi tiết vui lòng liên hệ:</span>
-                                <span class="font_s16 line_h20 font_w400 cl_a4">Email: Timviec365net.@gmail.com</span>
-                            </div>
+                            <!-- Nghề nghiệp -->
                         </div>
-                        <!-- Nghề nghiệp -->
 
                         <div class="down_app btn_primary br_16 mt_24 d_flex">
                             <div class="app_left">
@@ -293,30 +308,93 @@
                     </div>
                 </div>
             </div>
+            <!-- render ds -->
+            <div class="change_list mt_24 lr_68 d_none"></div>
+            <!-- render ds -->
         </div>
         <?php include("../../includes/footer.php") ?>
     </div>
 
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/select2.min.js"></script>
+    <script src="../../js/slick.min.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
         $('.select_one').select2({
             width: '100%'
         })
 
-        $('.btn_viewcv').each(function() {
-            $(this).click(function() {
-                let objectELemet = viewAndClosePopupUpdate('#popup_viewcv', '.main_popup', '.close_popup', '.cancel', '.form_check')
-            })
+        $('.save_xv').click(function() {
+            let objectELemet = viewAndClosePopupUpdate('#save_xv', '.main_popup', '.close_popup', '.cancel', '.form_check');
+            let {
+                infor_menu,
+                box_popup_infor_menu,
+                clearAmintions
+            } = objectELemet;
+            let dong_y = infor_menu.querySelector('.dong_y');
+
+            if (dong_y) {
+                dong_y.onclick = () => {
+                    clearAmintions();
+                    viewAndClosePopupUpdate('#popup_ss', '.main_popup', '', '.cancel', '', false);
+                }
+            }
         })
 
+        // ngôn ngữ
         changeAjax({
             listElem: '.fuc_lange .list_c',
             classChange: 'active_lan',
-            // callBack: function (e, parent, className) {
-            //     console.log()
-            // }
+            callBack: function(e, parent, className) {
+                console.log(e)
+            }
+        })
+
+        // cỡ chữ
+        changeAjax({
+            listElem: '.co_js',
+            classChange: 'act_ch',
+            // call ajax
+            callBack: function(e, parent, className) {
+                // code call ajax
+            }
+        })
+
+        // màu sắc
+        changeAjax({
+            listElem: '.mau_js',
+            classChange: 'ac_color',
+            // call ajax
+            callBack: function(e, parent, className) {
+                // code call ajax
+            }
+        })
+
+        // giãn dòng
+        changeAjax({
+            listElem: '.gd_js',
+            classChange: 'act_ch',
+            // call ajax
+            callBack: function(e, parent, className) {
+                // code call ajax
+            }
+        })
+
+        $('.doi_mau_cv').click(() => {
+            $.ajax({
+                url: '../../ajax/ds_dx.php',
+                method: 'POST',
+                success: (data) => {
+                    $('.change_list').empty()
+                    $('.cv_warp').css('display', 'none')
+                    $('.change_list').css('display', 'block');
+                    $('.change_list').html(data)
+                    $('.btn_prev').click(() => {
+                        $('.change_list').css('display', 'none');
+                        $('.cv_warp').css('display', 'block')
+                    })
+                }
+            })
         })
     </script>
 </body>

@@ -107,6 +107,28 @@
     </div>
     <!-- end poup xác nhận -->
 
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="popup_het_diem">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
+                <h3 class="font_s20 line_h23 cl_white font_w700">Thông báo</h3>
+                <div class="close_popup">
+                    <img src="../../../images/close_white.png" alt="" class="img_full">
+                </div>
+            </div>
+            <div class="conatent_popup">
+                <form onsubmit="return false" action="" method="POST">
+                    <p class="font_s16 line_h19 font_w400 cl_a4 pd_48_24 txt_center"><span class="cl_ff33">Điểm của bạn đã sử dụng hết.</span> Để tiếp tục xem hồ sơ vui lòng nạp thêm điểm <a href="" class="cl_primary">Xem chi tiết</a></p>
+                    <div class="form_submit d_flex center_center pd_24 pd_t0">
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Đóng</button>
+                        <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white bg_ffa ml_68">Mua điểm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end poup xác nhận -->
+
     <div id="root">
         <? include('../../../includes/after_header.php') ?>
         <div class="container bg_f5 pd_b48 mt_90">
@@ -119,53 +141,55 @@
                     <div class="infor_ct">
                         <h1 class="font_s28 line_h33 font_w700 cl_primary pd_b12">Nguyễn Thanh Hằng</h1>
                         <span class="font_s20 line_h23 font_w500 cl_55">Nhân viên thiết kế</span>
-                        <div class="mt_16 d_flex flex_w if_add">
-                            <div class="d_flex">
-                                <div class="d_flex align_c wh_16 mr_8">
-                                    <img src="../../images/adrress_icon.png" alt="icon_addrress" class="img_full">
+                        <div class="d_flex space_b">
+                            <div class="mt_16 d_flex flex_w if_add">
+                                <div class="d_flex">
+                                    <div class="d_flex align_c wh_16 mr_8">
+                                        <img src="../../images/adrress_icon.png" alt="icon_addrress" class="img_full">
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w400 cl_55">Thanh Xuân, Hà Nội</span>
                                 </div>
-                                <span class="font_s16 line_h19 font_w400 cl_55">Thanh Xuân, Hà Nội</span>
-                            </div>
 
-                            <div class="d_flex">
-                                <div class="d_flex align_c mr_8">
-                                    <img src="../../../images/time_small_gray.png" alt="icon_addrress">
+                                <div class="d_flex">
+                                    <div class="d_flex align_s mr_8">
+                                        <img src="../../../images/time_small_gray.png" alt="icon_addrress">
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w400 cl_55">Fulltime</span>
                                 </div>
-                                <span class="font_s16 line_h19 font_w400 cl_55">Fulltime</span>
+                            </div>
+                            <div class="infor_follower d_flex align_e">
+                                <button class="btn td_btn btn_ut hover_td flex_im m_w142 pd_lr24 center_center cl_primary bg_w bg_td bd_td br_100">
+                                    <div class="mr_6 d_flex align_c">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1146_3719)">
+                                                <path d="M7.98438 13.667H15.016" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M12.0389 1.47176C12.3642 1.1697 12.8054 1 13.2654 1C13.4932 1 13.7188 1.04166 13.9292 1.12261C14.1397 1.20355 14.3309 1.32219 14.4919 1.47176C14.653 1.62133 14.7808 1.79889 14.868 1.99431C14.9551 2.18972 15 2.39917 15 2.61069C15 2.82221 14.9551 3.03166 14.868 3.22708C14.7808 3.42249 14.653 3.60006 14.4919 3.74962L4.27078 13.2407L1 14L1.81769 10.9629L12.0389 1.47176Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1146_3719">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Đánh giá ứng viên</span>
+                                </button>
+
+                                <button class="btn btn_chat hover_chat flex_im m_w142 pd_lr24 center_center cl_green bg_w bg_td bd_chat br_100">
+                                    <div class="mr_6 d_flex align_c">
+                                        <!-- <img src="../../../images/ib_green.png" alt="" class="img_full"> -->
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.12122 14.6263L4.52302 13.993C4.33262 13.8722 4.09797 13.8434 3.88405 13.9147L4.12122 14.6263ZM0.75 15.75L0.0384876 15.5128C-0.0513461 15.7823 0.0187957 16.0795 0.21967 16.2803C0.420544 16.4812 0.71767 16.5513 0.987171 16.4615L0.75 15.75ZM1.87374 12.3788L2.58525 12.6159C2.65656 12.402 2.62783 12.1674 2.50703 11.977L1.87374 12.3788ZM8 16.5C12.4183 16.5 16 12.9183 16 8.5H14.5C14.5 12.0899 11.5899 15 8 15V16.5ZM3.71942 15.2595C4.95767 16.0452 6.42686 16.5 8 16.5V15C6.71976 15 5.52808 14.6306 4.52302 13.993L3.71942 15.2595ZM3.88405 13.9147L0.512829 15.0385L0.987171 16.4615L4.3584 15.3378L3.88405 13.9147ZM1.46151 15.9872L2.58525 12.6159L1.16223 12.1416L0.0384876 15.5128L1.46151 15.9872ZM0 8.5C0 10.0731 0.454829 11.5423 1.24045 12.7806L2.50703 11.977C1.86936 10.9719 1.5 9.78024 1.5 8.5H0ZM8 0.5C3.58172 0.5 0 4.08172 0 8.5H1.5C1.5 4.91015 4.41015 2 8 2V0.5ZM16 8.5C16 4.08172 12.4183 0.5 8 0.5V2C11.5899 2 14.5 4.91015 14.5 8.5H16Z" fill="currentColor" />
+                                            <line x1="4.72266" y1="6.94336" x2="11.2782" y2="6.94336" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                            <line x1="4.72266" y1="10.166" x2="8.05599" y2="10.166" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Chat ngay</span>
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="infor_follower d_flex align_e">
-                    <button class="btn td_btn btn_ut hover_td flex_im m_w142 pd_lr24 center_center cl_primary bg_w bg_td bd_td br_100">
-                        <div class="mr_6 d_flex align_c">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1146_3719)">
-                                    <path d="M7.98438 13.667H15.016" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M12.0389 1.47176C12.3642 1.1697 12.8054 1 13.2654 1C13.4932 1 13.7188 1.04166 13.9292 1.12261C14.1397 1.20355 14.3309 1.32219 14.4919 1.47176C14.653 1.62133 14.7808 1.79889 14.868 1.99431C14.9551 2.18972 15 2.39917 15 2.61069C15 2.82221 14.9551 3.03166 14.868 3.22708C14.7808 3.42249 14.653 3.60006 14.4919 3.74962L4.27078 13.2407L1 14L1.81769 10.9629L12.0389 1.47176Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1146_3719">
-                                        <rect width="16" height="16" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                        <span class="font_s16 line_h19 font_w500 currentColor">Đánh giá ứng viên</span>
-                    </button>
-
-                    <button class="btn btn_chat hover_chat flex_im m_w142 pd_lr24 center_center cl_green bg_w bg_td bd_chat br_100">
-                        <div class="mr_6 d_flex align_c">
-                            <!-- <img src="../../../images/ib_green.png" alt="" class="img_full"> -->
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.12122 14.6263L4.52302 13.993C4.33262 13.8722 4.09797 13.8434 3.88405 13.9147L4.12122 14.6263ZM0.75 15.75L0.0384876 15.5128C-0.0513461 15.7823 0.0187957 16.0795 0.21967 16.2803C0.420544 16.4812 0.71767 16.5513 0.987171 16.4615L0.75 15.75ZM1.87374 12.3788L2.58525 12.6159C2.65656 12.402 2.62783 12.1674 2.50703 11.977L1.87374 12.3788ZM8 16.5C12.4183 16.5 16 12.9183 16 8.5H14.5C14.5 12.0899 11.5899 15 8 15V16.5ZM3.71942 15.2595C4.95767 16.0452 6.42686 16.5 8 16.5V15C6.71976 15 5.52808 14.6306 4.52302 13.993L3.71942 15.2595ZM3.88405 13.9147L0.512829 15.0385L0.987171 16.4615L4.3584 15.3378L3.88405 13.9147ZM1.46151 15.9872L2.58525 12.6159L1.16223 12.1416L0.0384876 15.5128L1.46151 15.9872ZM0 8.5C0 10.0731 0.454829 11.5423 1.24045 12.7806L2.50703 11.977C1.86936 10.9719 1.5 9.78024 1.5 8.5H0ZM8 0.5C3.58172 0.5 0 4.08172 0 8.5H1.5C1.5 4.91015 4.41015 2 8 2V0.5ZM16 8.5C16 4.08172 12.4183 0.5 8 0.5V2C11.5899 2 14.5 4.91015 14.5 8.5H16Z" fill="currentColor" />
-                                <line x1="4.72266" y1="6.94336" x2="11.2782" y2="6.94336" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                <line x1="4.72266" y1="10.166" x2="8.05599" y2="10.166" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-
-                        </div>
-                        <span class="font_s16 line_h19 font_w500 currentColor">Chat ngay</span>
-                    </button>
                 </div>
             </div>
 
@@ -703,9 +727,16 @@
             infinite: false,
             speed: 300,
             slidesToShow: 3,
-            slidesToScroll: 1,
+            slidesToScroll: 3,
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../../images/arrow_prev.png" alt="" class="img_full"></button>`,
-            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`
+            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`,
+            responsive: [{
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            }]
         })
 
 
@@ -715,7 +746,7 @@
             let objectELemet = viewAndClosePopupUpdate('#popup_ut', '.main_popup', '.close_popup', '.cancel', '.form_check')
         })
 
-        $('.btn_chat').click(function () {
+        $('.btn_chat').click(function() {
             let objectELemet = viewAndClosePopupUpdate('#popup_xh_chat', '.main_popup', '.close_popup', '.cancel', '.form_check')
         })
 

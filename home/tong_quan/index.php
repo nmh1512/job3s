@@ -18,30 +18,30 @@
             <div class="content wbjsb mt_90 pd_48_24_91">
                 <div class="box_item">
                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Đăng tin tuyển dụng</h3>
-                    <div class="list_td mt_24">
-                        <div class="row">
-                            <div class="col_2 item_td pd_lrt24_b25 bg_clE5">
+                    <div class="list_tds mt_24">
+                        <div class="row row_tq">
+                            <div class="col_2 item_td pd_lrt24_b25 d_flex flex_column bg_clE5">
                                 <div class="w_49h18">
                                     <img src="../../images/logo_small.png" alt="" class="img_full">
                                 </div>
                                 <div class="mt_16">
                                     <h2 class="font_s22 line_h26 font_w700 cl_primary">Đăng tin tuyển dụng miễn phí</h2>
-                                    <p class="font_s15 line_h18 font_w400 cl_55 mt_8">Đăng tin tuyển dụng dễ dàng, không quá 1 phút. Kiểm duyệt và đăng tin trong 24h.</p>
+                                    <p class="font_s15 line_h18 font_w400 cl_55 mt_8 m_rp">Đăng tin tuyển dụng dễ dàng, không quá 1 phút. Kiểm duyệt và đăng tin trong 24h.</p>
                                 </div>
-                                <div class="mt_24">
+                                <div class="mt_24 flex_1 d_flex align_e">
                                     <button class="btn br_100 sh_btn bg_w font_s16 line_h19 font_w500 cl_primary pd_t12_b11_lr24">Đăng tin ngay</button>
                                 </div>
                             </div>
 
-                            <div class="col_2 item_td pd_lrt24_b25 bg_white">
+                            <div class="col_2 item_td pd_lrt24_b25 d_flex flex_column bg_white">
                                 <div class="w_49h18">
                                     <img src="../../images/logo_small.png" alt="" class="img_full">
                                 </div>
                                 <div class="mt_16">
                                     <h2 class="font_s22 line_h26 font_w700 cl_primary">Quảng cáo tin tuyển dụng</h2>
-                                    <p class="font_s15 line_h18 font_w400 cl_55 mt_8">Tăng lượt tiếp cận người tìm việc.Tin tuyển dụng hiển thị ở những vị trí nổi bật. Đẩy tin lên vị trí đầu trong kết quả tìm kiếm.</p>
+                                    <p class="font_s15 line_h18 font_w400 cl_55 mt_8 m_rp28">Tăng lượt tiếp cận người tìm việc.Tin tuyển dụng hiển thị ở những vị trí nổi bật. Đẩy tin lên vị trí đầu trong kết quả tìm kiếm.</p>
                                 </div>
-                                <div class="mt_24">
+                                <div class="mt_24 flex_1 d_flex align_e">
                                     <button class="btn br_100 sh_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">Tăng tốc tuyển dụng</button>
                                 </div>
                             </div>
@@ -49,10 +49,10 @@
                     </div>
                 </div>
 
-                <div class="box_item">
+                <div class="box_item number_counter">
                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thống kê tin tuyển dụng</h3>
                     <div class="list_common mt_24">
-                        <div class="row">
+                        <div class="row row_tq">
                             <?php
                             $arr = [
                                 [
@@ -84,7 +84,7 @@
                             ?>
                                 <div class="col_3 item_common <?= $item['class'] . ' ' . $item['bg_box'] ?>">
                                     <div class="pd_r10">
-                                        <h3 class="font_s30 line_h35 font_w700 currentColor"><?= $ran ?></h3>
+                                        <h3 class="font_s30 line_h35 font_w700 currentColor counter"><?= $ran ?></h3>
                                         <p class="font_s16 line_h19 font_w500 mt_16"><?= $item['txt'] ?></p>
                                     </div>
                                     <div class="wh_60 d_flex center_center <?= $item['bg_icon'] ?> br_100">
@@ -99,7 +99,7 @@
                 <div class="box_item">
                     <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thống kê hồ sơ ứng viên</h3>
                     <div class="list_common mt_24">
-                        <div class="row">
+                        <div class="row row_tq">
                             <?php
                             $arr = [
                                 [
@@ -149,14 +149,14 @@
                         <div class="w_49h18">
                             <img src="../../images/logo_small.png" alt="" class="img_full">
                         </div>
-                        <div class="mt_16">
+                        <div class="mt_16 w_55pt">
                             <h2 class="font_s22 line_h26 font_w700 cl_primary">Ứng dụng di động job3s miễn phí</h2>
                             <p class="font_s15 line_h18 font_w400 cl_55 mt_8">Đăng tin tuyển dụng dễ dàng, mọi lúc mọi nơi ngay trên thiết bị di động.</p>
                             <div class="mt_16 wh_100 ml_63">
                                 <img src="../../images/qc_job3s.png" alt="" class="img_full">
                             </div>
                         </div>
-                        <div class="mt_24">
+                        <div class="mt_24 w_55pt">
                             <button class="btn btn_hover_primary flex_im align_c br_100 pd_lr20 shdown_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">
                                 <div class="mr_6 d_flex align_c">
                                     <img src="../../images/down_icon_white.png" alt="">
@@ -166,8 +166,8 @@
                         </div>
 
                         <!--  -->
-                        <div class="img_app d_flex align_e">
-                            <img src="../../images/down_img.png" alt="">
+                        <div class="img_app d_flex align_e kt_pdt" style="background-image: url(../../images/down_img.png);">
+                            <!-- <img src="../../images/down_img.png" alt=""> -->
                         </div>
                     </div>
                 </div>
