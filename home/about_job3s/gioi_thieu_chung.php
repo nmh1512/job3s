@@ -142,7 +142,7 @@
       </div>
     </section>
     <section class="pb_60">
-      <div class="d_flex plr_resp pb_55 mt_18">
+      <div class="d_flex plr_resp pb_55 giatricotloi_top mt_18">
         <div class="gioithieu_header_content w_50pt mr_24">
           <h4 class="mb_8 orange font_w500">Giá trị cốt lõi</h4>
           <h2 class="mb_16 main_color font_s28 font_w500">
