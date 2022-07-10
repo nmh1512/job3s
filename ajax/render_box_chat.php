@@ -294,17 +294,17 @@
                                     </div>
                                     <div class="d_flex flex_end imgs_chat flex_w">
                                         <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px" src="../../images/doggo.jpg" alt="">
+                                            <img class="w_110px pd_0" src="../../images/doggo.jpg" alt="">
                                         </a>
                                         <a href="../../images/img_mes.png" class="p_23_5 txt_justify text_chat border_r12 bg_white ml_12" data-fancybox="gallery">
-                                            <img class="w_110px" src="../../images/img_mes.png" alt="">
+                                            <img class="w_110px pd_0" src="../../images/img_mes.png" alt="">
                                         </a>
 
                                         <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px" src="../../images/doggo.jpg" alt="">
+                                            <img class="w_110px pd_0" src="../../images/doggo.jpg" alt="">
                                         </a>
                                         <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px" src="../../images/doggo.jpg" alt="">
+                                            <img class="w_110px pd_0" src="../../images/doggo.jpg" alt="">
                                         </a>
                                     </div>
 
