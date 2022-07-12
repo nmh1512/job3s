@@ -1,5 +1,5 @@
 <div class="d_flex flex_end">
-    <button type="button" class="btn_prev btn td_btn btn_loctd flex_im center_center bd_ff33 h_42 cl_ff33 bg_w br_12 pd_t12_b11_lr24">
+    <button type="button" class="btn_huys btn td_btn btn_loctd flex_im center_center bd_ff33 h_42 cl_ff33 bg_w br_12 pd_t12_b11_lr24">
         <span class="font_s16 line_h19 font_w500 currentColor">Hủy</span>
     </button>
 </div>

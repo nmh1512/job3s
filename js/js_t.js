@@ -37,7 +37,6 @@ function clickToggleClass(element, listSelectName, className) {
   }
 }
 
-
 function onScrollHeader(classHeader, classAdd, startClassPostion) {
   let header = document.querySelector(classHeader);
   let elemenStart = document.querySelector(startClassPostion);
@@ -205,16 +204,16 @@ function viewAndClosePopupUpdate(
   resertForm,
   isCloseMain = true,
   hiddenTime = false,
-  timeHidden = 1000,
+  timeHidden = 1000
 ) {
   viewPopup(idPopup, "hidden");
   let infor_menu = document.querySelector(idPopup);
   let box_popup_infor_menu = infor_menu.querySelector(selectorChild);
-  let elmClose = close_popup&&infor_menu.querySelector(close_popup);
-  let cancel = selectCancel&&infor_menu.querySelector(selectCancel);
-  let elementForm = resertForm&&infor_menu.querySelector(resertForm);
+  let elmClose = close_popup && infor_menu.querySelector(close_popup);
+  let cancel = selectCancel && infor_menu.querySelector(selectCancel);
+  let elementForm = resertForm && infor_menu.querySelector(resertForm);
 
-  if(typeof timeHidden!= 'number') timeHidden = 1000;
+  if (typeof timeHidden != "number") timeHidden = 1000;
 
   if (infor_menu) {
     if (elmClose) {
@@ -231,9 +230,9 @@ function viewAndClosePopupUpdate(
       };
     }
 
-    if(hiddenTime) {
-      let clearTime = setTimeout(()=>{
-        clearTimeout(clearTime)
+    if (hiddenTime) {
+      let clearTime = setTimeout(() => {
+        clearTimeout(clearTime);
         clearAmintions();
         resertForm(elementForm);
       }, timeHidden);
@@ -280,7 +279,7 @@ function viewAndClosePopupUpdate(
         }
       }
     }
-    if(isCloseMain) infor_menu.addEventListener("click", hiddenOverlay);
+    if (isCloseMain) infor_menu.addEventListener("click", hiddenOverlay);
   }
 
   return {
@@ -296,26 +295,36 @@ function DropFiles(elementFiles, callBack = () => {}) {
   if (elementFiles) {
     elementFiles.ondrop = function (e) {
       e.preventDefault();
-      elementFiles.classList.remove('move_file');
+      elementFiles.classList.remove("move_file");
       let files = e.dataTransfer.files[0];
       callBack(files);
     };
 
     elementFiles.ondragover = function (e) {
       e.preventDefault();
-      elementFiles.classList.add('move_file');
+      elementFiles.classList.add("move_file");
     };
 
     elementFiles.ondragleave = function (e) {
       e.preventDefault();
-      elementFiles.classList.remove('move_file');
+      elementFiles.classList.remove("move_file");
     };
   }
 }
 
 function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
   let files_input = document.querySelectorAll(inputFile);
-  let { selecter, isTypeFileVaild, isMaxSize, isDropFile, customMessType, customMessSize,appendError ,isAppenError, classErorr} = dropFiles;
+  let {
+    selecter,
+    isTypeFileVaild,
+    isMaxSize,
+    isDropFile,
+    customMessType,
+    customMessSize,
+    appendError,
+    isAppenError,
+    classErorr,
+  } = dropFiles;
   let isError = false;
   let placeholder;
   if (files_input) {
@@ -323,42 +332,50 @@ function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
       if (elemeApp) {
         if (files) {
           let elemError = null;
-          let parentE =  document.querySelector(appendError);
-          let errorE = parentE.querySelector(`.${classErorr}` || '.isvalid');
+          let parentE = document.querySelector(appendError);
+          let errorE = parentE.querySelector(`.${classErorr}` || ".isvalid");
 
-          if(isAppenError&&errorE==null) {
-            elemError = document.createElement('span');
-            elemError.className = classErorr || 'isvalid';
+          if (isAppenError && errorE == null) {
+            elemError = document.createElement("span");
+            elemError.className = classErorr || "isvalid";
           } else {
             elemError = errorE;
           }
-          if(isTypeFileVaild) {
+          if (isTypeFileVaild) {
             let type = files.type;
-            type = type.split('/')[1];
+            type = type.split("/")[1];
 
-            if(!isTypeFileVaild.includes(type)) {
+            if (!isTypeFileVaild.includes(type)) {
               isError = true;
-              if(elemError)  elemError.innerText = typeof customMessType === 'function'? customMessType (files, isTypeFileVaild):'file không hợp lệ';
+              if (elemError)
+                elemError.innerText =
+                  typeof customMessType === "function"
+                    ? customMessType(files, isTypeFileVaild)
+                    : "file không hợp lệ";
             } else {
               isError = false;
             }
           }
 
-          if(!isError&&isMaxSize) {
+          if (!isError && isMaxSize) {
             let size = files.size;
-            if(size > isMaxSize) {
+            if (size > isMaxSize) {
               isError = true;
-              if(elemError)  elemError.innerText = typeof customMessSize === 'function'? customMessSize (files, isMaxSize):`file vượt qua giới hạn cho phép`;
+              if (elemError)
+                elemError.innerText =
+                  typeof customMessSize === "function"
+                    ? customMessSize(files, isMaxSize)
+                    : `file vượt qua giới hạn cho phép`;
             } else {
               isError = false;
             }
           }
 
-          if(isError&&elemError) {
-            if(errorE==null) parentE.appendChild(elemError);
+          if (isError && elemError) {
+            if (errorE == null) parentE.appendChild(elemError);
             return;
           } else {
-            if(errorE) {
+            if (errorE) {
               parentE.removeChild(elemError);
             }
           }
@@ -380,23 +397,23 @@ function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
     }
 
     Array.from(files_input).forEach((e) => {
-      e.addEventListener('change',() => {
+      e.addEventListener("change", () => {
         let parent = e.parentElement;
         let elemeApp = parent.querySelector(selectorAppend);
         let close = parent.querySelector(seletClose);
         let files = e.files[0];
 
-        handelFiles(elemeApp, close, files)
+        handelFiles(elemeApp, close, files);
       });
 
-      if (selecter&&isDropFile==true) {
+      if (selecter && isDropFile == true) {
         let elemeElem = document.querySelector(selecter);
 
         if (elemeElem) {
-          let elemeApp =  elemeElem.querySelector(selectorAppend);
+          let elemeApp = elemeElem.querySelector(selectorAppend);
           let close = elemeElem.querySelector(seletClose);
           DropFiles(elemeElem, (files) => {
-            handelFiles(elemeApp, close, files)
+            handelFiles(elemeApp, close, files);
           });
         }
       }
@@ -404,85 +421,349 @@ function ChangeFiles(inputFile, selectorAppend, seletClose, dropFiles) {
   }
 }
 
-function navigatePopup ({
+function navigatePopup({
   controllList,
   navigateContentList,
   defaultActive = 0,
-  customDataList = 'navigate',
-  activeControl= 'active_control',
-  activeNavigate = 'active_navigate'
+  customDataList = "navigate",
+  activeControl = "active_control",
+  activeNavigate = "active_navigate",
 }) {
-  let controllELem = document.querySelector(controllList)
-  let contentNVList = document.querySelector(navigateContentList)
-  if (defaultActive == ''||typeof defaultActive == 'string') defaultActive = 0; 
+  let controllELem = document.querySelector(controllList);
+  let contentNVList = document.querySelector(navigateContentList);
+  if (defaultActive == "" || typeof defaultActive == "string")
+    defaultActive = 0;
 
-  if(controllELem&&contentNVList) {
+  if (controllELem && contentNVList) {
     let chilControl = [...controllELem.children];
     let chilNavigateList = [...contentNVList.children];
     let mxLeng = chilControl.length - 1;
     let ix = 0;
 
-    chilControl.forEach((e, index)=>{
+    chilControl.forEach((e, index) => {
       e.setAttribute(`data-${customDataList}`, index);
-      chilNavigateList[index].setAttribute(`data-${customDataList || 'navigate'}`, index);
-      if(index == defaultActive) {
+      chilNavigateList[index].setAttribute(
+        `data-${customDataList || "navigate"}`,
+        index
+      );
+      if (index == defaultActive) {
         ix = index;
       }
-      if(mxLeng == index) {
-        acitveContent(chilControl[ix],controllList,chilNavigateList,activeNavigate)
+      if (mxLeng == index) {
+        acitveContent(
+          chilControl[ix],
+          controllList,
+          chilNavigateList,
+          activeNavigate
+        );
         ix = null;
         mxLeng = null;
       }
 
       e.onclick = function () {
-        acitveContent(this,controllList,chilNavigateList,activeNavigate);
-      }
-    })
+        acitveContent(this, controllList, chilNavigateList, activeNavigate);
+      };
+    });
 
-    function acitveContent (element, listControl, elementList, classActiveList) {
-      if(element&&elementList) {
-        let dataID = element.dataset[customDataList]
+    function acitveContent(element, listControl, elementList, classActiveList) {
+      if (element && elementList) {
+        let dataID = element.dataset[customDataList];
         // remove class control
-        clickToggleClass(element, listControl, activeControl)
+        clickToggleClass(element, listControl, activeControl);
 
         elementList.forEach((e) => {
           let i = e.dataset[customDataList];
-          if(i != dataID) {
-            e.style.display = 'none'
-            if(classActiveList) {
-              if(e.classList.contains(classActiveList)) e.classList.remove(classActiveList)
+          if (i != dataID) {
+            e.style.display = "none";
+            if (classActiveList) {
+              if (e.classList.contains(classActiveList))
+                e.classList.remove(classActiveList);
             }
           } else {
-            e.style.display = 'block';
-            if(classActiveList) {
-              if(!(e.classList.contains(classActiveList))) e.classList.add(classActiveList)
+            e.style.display = "block";
+            if (classActiveList) {
+              if (!e.classList.contains(classActiveList))
+                e.classList.add(classActiveList);
             }
           }
-        })
+        });
       }
     }
   }
 }
 
-function changeAjax ({
+function changeAjax({
   listElem,
   classChange,
   fucCustom = () => {},
-  callBack = ()=>{}
+  callBack = () => {},
 }) {
   let elemPr = document.querySelector(listElem);
-  if(classChange) {
+  if (classChange) {
     let chil = [...elemPr.children];
 
-    if(chil) {
-      chil.forEach((e)=>{
+    if (chil) {
+      chil.forEach((e) => {
         e.onclick = function () {
           clickToggleClass(this, listElem, classChange);
-          if(typeof fucCustom === 'function') fucCustom(this, listElem, classChange)
-          if(typeof callBack === 'function') callBack(this, listElem, classChange)
-        }
-      })
+          if (typeof fucCustom === "function")
+            fucCustom(this, listElem, classChange);
+          if (typeof callBack === "function")
+            callBack(this, listElem, classChange);
+        };
+      });
     }
+  }
+}
+
+
+function moreShows({
+  elem,
+  classMore
+}) {
+  // lấy element
+  let children = $(elem).children(classMore);
+  let tabID = $(elem).data("tab");
+
+  if (children.length <= 0) {
+    let chilbody = $("body").children(`${classMore}[data-tab=${tabID}]`);
+    $(chilbody).slideUp("fast", () => {
+      let prop = $(chilbody).prop("style");
+      prop.removeProperty("top");
+      prop.removeProperty("right");
+      $(chilbody).appendTo($(elem));
+
+    });
+  } else {
+    $(children).attr("data-tab", tabID);
+    $(children).appendTo($("body"));
+
+    let x = $("body").innerWidth();
+
+    // lấy tọa độ của thẻ click
+    let topClick = $(elem).offset().top;
+    let heightClick = $(elem).outerHeight(true);
+    let leftClick = $(elem).offset().left;
+    let widthClick = $(elem).outerWidth(true);
+
+    let rightChild = Math.ceil(x - (leftClick + widthClick));
+
+    $(children).css({
+      top: `${topClick + heightClick + 10}px`,
+      right: `${rightChild}px`,
+    });
+
+    $(children).slideDown("fast");
+  }
+}
+
+function startChange(selectorListStart, addClass, removeCl = "") {
+  let elemListStart = document.querySelector(selectorListStart);
+
+  function fillStart(listStart, classAdd, index, removeClass = "") {
+    if (listStart) {
+      listStart.forEach((e, i) => {
+        if (i <= index) {
+          e.classList.add(classAdd);
+          if (removeCl) e.classList.remove(removeCl);
+        } else {
+          e.classList.remove(classAdd);
+          if (removeCl) e.classList.add(removeCl);
+        }
+      });
+    }
+  }
+
+  if (elemListStart) {
+    let childrenStart = [...elemListStart.children];
+
+    if (childrenStart) {
+      childrenStart.forEach((e, index) => {
+        e.setAttribute("data-start", index);
+        e.onclick = function () {
+          let i = this.dataset.start;
+          if (i) {
+            fillStart(childrenStart, addClass, i);
+          }
+        };
+      });
+    }
+  }
+}
+
+
+function moreShow(elem) {
+  // lấy element
+  let children = $(elem).children(".popup_more");
+  let tbody = $(elem).parents(".table").children("tbody");
+  let tabID = $(elem).data("tab");
+  // let childrenTab = $(children).attr('data-tab');
+
+  if (children.length <= 0) {
+    let chilbody = $("body").children(`.popup_more[data-tab=${tabID}]`);
+    $(chilbody).slideUp("fast", () => {
+      let prop = $(chilbody).prop("style");
+      prop.removeProperty("display");
+      prop.removeProperty("top");
+      prop.removeProperty("right");
+      $(chilbody).appendTo($(elem));
+    });
+  } else {
+    $(children).attr("data-tab", tabID);
+    $(children).appendTo($("body"));
+
+    let x = $("body").innerWidth();
+    let y = $("body").innerHeight();
+
+    // lấy chiều cao popup
+    let heightChildren = $(children).outerHeight(true);
+
+    // lấy chiều cao thẻ chứa
+    let heightTbody = $(tbody).outerHeight(true);
+    // lấy tạo độ top của thẻ chứa
+    let topTbody = $(tbody).offset().top;
+    // tìm được tọa độ chứa tối đa của thẻ chứa
+    let maxTopTbody = topTbody + heightTbody;
+    // lấy tọa độ của thẻ click
+    let topClick = $(elem).offset().top;
+    let heightClick = $(elem).outerHeight(true);
+    let leftClick = $(elem).offset().left;
+    let widthClick = $(elem).outerWidth(true);
+
+    let rightChild = Math.ceil(x - (leftClick + widthClick));
+
+    let max = topClick + heightChildren;
+
+    if (max >= maxTopTbody) {
+      $(children).css({
+        top: `${topClick - heightChildren - 10}px`,
+        right: `${rightChild}px`,
+      });
+    } else {
+      $(children).css({
+        top: `${topClick + heightClick + 10}px`,
+        right: `${rightChild}px`,
+      });
+    }
+
+    $(children).slideDown("fast");
+  }
+}
+
+function sizeChildrenTable(breackpoint) {
+  let parentTb = document.querySelector(".table_tdd");
+  let m = document.querySelector(".tb_ttd");
+  let maxW = 0;
+  if (parentTb) {
+    let winWidth = window.innerWidth;
+    let th = parentTb.querySelectorAll("thead > tr > th");
+    let td = parentTb.querySelectorAll("tbody > tr");
+
+    window.onresize = function () {
+      winWidth = window.innerWidth;
+
+      if (winWidth <= breackpoint) {
+        resizeTable();
+      } else {
+        removeStyle();
+      }
+    };
+
+    if (winWidth <= breackpoint) {
+      resizeTable();
+    }
+
+    function resizeTable() {
+      td.forEach((e, i) => {
+        let chil = [...e.children];
+        let h = chil[0].getBoundingClientRect().height;
+        let w = chil[chil.length - 1].getBoundingClientRect().width;
+
+        maxW = w > maxW ? w : maxW;
+
+        if (i >= td.length - 1) {
+          h -= 0.5;
+        }
+        chil[chil.length - 1].style.height = `${h}px`;
+      });
+
+      maxW > 0&&(th[th.length - 1].style.width = `${maxW}px`);
+      th[th.length - 1].style.height = `${
+        th[0].getBoundingClientRect().height
+      }px`;
+      maxW > 0?(m.style.paddingRight = `${maxW - 1}px`):(m.style.paddingRight = `${th[th.length - 1].getBoundingClientRect().width}px`);
+    }
+
+    function removeStyle() {
+      td.forEach((e, i) => {
+        let chil = [...e.children];
+
+        chil[chil.length - 1].style.removeProperty("height");
+      });
+
+      th[th.length - 1].style.removeProperty("width");
+      m.style.removeProperty("padding-right");
+    }
+  }
+}
+
+
+function scrollXSlider({
+  parentEl,
+  listSL,
+  slide,
+  next,
+  prev
+}) {
+  let elemParent = document.querySelector(parentEl);
+
+  if (elemParent) {
+      let slideElem = elemParent.querySelector(slide);
+      let listEL = elemParent.querySelector(listSL);
+      let btnPrev = elemParent.querySelector(prev);
+      let btnNext = elemParent.querySelector(next);
+
+      if (slideElem && btnNext && btnPrev) {
+          let clientW = elemParent.offsetWidth;
+          let child = [...listEL.children];
+          let start = 0
+          let end = child.reduce((init, currentE) => {
+              let w = currentE.offsetWidth;
+              return init += w;
+          }, 0)
+
+          function slider(start) {
+              $(slideElem).animate({
+                  scrollLeft: start,
+              }, 300)
+          }
+
+          slideElem.onscroll = (e) => {
+              let maxScroll = slideElem.scrollLeft;
+              if(maxScroll == end - clientW) {
+                  btnNext.classList.add('is_disable');
+                  btnPrev.classList.remove('is_disable');
+              } else if(maxScroll == 0){
+                  btnNext.classList.remove('is_disable');
+                  btnPrev.classList.add('is_disable');
+              } else{
+                  btnPrev.classList.remove('is_disable');
+                  btnNext.classList.remove('is_disable');
+              }
+          }
+
+          btnNext.onclick = () => {
+              start += clientW;
+              slider(start)
+          } 
+
+          
+          btnPrev.onclick = () => {
+              start -= clientW; 
+              if(start < 0) start = 0;
+              slider(start)
+          } 
+      }
   }
 }
 

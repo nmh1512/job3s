@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="d_flex align_c list_btn_tt">
-                        <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
+                        <a href="/tin-tuyen-dung/dang-tin-tuyen-dung" class="btn btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
                             <div class="mr_6 d_flex align_c">
                                 <img src="../../images/add_pri.png" alt="">
                             </div>
@@ -135,8 +135,8 @@
                 </div>
 
                 <div class="main_table_list_all position_r mt_10 mt_24">
-                    <div class="box_main_table_list list_td">
-                        <table class="table table_danh_sach_vanmau bang_934">
+                    <div class="box_main_table_list list_td tb_ttd">
+                        <table class="table table_tdd">
                             <thead class="">
                                 <tr>
                                     <th class="stt">STT<span class="span_thead"></span></th>
@@ -144,7 +144,7 @@
                                     <th>Ngày cập nhật<span class="span_thead"></span></th>
                                     <th>Trạng thái<span class="span_thead"></span></th>
                                     <th>Dịch vụ đang sử dụng<span class="span_thead"></span></th>
-                                    <th class="">Chức năng</th>
+                                    <th class="mb_1024th">Chức năng</th>
                                 </tr>
                             </thead>
                             <tbody class="tr_wap">
@@ -195,7 +195,7 @@
                                         <td class="txt_center">10/07/2022</td>
                                         <td class="<?= $att[$indexs]['class'] ?>"><?= $att[$indexs]['txt'] ?></td>
                                         <td>Chưa kích hoạt dịch vụ</td>
-                                        <td>
+                                        <td class="mb_1024td">
                                             <div class="d_flex align_c cursor_p position_r hove_tc" data-tab="<?= $i ?>" style="width: fit-content">
                                                 <div class="d_flex align_c mr_6">
                                                     <img src="../../images/3_dots_pri.png" alt="">
@@ -210,7 +210,7 @@
                                                         <span class="font_s16 line_h19 font_w500 cl_primary">Làm mới</span>
                                                     </div>
 
-                                                    <a href="/tin-tuyen-dung/chinh-sua-dang-tin-tuyen-dung.html" class="d_flex align_c">
+                                                    <a href="/tin-tuyen-dung/chinh-sua-dang-tin-tuyen-dung" class="d_flex align_c">
                                                         <div class="mr_8 d_flex align_c">
                                                             <img src="../../images/edit_icon_pri.png" alt="">
                                                         </div>
@@ -390,65 +390,12 @@
 
         $('.hove_tc').each((i, elem) => {
             $(elem).click(() => {
-                // lấy element
-                let children = $(elem).children('.popup_more');
-                let tbody = $(elem).parents('.table').children('tbody');
-                let tabID = $(elem).data('tab');
-                let childrenTab = $(children).attr('data-tab');
-
-                if (children.length <= 0) {
-                    let chilbody = $("body").children(`.popup_more[data-tab=${tabID}]`);
-                    $(chilbody).slideUp("fast", () => {
-                        let prop = $(chilbody).prop("style");
-                        prop.removeProperty("display");
-                        prop.removeProperty("top");
-                        prop.removeProperty("right");
-                        $(chilbody).appendTo($(elem));
-                    });
-
-                } else {
-                    $(children).attr('data-tab', tabID);
-                    $(children).appendTo($('body'));
-
-                    let x = $("body").innerWidth();
-                    let y = $("body").innerHeight();
-
-                    // lấy chiều cao popup
-                    let heightChildren = $(children).outerHeight(true);
-
-                    // lấy chiều cao thẻ chứa
-                    let heightTbody = $(tbody).outerHeight(true);
-                    // lấy tạo độ top của thẻ chứa
-                    let topTbody = $(tbody).offset().top;
-                    // tìm được tọa độ chứa tối đa của thẻ chứa
-                    let maxTopTbody = topTbody + heightTbody;
-                    // lấy tọa độ của thẻ click
-                    let topClick = $(elem).offset().top;
-                    let heightClick = $(elem).outerHeight(true);
-                    let leftClick = $(elem).offset().left;
-                    let widthClick = $(elem).outerWidth(true);
-
-                    let rightChild = Math.ceil(x - (leftClick + widthClick));
-
-                    let max = (topClick + heightChildren)
-
-                    if (max >= maxTopTbody) {
-                        $(children).css({
-                            'top': `${topClick - heightChildren - 10}px`,
-                            'right': `${rightChild}px`
-                        });
-                    } else {
-                        $(children).css({
-                            'top': `${topClick + heightClick + 10}px`,
-                            'right': `${rightChild}px`
-                        });
-                    }
-
-                    $(children).slideDown("fast")
-                }
-
+                moreShow (elem);
             })
         })
+
+        // màn 1024
+        sizeChildrenTable(1024)
     </script>
 </body>
 

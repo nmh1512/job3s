@@ -84,8 +84,8 @@
         </div>
     </div>
     <!-- poup xác nhận -->
-    <div class="popup hidden">
-        <div class="main_popup bg_white popup_500 br_20">
+    <div class="popup hidden" id="unfower_popup">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
             <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
                 <h3 class="font_s20 line_h23 cl_white font_w700">Xác nhận</h3>
                 <div class="close_popup">
@@ -96,8 +96,8 @@
                 <form onsubmit="return false" action="" method="POST">
                     <p class="font_s16 line_h19 font_w400 cl_a4 pd_48_24">Bỏ theo dõi sẽ không tiếp tục nhận được thông tin tuyển dụng từ <span class="font_w500">Công ty TNHH Draho Việt Nam.</span></p>
                     <div class="form_submit d_flex center_center bd_topdc pd_24">
-                        <button class="font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Đóng lại</button>
-                        <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68">Bỏ theo dõi</button>
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Đóng lại</button>
+                        <button class="unfower btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68">Bỏ theo dõi</button>
                     </div>
                 </form>
             </div>
@@ -344,7 +344,16 @@
             slidesToShow: 2,
             slidesToScroll: 2,
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../images/arrow_prev.png" alt=""></button>`,
-            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../images/arrow_next.png" alt=""></button>`
+            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../images/arrow_next.png" alt=""></button>`,
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
         })
 
 
@@ -358,14 +367,26 @@
                     backgroundColor: '#007580',
                     color: 'white'
                 })
+
+                isCheck = true;
             } else {
-                $('.td_btn > span').text('Theo dõi')
-                $('.td_btn').css({
-                    backgroundColor: 'white',
-                    color: '#007580'
-                })
+                let {infor_menu, cancel, clearAmintions} = viewAndClosePopupUpdate('#unfower_popup', '.main_popup', '.close_popup', '.cancel', '');
+                if(infor_menu) {
+                    let unfow = infor_menu.querySelector('.unfower');
+                    if(unfow) {
+                        unfow.onclick = () => {
+                            clearAmintions();
+                            $('.td_btn > span').text('Theo dõi');
+                            $('.td_btn').css({
+                                backgroundColor: 'white',
+                                color: '#007580'
+                            })
+
+                            isCheck = false;
+                        } 
+                    }
+                }
             }
-            isCheck = !isCheck;
         })
     </script>
 </body>
