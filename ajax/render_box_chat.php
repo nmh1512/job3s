@@ -255,8 +255,8 @@
                                         <img src="../../images/change_black.svg" alt="">
                                     </div>
                                     <div class="d_flex flex_end imgs_chat flex_w">
-                                        <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px" src="../../images/doggo.jpg" alt="">
+                                        <a href="../../images/doggo.jpg" class="wh_120px d_flex align_c flex_center txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
+                                            <img class="w_100 plr_5 pd_0 m-0" src="../../images/doggo.jpg" alt="">
                                         </a>
                                     </div>
 
@@ -293,18 +293,18 @@
                                         <img src="../../images/change_black.svg" alt="">
                                     </div>
                                     <div class="d_flex flex_end imgs_chat flex_w">
-                                        <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px pd_0" src="../../images/doggo.jpg" alt="">
+                                        <a href="../../images/doggo.jpg" class="wh_120px d_flex align_c flex_center txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
+                                            <img class="w_100 plr_5 m-0" src="../../images/doggo.jpg" alt="">
                                         </a>
-                                        <a href="../../images/img_mes.png" class="p_23_5 txt_justify text_chat border_r12 bg_white ml_12" data-fancybox="gallery">
-                                            <img class="w_110px pd_0" src="../../images/img_mes.png" alt="">
+                                        <a href="../../images/img_mes.png" class="wh_120px d_flex align_c flex_center txt_justify text_chat border_r12 bg_white ml_12" data-fancybox="gallery">
+                                            <img class="w_100 plr_5 m-0" src="../../images/img_mes.png" alt="">
                                         </a>
 
-                                        <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px pd_0" src="../../images/doggo.jpg" alt="">
+                                        <a href="../../images/doggo.jpg" class="wh_120px d_flex align_c flex_center txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
+                                            <img class="w_100 plr_5 m-0" src="../../images/doggo.jpg" alt="">
                                         </a>
-                                        <a href="../../images/doggo.jpg" class="p_23_5 txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
-                                            <img class="w_110px pd_0" src="../../images/doggo.jpg" alt="">
+                                        <a href="../../images/doggo.jpg" class="wh_120px d_flex align_c flex_center txt_justify text_chat border_r12 bg_white" data-fancybox="gallery">
+                                            <img class="w_100 plr_5 m-0" src="../../images/doggo.jpg" alt="">
                                         </a>
                                     </div>
 
@@ -318,16 +318,28 @@
             </div>
         </div>
 
-        <div class="w_100 mt_24">
-            <div class="p_16 box_center bg_white border_r12 color_red text_center w_50pt font_w500">Bạn đã chặn liên lạc với Nguyễn Thu Hằng. Không thể gửi tin nhắn.</div>
+        <div hidden class="w_100 mt_24">
+            <div class="p_16 box_center bg_white border_r12 color_red text_center w_50pt font_w500">Bạn đã chặn liên lạc với <span>Nguyễn Thu Hằng</span>. Không thể gửi tin nhắn.</div>
         </div>
     </div>
-    <div class="box_chat_footer p_16 d_flex border_none position_r">
-    <!-- <div class="box_chat_footer p_16 d_flex bt_dc position_r"> -->
-        <div class="position_a block_input absolute_full d_flex align_c flex_center">
-            <p class="font_w500 cl_white">Bạn không thể chat với người này!</p>
+    <!-- <div class="box_chat_footer p_16 d_flex border_none position_r"> -->
+    <div class="box_chat_footer p_16 d_flex bt_dc position_r">
+        <div hidden class="position_a files_container bg_white  bt_dc align_s">
+            <div class="d_flex files_list_container flex_w w_100">
+
+            </div>
+
         </div>
-        <div class="d_flex align_c flex_center bg_cc_blue bd_cicre wh_42px"><img src="../../images/file.png" alt=""></div>
+        <div class="position_a block_input absolute_full d_flex align_c flex_center display_none">
+            <p class="font_w500 cl_white">Bạn không thể chat với người này!</p>
+
+        </div>
+        <div class="d_flex align_c flex_center bg_cc_blue bd_cicre wh_42px cursor_p">
+            <!-- <img src="../../images/file.png" alt=""> -->
+            <label class="upload_file_chat cursor_p" for="upload_file"><img src="../../images/file.png" alt=""></></label>
+            <input type="file" id="upload_file" onchange="loadFile(event, this)" multiple />
+
+        </div>
         <input class="b_r100_dc h_42px ml_16 mr_12 plr_15 font_s16 input_chat" type="text" placeholder="Nhập tin nhắn">
         <div class="d_flex align_c bg_s_green bd_cicre wh_42px pl_13"><img src="../../images/send_mess.png" alt=""></div>
     </div>
@@ -349,4 +361,7 @@
             $(this).parents('.item_chat').find(".popup_choose").toggle();
         })
     })
+
+
+    
 </script>
