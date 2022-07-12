@@ -18,7 +18,10 @@
   include "../../../includes/slider_bar.php"; ?>
   <div class="main_container pd_24">
     <div class="box_shadow border_c4 pd_24 d_flex">
-      <img src="../../../images/doggo.jpg" alt="" class="border_r16 wh_120px border_dc" />
+      <div class="border_r16 position_r wh_120px avt_uv">
+        <img src="../../../images/doggo.jpg" alt="" class="border_r16 wh_120px border_dc" />
+        <div hidden class="position_a align_c flex_center update_avt font_w500 cl_white font_s15 cursor_p"><img src="../../../images/cam.png" alt="">Cập nhật</div>
+      </div>
       <div class="ml_16">
         <h2 class="font_w500 orange border_0">Nguyễn Đình Mạnh</h2>
         <p class="gray_c4 pd_tb8">Chưa cập nhật</p>
@@ -47,12 +50,10 @@
         Thống kê số lượt xem từ Nhà tuyển dụng
       </h4>
       <p class="green font_s14">Phần này chỉ hiển thị với riêng bạn</p>
-      <div class="d_flex mt_16">
+      <div class="d_flex mt_16 thongke_uv">
         <div class="box_8px box_thongke_uv">
           <div class="progressbar position_r mb_8">
-
             <div class="progress"></div>
-
           </div>
           <p class="font_s14 gray">Tỉ lệ hoàn thiện hồ sơ</p>
         </div>
@@ -78,7 +79,7 @@
           nhật
         </div>
       </div>
-      <!-- <div class="mt_24 info_ungvien">
+      <div class="mt_24 info_ungvien">
           <div class="d_flex">
             <h4 class="font_w500">Họ và tên:</h4>
             <p>Nguyễn Đình Mạnh</p>
@@ -119,7 +120,7 @@
             <h4 class="font_w500">Giới thiệu bản thân:</h4>
             <p class="gray_c4">Giới thiệu bản thân</p>
           </div>
-        </div> -->
+        </div>
       <div class="mt_24 info_ungvien">
         <form action="">
           <div class="d_flex">
@@ -1506,6 +1507,15 @@
     $("#toggle_contact").change(function() {
       checkContact();
     });
+  })
+
+  $('.avt_uv').hover(function() {
+    $('.update_avt').addClass('d_flex')
+    $('.update_avt').show()
+  }, function() {
+    $('.update_avt').removeClass('d_flex')  
+    $('.update_avt').hide()
+
   })
 </script>
 

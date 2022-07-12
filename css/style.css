@@ -188,6 +188,7 @@ img {object-fit: cover;}
 
 .wh_100 {width: 100px; height: 100px;}
 .wh_16 {width: 16px; height: 16px;}
+.wh_14 {width: 14px; height: 14px;}
 .ps_center {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
 .ps_top_center {position: absolute;top: 50%;transform: translateY(-50%);}
 .r_5 {right: 5px;}

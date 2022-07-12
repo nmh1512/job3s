@@ -25,9 +25,9 @@
           <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/change_large.svg" alt="">Đăng ký</a>
           <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/logout.svg" alt="">Đăng nhập</a>
           <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/hoso.svg" alt="">Hồ sơ & CV</a>
-          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/seach_green.svg" alt="">Tìm ứng viên</a>
-          <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
-          <a href="" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
+          <a href="tim-ung-vien" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/seach_green.svg" alt="">Tìm ứng viên</a>
+          <a href="tin-tuc" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
+          <a href="lien-he" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
         </div>
 
       </div>
@@ -40,26 +40,36 @@
             <a href="">Hồ sơ & CV</a>
           </li>
           <li>
-            <a href="">Tìm ứng viên</a>
+            <a href="tim-ung-vien">Tìm ứng viên</a>
           </li>
-          <li><a href="">Tin tức</a></li>
+          <li><a href="tin-tuc">Tin tức</a></li>
           <li>
-            <a href="">Liên hệ</a>
+            <a href="lien-he">Liên hệ</a>
           </li>
         </ul>
         <div class="account">
           <ul>
-            <li class="login">
-              <a href="">Đăng nhập</a>
+            <li class="login show_popup_choose" onclick="show_popup_choose(this)">
+              Đăng nhập
+              <div class="popup_choose">
+                <a href="authen/dang-nhap-ung-vien" class="popup_choose_top d_flex align_c">
+                  <img src="../images/avartar_green.png" alt="" />
+                  <p>Ứng viên</p>
+                </a>
+                <a href="authen/dang-nhap-nha-tuyen-dung" class="popup_choose_bot d_flex align_c">
+                  <img src="../images/bag_green.png" alt="" />
+                  <p>Nhà tuyển dụng</p>
+                </a>
+              </div>
             </li>
             <li class="sign_in show_popup_choose" onclick="show_popup_choose(this)">
               Đăng ký
               <div class="popup_choose">
-                <a href="" class="popup_choose_top d_flex align_c">
+                <a href="authen/dang-ky-ung-vien" class="popup_choose_top d_flex align_c">
                   <img src="../images/avartar_green.png" alt="" />
                   <p>Ứng viên</p>
                 </a>
-                <a href="" class="popup_choose_bot d_flex align_c">
+                <a href="authen/dang-ky-nha-tuyen-dung" class="popup_choose_bot d_flex align_c">
                   <img src="../images/bag_green.png" alt="" />
                   <p>Nhà tuyển dụng</p>
                 </a>
@@ -174,8 +184,12 @@
                 <div class="new_works_content_item_top d_flex">
                   <img src="../images/img_logo.svg" alt="">
                   <div class="content_job">
-                    <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
-                    <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    <a href="">
+                      <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                    </a>
+                    <a href="">
+                      <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    </a>
                     <div class="d_flex space_b">
                       <span>Hạn nộp: 30/04/2022</span>
                       <a href="">Chat</a>
@@ -286,8 +300,12 @@
                 <div class="new_works_content_item_top d_flex">
                   <img src="../images/img_logo.svg" alt="">
                   <div class="content_job">
-                    <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
-                    <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    <a href="">
+                      <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                    </a>
+                    <a href="">
+                      <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    </a>
                     <div class="d_flex space_b">
                       <span>Hạn nộp: 30/04/2022</span>
                       <a href="">Chat</a>
@@ -373,8 +391,12 @@
                 <div class="new_works_content_item_top d_flex">
                   <img src="../images/img_logo.svg" alt="">
                   <div class="content_job">
-                    <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
-                    <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    <a href="">
+                      <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                    </a>
+                    <a href="">
+                      <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                    </a>
                     <div class="d_flex space_b">
                       <span>Hạn nộp: 30/04/2022</span>
                       <a href="">Chat</a>
@@ -423,12 +445,14 @@
                   <div class="writer">Nguyễn Hoàng Anh</div>
                   <div class="date">13/03/2022</div>
                 </div>
-                <h4 class="mt_16 main_color">Hướng Dẫn Viết Mẫu Đơn Xin Nghỉ Việc Của Giáo Viên Chuẩn Nhất.
-                </h4>
+                <a href="chi-tiet-tin-tuc">
+                  <h4 class="mt_16 main_color">Hướng Dẫn Viết Mẫu Đơn Xin Nghỉ Việc Của Giáo Viên Chuẩn Nhất.
+                  </h4>
+                </a>
                 <p class="mt_12 txt_justify">Mẫu đơn xin nghỉ việc của giáo viên là mẫu đơn dành cho giáo
                   viên có ý định nghỉ việc. Dù nghề giáo viên giáo viên có ý định nghỉ việc dù nghề ...
                 </p>
-                <a href="" class="read_more_news d_flex align_c flex_center main_color see_all m-0">Đọc
+                <a href="chi-tiet-tin-tuc" class="read_more_news d_flex align_c flex_center main_color see_all m-0">Đọc
                   thêm</a>
               </div>
             </div>
@@ -438,7 +462,7 @@
           ?>
         </div>
         <div class="see_all_container ">
-          <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+          <a class="see_all d_flex align_c flex_center main_color" href="tin-tuc">Xem tất cả</a>
         </div>
       </div>
 
@@ -485,7 +509,7 @@
   </section>
   <? include "../includes/footer.php" ?>
 
-  <a class="back_to_top"><img class="border_0" src="../images/back_to_top.svg" alt="" /></a>
+  <a class="back_to_top"><img class="m-0" src="../images/back_to_top.svg" alt="" /></a>
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/select2.min.js"></script>
   <script type="text/javascript" src="../js/slick.min.js"></script>
@@ -495,14 +519,14 @@
       placeholder: "Tất cả địa điểm",
     });
     $(".back_to_top").click(function() {
-      $(window).scrollTop(0);
+      $('html,body').animate({
+        scrollTop: 0
+      }, 300)
+
     });
 
-    function slickSlider(data, flag, data2) {
-      var padding = 0;
-      if(flag == true) {
-        padding = '300px';
-      }
+    function slickSlider(data, padding, data2) {
+
       $(".new_works_content").slick({
         infinite: true,
         rows: 6,
@@ -520,7 +544,7 @@
         slidesToScroll: data2,
         arrows: true,
         dots: true,
-        centerMode: flag,
+        centerMode: true,
         centerPadding: padding,
         prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
         nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
@@ -534,24 +558,27 @@
       var flag = true;
       if (ww > 1024) {
         slide = 3
-        flag = false
-        slide2 = 3
+        // flag = true
+        padding = '420px'
+        slide2 = 1
       } else {
         slide = 2
-        flag = true
+        // flag = true
+        padding = '300px'
+
         slide2 = 1
 
       }
-      slickSlider(slide, flag, slide2)
+      slickSlider(slide, padding, slide2)
 
 
 
 
     });
-    // ScrollReveal().reveal('.tile', {
-    //   interval: 16,
-    //   reset: true
-    // });
+    ScrollReveal().reveal('.tile', {
+      interval: 16,
+      reset: true
+    });
 
     $('.nav_menu_btn button').click(function() {
       toggleNav()

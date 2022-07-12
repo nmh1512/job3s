@@ -102,7 +102,7 @@
         </div>
       </section>
       <section>
-        <div class="d_flex plr_resp ptb_48px bg_wb">
+        <div class="d_flex plr_resp ptb_48px bg_wb download_app">
           <div class="w_80pt">
             <h2 class="font_s24 main_color">Ứng dụng tìm việc làm Job3s tuyển dụng thông minh</h2>
             <p class="mt_12">
