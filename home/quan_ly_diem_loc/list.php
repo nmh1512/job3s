@@ -106,7 +106,7 @@
                 <div class="box_item">
                     <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thông tin điểm tuyển dụng</h2>
                     <div class="list_common mt_24">
-                        <div class="row">
+                        <div class="row row_tq">
                             <?php
                             $arr = [
                                 [
@@ -134,7 +134,7 @@
                             ?>
                             <!-- có thể thêm style inline -->
                             <?php foreach ($arr as $item) :
-                                $ran = rand(10, 999999);
+                                $ran = rand(10, 99);
                             ?>
                                 <div class="col_3 item_common <?= $item['class'] . ' ' . $item['bg_box'] ?>">
                                     <div class="pd_r10">
@@ -153,8 +153,8 @@
                 <div class="mt_48">
                     <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thông tin điểm tuyển dụng</h2>
                     <div class="bg_w drop_poup br_16 mt_24">
-                        <div class="pd_t24_lr26_b25">
-                            <div class="box_search loc_box_search mt_24 d_flex space_b">
+                        <div class="pd_t24_lr26_b25 d_flex flex_w ct_box_sear">
+                            <div class="box_search loc_box_search flex_1 d_flex space_b">
                                 <div class="searching d_flex align_c pd_lr15 bd_dc br_8 br_5 bg_white">
                                     <input type="text" class="rs_input ph_fz16 ip_lhd pd_tb11 flex_1 mr_10 font_s16 line_h19 font_w400 cl_73" placeholder="Tìm kiếm tin tuyển dụng">
                                     <div class="d_flex align_c wh_16 cursor_p">
@@ -164,28 +164,27 @@
 
                                 <div class="d_flex flex_1 pd_l23_r55 loc_mr">
                                     <div class="d_flex align_c">
-                                        <span class="font_s16 line_h19 font_w500 cl_55">Từ ngày:</span>
+                                        <span class="font_s16 line_h19 font_w500 cl_55 white_s_nw">Từ ngày:</span>
                                         <div class="d_flex align_c br_5 ml_8 date_loc">
                                             <input type="date" name="start_date" class="custom_ipdate">
                                         </div>
                                     </div>
 
                                     <div class="d_flex align_c flex_1">
-                                        <span class="font_s16 line_h19 font_w500 cl_55">Đến ngày:</span>
+                                        <span class="font_s16 line_h19 font_w500 cl_55 white_s_nw">Đến ngày:</span>
                                         <div class="d_flex align_c br_5 ml_8 date_loc">
                                             <input type="date" name="start_date" class="custom_ipdate">
                                         </div>
                                     </div>
                                 </div>
-
-                                <div>
-                                    <button class="btn flex_im align_c br_8 bg096 btn_primary cl_white pd_t12_b11_lr24">
-                                        <span class="font_s16 line_h19 font_w500 currentColor">Xuất excel</span>
-                                    </button>
-                                </div>
+                            </div>
+                            <div class="d_flex align_c btn_exe">
+                                <button class="btn flex_im align_c br_8 bg096 btn_primary cl_white pd_t12_b11_lr24">
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Xuất excel</span>
+                                </button>
                             </div>
 
-                            <div class="d_flex align_c mt_5 w_100 br_5 custom_select mt_23 w_222">
+                            <div class="d_flex align_c mt_5 br_5 custom_select mt_23 w_222">
                                 <select name="" class="select_one" data-placeholder="Tất cả trạng thái hồ sơ" data-minimum-results-for-search="Infinity">
                                     <option value=""></option>
                                     <option value="0">Hà Nội</option>
@@ -199,19 +198,19 @@
 
                         <div class="main_table_list_all position_r mt_10">
                             <div class="box_main_table_list list_td tb_loc_diem">
-                                <table class="table table_danh_sach_vanmau bang_934">
+                                <table class="table tb_diemloc">
                                     <thead class="">
                                         <tr>
-                                            <th class="stt">STT<span class="span_thead"></span></th>
-                                            <th>Ngày lọc<span class="span_thead"></span></th>
-                                            <th>Thông tin chi tiết<span class="span_thead"></span></th>
-                                            <th>Thông tin liên hệ<span class="span_thead"></span></th>
-                                            <th>Trạng thái<span class="span_thead"></span></th>
+                                            <th class="stt">STT</th>
+                                            <th>Ngày lọc</th>
+                                            <th>Thông tin chi tiết</th>
+                                            <th>Thông tin liên hệ</th>
+                                            <th>Trạng thái</th>
                                             <th>Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody class="tr_wap ">
-                                        <?php for ($i = 0; $i < 1; $i++) :
+                                        <?php for ($i = 0; $i < 2; $i++) :
                                         ?>
                                             <tr class="tr" data-id="">
                                                 <td><?= $i + 1 ?></td>
@@ -248,7 +247,7 @@
                                                     <span class="bg_kv font_s14 line_h16 font_w400 cl_55 pd_5_19 br_100">Hà Nội</span>
                                                 </td>
                                                 <td>
-                                                    <div class="d_flex flex_center cursor_p position_r hove_tc">
+                                                    <div class="d_flex flex_center cursor_p position_r hove_tc" data-tab="0">
                                                         <div class="center_center wh_26 br_100 d_flex bg_kv ">
                                                             <img src="../../images/3_dots_pri.png" alt="">
                                                         </div>
@@ -359,6 +358,12 @@
 
         $('.btn_loctd').click(() => {
             let objectELemet = viewAndClosePopupUpdate('#loc_new_td', '.main_popup', '.close_popup', '.cancel', '.form_check')
+        })
+
+        $('.hove_tc').each((i, elem) => {
+            $(elem).click(() => {
+                moreShow (elem);
+            })
         })
     </script>
 </body>

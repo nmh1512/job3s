@@ -108,103 +108,128 @@
         <?php include("../../includes/after_header.php") ?>
         <div class="container mt_90 pd_b48">
             <div class="fuc_controll">
-                <div class="list_control_fuc">
-                    <div class="item_control_fuc fuc_lange">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Ngôn ngữ</span>
-                        <div class="list_c">
-                            <div class="item_c active_lan">
-                                <img src="../../images/vn_qk.png" alt="">
+                <div class="align_c btn_prev">
+                    <img src="../../images/arrow_prev.png" alt="">
+                </div>
+                <div class="ovex_x">
+                    <div class="list_control_fuc m_wap">
+                        <div class="item_control_fuc fuc_lange">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Ngôn ngữ</span>
+                            <div class="list_c">
+                                <div class="item_c active_lan">
+                                    <img src="../../images/vn_qk.png" alt="">
+                                </div>
+
+                                <div class="item_c">
+                                    <img src="../../images/vn_qk.png" alt="">
+                                </div>
+
+                                <div class="item_c">
+                                    <img src="../../images/vn_qk.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item_control_fuc">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Màu sắc</span>
+                            <div class="list_color_cv mt_8_i mau_js cusr_p m_wap">
+                                <span class="color_cv ac_color" style="color: #FF823C"></span>
+                                <span class="color_cv" style="color: #40BA77"></span>
+                                <span class="color_cv" style="color: #5D5FEF"></span>
+                                <span class="color_cv" style="color: #5D5FEF"></span>
+                                <span class="color_cv" style="color: #5D5FEF"></span>
+                            </div>
+                        </div>
+
+                        <div class="item_control_fuc">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Font chữ</span>
+                            <div class="list_c w_138 cus_fuc_cv">
+                                <select class="select_one">
+                                    <option value="">Roboto</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="item_control_fuc mw_124">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Cỡ chữ</span>
+                            <div class="list_c cus_fuc_cv d_flex center_center co_chu co_js">
+                                <span class="small_fuc act_ch">A</span>
+                                <span class="medium_fuc">A</span>
+                                <span class="">A</span>
+                            </div>
+                        </div>
+
+                        <div class="item_control_fuc mw_124">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Giãn dòng</span>
+                            <div class="list_c cus_fuc_cv d_flex center_center co_chu gd_js">
+                                <span class="small_fuc act_ch">
+                                    <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.28284 0.717157C3.12663 0.560947 2.87337 0.560947 2.71716 0.717157L0.171573 3.26274C0.0153631 3.41895 0.0153631 3.67222 0.171573 3.82843C0.327783 3.98464 0.581048 3.98464 0.737258 3.82843L3 1.56569L5.26274 3.82843C5.41895 3.98464 5.67222 3.98464 5.82843 3.82843C5.98464 3.67222 5.98464 3.41895 5.82843 3.26274L3.28284 0.717157ZM3.4 6L3.4 1L2.6 1L2.6 6L3.4 6Z" fill="currentColor" />
+                                        <path d="M2.71716 11.2828C2.87337 11.4391 3.12663 11.4391 3.28284 11.2828L5.82843 8.73726C5.98464 8.58105 5.98464 8.32778 5.82843 8.17157C5.67222 8.01536 5.41895 8.01536 5.26274 8.17157L3 10.4343L0.737258 8.17157C0.581049 8.01536 0.327783 8.01536 0.171573 8.17157C0.0153633 8.32778 0.0153633 8.58105 0.171573 8.73726L2.71716 11.2828ZM2.6 6L2.6 11L3.4 11L3.4 6L2.6 6Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span class="medium_fuc">
+                                    <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.35355 0.648324C4.15829 0.453062 3.84171 0.453062 3.64645 0.648324L0.464466 3.8303C0.269204 4.02557 0.269204 4.34215 0.464466 4.53741C0.659728 4.73267 0.976311 4.73267 1.17157 4.53741L4 1.70898L6.82843 4.53741C7.02369 4.73267 7.34027 4.73267 7.53553 4.53741C7.7308 4.34215 7.7308 4.02557 7.53553 3.8303L4.35355 0.648324ZM4.5 8.00391L4.5 1.00188L3.5 1.00188L3.5 8.00391L4.5 8.00391Z" fill="currentColor" />
+                                        <path d="M3.64645 15.3517C3.84171 15.5469 4.15829 15.5469 4.35355 15.3517L7.53553 12.1697C7.7308 11.9744 7.7308 11.6579 7.53553 11.4626C7.34027 11.2673 7.02369 11.2673 6.82843 11.4626L4 14.291L1.17157 11.4626C0.976311 11.2673 0.659728 11.2673 0.464466 11.4626C0.269204 11.6579 0.269204 11.9744 0.464466 12.1697L3.64645 15.3517ZM3.5 7.99609L3.5 14.9981L4.5 14.9981L4.5 7.99609L3.5 7.99609Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span class="">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.53033 0.470968C6.23744 0.178075 5.76256 0.178075 5.46967 0.470968L0.696699 5.24394C0.403806 5.53683 0.403806 6.01171 0.696699 6.3046C0.989592 6.59749 1.46447 6.59749 1.75736 6.3046L6 2.06196L10.2426 6.3046C10.5355 6.59749 11.0104 6.59749 11.3033 6.3046C11.5962 6.01171 11.5962 5.53683 11.3033 5.24394L6.53033 0.470968ZM6.75 10.0039L6.75 1.0013L5.25 1.0013L5.25 10.0039L6.75 10.0039Z" fill="currentColor" />
+                                        <path d="M5.46967 19.529C5.76256 19.8219 6.23744 19.8219 6.53033 19.529L11.3033 14.7561C11.5962 14.4632 11.5962 13.9883 11.3033 13.6954C11.0104 13.4025 10.5355 13.4025 10.2426 13.6954L6 17.938L1.75736 13.6954C1.46447 13.4025 0.989593 13.4025 0.696699 13.6954C0.403806 13.9883 0.403806 14.4632 0.696699 14.7561L5.46967 19.529ZM5.25 9.99609L5.25 18.9987L6.75 18.9987L6.75 9.99609L5.25 9.99609Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="item_control_fuc mw_124 position_r add_muc_fuc" data-tab='1'>
+                            <span class="font_s16 line_h19 font_w500 cl_55">Thêm mục</span>
+                            <div class="list_c flex_center">
+                                <button class="btn btn_primary flex_im center_center wh_28 br_50pt">
+                                    <img src="../../images/add_pri.png" alt="">
+                                </button>
                             </div>
 
-                            <div class="item_c">
-                                <img src="../../images/vn_qk.png" alt="">
+                            <div class="more_add_muc" style="display: none;">
+                                <?php for ($i = 0; $i < 5; $i++) : ?>
+                                    <div class="d_flex align_c item_add_muc">
+                                        <div class="mr_12">
+                                            <input type="checkbox" id="cb_<?= $i ?>" class="d_none cb_cus_ip">
+                                            <label for="cb_<?= $i ?>" class="cus_cb"></label>
+                                        </div>
+                                        <label for="cb_<?= $i ?>" class="font_s16 line_h19 font_w400 cl_a4 white_s_nw">Thông tin liên hệ</label>
+                                    </div>
+                                <?php endfor; ?>
+                                <div class="d_flex center_center mt_24 poup_more_add">
+                                    <button class="btn h_42 mw_112 br_5 font_s16 line_h19 font_w500 bg_td cl_white btn_primary">Cập nhật</button>
+                                    <button class="cancel font_s16 line_h19 font_w500 btn h_42 flex_im mw_112 center_center cl_73 bg_w bg_td bd_73 br_5 ml_16">Hủy</button>
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="item_c">
-                                <img src="../../images/vn_qk.png" alt="">
+                        <div class="item_control_fuc doi_mau_cv mw_124">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Đổi mẫu CV</span>
+                            <div class="list_c flex_center cl_primary">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1564 10.1914H12.7401C11.339 10.1914 10.2031 11.3273 10.2031 12.7285V24.1454C10.2031 25.5466 11.339 26.6825 12.7401 26.6825H24.1564C25.5575 26.6825 26.6933 25.5466 26.6933 24.1454V12.7285C26.6933 11.3273 25.5575 10.1914 24.1564 10.1914Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M5.11793 17.8036H3.84945C3.17661 17.8036 2.53133 17.5363 2.05556 17.0605C1.57979 16.5847 1.3125 15.9394 1.3125 15.2665V3.84959C1.3125 3.17671 1.57979 2.53139 2.05556 2.0556C2.53133 1.5798 3.17661 1.3125 3.84945 1.3125H15.2657C15.9386 1.3125 16.5839 1.5798 17.0596 2.0556C17.5354 2.53139 17.8027 3.17671 17.8027 3.84959V5.11814" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="item_control_fuc save_xv mw_100px">
+                            <span class="font_s16 line_h19 font_w500 cl_55">Lưu CV</span>
+                            <div class="list_c flex_center">
+                                <button class="btn flex_im center_center wh_28 br_50pt">
+                                    <img src="../../images/sv_nofill.png" alt="">
+                                </button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="item_control_fuc">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Màu sắc</span>
-                        <div class="list_color_cv mt_8_i mau_js cusr_p">
-                            <span class="color_cv ac_color" style="color: #FF823C"></span>
-                            <span class="color_cv" style="color: #40BA77"></span>
-                            <span class="color_cv" style="color: #5D5FEF"></span>
-                            <span class="color_cv" style="color: #5D5FEF"></span>
-                            <span class="color_cv" style="color: #5D5FEF"></span>
-                        </div>
-                    </div>
-
-                    <div class="item_control_fuc">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Font chữ</span>
-                        <div class="list_c w_138 cus_fuc_cv">
-                            <select class="select_one">
-                                <option value="">Roboto</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="item_control_fuc">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Cỡ chữ</span>
-                        <div class="list_c w_138 cus_fuc_cv d_flex center_center co_chu co_js">
-                            <span class="small_fuc act_ch">A</span>
-                            <span class="medium_fuc">A</span>
-                            <span class="">A</span>
-                        </div>
-                    </div>
-
-                    <div class="item_control_fuc">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Giãn dòng</span>
-                        <div class="list_c w_138 cus_fuc_cv d_flex center_center co_chu gd_js">
-                            <span class="small_fuc act_ch">
-                                <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.28284 0.717157C3.12663 0.560947 2.87337 0.560947 2.71716 0.717157L0.171573 3.26274C0.0153631 3.41895 0.0153631 3.67222 0.171573 3.82843C0.327783 3.98464 0.581048 3.98464 0.737258 3.82843L3 1.56569L5.26274 3.82843C5.41895 3.98464 5.67222 3.98464 5.82843 3.82843C5.98464 3.67222 5.98464 3.41895 5.82843 3.26274L3.28284 0.717157ZM3.4 6L3.4 1L2.6 1L2.6 6L3.4 6Z" fill="currentColor" />
-                                    <path d="M2.71716 11.2828C2.87337 11.4391 3.12663 11.4391 3.28284 11.2828L5.82843 8.73726C5.98464 8.58105 5.98464 8.32778 5.82843 8.17157C5.67222 8.01536 5.41895 8.01536 5.26274 8.17157L3 10.4343L0.737258 8.17157C0.581049 8.01536 0.327783 8.01536 0.171573 8.17157C0.0153633 8.32778 0.0153633 8.58105 0.171573 8.73726L2.71716 11.2828ZM2.6 6L2.6 11L3.4 11L3.4 6L2.6 6Z" fill="currentColor" />
-                                </svg>
-                            </span>
-                            <span class="medium_fuc">
-                                <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.35355 0.648324C4.15829 0.453062 3.84171 0.453062 3.64645 0.648324L0.464466 3.8303C0.269204 4.02557 0.269204 4.34215 0.464466 4.53741C0.659728 4.73267 0.976311 4.73267 1.17157 4.53741L4 1.70898L6.82843 4.53741C7.02369 4.73267 7.34027 4.73267 7.53553 4.53741C7.7308 4.34215 7.7308 4.02557 7.53553 3.8303L4.35355 0.648324ZM4.5 8.00391L4.5 1.00188L3.5 1.00188L3.5 8.00391L4.5 8.00391Z" fill="currentColor" />
-                                    <path d="M3.64645 15.3517C3.84171 15.5469 4.15829 15.5469 4.35355 15.3517L7.53553 12.1697C7.7308 11.9744 7.7308 11.6579 7.53553 11.4626C7.34027 11.2673 7.02369 11.2673 6.82843 11.4626L4 14.291L1.17157 11.4626C0.976311 11.2673 0.659728 11.2673 0.464466 11.4626C0.269204 11.6579 0.269204 11.9744 0.464466 12.1697L3.64645 15.3517ZM3.5 7.99609L3.5 14.9981L4.5 14.9981L4.5 7.99609L3.5 7.99609Z" fill="currentColor" />
-                                </svg>
-                            </span>
-                            <span class="">
-                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.53033 0.470968C6.23744 0.178075 5.76256 0.178075 5.46967 0.470968L0.696699 5.24394C0.403806 5.53683 0.403806 6.01171 0.696699 6.3046C0.989592 6.59749 1.46447 6.59749 1.75736 6.3046L6 2.06196L10.2426 6.3046C10.5355 6.59749 11.0104 6.59749 11.3033 6.3046C11.5962 6.01171 11.5962 5.53683 11.3033 5.24394L6.53033 0.470968ZM6.75 10.0039L6.75 1.0013L5.25 1.0013L5.25 10.0039L6.75 10.0039Z" fill="currentColor" />
-                                    <path d="M5.46967 19.529C5.76256 19.8219 6.23744 19.8219 6.53033 19.529L11.3033 14.7561C11.5962 14.4632 11.5962 13.9883 11.3033 13.6954C11.0104 13.4025 10.5355 13.4025 10.2426 13.6954L6 17.938L1.75736 13.6954C1.46447 13.4025 0.989593 13.4025 0.696699 13.6954C0.403806 13.9883 0.403806 14.4632 0.696699 14.7561L5.46967 19.529ZM5.25 9.99609L5.25 18.9987L6.75 18.9987L6.75 9.99609L5.25 9.99609Z" fill="currentColor" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="item_control_fuc">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Thêm mục</span>
-                        <div class="list_c w_138 flex_center">
-                            <button class="btn btn_primary flex_im center_center wh_28 br_50pt">
-                                <img src="../../images/add_pri.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="item_control_fuc doi_mau_cv">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Đổi mẫu CV</span>
-                        <div class="list_c w_138 flex_center">
-                            <button class="btn flex_im center_center wh_28 br_50pt">
-                                <img src="../../images/change_icon.png" alt="" class="img_full">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="item_control_fuc save_xv">
-                        <span class="font_s16 line_h19 font_w500 cl_55">Lưu CV</span>
-                        <div class="list_c w_138 flex_center">
-                            <button class="btn flex_im center_center wh_28 br_50pt">
-                                <img src="../../images/sv_nofill.png" alt="">
-                            </button>
-                        </div>
-                    </div>
+                </div>
+                <div class="align_c btn_next">
+                    <img src="../../images/arrow_next.png" alt="">
                 </div>
             </div>
             <div class="cv_warp pd_lr68 mt_24">
@@ -381,6 +406,7 @@
         })
 
         $('.doi_mau_cv').click(() => {
+            cl(false);
             $.ajax({
                 url: '../../ajax/ds_dx.php',
                 method: 'POST',
@@ -389,12 +415,53 @@
                     $('.cv_warp').css('display', 'none')
                     $('.change_list').css('display', 'block');
                     $('.change_list').html(data)
-                    $('.btn_prev').click(() => {
+                    $('.btn_huys').click(() => {
                         $('.change_list').css('display', 'none');
-                        $('.cv_warp').css('display', 'block')
+                        $('.cv_warp').css('display', 'block');
+                        cl(true);
                     })
-                }
+                },
+                // beforeSend: function() {
+                //     // setting a timeout
+                //     $('.change_list').css('height', '200px');
+                //     $('.change_list').html(`<div class="loading">
+                //         <img src="../../images/download_loading.gif" alt="">
+                //     </div>
+                //     `)
+                // },
             })
+        })
+
+        function cl(check) {
+            if (check) {
+                $('.doi_mau_cv').toggleClass('acitve_doicv');
+            } else {
+                $('.doi_mau_cv').addClass('acitve_doicv');
+            }
+            if ($('.doi_mau_cv').hasClass('acitve_doicv')) {
+                $('.doi_mau_cv').css('background-color', '#007580');
+                $('.doi_mau_cv span').css('color', '#FFFFFF');
+                $('.doi_mau_cv div').css('color', '#FFFFFF');
+            } else {
+                $('.doi_mau_cv').css('background-color', '#FFFFFF');
+                $('.doi_mau_cv span').css('color', '#595959');
+                $('.doi_mau_cv div').css('color', '#007580')
+            }
+        }
+
+        scrollXSlider({
+            parentEl: '.fuc_controll',
+            slide: '.ovex_x',
+            listSL: '.list_control_fuc',
+            next: '.btn_next',
+            prev: '.btn_prev'
+        })
+
+        $('.add_muc_fuc').click(function() {
+            moreShows({
+                elem: this,
+                classMore: '.more_add_muc'
+            });
         })
     </script>
 </body>

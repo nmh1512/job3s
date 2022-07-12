@@ -35,7 +35,7 @@
         <?php include("../../includes/after_header.php"); ?>
         <div class="container bg_fa d_flex flex_end">
             <?php include("../../includes/slider_bar.php"); ?>
-            <div class="content wbjsb mt_90 pd_24">
+            <div class="content wbjsb mt_90 pd_24 mb_40">
                 <div class="box_form br_16 pd_24">
                     <form action="" method="POST" class="chil_div16">
                         <h1 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Đánh giá</h1>
@@ -77,6 +77,9 @@
         </div>
     </div>
     <script src="../../js/js_t.js"></script>
+    <script>
+        startChange('.list_start', 'cl_oran', 'cl_f2')
+    </script>
 </body>
 
 </html>
