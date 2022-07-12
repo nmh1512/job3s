@@ -28,22 +28,23 @@
         <div class="tuyendung_content_navbar">
           <ul>
             <li>
-              <a href="dich-vu-dang-chay.html" class="font_w700">Đang chạy</a>
+              <a href="dich-vu-dang-chay" class="font_w700">Đang chạy</a>
             </li>
             <li>
-              <a href="dich-vu-het-han.html" class="font_w700 nav_active">Đã hết hạn</a>
+              <a href="dich-vu-het-han" class="font_w700 nav_active">Đã hết hạn</a>
             </li>
           </ul>
         </div>
         <div class="thong_ke_table_container">
-          <div class="tuyen_dung_filter d_flex align_c space_b">
-            <div class="d_flex">
-              <div class="position_r">
+
+          <div class="tuyen_dung_filter d_flex align_c space_b flex_w">
+            <div class="d_flex align_c search_box_service">
+              <div class="position_r mr_24">
                 <input type="text" class="filter_box" placeholder="Tìm ứng viên" />
                 <img src="../images/seach_green.svg" alt="" class="position_a img_search" />
               </div>
-              <div class="d_flex align_c space_b select_filter_box filter_my_service ml_24">
-                <div class="d_flex align_c mr_12">
+              <div class="d_flex align_c space_b select_filter_box filter_my_service">
+                <div class="d_flex align_c">
                   <p class="font_w500 mr_8">Từ ngày:</p>
                   <input type="date" class="choose_date">
                 </div>
@@ -55,11 +56,10 @@
             </div>
 
 
-
             <button class="btn_chung bg_green">Xuất excel</button>
           </div>
           <div class="tuyen_dung_table">
-            <table class="w_100 table_list_cv table_collapse table_ungvien">
+            <table class="table_list_cv table_collapse table_ungvien">
               <thead class="bg_s_green h_50px">
                 <th>STT</th>
                 <th class="text_l" style="width: 180px">Tên dịch vụ</th>

@@ -39,22 +39,22 @@
           <h4 class="pd_b_20">Về Job3s</h4>
           <ul>
             <li>
-              <a href="">Giới thiệu chung</a>
+              <a href="gioi-thieu-chung">Giới thiệu chung</a>
             </li>
             <li>
-              <a href="">Thông tin cần biết</a>
+              <a href="thong-tin-can-biet">Thông tin cần biết</a>
             </li>
             <li>
-              <a href="">Thỏa thuận sử dụng</a>
+              <a href="thoa-thuan-su-dung">Thỏa thuận sử dụng</a>
             </li>
             <li>
-              <a href="">Quy định bảo mật</a>
+              <a href="quy-dinh-bao-mat">Quy định bảo mật</a>
             </li>
             <li>
-              <a href="">Quy trình giải quyết tranh chấp</a>
+              <a href="giai-quyet-tranh-chap">Quy trình giải quyết tranh chấp</a>
             </li>
             <li>
-              <a href="">Sơ đồ Website</a>
+              <a href="so-do-web">Sơ đồ Website</a>
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@
               <a href="">Cần Thơ</a>
             </li>
             <li>
-              <a href="" class="d_flex">Xem tất cả khu vực <img src="../images/see_all.svg" alt=""></a>
+              <a href="viec-lam-theo-tinh" class="d_flex">Xem tất cả khu vực <img src="../images/see_all.svg" alt=""></a>
             </li>
           </ul>
         </div>
@@ -100,7 +100,7 @@
               <a href="">Xây dựng</a>
             </li>
             <li>
-              <a href="" class="d_flex">Xem tất cả ngành nghề <img src="../images/see_all.svg" alt=""></a>
+              <a href="viec-lam-theo-nganh-nghe" class="d_flex">Xem tất cả ngành nghề <img src="../images/see_all.svg" alt=""></a>
             </li>
           </ul>
         </div>

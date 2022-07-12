@@ -232,7 +232,7 @@
 
       <img class="mr_32" src="../../images/friends.png" alt="" />
     </div>
-    <div class="news_container pb_48 bg_f5 pt_30 tile">
+    <div class="news_container exp_jobs pb_48 bg_f5 pt_30 tile">
       <div class="news_page_header plr_resp">
         <div>
           <h2 class="border_0 main_color pb_16">Kinh nghiệm tìm việc</h2>

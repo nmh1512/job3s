@@ -50,6 +50,8 @@ RewriteRule ^viec-lam-theo-nganh-nghe$ /home/about_job3s/viec_lam_theo_nghe.php 
 RewriteRule ^lien-he$ /home/lien_he/lien_he.php [NE,L]
 RewriteRule ^chat$ /home/chat/chat.php [NE,L]
 RewriteRule ^tin-tuc$ /home/tin_tuc/tin_tuc.php [NE,L]
+RewriteRule ^danh-sach-tin-tuc$ /home/tin_tuc/danh_sach_tin_tuc.php [NE,L]
+RewriteRule ^chi-tiet-tin-tuc$ /home/tin_tuc/chi_tiet_tin_tuc.php [NE,L]
 
 #trang
 
