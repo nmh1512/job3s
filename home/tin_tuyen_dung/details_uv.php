@@ -205,7 +205,7 @@
                                     <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
                                         <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
                                             <span data-placeholder="Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn" class="append">Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn</span>
-                                            <div class="close_file d_flex align_c cursor_p d_none">
+                                            <div class="close_file align_c cursor_p d_none">
                                                 <img src="../../images/close_red_nobd.png" alt="">
                                             </div>
                                         </span>
@@ -331,7 +331,7 @@
                                     <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
                                         <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
                                             <span data-placeholder="Tải lên video giới thiệu của bạn" class="append">Tải lên video giới thiệu của bạn</span>
-                                            <div class="close_file d_flex align_c cursor_p d_none">
+                                            <div class="close_file align_c cursor_p d_none">
                                                 <img src="../../images/close_red_nobd.png" alt="">
                                             </div>
                                         </span>

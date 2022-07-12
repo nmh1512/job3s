@@ -1,6 +1,7 @@
 /* footer */
 .container ~ footer {padding-top: 0;background: transparent;}
 /* // footer */
+.is_disable {display: none !important;}
 #root {background-color: #F5FEFF;}
 .hidden {display: none;}
 .full_vh {height: 100vh;}
@@ -101,6 +102,8 @@
 .authen_right {padding-top: 87px;padding-bottom: 60px;}
 
 /* trang cv */
+.loading {display: flex;align-items: center;justify-content: center;}
+.loading > img {width: 50px;height: 50px;}
 .pd_t11_b10_lr24 {padding: 11px 24px 10px;}
 .pd_tb16_lr24 {padding: 16px 24px;}
 .pd_b24 {padding-bottom: 24px;}
@@ -133,7 +136,7 @@
 .job_item:hover {border-color: #007580; color: #007580;}
 
 label.error {margin-top: 5px;color: #EA4335;}
-
+.tb_diemloc.table.table tbody tr td {border-right: 0;}
 /* nhà tuyển dụng */
 .pd_b48 {padding-bottom: 48px;}
 .w_16h17 {width: 16px;height: 17px;}
@@ -160,9 +163,23 @@ label.error {margin-top: 5px;color: #EA4335;}
 .pdb16 {padding-bottom: 16px;}
 .pd_l8 {padding-left: 8px;}
 .bg_fa {background-color: #FAFAFA;}
+.poup_more_add {padding-left: 67px; padding-right: 64px;padding-bottom: 24px;}
+.search_advanced {display: none;width: 97.7%;background-color: rgb(255 255 255 / 40%);padding: 16px 16px 24px;border-radius: 16px;}
+.pl_ip99::placeholder {color: #999999;}
+.btn_cv {padding: 17px 40px 16px;}
+.search_nc .select2-container--default .select2-selection--single{padding: 17px 15px;}
 /* -------------------- */
 .details_cty_left {width: calc(100% - 32.04%);padding-right: 24px;}
 .details_cty_right {width: 32.04%;}
+.cus_cb {position: relative;transition: all .3s ease;display: block;width: 16px;height: 16px;background-color: #D9D9D9;border-radius: 4px; cursor: pointer;}
+.item_add_muc {padding: 12px 16px 11px;}
+.cus_btn_sx {width: 22px;height: 22px;border-radius: 4px;background-color: #FFFFFF;border: 2px solid #D1D1D1}
+.cb_cus_ip:checked + label {background-color: #005E66;}
+.cb_cus_ip:checked + label.cus_btn_sx {border-color: #005E66;}
+.cb_cus_ip:checked + label::before {content: '';background: url('../images/check_md_white.png') no-repeat center;width: 12px;height: 12px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9;animation: checked .3s linear;}
+@keyframes checked {from {width: 0;}to {width: 100%; }}
+.more_add_muc {position: absolute;background-color: #FFFFFF;}
+.mw_112 {min-width: 112px;}
 /* ------------------------ */
 .bd_bdc {border-bottom: 1px solid #DCDCDC;}
 .list_if > div+div {margin-top: 16px;}
@@ -283,12 +300,12 @@ label.error {margin-top: 5px;color: #EA4335;}
 /* ------- */
 .content_news h3,.content_news > span {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 /* ----------- */
-.table_danh_sach_vanmau {width: 1000px !important;}
+.item_common > .wh_60 {flex-shrink: 0;}
 /* =--------------== */
-.table_danh_sach_vanmau thead tr th:nth-child(6) {
+/* .table_danh_sach_vanmau thead tr th:nth-child(6) {
     width: 100px;
     border-radius: 0 10px 0 0;
-}
+} */
 
 th.absolute_option {
     background: #4C5BD4;
@@ -416,7 +433,7 @@ textarea.h_84 {height: 82px;}
 .font_s12 {font-size: 12px;}
 .pdr_15 {padding-right: 15px;}
 .mt_32 {margin-top: 32px;}
-.h_400 {height: 400px;}
+.h_400 {min-height: 400px;}
 .ml_6 {margin-left: 6px;}
 .bg_cv {background-color: #CCFAFF;}
 .reslt_sapxep {background-color: #9C9CA32E;padding: 3px 8px;border-radius: 5px;font-size: 14px;line-height: 16px;color: #4A4A4A;font-weight: 400;}
@@ -562,7 +579,7 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .pd_23_43 {padding: 23px 43px;}
 .mt_48_im {margin-top: 48px !important;}
 .bd_ff99 {border: 1px solid #FF9900;}
-.banner_cv {display: flex;align-items: flex-start;position: relative;;justify-content: center;flex-direction: column;padding-left: 68px;}
+.banner_cv {padding-top: 85px;display: flex;align-items: flex-start;position: relative;;justify-content: center;flex-direction: column;padding-left: 68px;padding-bottom: 68px;}
 .pd_t17_b16 {padding-top: 17px;padding-bottom: 16px;}
 .search_kv > * + *{margin-left: 8px;}
 .br_6 {border-radius: 6px;}
@@ -602,6 +619,13 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .item_mess > div:last-child > * {width: 100%; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: block;}
 .item_mess + .item_mess {margin-top: 8px;}
 .scroll_mess {overflow-y: auto;height: 100%;padding-right: 6px;}
+.mw_124 {min-width: 124px;}
+.mw_100px {min-width: 100px;}
+.m_wap {flex-wrap: nowrap;}
+.ovex_x {overflow-x: auto;}
+.ovex_x::-webkit-scrollbar-track{opacity: 0;background-color: transparent;}
+.ovex_x::-webkit-scrollbar{height: 0px;background-color: transparent}
+.ovex_x::-webkit-scrollbar-thumb{opacity: 0;visibility: hidden;}
 /* .mess_chat {position: relative;}
 .mess_chat::before {content: '';z-index: 9;background-color: #FFFFFF;left: 0;right: 10px;bottom: 0;height: 20px;position: absolute;display: block;} */
 .pd_tlr32_b24 {padding: 32px 32px 24px;}
@@ -628,6 +652,9 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .details_vl.silder_news .slick-prev {left: 0;transform: translate(-50%, calc(-50% - 10px));}
 .details_vl.silder_news .slick-next {right: 0;transform: translate(50%, calc(-50% - 10px));}
 /* --- */
+.fuc_controll {position: relative;}
+.btn_prev {position: absolute;left: 0;top: 50%;transform: translateY(-50%);z-index: 5;display: none;}
+.btn_next {position: absolute;right: 0;top: 50%;transform: translateY(-50%);z-index: 5;display: none;}
 .pd_t49_b47_lr68 {padding: 49px 68px 47px;}
 .popup_812 {width: 812px;}
 .nav_popup_ut {display: flex;}
@@ -656,6 +683,8 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .uv_tim .slick-prev {transform: translate(-50%, -50%);}
 .uv_tim .slick-next {transform: translate(50%, -50%);}
 .pd_17_23 {padding: 17px 23px;}
+.input_email_change {display: flex;}
+.close_file:not(.d_none) {display: flex;}
 /* chi tiết ứng viên */
 .edu_content > * + *{margin-top: 8px;}
 /* // chi tiết ứng viên */
@@ -695,7 +724,7 @@ div#circle {position: relative;width: 50px;height: 50px;}
     .infor_people{padding-left: 0;}
     .infor_people>div:nth-child(2) {margin-right: 0;}
     .infor_people::before {content: unset;}
-    .infor_people> div:last-child {display: none;}
+    .infor_people> div:last-child {display: none !important;}
     .slider_bar {display: none;}
     .menu_moblie {display: flex;align-items: center;cursor: pointer;}
     /* tổng quan */
@@ -720,13 +749,14 @@ div#circle {position: relative;width: 50px;height: 50px;}
 }
 
 @media screen and (max-width: 1144px) {
-    .img_tt {display: none;}
+    .img_tt {display: none !important;}
     /* cv đơn thư */
     .cv_left {display: none;}
     .cv_right {padding-left: 0;}
     .cv_warp,.banner_cv  ~ p  {padding-left: 40px;padding-right: 40px;margin-top: 24px;}
     .news_recruit {padding-left: 40px;padding-right: 40px;}
     .banner_cv {padding-left: 40px;}
+    .search_advanced {display: flex;}
 
     .wbjsb.chil_24 {padding-left: 40px !important;padding-right: 40px !important;}
 }
@@ -743,11 +773,24 @@ div#circle {position: relative;width: 50px;height: 50px;}
     .box_cv_right  {margin-left: 0;display: flex;margin-top: 24px;}
     .box_cv_right > * {width: 50%;}
     .box_cv_right .down_app {margin-top: 0 !important;margin-left: 24px;align-items: center;}
-
+    /*  */
+    .btn_prev, .btn_next {display: flex;}
+    /* .ct_box_sear {flex-direction: column;} */
+    .btn_exe {order: 9; margin-top: 24px;margin-left: 24px;}
+    .btn_exe ~ div {float: left;}
+    .tb_diemloc {width: 1069px !important;}
+    .table_tdd {width: 941px !important}
+    .table_tdd tr th:last-child {position: absolute;right: 0;border-radius: 0px 10px 0px 0px;border-left: 1px solid #DCDCDC;box-shadow: 0px 6px 9px 0px #0000001a;}
+    .table_tdd tr td:last-child {position: absolute;right: 0;background-color: #FFFFFF;border-left: 1px solid #DCDCDC;box-shadow: 0px 6px 9px 0px #0000001a;}
+    .mb_1024td {border-bottom: 1px solid #DCDCDC;}
+    .table_tdd tbody tr:last-child td:last-child {border-bottom: 0;border-radius: 0px 0px 10px 0px;}
+    table.table thead tr th:nth-last-child(2) > .span_thead::before{content: unset;}
     /* cv */
     .change_list{padding-left: 42px;padding-right: 42px;}
     .row_mau > .col_4 {width: calc(100% / 3 - 24px);}
     .row_mau > .col_4:is(:nth-child(4)) {margin-top: 32px;}
+
+    .mb_40 {padding-left: 40px !important; padding-right: 40px !important;}
 
     /* chi tiết tuyển dụng */
     .details_cty {flex-direction: column-reverse;}
@@ -766,12 +809,41 @@ div#circle {position: relative;width: 50px;height: 50px;}
     .cl_uv_app > div:last-child{margin-left: 24px;}
 }
 
+@media screen and (max-width: 858px) {
+    .loc_box_search > .searching {width: 46.87%;}
+    .box_search {flex-direction: column;width: 100%;flex-shrink: 0;flex-basis: 100%;}
+    .box_search .pd_l23_r55 {padding-left: 0;padding-right: 0; margin-top: 24px;}
+}
+
 @media screen and (max-width: 768px) {
     /* đăng nhập */
     .authen_right {display: none;}
     .authen_left {width: 100%;}
     .authen_left .mt_42.pd_lr89 {display: flex; justify-content: center;}
     .authen_left .mt_42.pd_lr89 > form {width: 66.14%;}
+
+    /* tổng quan */
+    .pd_48_24_91 {padding-left: 24px;padding-right: 24px;}
+    .list_tds > .row_tq {margin-left: 0;margin-right: 0;}
+    .list_tds > .row_tq > div {width: 100%;margin-left: 0;margin-right: 0;}
+    .list_tds > .row_tq > div + div {margin-top: 24px !important;}
+
+    .row_tq > .col_3 {width: calc(100% / 2 - 24px);}
+    .row_tq > div:nth-child(3) {margin-top: 24px !important;}
+    .kt_pdt {display: none !important;}
+
+    /* tin tuyeetn dụng */
+    .box_search {flex-direction: column; align-items: flex-start;}
+    .box_search > * + * {margin-top: 24px;}
+    .box_search > .list_btn_tt {justify-content: space-between;width: 100%;}
+    .box_search > .list_btn_tt > *:first-child{margin-left: 0;}
+    .searching {width: 60.7%;}
+    .box_form_content .form_group > .d_flex.w_100 {flex-direction: column;}
+    .box_form_content .form_group > .d_flex.w_100 > .w_50pt + .w_50pt {margin-top: 16px;}
+    .box_form_content .form_group > .d_flex.w_100 > .w_50pt {width: 100%;margin-left: 0;margin-right: 0;}
+
+    /* đánh giá đổi mật khẩu */
+    .mb_40 {padding-left: 24px !important;padding-right: 24px !important;padding-top: 48px !important;}
 }
 
 @media screen and (max-width: 680px) {
