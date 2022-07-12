@@ -161,7 +161,7 @@
                         <img class="position_a pd_0" src="../../images/twt_nobg.svg" alt="">
                     </a>
                     <a href="" class="wh_42px btn_rounded shadow_2 ml_20 yt_red d_flex align_c flex_center">
-                        <img class="pd_0" src="../../images/yt_nobg.svg" alt="">
+                        <img class="pd_0 m-0" src="../../images/yt_nobg.svg" alt="">
                     </a>
                  
                 </div>

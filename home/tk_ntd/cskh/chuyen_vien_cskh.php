@@ -198,7 +198,6 @@
       $("#file_name").html(filename);
       $(".choose_file").addClass("display_none");
       $(".file_name_container").removeClass("display_none");
-      console.log($('#upload_file')[0].files[0])
     }
     let fileContainer = document.querySelector('.file_container');
     DropFiles(fileContainer, (f) => getFileName(f.name));  

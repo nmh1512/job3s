@@ -29,19 +29,19 @@
           <div class="tuyendung_content_navbar">
           <ul>
               <li>
-                <a href="tin-tuyen-dung.html" class="font_w700">Tin tuyển dụng</a>
+                <a href="tin-tuyen-dung" class="font_w700">Tin tuyển dụng</a>
               </li>
               <li>
-                <a href="thong-ke-tuyen-dung.html" class="font_w700">Thống kê</a>
+                <a href="thong-ke-tuyen-dung" class="font_w700">Thống kê</a>
               </li>
               <li>
-                <a href="cv-ung-tuyen.html" class="font_w700">CV ứng tuyển</a>
+                <a href="cv-ung-tuyen" class="font_w700">CV ứng tuyển</a>
               </li>
               <li>
-                <a href="cv-ho-tro.html" class="font_w700 nav_active">CV được hỗ trợ</a>
+                <a href="cv-ho-tro" class="font_w700 nav_active">CV được hỗ trợ</a>
               </li>
               <li>
-                <a href="dich-vu-tuyen-dung.html" class="font_w700">Dịch vụ</a>
+                <a href="dich-vu-tuyen-dung" class="font_w700">Dịch vụ</a>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@
               <button class="btn_chung bg_green">Xuất excel</button>
             </div>
             <div class="tuyen_dung_table">
-              <table class="w_100 table_list_cv table_collapse">
+              <table class="table_list_cv table_collapse">
                 <thead class="bg_s_green h_50px">
                   <th style="width: 70px">STT</th>
                   <th class="text_l">Ứng viên</th>

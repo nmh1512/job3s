@@ -11,6 +11,7 @@ function show_popup_choose(e) {
 $(window).click(function (e) {
   if (!$(e.target).is(".show_popup_choose")) {
     $(".show_popup_choose").removeClass("bg_white");
+    $(".show_popup_choose").removeClass("bg_s_green");
     $(".popup_choose").hide();
   }
 });
@@ -21,6 +22,9 @@ $(window).click(function (e) {
 
 //   }
 // });
+$('.login').click(function() {
+  $(this).toggleClass('bg_s_green')
+})
 
 function showPopup(ele) {
   $(ele).removeClass("display_none");
