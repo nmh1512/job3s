@@ -428,6 +428,7 @@ function navigatePopup({
   customDataList = "navigate",
   activeControl = "active_control",
   activeNavigate = "active_navigate",
+  callBack = () => {}
 }) {
   let controllELem = document.querySelector(controllList);
   let contentNVList = document.querySelector(navigateContentList);
@@ -450,18 +451,22 @@ function navigatePopup({
         ix = index;
       }
       if (mxLeng == index) {
-        acitveContent(
+        let ct = acitveContent(
           chilControl[ix],
           controllList,
           chilNavigateList,
           activeNavigate
         );
+        
+        if(typeof callBack == 'function') callBack(chilControl[ix], ct)
+
         ix = null;
         mxLeng = null;
       }
 
       e.onclick = function () {
-        acitveContent(this, controllList, chilNavigateList, activeNavigate);
+        let ct = acitveContent(this, controllList, chilNavigateList, activeNavigate);
+        if(typeof callBack == 'function') callBack(this, ct);
       };
     });
 
@@ -471,6 +476,7 @@ function navigatePopup({
         // remove class control
         clickToggleClass(element, listControl, activeControl);
 
+        let content;
         elementList.forEach((e) => {
           let i = e.dataset[customDataList];
           if (i != dataID) {
@@ -485,8 +491,12 @@ function navigatePopup({
               if (!e.classList.contains(classActiveList))
                 e.classList.add(classActiveList);
             }
+
+            content = e;
           }
         });
+
+        return content;
       }
     }
   }

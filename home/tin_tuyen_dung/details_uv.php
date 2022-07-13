@@ -780,6 +780,11 @@
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 },
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
             }]
         })
 
@@ -803,18 +808,6 @@
             defaultActive: 0,
             navigateContentList: '.nav_content_details',
         })
-
-        // ChangeFiles('.files', '.append', '.close_file', {
-        //     selecter: '.file_drop',
-        //     appendError: '.append_error',
-        //     isDropFile: true,
-        //     isAppenError: true,
-        //     classErorr: 'error_valid',
-        //     isTypeFileVaild: ['doc', 'docx', 'pdf', 'rar'],
-        //     customMessType: (file, type) => `File upload phải là tệp thuộc dạng: ${type.join(', ')}`,
-        //     // customMessSize: '',
-        //     // isMaxSize: 10000,
-        // });
     </script>
 </body>
 

@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- copy -->
+    <!-- <link rel="stylesheet" href="https://work247.vn/css/css_cv.css?v=279"> -->
+    <link rel="stylesheet" href="https://work247.vn/css/notification.css">
+    <link rel="stylesheet" href="https://work247.vn/css/support-ticket.css">
+    <!-- copy -->
+
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/slick.css">
+    <link rel="stylesheet" href="../../css/cv_t.css?v=<? 5 ?>">
+    <link rel="stylesheet" type="text/css" href="https://vieclam123.vn/css/cv_css/cropper.css?v=26">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Danh sách mẫu thư xin việc đẹp nhất hiện nay</title>
@@ -115,7 +123,7 @@
                     <div class="list_control_fuc m_wap">
                         <div class="item_control_fuc fuc_lange">
                             <span class="font_s16 line_h19 font_w500 cl_55">Ngôn ngữ</span>
-                            <div class="list_c">
+                            <div class="list_c" id="pre_language">
                                 <div class="item_c active_lan">
                                     <img src="../../images/vn_qk.png" alt="">
                                 </div>
@@ -144,37 +152,40 @@
                         <div class="item_control_fuc">
                             <span class="font_s16 line_h19 font_w500 cl_55">Font chữ</span>
                             <div class="list_c w_138 cus_fuc_cv">
-                                <select class="select_one">
-                                    <option value="">Roboto</option>
+                                <select class="select_one" id="font-selector">
+                                    <option value="1">Roboto</option>
+                                    <option value="2">Arial</option>
+                                    <option value="3">Times New Roman</option>
+                                    <option value="4">Open sans</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="item_control_fuc mw_124">
                             <span class="font_s16 line_h19 font_w500 cl_55">Cỡ chữ</span>
-                            <div class="list_c cus_fuc_cv d_flex center_center co_chu co_js">
-                                <span class="small_fuc act_ch">A</span>
-                                <span class="medium_fuc">A</span>
-                                <span class="">A</span>
+                            <div class="list_c cus_fuc_cv d_flex center_center co_chu co_js" id="font_size">
+                                <span class="small_fuc act_ch" data-size="10">A</span>
+                                <span class="medium_fuc" data-size="14">A</span>
+                                <span class="" data-size="20">A</span>
                             </div>
                         </div>
 
                         <div class="item_control_fuc mw_124">
                             <span class="font_s16 line_h19 font_w500 cl_55">Giãn dòng</span>
                             <div class="list_c cus_fuc_cv d_flex center_center co_chu gd_js">
-                                <span class="small_fuc act_ch">
+                                <span class="small_fuc act_ch" data-line='1.1'>
                                     <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.28284 0.717157C3.12663 0.560947 2.87337 0.560947 2.71716 0.717157L0.171573 3.26274C0.0153631 3.41895 0.0153631 3.67222 0.171573 3.82843C0.327783 3.98464 0.581048 3.98464 0.737258 3.82843L3 1.56569L5.26274 3.82843C5.41895 3.98464 5.67222 3.98464 5.82843 3.82843C5.98464 3.67222 5.98464 3.41895 5.82843 3.26274L3.28284 0.717157ZM3.4 6L3.4 1L2.6 1L2.6 6L3.4 6Z" fill="currentColor" />
                                         <path d="M2.71716 11.2828C2.87337 11.4391 3.12663 11.4391 3.28284 11.2828L5.82843 8.73726C5.98464 8.58105 5.98464 8.32778 5.82843 8.17157C5.67222 8.01536 5.41895 8.01536 5.26274 8.17157L3 10.4343L0.737258 8.17157C0.581049 8.01536 0.327783 8.01536 0.171573 8.17157C0.0153633 8.32778 0.0153633 8.58105 0.171573 8.73726L2.71716 11.2828ZM2.6 6L2.6 11L3.4 11L3.4 6L2.6 6Z" fill="currentColor" />
                                     </svg>
                                 </span>
-                                <span class="medium_fuc">
+                                <span class="medium_fuc" data-line='1.5'>
                                     <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.35355 0.648324C4.15829 0.453062 3.84171 0.453062 3.64645 0.648324L0.464466 3.8303C0.269204 4.02557 0.269204 4.34215 0.464466 4.53741C0.659728 4.73267 0.976311 4.73267 1.17157 4.53741L4 1.70898L6.82843 4.53741C7.02369 4.73267 7.34027 4.73267 7.53553 4.53741C7.7308 4.34215 7.7308 4.02557 7.53553 3.8303L4.35355 0.648324ZM4.5 8.00391L4.5 1.00188L3.5 1.00188L3.5 8.00391L4.5 8.00391Z" fill="currentColor" />
                                         <path d="M3.64645 15.3517C3.84171 15.5469 4.15829 15.5469 4.35355 15.3517L7.53553 12.1697C7.7308 11.9744 7.7308 11.6579 7.53553 11.4626C7.34027 11.2673 7.02369 11.2673 6.82843 11.4626L4 14.291L1.17157 11.4626C0.976311 11.2673 0.659728 11.2673 0.464466 11.4626C0.269204 11.6579 0.269204 11.9744 0.464466 12.1697L3.64645 15.3517ZM3.5 7.99609L3.5 14.9981L4.5 14.9981L4.5 7.99609L3.5 7.99609Z" fill="currentColor" />
                                     </svg>
                                 </span>
-                                <span class="">
+                                <span class="" data-line='1.9'>
                                     <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6.53033 0.470968C6.23744 0.178075 5.76256 0.178075 5.46967 0.470968L0.696699 5.24394C0.403806 5.53683 0.403806 6.01171 0.696699 6.3046C0.989592 6.59749 1.46447 6.59749 1.75736 6.3046L6 2.06196L10.2426 6.3046C10.5355 6.59749 11.0104 6.59749 11.3033 6.3046C11.5962 6.01171 11.5962 5.53683 11.3033 5.24394L6.53033 0.470968ZM6.75 10.0039L6.75 1.0013L5.25 1.0013L5.25 10.0039L6.75 10.0039Z" fill="currentColor" />
                                         <path d="M5.46967 19.529C5.76256 19.8219 6.23744 19.8219 6.53033 19.529L11.3033 14.7561C11.5962 14.4632 11.5962 13.9883 11.3033 13.6954C11.0104 13.4025 10.5355 13.4025 10.2426 13.6954L6 17.938L1.75736 13.6954C1.46447 13.4025 0.989593 13.4025 0.696699 13.6954C0.403806 13.9883 0.403806 14.4632 0.696699 14.7561L5.46967 19.529ZM5.25 9.99609L5.25 18.9987L6.75 18.9987L6.75 9.99609L5.25 9.99609Z" fill="currentColor" />
@@ -233,12 +244,15 @@
                 </div>
             </div>
             <div class="cv_warp pd_lr68 mt_24">
-                <span class="name_cv_box font_s16 line_h19 font_w400 txt_center cl_73 block title_cv_fuc" contenteditable="true">Chưa có tên</span>
+                <!-- <span class="name_cv_box font_s16 line_h19 font_w400 txt_center cl_73 block title_cv_fuc" contenteditable="true">Chưa có tên</span> -->
                 <div class="d_flex mt_24">
                     <div class="box_cv_flex">
-                        <div class="render_cv">
+                        <!-- <div class="render_cv">
                             <img src="../../images/cv_dep.png" alt="" class="w_100">
-                        </div>
+                        </div> -->
+                        <link id="font_change" rel="stylesheet" href="">
+
+                        <? include("../../ajax/maucv/logictis/logictis_24.php") ?>
                     </div>
                     <div class="box_cv_right flex_1 ml_36">
                         <div class="muc_box">
@@ -337,11 +351,100 @@
             <div class="change_list mt_24 lr_68 d_none"></div>
             <!-- render ds -->
         </div>
+
+        <div id="imageEditorWraper" style="display: none;">
+            <div class="container">
+                <h3>Chỉnh sửa ảnh đại diện</h3>
+                <div class="editor-col-left">
+                    <h4>Ảnh gốc tải từ thiết bị của bạn</h4>
+                    <div class="imageEditor" style="display:none;">
+                        <img id="image" src="">
+                    </div>
+                    <div class="editorChooseImage">
+                        <label for="inputImage" class="btn-choose-image" title="Upload image file">
+                            <input type="file" class="sr-only" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                            <i class="fa fa-picture-o"></i><br>Click chọn ảnh để tải lên!
+                        </label>
+                    </div>
+                    <div class="image-controls" style="display: none;">
+                        <div class="image-control-group">
+                            <button class="image-control-btn btn-zoom-in-image">
+                                <span class="fa fa-search-plus"></span>
+                            </button><button class="image-control-btn btn-zoom-out-image">
+                                <span class="fa fa-search-minus"></span>
+                            </button>
+                        </div>
+                        <div class="image-control-group">
+                            <button class="image-control-btn btn-rotate-left">
+                                <span class="fa fa-rotate-left"></span>
+                            </button><button class="image-control-btn btn-rotate-right">
+                                <span class="fa fa-rotate-right"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="tipCompress">Nếu ảnh của bạn có dung lượng trên 5MB, vui lòng<a href="https://compressor.io/compress" target="_blank" style="color:#fb236a"> bấm vào đây</a> để giảm
+                        dung lượng ảnh.</div>
+                </div>
+                <div class="editor-col-right">
+                    <h4>Ảnh hiển thị trên CV</h4>
+                    <div class="imageEditorControls">
+                        <div class="img-edit-preview" style="border: 1px solid #efefef;"><img src="https://vieclam123.vn/images/no_avatar.jpg"></div>
+                        <div class="edit-image-btns" style="display: none;">
+                            <label id="title-change" for="inputImage1" type="button" class="btn-change-image"><input type="file" class="sr-only" id="inputImage1" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">Đổi
+                                ảnh</label>
+                            <button type="button" class="btn-remove-image">Xóa ảnh</button><br>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-save-image disabled">Xong</button>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)" class="btn-close-image-editor" title="Đóng trình chỉnh sửa (Không lưu thay đổi)">Đóng lại (Không lưu)</a>
+                        </div>
+                        <form action="" method="post" id="saveEditedAvatar" style="display: none;">
+                            <input type="text" name="cropx" id="dataX" value="0">
+                            <input type="text" name="cropy" id="dataY" value="0">
+                            <input type="text" name="cropw" id="dataWidth" value="280">
+                            <input type="text" name="croph" id="dataHeight" value="280">
+                            <input type="text" name="rotate" id="dataRotate" value="0">
+                            <input type="text" name="tile" id="dataTile" value="1">
+                            <input type="text" name="cv_alias" id="cv_alias" value="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php include("../../includes/footer.php") ?>
     </div>
 
+
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/select2.min.js"></script>
+
+    <script src="https://work247.vn/js/mresize.min.js"></script>
+    <script src="https://work247.vn/js/cv_page.js"></script>
+    <script src="https://work247.vn/js/jscv/jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://work247.vn/js/validate_cv.js?v=279"></script>
+    <script src="https://work247.vn/js/jscv/jquery.validate.min.js"></script>
+    <script src="https://work247.vn/js/jscv/html2canvas.min.js"></script>
+    <script src="https://work247.vn/js/jscv/cropper.js?v=279" type="text/javascript"></script>
+    <script src="https://work247.vn/js/jscv/main.js?v=279"></script>
+    <script src="https://work247.vn/js/jscv/create.js?v=279" async></script>
+    <script src="https://work247.vn/js/jscv/general.js?v=279"></script>
+    <!-- <script src="https://work247.vn/js/jscv/edit.js?v=279"></script> -->
+    <script src="https://work247.vn/js/jscv/app_cv.js?v=279" type="text/javascript"></script>
+    <script src="https://work247.vn/js/jscv/custom_cv.js?v=279" defer></script>
+
+
+    <!-- <script src="/js/cv_page.js"></script>
+    <script type="text/javascript" src="https://vieclam123.vn/js/jqueryui/jquery-ui.js?v=26"></script>
+    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/cropper.js?v=26"></script>
+    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/html2canvas.min.js?v=26"></script>
+    <script src="https://vieclam123.vn/js/jscv/editor-control.js?v=26"></script>
+    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/render_cv_pdf_2pages.js?v=26"></script>
+    <script src="../../js/js_cv.js"></script>
+    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/create.js?v=26"></script> -->
+    <!-- <script src="https://vieclam123.vn/js/jscv/main1.js?v=26"></script> -->
     <script src="../../js/slick.min.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
@@ -366,6 +469,28 @@
             }
         })
 
+        $("#font-selector").change(function() {
+            let baseUrl = "../../fonts/";
+            array_font = [
+                "",
+                "Roboto, sans-serif",
+                "Arial-Narrow",
+                "Times-New-Roman",
+                "OpenSans",
+            ];
+            value = $("#font-selector").val();
+            // let namFont = array_font[value];
+
+            $('#page-cv').css('font-family', array_font[value])
+
+            // $(
+            //     "#cv-profile-fullname, #cv-profile-job, #cv-boxtitle, #cv-profile-birthday, #cv-profile-sex, #cv-profile-phone, #cv-profile-email, #cv-profile-address"
+            // ).css("font-family", array_font[value]);
+            // $(
+            //     ".titlecv, .box-title, .skill-name, .box-content, .block-title, .exp-title, .exp-subtitle, .exp-content, .exp-date"
+            // ).css("font-family", array_font[value]);
+        });
+
         // ngôn ngữ
         changeAjax({
             listElem: '.fuc_lange .list_c',
@@ -381,7 +506,9 @@
             classChange: 'act_ch',
             // call ajax
             callBack: function(e, parent, className) {
-                // code call ajax
+                let size = e.dataset.size;
+                $(".box-content, .exp-content, .exp-title, .exp-date, .exp-subtitle, .skill-name").css("font-size", "" + size + "px");
+                $('#cv-profile-birthday, #cv-profile-sex, #cv-profile-phone, #cv-profile-email, #cv-profile-address').css("font-size", "" + size + "px");
             }
         })
 
@@ -401,7 +528,9 @@
             classChange: 'act_ch',
             // call ajax
             callBack: function(e, parent, className) {
-                // code call ajax
+                let line = e.dataset.line;
+                $(".box-content, .exp-content, .exp-title, .exp-date, .exp-subtitle, .skill-name").css("line-height", "" + line);
+                $("#cv-profile-birthday, #cv-profile-sex, #cv-profile-phone, #cv-profile-email, #cv-profile-address").css('line-height', '' + line);
             }
         })
 
@@ -463,6 +592,18 @@
                 classMore: '.more_add_muc'
             });
         })
+
+
+        // $('.fieldgroup_controls').each(function () {
+        //     let btnClone = $(this).children('.clone');
+
+        //     $(btnClone).click(() => {
+        //         let elemClone = $(this).parent();
+        //         let cloneEl = elemClone.clone(true);
+
+        //         $(cloneEl).insertAfter(elemClone);
+        //     })
+        // })
     </script>
 </body>
 
