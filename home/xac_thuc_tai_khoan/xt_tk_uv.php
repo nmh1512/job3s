@@ -15,7 +15,7 @@
         <?php include("../../includes/after_header.php"); ?>
         <div class="container bg_fa d_flex flex_end">
             <div class="content mt_90 pd_48_24_91 bg_f5fff w_100 d_flex flex_center">
-                <div class="box_xt d_none">
+                <div class="box_xt ">
                     <!-- error cl_ff33 bg_ffe5 -->
                     <div class="mess_box cl_green bg_e5" style="display: none;">
                         <span class="font_s18 line_h21 font_w400 currentColor">Hoàn thành! Gửi email xác thực thành công.</span>
@@ -42,7 +42,7 @@
 
                             <div class="mt_16chil pd_tb16_lr24">
                                 <span class="font_s16 line_h19 font_w400 cl_a4">Nếu email không đúng vui lòng bấm <span class="change_email cl_primary font_w500 cursor_p">vào đây</span> để thay đổi.</span>
-                                <div class="d_flex input_email_change" style="display: none;">
+                                <div class="input_email_change" style="display: none;">
                                     <div class="d_flex align_c pd_lr15 bd_dc w_100 br_5">
                                         <input type="text" autocomplete="off" name="sl_tuyen" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email mới" />
                                     </div>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="box_xt">
+                <div class="box_xt d_none">
                     <div class="box_cty mt_24 pd_0">
                         <form action="" method="post" class="bt_xt">
                             <div class="mt_16chil pd_24">

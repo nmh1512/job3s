@@ -643,3 +643,22 @@ footer h4{font-weight: 500;}
     .footer_bottom > div {width: 50%;}
     .url_download_footer a {margin: 0;}
 }
+@media screen and (max-width: 768px) {
+    .footer_content:nth-child(2n+1) {width: 68%;}
+    .footer_content:nth-child(2n) {width: 32%;}
+    .footer_map img{width: 100%;}
+    .footer_bottom .footer_map {width: 31.1%;}
+    .contact_wrapper{flex-direction: row;}
+    .contact_wrapper > div {width: 50%;}
+    .footer_bottom > div {width: 61.7%;}
+    .footer_container{padding-bottom: 48px !important;}
+    /* .contact_wrapper .footer_download{width: 60%;} */
+    .contact_wrapper .img_footer_contact{width: 40%;}
+    .contact_wrapper > div:first-child{width: 51%;}
+    .footer_download > div > div:last-child{width: 86%; margin: 0 auto;}
+    .footer_download > div {flex-wrap: wrap;}
+    .footer_download > div > div {width: 100%;}
+    .footer_download p{padding-bottom: 16px;}
+    .footer_download > div > div:first-child{margin-bottom: 24px;}
+    .contact_wrapper .img_footer_contact{flex-direction: column; margin-top: 0;}
+}

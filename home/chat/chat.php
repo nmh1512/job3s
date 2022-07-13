@@ -340,6 +340,7 @@
 
       name = v.name.toLowerCase();
       type = v.type;
+      size = v.size;
       if ($.inArray(type, validImageTypes) < 0) {
         var boxFile = '<div class="wh_86 mt_16 bg_orange_file border_r12 text_l file_xemtruoc_item p_8 mr_24 position_r"><img src="../images/docx_white.png" alt="" class="mb_6"><p class="file_name text_ellipsis word_b ellip_line2 font_w500 font_s14 cl_white">' + name + '</p><div class="wh_20px d_flex align_c flex_center back_red bd_cicre position_a remove_file cursor_p" onclick="removeFile(this)"><img src="../images/x_fat.svg" alt=""></div></div>'
         $('.files_list_container').append(boxFile);
@@ -359,14 +360,14 @@
       i++;
     })
     $('.files_container').addClass('pd_files')
-    // if ($('.file_xemtruoc_item').length == 0) {
+    
     if (!$('.files_container').is(':visible') && $('.file_xemtruoc_item').length > 0) {
       $('.files_container').slideToggle()
       $('.files_container').addClass('d_flex')
       $('.box_chat_footer').removeClass('bt_dc')
     }
     $('#upload_file').val('');
-    // }
+    
   };
 
   function removeFile(e) {
