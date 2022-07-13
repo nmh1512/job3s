@@ -22,7 +22,7 @@
   ?>
 
   <div class="news_wrapper main_container_p0">
-    <div class="news_container plr_resp pb_48 bg_f5 pt_30 tile">
+    <div class="news_container plr_resp pb_48 bg_f5 pt_30 tile _new1366">
       <div class="news_page_header">
         <div>
           <h2 class="border_0 main_color pb_16">Tin tức tổng hợp</h2>
@@ -39,7 +39,7 @@
               </h3>
               <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
                 Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
-                biết chưa? Nếu bạn đang ...
+                biết chưa? Nếu bạn đang sssssssssssssssssssssssssssssssssss ddddddddddddd wwwwwwwwwwwwwwwwwww qqqqqq
               </p>
               <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
               <p class="mb_8 line_h26">01/06/2022</p>
@@ -208,7 +208,123 @@
       </div>
 
       <div class="see_all_container">
-        <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+        <a class="see_all d_flex align_c flex_center main_color" href="danh-sach-tin-tuc">Xem tất cả</a>
+      </div>
+    </div>
+    <div class="news_container pb_48 bg_f5 pt_30 tile _new1024">
+      <div class="news_page_header plr_resp">
+        <div>
+          <h2 class="border_0 main_color pb_16">Tin tức tổng hợp</h2>
+        </div>
+      </div>
+      <div class="pt_24 news_item_list">
+        <div class="d_flex flex_w list_news_container_1024">
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="see_all_container">
+        <a class="see_all d_flex align_c flex_center main_color" href="danh-sach-tin-tuc">Xem tất cả</a>
       </div>
     </div>
     <div class="plr_resp news_download d_flex align_c space_b tile">
@@ -312,11 +428,47 @@
               </div>
             </div>
           </div>
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                <p class="mb_8 line_h26">01/06/2022</p>
+                <span class="orange">Tin tổng hợp ★</span>
+              </div>
+            </div>
+          </div>
+          <div class="list_news_container_item">
+            <div>
+              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+              <div>
+                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                  Người Nước Ngoài
+                </h3>
+                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                  biết chưa? Nếu bạn đang ...
+                </p>
+                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                <p class="mb_8 line_h26">01/06/2022</p>
+                <span class="orange">Tin tổng hợp ★</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="see_all_container">
-        <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+        <a class="see_all d_flex align_c flex_center main_color" href="danh-sach-tin-tuc">Xem tất cả</a>
       </div>
     </div>
     <div class="news_container pb_48 plr_resp bg_f5 pt_30 d_flex tile">
@@ -334,7 +486,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -354,7 +506,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -374,7 +526,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -394,7 +546,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -414,7 +566,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -434,7 +586,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -454,7 +606,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -474,7 +626,7 @@
               <div>
                 <div class="d_flex mb_6 align_c space_b">
                   <p>Nguyễn Lan Anh</p>
-                  <p>01/06/2022</p>
+                  <p class="mt_8">01/06/2022</p>
                   <span class="orange">Bí quyết viết CV ★</span>
                 </div>
                 <h4 class="font_w500 mb_12 line_h24">
@@ -494,7 +646,7 @@
         </div>
 
         <div class="see_all_container">
-          <a class="see_all d_flex align_c flex_center main_color" href="">Xem tất cả</a>
+          <a class="see_all d_flex align_c flex_center main_color" href="danh-sach-tin-tuc">Xem tất cả</a>
         </div>
       </div>
       <div class="news_container_bottom_right">
@@ -513,11 +665,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
             <div class="d_flex mb_36">
@@ -528,11 +680,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
             <div class="d_flex mb_36">
@@ -543,11 +695,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
             <div class="d_flex mb_36">
@@ -558,11 +710,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
           </div>
@@ -598,11 +750,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
             <div class="d_flex mb_36">
@@ -613,11 +765,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
             <div class="d_flex mb_36">
@@ -628,11 +780,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
             <div class="d_flex mb_36">
@@ -643,11 +795,11 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-                <div class="d_flex align_c mb_8">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
+                  <p class="mt_8">01/06/2022</p>
                 </div>
-                <p>01/06/2022</p>
               </div>
             </div>
           </div>
@@ -679,31 +831,35 @@
       infinite: true,
       rows: 2,
       slidesPerRow: 3,
-      // responsive: [{
-      //   breakpoint: 481,
-      //   settings: {
-      //     dots: false,
-      //     arrows: false,
-      //   },
-      // }, ],
+      responsive: [{
+        breakpoint: 1025,
+        settings: {
+          rows: 2,
+          slidesPerRow: 2,
+        },
+      }, ],
     });
     $(".slide_bottom_news").slick({
       dots: true,
       infinite: true,
       rows: 5,
       slidesPerRow: 1,
-      // responsive: [{
-      //   breakpoint: 481,
-      //   settings: {
-      //     dots: false,
-      //     arrows: false,
-      //   },
-      // }, ],
+      responsive: [{
+        breakpoint: 1025,
+        settings: "unslick"
+      }, ],
     });
     ScrollReveal().reveal('.tile', {
       interval: 16,
       reset: true
     });
+
+    $('.list_news_container_1024').slick({
+      dots: true,
+      infinite: true,
+      rows: 2,
+      slidesPerRow: 2,
+    })
   </script>
 </body>
 

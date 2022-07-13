@@ -45,7 +45,7 @@
                   ONLINE
                 </div>
               </div>
-              <div class="info_member_cskh">
+              <div class="info_member_cskh ">
                 <div class="d_flex">
                   <p>Tên NVCS:</p>
                   <span class="font_s16 font_w500">Trần Dần</span>
@@ -70,7 +70,7 @@
                 Vui lòng nhập thông tin cần tư vấn.
               </p>
             </div>
-            <form action="" class="mt_24" style="width: 47%">
+            <form action="" class="mt_24 form_cskh">
               <div class="div_input w_100">
                 <label for="" class="font_w500">Tiêu đề<span class="color_red">*</span></label>
                 <div class="input_container">
@@ -184,8 +184,9 @@
       var filename = $(this)
         .val()
         .replace(/C:\\fakepath\\/i, "");
-      getFileName(filename);
-      
+      if (filename != '') {
+        getFileName(filename);
+      }
     });
 
     $(".remove_file").click(function() {
@@ -194,13 +195,13 @@
       $(".choose_file").removeClass("display_none");
     });
 
-    function getFileName (filename) {
+    function getFileName(filename) {
       $("#file_name").html(filename);
       $(".choose_file").addClass("display_none");
       $(".file_name_container").removeClass("display_none");
     }
     let fileContainer = document.querySelector('.file_container');
-    DropFiles(fileContainer, (f) => getFileName(f.name));  
+    DropFiles(fileContainer, (f) => getFileName(f.name));
   </script>
 </body>
 
