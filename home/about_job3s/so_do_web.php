@@ -20,7 +20,7 @@
         </div>
       </section>
       <section>
-        <div class="plr_resp ptb_48px d_flex">
+        <div class="plr_resp ptb_48px d_flex list_category">
           <div class="w_33pt">
             <h2>Người tìm việc</h2>
             <ul class="mt_24">
@@ -57,7 +57,7 @@
         </div>
       </section>
       <section>
-        <div class="bg_fa plr_resp ptb_48px d_flex">
+        <div class="bg_fa plr_resp ptb_48px d_flex list_category">
           <div class="w_33pt">
             <h2>Việc làm theo tỉnh thành</h2>
             <ul class="mt_24">

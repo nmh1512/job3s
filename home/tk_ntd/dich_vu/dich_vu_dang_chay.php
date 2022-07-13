@@ -37,7 +37,7 @@
         </div>
         <div class="thong_ke_table_container">
         <div class="tuyen_dung_filter d_flex align_c space_b flex_w">
-            <div class="d_flex align_c search_box_service">
+            <!-- <div class="d_flex align_c search_box_service"> -->
               <div class="position_r mr_24">
                 <input type="text" class="filter_box" placeholder="Tìm ứng viên" />
                 <img src="../images/seach_green.svg" alt="" class="position_a img_search" />
@@ -52,7 +52,7 @@
                   <input type="date" class="choose_date">
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
 
 
             <button class="btn_chung bg_green">Xuất excel</button>

@@ -48,7 +48,7 @@
       </section>
 
       <section>
-        <div class="plr_resp ptb_48px bg_f5">
+        <div class="plr_resp ptb_48px bg_f5 info_com_box">
           <div class="box_shadow_after_login pd_24 bg_white">
             <div class="info_header text_c">
               <h2 class="font_s28 main_color">Thỏa thuận sử dụng</h2>

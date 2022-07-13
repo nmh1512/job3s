@@ -146,13 +146,13 @@
           <div class="text_c">
             <img src="../images/app_qr.svg" alt="" />
             <div class="url_download">
-              <a class="btn_main_color d_flex align_c flex_center" href="">Tải App tìm việc Job3s</a>
+              <a class="btn_main_color d_flex align_c flex_center shadow_15" href="">Tải App tìm việc Job3s</a>
             </div>
           </div>
           <div class="text_c">
             <img src="../images/app_qr.svg" alt="" />
             <div class="url_download">
-              <a class="btn_main_color d_flex align_c flex_center " href="">Tải App CV365</a>
+              <a class="btn_main_color d_flex align_c flex_center shadow_15" href="">Tải App CV Job3s</a>
             </div>
           </div>
         </div>
@@ -185,10 +185,10 @@
                   <img src="../images/img_logo.svg" alt="">
                   <div class="content_job">
                     <a href="">
-                      <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                      <h4 class="main_color pb_5px ellipsis">Nhân viên kinh doanh bất động sảnnnnnnn</h4>
                     </a>
                     <a href="">
-                      <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                      <p class="pb_5px ellipsis">Công ty Cổ phần Thanh toán Hưng hàaaaa </p>
                     </a>
                     <div class="d_flex space_b">
                       <span>Hạn nộp: 30/04/2022</span>
@@ -301,10 +301,10 @@
                   <img src="../images/img_logo.svg" alt="">
                   <div class="content_job">
                     <a href="">
-                      <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                      <h4 class="main_color pb_5px ellipsis">Nhân viên kinh doanh bất động sản</h4>
                     </a>
                     <a href="">
-                      <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                      <p class="pb_5px ellipsis">Công ty Cổ phần Thanh toán Hưng hà</p>
                     </a>
                     <div class="d_flex space_b">
                       <span>Hạn nộp: 30/04/2022</span>
@@ -392,10 +392,10 @@
                   <img src="../images/img_logo.svg" alt="">
                   <div class="content_job">
                     <a href="">
-                      <h4 class="main_color pb_5px">Nhân viên kinh doanh bất động sản</h4>
+                      <h4 class="main_color pb_5px ellipsis">Nhân viên kinh doanh bất động sản</h4>
                     </a>
                     <a href="">
-                      <p class="pb_5px">Công ty Cổ phần Thanh toán Hưng hà</p>
+                      <p class="pb_5px ellipsis">Công ty Cổ phần Thanh toán Hưng hà</p>
                     </a>
                     <div class="d_flex space_b">
                       <span>Hạn nộp: 30/04/2022</span>
@@ -478,7 +478,7 @@
 
       </div>
       <div class="customer_content_container">
-        <div class="customer_content news_content d_flex">
+        <div class="customer_content   d_flex">
           <?
           for ($i = 0; $i < 9; $i++) {
           ?>
@@ -525,7 +525,7 @@
 
     });
 
-    function slickSlider(data, padding, data2) {
+    function slickSlider(data, padding, data2, padding1) {
 
       $(".new_works_content").slick({
         infinite: true,
@@ -549,6 +549,17 @@
         prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
         nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
       });
+      $(".customer_content").slick({
+        infinite: true,
+        slidesToShow: data2,
+        slidesToScroll: data2,
+        arrows: true,
+        dots: true,
+        centerMode: true,
+        centerPadding: padding1,
+        prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
+        nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
+      });
     }
 
     $(document).ready(function() {
@@ -561,15 +572,21 @@
         // flag = true
         padding = '420px'
         slide2 = 1
-      } else {
+      } else if(ww > 768 && ww <= 1024) {
         slide = 2
-        // flag = true
         padding = '300px'
+        padding1 = '300px'
 
         slide2 = 1
 
+      } else if(ww > 480 && ww <= 768) {
+        slide = 2
+        padding = '163px'
+        padding1 = '110px'
+        slide2 = 1
+
       }
-      slickSlider(slide, padding, slide2)
+      slickSlider(slide, padding, slide2, padding1)
 
 
 

@@ -48,16 +48,19 @@
           </ul>
         </div>
         <div class="thong_ke_table_container">
-          <div class="tuyen_dung_filter d_flex align_c space_b">
+        <div class="tuyen_dung_filter d_flex align_c flex_w">
             <div class="position_r">
               <input type="text" class="filter_box" placeholder="Tìm ứng viên" />
               <img src="../images/seach_green.svg" alt="" class="position_a img_search" />
             </div>
-            <div class="d_flex align_c space_b select_filter_box w_50pt">
+            <div class="select_filter_box_1">
               <select name="" id="" class="_filter filter_box">
                 <option value="1" selected>Chỉ hiển thị tất cả CV</option>
                 <option value="2">Chỉ hiển thị CV chưa xem</option>
               </select>
+            </div>
+            <div class="select_filter_box_2">
+
               <select name="" id="" class="_filter filter_box">
                 <option value="1">Tất cả trạng thái hồ sơ</option>
                 <option value="2">CV tiếp nhận</option>
