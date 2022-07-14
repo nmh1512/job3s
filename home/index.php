@@ -224,7 +224,10 @@
             <h2 class="main_color mb_15 font_s22">Tạo CV online ấn tượng</h2>
             <p class="mb_30">Job3s hiện có 1000+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề.
             </p>
-            <a href="" class="btn_main_color">Tạo CV ngay</a>
+            <div>
+
+              <a href="" class="btn_main_color">Tạo CV ngay</a>
+            </div>
           </div>
           <div class="banner_create_cv_img d_flex align_c">
             <img src="../images/cv.svg" alt="">
@@ -235,7 +238,10 @@
             <h2 class="main_color mb_15 font_s22">Sử dụng CV sẵn có để tìm việc</h2>
             <p class="mb_30">Cách đơn giản để bắt đầu tìm việc làm tại Job3s, Nhà tuyển dụng sẽ nhìn thấy CV
               bạn đã tải lên.</p>
-            <a href="" class="btn_main_color">Tải lên CV của bạn</a>
+            <div>
+
+              <a href="" class="btn_main_color">Tải lên CV của bạn</a>
+            </div>
           </div>
           <div class="banner_upload_cv_img position_r">
             <img src="../images/upload_big.svg" alt="" class="position_a img_uploadbig">
@@ -562,15 +568,18 @@
       });
     }
 
-    $(document).ready(function() {
+    $(document).ready(function() {  
       var ww = $(window).innerWidth();
+      console.log(ww);
       var slide = 0
       var slide2 = 0
       var flag = true;
+    
       if (ww > 1024) {
         slide = 3
         // flag = true
         padding = '420px'
+        padding1 = '420px'
         slide2 = 1
       } else if(ww > 768 && ww <= 1024) {
         slide = 2
@@ -585,6 +594,11 @@
         padding1 = '110px'
         slide2 = 1
 
+      } else {
+        slide = 1
+        padding = '5px'
+        padding1 = '30px'
+        slide2 = 1
       }
       slickSlider(slide, padding, slide2, padding1)
 
@@ -592,10 +606,10 @@
 
 
     });
-    ScrollReveal().reveal('.tile', {
-      interval: 16,
-      reset: true
-    });
+    // ScrollReveal().reveal('.tile', {
+    //   interval: 16,
+    //   reset: true
+    // });
 
     $('.nav_menu_btn button').click(function() {
       toggleNav()

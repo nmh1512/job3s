@@ -137,7 +137,7 @@
           </div>
           <div class="contact_container">
             <h4>Kết nối với Job3s.com</h4>
-            <div class="d_flex">
+            <div class="d_flex flex_w">
               <img src="../images/fb_logo.svg" alt="">
               <img src="../images/twt_logo.svg" alt="">
               <img src="../images/yt_logo.svg" alt="">

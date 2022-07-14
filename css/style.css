@@ -662,3 +662,16 @@ footer h4{font-weight: 500;}
     .footer_download > div > div:first-child{margin-bottom: 24px;}
     .contact_wrapper .img_footer_contact{flex-direction: column; margin-top: 0;}
 }
+@media screen and (max-width: 480px) {
+.footer_content{width: 100% !important;}
+.footer_bottom{flex-wrap: wrap;}
+.footer_bottom .footer_map{width: 100%;}
+.footer_bottom .contact_wrapper{margin-top: 30px;}
+.footer_bottom > div:last-child{flex-wrap: wrap;}
+.contact_wrapper > div {width: 100% !important;}
+.contact_wrapper{width: 62% !important;}
+.footer_download p{display: none;}
+.footer_download > div > div:last-child{margin: 0;}
+.img_footer_contact{margin-top: 32px !important;}
+.new_works_header .list_works{flex-wrap: wrap;}
+}
