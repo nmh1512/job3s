@@ -21,14 +21,14 @@
   include "../../includes/before_header.php";
   ?>
 
-  <div class="news_wrapper main_container_p0">
+  <div class="news_wrapper main_container_p0 bg_f5">
     <div class="news_banner">
       <img class="w_100" src="../../images/news_banner.png" alt="" />
     </div>
     <div class="news_detail plr_resp pd_t_20 pb_24 bg_f5">
       <div class="d_flex news_detail_content d_flex align_s">
-        <div>
-          <div class="box_s_15 border_r16 plr_24 pb_24 pd_t_20">
+        <div class="bg_f5">
+          <div class="box_s_15 border_r16 plr_24 pb_24 pd_t_20 bg_white">
             <div class="mb_16 position_r text_c">
               <h2 class="orange font_s20 font_w500">Tin tức tổng hợp</h2>
             </div>
@@ -184,7 +184,7 @@
           </div>
         </div>
 
-        <div class="box_s_15 border_r16">
+        <div class="box_s_15 border_r16 bg_white">
           <div class="menu_news_header d_flex align_c flex_center">
             <h2 class="orange">Mục lục</h2>
           </div>

@@ -1,6 +1,9 @@
 <div class="height_full_chat">
     <div class="box_chat_top p_16 bb_dc d_flex align_c">
         <div class="d_flex w_100 position_r">
+            <div class="btn_back_chat align_c cursor_p" onclick="backChat()">
+                <img class="w_100" src="../images/arrow_prev_black.png" alt="">
+            </div>
             <div class="position_r wh_50px">
                 <img class="btn_rounded w_100 b_d9" src="../../images/doggo.jpg" alt="" />
 
@@ -13,23 +16,32 @@
                 </div>
             </div>
         </div>
-        <div class="cursor_p show_popup_choose position_r" onclick="show_popup_choose(this)">
-            <img class="show_popup_choose" src="../../images/setting_black.svg" alt="">
-            <div class="popup_choose position_a">
-                <a href="" class="popup_choose_top d_flex align_c">
-                    <img src="../../images/eye.svg" alt="" />
-                    <p>Xem trang cá nhân</p>
-                </a>
-                <a data-status="block" class="d_flex align_c" onclick="showPopupChat(this)">
-                    <img src="../../images/block.svg" alt="" />
-                    <p>Chặn người dùng này</p>
-                </a>
-                <a data-status="delete" class="popup_choose_bot d_flex align_c" onclick="showPopupChat(this)">
-                    <img src="../../images/delete.svg" alt="" />
-                    <p>Xóa cuộc trò truyện</p>
-                </a>
+        <div class="d_flex align_c">
+            <div class="cursor_p mr_16">
+                <img src="../images/chat_call.png" alt="">
+            </div>
+            <div class="cursor_p mr_24">
+                <img src="../images/chat_sms.png" alt="">
+            </div>
+            <div class="cursor_p show_popup_choose position_r" onclick="show_popup_choose(this)">
+                <img class="show_popup_choose" src="../../images/setting_black.svg" alt="">
+                <div class="popup_choose position_a">
+                    <a href="" class="popup_choose_top d_flex align_c">
+                        <img src="../../images/eye.svg" alt="" />
+                        <p>Xem trang cá nhân</p>
+                    </a>
+                    <a data-status="block" class="d_flex align_c" onclick="showPopupChat(this)">
+                        <img src="../../images/block.svg" alt="" />
+                        <p>Chặn người dùng này</p>
+                    </a>
+                    <a data-status="delete" class="popup_choose_bot d_flex align_c" onclick="showPopupChat(this)">
+                        <img src="../../images/delete.svg" alt="" />
+                        <p>Xóa cuộc trò truyện</p>
+                    </a>
+                </div>
             </div>
         </div>
+
     </div>
     <div class="box_chat_body plr_16 pb_24 bg_fa">
         <div class="box_chat_body_content">
@@ -361,7 +373,4 @@
             $(this).parents('.item_chat').find(".popup_choose").toggle();
         })
     })
-
-
-    
 </script>

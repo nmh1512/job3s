@@ -26,7 +26,7 @@
         <h2 class="font_w500 orange border_0">Nguyễn Đình Mạnh</h2>
         <p class="gray_c4 pd_tb8">Chưa cập nhật</p>
         <p class="gray_c4">Chưa cập nhật</p>
-        <div id="btnContainer" class="mt_24 d_flex">
+        <div id="btnContainer" class="mt_24 d_flex flex_w">
           <button class="btn_main_color d_flex align_c flex_center plr_24">
             <img class="mr_7" src="../../../images/download_icon.svg" alt="" />Tải xuống CV
           </button>
@@ -359,7 +359,7 @@
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Trường học<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập trường học" />
@@ -367,7 +367,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Chuyên ngành<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập chuyên ngành" />
@@ -498,7 +498,7 @@
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên chứng chỉ<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập tên chứng chỉ" />
@@ -506,7 +506,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tổ chức</label>
                 <div class="input_container">
                   <input type="text" placeholder="Tổ chức" />
@@ -633,7 +633,7 @@
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Công ty<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập tên công ty" />
@@ -641,7 +641,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Chức vụ<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập chức vụ" />
@@ -753,7 +753,7 @@
         <div class="mt_24">
           <form action="">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên kỹ năng<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập kỹ năng" />
@@ -938,7 +938,7 @@
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên giải thưởng<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập tên giải thưởng" />
@@ -946,7 +946,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tổ chức</label>
                 <div class="input_container">
                   <input type="text" placeholder="Tổ chức" />
@@ -1105,7 +1105,7 @@
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên dự án<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập tên dự án" />
@@ -1113,7 +1113,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Khách hàng<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhập tên khách hàng" />
@@ -1122,14 +1122,14 @@
             </div>
             <div class="d_flex mt_16">
               <div class="div_input mt-0 w_100">
-                <label for="" class="font_w500">Số thành viên<span class="color_red">*</span></label>
+                <label for="" class="font_w500 mr_0">Số thành viên<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Số thành viên tham gia dự án" />
                 </div>
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Vị trí<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Vị trí của bạn trong dự án" />
@@ -1137,7 +1137,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Nhiệm vụ<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="Nhiệm vụ của bạn trong dự án" />
@@ -1145,7 +1145,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Công nghệ sử dụng</label>
                 <div class="input_container">
                   <input type="text" placeholder="Công nghệ sử dụng trong dự án" />
@@ -1278,7 +1278,7 @@
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên tổ chức<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="VD: CLB Tình Nguyện Hà Nội" />
@@ -1286,7 +1286,7 @@
               </div>
             </div>
             <div class="d_flex mt_16">
-              <div class="div_input mt-0 w_100">
+              <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Vị trí tham gia<span class="color_red">*</span></label>
                 <div class="input_container">
                   <input type="text" placeholder="VD: Thành viên" />
