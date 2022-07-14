@@ -368,9 +368,11 @@
                   Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
                   biết chưa? Nếu bạn đang ...
                 </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Tin tổng hợp ★</span>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
               </div>
             </div>
           </div>
@@ -386,9 +388,11 @@
                   Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
                   biết chưa? Nếu bạn đang ...
                 </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Tin tổng hợp ★</span>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
               </div>
             </div>
           </div>
@@ -404,9 +408,11 @@
                   Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
                   biết chưa? Nếu bạn đang ...
                 </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Tin tổng hợp ★</span>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
               </div>
             </div>
           </div>
@@ -422,9 +428,11 @@
                   Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
                   biết chưa? Nếu bạn đang ...
                 </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Tin tổng hợp ★</span>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
               </div>
             </div>
           </div>
@@ -440,9 +448,11 @@
                   Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
                   biết chưa? Nếu bạn đang ...
                 </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Tin tổng hợp ★</span>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
               </div>
             </div>
           </div>
@@ -458,9 +468,11 @@
                   Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
                   biết chưa? Nếu bạn đang ...
                 </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Tin tổng hợp ★</span>
+                <div class="d_flex flex_w align_c info_news_1024">
+                  <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
+                  <p class="mb_8 line_h26">01/06/2022</p>
+                  <span class="orange">Tin tổng hợp ★</span>
+                </div>
               </div>
             </div>
           </div>
@@ -846,7 +858,7 @@
       slidesPerRow: 1,
       responsive: [{
         breakpoint: 1025,
-        settings: "unslick"
+     
       }, ],
     });
     ScrollReveal().reveal('.tile', {

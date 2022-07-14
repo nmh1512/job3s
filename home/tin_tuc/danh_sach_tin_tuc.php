@@ -42,7 +42,7 @@
               <div class="mr_36">
 
                 <h4 class="font_w500 mb_16 text_ellipsis ellip_line1 font_s24">
-                  Hướng Dẫn Viết Đơn Xin Việc Tiếng Nhật Gây Ấn ...
+                Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho Người Nước Ngoài
                 </h4>
                 <p class="text_ellipsis ellip_line2 line_h24 mb_16">
                   Ngành kế toán nói riêng hay bất cứ ngành nghề nào nói chung hiện nay đều có những ưu và nhược điểm riêng. Nếu như ưu điểm khá rõ ràng...

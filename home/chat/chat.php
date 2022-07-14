@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../../css/style_h.css" />
   <link rel="stylesheet" href="../../css/fancybox.css" type="text/css" media="screen" />
   <script src="../../js/jquery-3.4.1.min.js"></script>
-
+  <script src="../../js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="../../js/fancybox.umd.js"></script>
 </head>
 
@@ -19,44 +19,45 @@
   include "../../includes/before_header.php"
   ?>
   <div class="chat_container container_about d_flex height_full_chat">
-    <div class="list_chat">
-      <div class="p_16_24">
-        <div class="position_r">
-          <input type="text" class="border_r100_dc w_100 font_s16" placeholder="Tìm kiếm nhanh" />
+    <div class="chat_box_container d_flex">
+      <div class="list_chat">
+        <div class="p_16_24">
+          <div class="position_r">
+            <input type="text" class="border_r100_dc w_100 font_s16" placeholder="Tìm kiếm nhanh" />
+          </div>
         </div>
-      </div>
-      <div class="list_person_chat">
-        <div class="empty_chat h_100 d_flex align_c flex_center display_none">
-          <p>Bạn chưa có cuộc trò truyện nào!</p>
-        </div>
-        <div>
-          <div class="list_person_chat_box">
-            <? for ($i = 0; $i < 300; $i++) { ?>
-              <div class="list_person_chat_box_item d_flex align_c cursor_p position_r">
-                <!-- <span class="check_delete display_none">
+        <div class="list_person_chat">
+          <div class="empty_chat h_100 d_flex align_c flex_center display_none">
+            <p>Bạn chưa có cuộc trò truyện nào!</p>
+          </div>
+          <div>
+            <div class="list_person_chat_box">
+              <? for ($i = 0; $i < 300; $i++) { ?>
+                <div class="list_person_chat_box_item d_flex align_c cursor_p position_r">
+                  <!-- <span class="check_delete display_none">
                             <input class="wh_15px mr_8" type="checkbox">
                         </span> -->
-                <label class="container_checkbox position_a check_delete display_none">
-                  <input type="checkbox" />
-                  <span class="checkmark wh_15px middle_check"></span>
-                </label>
-                <span class="num_chat btn_rounded wh_18px position_a back_red d_flex align_c flex_center font_s14 font_w500 cl_white">2</span>
-                <div class="d_flex w_100 position_r box_text">
-                  <div class="position_r wh_50px">
-                    <img class="btn_rounded w_100" src="../../images/doggo.jpg" alt="" />
-                    <div class="btn_rounded wh_12px position_a bg_green br_0"></div>
-                  </div>
-                  <div class="pd_l_10">
-                    <h4 class="mb_8">Trần Công Chiến</h4>
-                    <p class="ellipsis font_s15">
-                      Xin
-                      chào000000000000000000chào000000000000000000chào000000000000000000chào000000000000000000chào000000000000000000!
-                    </p>
+                  <label class="container_checkbox position_a check_delete display_none">
+                    <input type="checkbox" />
+                    <span class="checkmark wh_15px middle_check"></span>
+                  </label>
+                  <span class="num_chat btn_rounded wh_18px position_a back_red d_flex align_c flex_center font_s14 font_w500 cl_white">2</span>
+                  <div class="d_flex w_100 position_r box_text">
+                    <div class="position_r wh_50px">
+                      <img class="btn_rounded w_100" src="../../images/doggo.jpg" alt="" />
+                      <div class="btn_rounded wh_12px position_a bg_green br_0"></div>
+                    </div>
+                    <div class="pd_l_10">
+                      <h4 class="mb_8">Trần Công Chiến</h4>
+                      <p class="ellipsis font_s15">
+                        Xin
+                        chào000000000000000000chào000000000000000000chào000000000000000000chào000000000000000000chào000000000000000000!
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            <? } ?>
-            <!-- <div
+              <? } ?>
+              <!-- <div
                 class="list_person_chat_box_item d_flex align_c cursor_p position_r"
               >
                 <span class="check_delete display_none">
@@ -92,7 +93,7 @@
                   </div>
                 </div>
               </div> -->
-            <!-- <div
+              <!-- <div
                 class="list_person_chat_box_item d_flex align_c cursor_p position_r"
               >
                 <label
@@ -125,39 +126,41 @@
                   </div>
                 </div>
               </div> -->
-          </div>
-          <div class="h_50px delete_chat_box d_flex space_b">
-            <div class="btnXoa btn_group_delete">
-              <button onclick="deleteChat(this)" class="d_flex align_c flex_center font_s14 font_w500 cursor_p">
-                <img class="mr_6" src="../../images/delete_black.svg" alt="" />Xóa cuộc trò truyện
-              </button>
             </div>
+            <div class="h_50px delete_chat_box d_flex space_b">
+              <div class="btnXoa btn_group_delete">
+                <button onclick="deleteChat(this)" class="d_flex align_c flex_center font_s14 font_w500 cursor_p w_100">
+                  <img class="mr_6" src="../../images/delete_black.svg" alt="" />Xóa cuộc trò truyện
+                </button>
+              </div>
 
-            <div class="btnCheckXoa d_flex flex_right display_none btn_group_delete w_100">
-              <button onclick="deleteChat(this)" id="btnXoa" class="d_flex align_c flex_center font_s14 font_w500 cursor_p w195 back_red cl_white display_none">
-                Xóa
-              </button>
-              <button onclick="deleteChat(this)" class="d_flex align_c flex_center font_s14 font_w500 cursor_p w195">
-                Hủy
-              </button>
+              <div class="btnCheckXoa d_flex flex_right display_none btn_group_delete w_100">
+                <button onclick="deleteChat(this)" id="btnXoa" class="d_flex align_c flex_center font_s14 font_w500 cursor_p w195 back_red cl_white display_none">
+                  Xóa
+                </button>
+                <button onclick="deleteChat(this)" class="d_flex align_c flex_center font_s14 font_w500 cursor_p w195">
+                  Hủy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box_chat text_c">
+        <div class="bg_f5 d_flex align_c flex_center height_full_chat welcome_chat">
+          <div>
+            <img class="chat_img" src="../../images/chat_img.png" alt="" />
+            <div class="mt_20 border_r12 box_center">
+              Nay đã có thể nhắn tin trực tiếp giữa
+              <span class="main_color font_w500">Nhà tuyển dụng</span> và
+              <span class="main_color font_w500">Ứng viên</span> ngay trên
+              <span class="main_color font_w500">Job3s</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="box_chat text_c">
-      <div class="bg_f5 d_flex align_c flex_center height_full_chat">
-        <div>
-          <img src="../../images/chat_img.png" alt="" />
-          <div class="mt_20 border_r12 box_center">
-            Nay đã có thể nhắn tin trực tiếp giữa
-            <span class="main_color font_w500">Nhà tuyển dụng</span> và
-            <span class="main_color font_w500">Ứng viên</span> ngay trên
-            <span class="main_color font_w500">Job3s</span>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 
   <div class="popupContainer popup_chung popup display_none">
@@ -310,9 +313,30 @@
     },
   });
 
-  $('.list_person_chat_box_item').click(function(e) {
+  $(document).ready(function() {
+    var w = $(window).width();
+
+    if (w <= 768) {
+      var iw = $(window).innerWidth() * 2;
+      $('.chat_box_container').width(iw);
+      $('.chat_box_container > div').width(iw / 2);
+      $('.list_person_chat_box_item').click(function(e) {
+        renderChat(e)
+        if(renderChat(e) == false) {
+          return;
+        }
+        $('.chat_box_container').css('transform', `translateX(-${w}px)`)
+      })
+    }
+  })
+
+  function backChat() {
+    $('.chat_box_container').css('transform', 'translateX(0)')
+  }
+
+  function renderChat(e) {
     if ($(e.target).closest('label').length == 1 || $('.list_person_chat_box_item').find('label').is(':visible')) {
-      return
+      return false
     }
     $.ajax({
       type: 'GET',
@@ -324,6 +348,11 @@
         $('html').css('overflow', 'hidden')
       }
     })
+  }
+
+
+  $('.list_person_chat_box_item').click(function(e) {
+    renderChat(e)
 
   })
 
@@ -332,7 +361,7 @@
     var validImageTypes = ["image/gif", "image/jpeg", "image/png"];
     var i = 0;
     var check = $('.file_xemtruoc_item').length + fileArray.length
-    if(check > 10 || fileArray.length > 10) {
+    if (check > 10 || fileArray.length > 10) {
       alert('Giới hạn là 10 tệp')
       return;
     }
@@ -360,14 +389,14 @@
       i++;
     })
     $('.files_container').addClass('pd_files')
-    
+
     if (!$('.files_container').is(':visible') && $('.file_xemtruoc_item').length > 0) {
       $('.files_container').slideToggle()
       $('.files_container').addClass('d_flex')
       $('.box_chat_footer').removeClass('bt_dc')
     }
     $('#upload_file').val('');
-    
+
   };
 
   function removeFile(e) {
