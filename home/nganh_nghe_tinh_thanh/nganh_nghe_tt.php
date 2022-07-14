@@ -44,6 +44,87 @@
                         </div>
                     </div>
 
+                    <!-- tìm kiếm nâng cao màn 1024 -->
+                    <div class="search_advanced bg_20white mt_24 align_s">
+                        <div class="flex_1 mr_8">
+                            <div class="d_flex align_c pd_lr15 bg_w flex_1 br_5">
+                                <div class="mr_10 d_flex align_c">
+                                    <img src="../../images/search_gray.png" alt="">
+                                </div>
+                                <input type="text" autocomplete="off" name="search" class="pl_ip99 sr_tt rs_input ip_lhd pd_t17_b16 flex_1" placeholder="Tìm kiếm mẫu CV phù hợp" />
+                            </div>
+                            <div class="d_flex space_b mt_16">
+                                <span class="font_s16 line_h22 font_w500 cl_a4">Bộ lọc nâng cao</span>
+                                <a href="" class="d_flex align_c">
+                                    <div class="wh_16 d_flex align_c mr_6">
+                                        <img src="../../images/up_pri.png" alt="">
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w400 cl_primary">Thu gọn</span>
+                                </a>
+                            </div>
+                            <div class="d_flex align_c br_5 custom_select search_nc w_100 nganh_nghe mt_16 bg_w">
+                                <div class="icon_add_nn d_flex align_c">
+                                    <img src="../../images/adrress_icon.png" alt="">
+                                </div>
+                                <select name="" class="select_one" data-placeholder="Tất cả địa điểm">
+                                    <option value=""></option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
+                                    <option value="3">Khác</option>
+                                </select>
+                            </div>
+
+                            <div class="d_flex align_c br_5 custom_select search_nc w_100 nganh_nghe mt_8 bg_w">
+                                <div class="icon_add_nn d_flex align_c">
+                                    <img src="../../images/adrress_icon.png" alt="">
+                                </div>
+                                <select name="" class="select_one" data-placeholder="Tất cả địa điểm">
+                                    <option value=""></option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
+                                    <option value="3">Khác</option>
+                                </select>
+                            </div>
+
+                            <div class="d_flex align_c br_5 custom_select search_nc w_100 nganh_nghe mt_8 bg_w">
+                                <div class="icon_add_nn d_flex align_c">
+                                    <img src="../../images/adrress_icon.png" alt="">
+                                </div>
+                                <select name="" class="select_one" data-placeholder="Tất cả địa điểm">
+                                    <option value=""></option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
+                                    <option value="3">Khác</option>
+                                </select>
+                            </div>
+
+                            <div class="cv-group mt_32">
+                                <span class="font_s18 line_h22 font_w500 cl_a4">Sắp xếp theo</span>
+                                <div class="mt_16 d_flex">
+                                    <div class="d_flex space_b w_100">
+                                        <div class="d_flex align_c">
+                                            <input type="checkbox" id="cb_sx1" class="cb_cus_ip d_none">
+                                            <label for="cb_sx1" class="cus_cb cus_btn_sx mr_12"></label>
+                                            <label for="cb_sx1" class="font_s14 line_h19 font_w400 cl_37 pd_t1 el1">Mới nhất</label>
+                                        </div>
+                                        <span class="font_s12 line_h16 font_w400 d_flex center_center reslt_sapxep fshick0">235</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn mt_16 flex_im center_center bg_w w_100 br_6 w_100 pd_tb13 cl_primary bd_td ">
+                                <span class="font_s16 line_h14 font_w500 currentColor">Hủy lọc</span>
+                            </button>
+                        </div>
+
+
+                        <div>
+                            <button class="btn btn_cv hover_oran h_100 flex_im align_c br_6 bg_ff99 cl_white">
+                                <span class="font_s16 line_h19 font_w700 currentColor white_s_nw">Tìm việc làm</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="mt_48 d_flex">
                         <div>
                             <span class="font_s16 line_h19 font_w500 cl_a4">Tải app tìm việc Job3s</span>

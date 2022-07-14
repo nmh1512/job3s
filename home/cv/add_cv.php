@@ -203,17 +203,76 @@
                             </div>
 
                             <div class="more_add_muc" style="display: none;">
-                                <?php for ($i = 0; $i < 5; $i++) : ?>
-                                    <div class="d_flex align_c item_add_muc">
+                                <?php 
+                                    $arr = [
+                                        [
+                                            'name' => 'Thông tin liên hệ',
+                                            'keyBox' => 'box01'
+                                        ],
+
+                                        [
+                                            'name' => 'Mục tiêu nghề nghiệp',
+                                            'keyBox' => 'box02'
+                                        ],
+
+                                        [
+                                            'name' => 'Kỹ năng',
+                                            'keyBox' => 'box03'
+                                        ],
+
+                                        [
+                                            'name' => 'Giải thưởng',
+                                            'keyBox' => 'box04'
+                                        ],
+
+                                        [
+                                            'name' => 'Chứng chỉ',
+                                            'keyBox' => 'box05'
+                                        ],
+
+                                        [
+                                            'name' => 'Sở thích',
+                                            'keyBox' => 'box06'
+                                        ],
+
+                                        [
+                                            'name' => 'Người tham chiếu',
+                                            'keyBox' => 'box07'
+                                        ],
+                                        [
+                                            'name' => 'Trình độ học vấn',
+                                            'keyBox' => 'block01'
+                                        ],
+                                        [
+                                            'name' => 'Kinh nghiệm làm việc',
+                                            'keyBox' => 'block02'
+                                        ],
+                                        [
+                                            'name' => 'Hoạt động',
+                                            'keyBox' => 'block03'
+                                        ],
+                                        [
+                                            'name' => 'Dự án tham gia',
+                                            'keyBox' => 'block04'
+                                        ],
+                                        [
+                                            'name' => 'Thông tin thêm',
+                                            'keyBox' => 'block05'
+                                        ]
+                                        ];
+                                    $i=0;
+                                ?>
+                                <?php foreach ($arr as $value): ?>
+                                    <div class="d_flex align_c item_add_muc" data-keybox="<?=$value['keyBox']?>">
                                         <div class="mr_12">
                                             <input type="checkbox" id="cb_<?= $i ?>" class="d_none cb_cus_ip">
                                             <label for="cb_<?= $i ?>" class="cus_cb"></label>
                                         </div>
-                                        <label for="cb_<?= $i ?>" class="font_s16 line_h19 font_w400 cl_a4 white_s_nw">Thông tin liên hệ</label>
+                                        <label for="cb_<?= $i?>" class="font_s16 line_h19 font_w400 cl_a4 white_s_nw"><?=$value['name']?></label>
                                     </div>
-                                <?php endfor; ?>
+                                <?php $i++; endforeach; ?>
                                 <div class="d_flex center_center mt_24 poup_more_add">
-                                    <button class="btn h_42 mw_112 br_5 font_s16 line_h19 font_w500 bg_td cl_white btn_primary">Cập nhật</button>
+                                    <button class="update_bc btn h_42 mw_112 br_5 font_s16 line_h19 font_w500 bg_td cl_white btn_primary">Cập nhật</button>
                                     <button class="cancel font_s16 line_h19 font_w500 btn h_42 flex_im mw_112 center_center cl_73 bg_w bg_td bd_73 br_5 ml_16">Hủy</button>
                                 </div>
                             </div>
@@ -421,6 +480,7 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/select2.min.js"></script>
 
+    <script src="https://work247.vn/js/custom.js?v=280" defer></script>
     <script src="https://work247.vn/js/mresize.min.js"></script>
     <script src="https://work247.vn/js/cv_page.js"></script>
     <script src="https://work247.vn/js/jscv/jquery-ui/jquery-ui.min.js"></script>
@@ -589,9 +649,47 @@
         $('.add_muc_fuc').click(function() {
             moreShows({
                 elem: this,
-                classMore: '.more_add_muc'
+                classMore: '.more_add_muc',
             });
+
         })
+        $('.more_add_muc .cancel').click(()=>{
+            $('.more_add_muc').slideUp(300);
+        })
+        
+        $('.item_add_muc').each(function () {
+            $(this).find('input')[0].checked = true;
+            $(`#${$(this).data('keybox')}`).css('display', 'block');
+        })
+
+        $('.update_bc').click(function () {
+            let p = $(this).parents('.more_add_muc').children('.item_add_muc');
+            $(p).each(function () {
+                let ip = $(this).find('input');
+                let isChecked = $(ip)[0].checked;
+                if(isChecked) {
+                    $(`#${$(this).data('keybox')}`).css('display', 'block');
+                } else {
+                    $(`#${$(this).data('keybox')}`).css('display', 'none');
+                }
+            })
+            $('.more_add_muc').slideUp(300)
+        })
+
+        $('.blockControls .an-muc').click(function () {
+           let id = $(this).parent().parent().attr('id');
+           $(`.item_add_muc[data-keybox='${id}']`).find('input')[0].checked = false;
+        })
+
+        // $('.paging-arrow').each(function() {
+        //     $(this).mouseover(function () {
+        //         $(this).parent().css('width', '100%')
+        //     })
+
+        //     $(this).mouseleave(function () {
+        //         $(this).parent().css('width', '1px')
+        //     })
+        // })
 
 
         // $('.fieldgroup_controls').each(function () {

@@ -390,7 +390,7 @@
                                     <span class="font_s16 line_h19 font_w400 cl_55">Hạn nộp hồ sơ: 07/10/2022</span>
                                 </div>
                             </div>
-                            <div class="infor_follower d_flex align_e">
+                            <div class="infor_follower flex_w d_flex align_e">
                                 <button class="btn hover_chat flex_im m_w142 pd_lr24 center_center cl_green bg_w bg_td bd_chat br_100">
                                     <div class="mr_6 d_flex align_c">
                                         <!-- <img src="../../images/ib_green.png" alt="" class="img_full"> -->
@@ -428,9 +428,9 @@
                 </div>
             </div>
 
-            <div class="details_cty mt_48 lr_68 d_flex">
-                <div class="details_cty_left">
-                    <div class="box_cty h_100">
+            <div class="details_cty mt_48 lr_68 d_flex" data-mobile="1024">
+                <div class="details_cty_left" data-id="0">
+                    <div class="box_cty h_100" data-id="0" data-orderOld="0" data-new="1">
                         <div class="nav_details item_box d_flex">
                             <span class="font_s20 line_h23 font_w400 cl_primary active_nav">Tin tuyển dụng</span>
                             <span class="font_s20 line_h23 font_w400 cl_primary">Thông tin công ty</span>
@@ -542,8 +542,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="details_cty_right">
-                    <div class="box_cty">
+                <div class="details_cty_right" data-id="1">
+                    <div class="box_cty" data-id="1" data-orderOld="0" data-new="0">
                         <h3 class="font_s24 line_h28 font_w700 cl_primary bd_bpr pdb16">Tổng quan</h3>
                         <div class="list_if mt_24">
                             <div class="d_flex align_s">
@@ -630,13 +630,13 @@
                         </div>
                     </div>
 
-                    <div class="d_flex flex_column cl_uv_app">
+                    <div class="d_flex flex_column cl_uv_app mb_ct_colum" data-id="1" data-orderOld="1" data-new="2">
                         <div class="box_cty mt_24">
                             <h3 class="font_s24 line_h28 font_w700 cl_primary bd_bpr">Chia sẻ tin với bạn bè</h3>
                             <div class="mxh mt_24">
                                 <div class="copy_box">
                                     <span class="font_s16 line_h19 font_w400 cl_a4">Sao chép đường dẫn</span>
-                                    <div class="link mt_16">
+                                    <div class="link mt_16 dt_tin">
                                         <span class="link_copy">https://job3s/congtycophanthanh toán hưng hà</span>
                                         <div class="copyeid" onclick="Copyied(this,'.link_copy')">
                                             <img src="../../images/copy_primary.png" alt="">
@@ -685,20 +685,26 @@
                                 </svg>
                             </div>
                             <h3 class="font_s24 line_h28 font_w500 cl_white mt_24 txt_center">Tải ngay app tìm việc Job3s.com</h3>
-                            <div class="mt_16 d_flex h_100px flex_center">
+                            <div class="mt_16 d_flex h_100px flex_center down_app1024">
                                 <div class="d_flex flex_column space_b">
                                     <a href="" class="h_42 block">
-                                        <img src="../../images/img_app_adroi.png" alt="">
+                                        <img src="../../../images/img_app_adroi.png" alt="">
                                     </a>
 
                                     <a href="" class="h_42 block">
-                                        <img src="../../images/img_app_appstore.png" alt="">
+                                        <img src="../../../images/img_app_appstore.png" alt="">
                                     </a>
                                 </div>
 
                                 <div class="ml_16">
-                                    <img src="../../images/qc_ap.png" alt="">
+                                    <img src="../../../images/qc_ap.png" alt="">
                                 </div>
+                            </div>
+
+                            <div class="down_1024">
+                                <button class="btn td_btn hover_sv flex_im m_w142 pd_lr24 center_center cl_primary bg_w bg_td br_100">
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Tải App tìm việc Job3s</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -779,7 +785,8 @@
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                },
+                }
+            }, {
                 breakpoint: 769,
                 settings: {
                     slidesToShow: 1,
@@ -807,6 +814,11 @@
             activeControl: 'active_nav',
             defaultActive: 0,
             navigateContentList: '.nav_content_details',
+        })
+
+        responsiveLayout({
+            elemAppenNew: '.details_cty',
+            resize: true
         })
     </script>
 </body>
