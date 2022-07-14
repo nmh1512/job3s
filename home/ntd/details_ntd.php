@@ -108,7 +108,7 @@
     <div id="root">
         <? include("../../includes/before_header.php") ?>
         <div class="container bg_f5 pd_b48 mt_90">
-            <div class="infor_controll pd_48 d_flex bg_clE5 space_b">
+            <div class="infor_controll pd_48 d_flex bg_clE5 space_b controll_ntd">
                 <div class="infor_left d_flex">
                     <div class="wh_120 br_16 bd_dc mr_24 fshick position_r">
                         <span class="online is_offline"></span>
@@ -117,7 +117,7 @@
                     <div class="infor_ct">
                         <h1 class="font_s28 line_h33 font_w700 cl_primary pd_b12">Công ty Cổ phần Thanh Toán Hưng Hà</h1>
                         <span class="font_s20 line_h23 font_w500 cl_55">Công nghệ thông tin - Viễn thông</span>
-                        <div class="d_flex space_b">
+                        <div class="d_flex space_b flex_w mb_w">
                             <div class="mt_16 d_flex flex_w if_add">
                                 <div class="d_flex">
                                     <div class="d_flex align_c wh_16 mr_8">
@@ -163,9 +163,9 @@
                 </div>
             </div>
 
-            <div class="details_cty mt_48 lr_68 d_flex">
-                <div class="details_cty_left">
-                    <div class="box_cty">
+            <div class="details_cty mt_48 lr_68 d_flex" data-mobile="1024">
+                <div class="details_cty_left" data-id="0">
+                    <div class="box_cty" data-id="0" data-orderOld="0" data-new="1">
                         <div class="item_box">
                             <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thông tin công ty</h3>
                             <div class="content_cty mt_24">
@@ -189,8 +189,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="details_cty_right">
-                    <div class="box_cty">
+                <div class="details_cty_right" data-id="1">
+                    <div class="box_cty" data-id="1" data-orderOld="0" data-new="0">
                         <h3 class="font_s24 line_h28 font_w700 cl_primary bd_bpr">Tổng quan</h3>
                         <div class="list_if mt_24">
                             <div class="d_flex align_s">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
 
-                    <div class="box_cty mt_24">
+                    <div class="box_cty mt_24" data-id="1" data-orderOld="1" data-new="2">
                         <h3 class="font_s24 line_h28 font_w700 cl_primary bd_bpr">Chia sẻ công ty với bạn bè</h3>
                         <div class="mxh mt_24">
                             <div class="copy_box">
@@ -387,6 +387,12 @@
                     }
                 }
             }
+        })
+
+
+        responsiveLayout({
+            elemAppenNew: '.details_cty',
+            resize: true
         })
     </script>
 </body>

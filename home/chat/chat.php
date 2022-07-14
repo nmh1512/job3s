@@ -405,7 +405,6 @@
       $('.files_container').removeClass('d_flex')
       $('.files_container').slideToggle()
       $('.box_chat_footer').addClass('bt_dc')
-
     }
   }
 </script>
