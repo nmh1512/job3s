@@ -790,7 +790,6 @@ function loadData() {
     document.cookie = "lang_id=" + lang_id + "; path=/";
     window.location.reload();
   });
-  
 
   $(".download-cv").on("click", function () {
     var cv_title = document.getElementById("uname_cv").value;
@@ -955,175 +954,213 @@ function loadData() {
   });
 
   $(".sortable").sortable({
-      connectWith: ".sortable",
-      cancel: '[contenteditable],input'
+    connectWith: ".sortable",
+    cancel: "[contenteditable],input",
   });
   $(".check-list-block").sortable({
-      start: function(event, ui) {
-          start_parent = ui.item.parent();
-          prev_ui = ui.item.prev();
-          if (start_parent.hasClass("list-block-right")) {
-              start_position = "right";
+    start: function (event, ui) {
+      start_parent = ui.item.parent();
+      prev_ui = ui.item.prev();
+      if (start_parent.hasClass("list-block-right")) {
+        start_position = "right";
+      } else {
+        start_position = "left";
+      }
+    },
+    stop: function (event, ui) {
+      var stop_parent = ui.item.parent();
+      var next_ui_id = "";
+      var cur_id = ui.item.find(".q-inp-checkbox")[0].id;
+      var target_prev = ui.item.prev();
+      var target_next = ui.item.next();
+      var dt = $("#" + cur_id.replace("c_", "")).detach();
+      elem_id = cur_id.replace("c_", "");
+      if (stop_parent.hasClass("list-block-right")) {
+        finish_posittion = "right";
+      } else {
+        finish_posittion = "left";
+      }
+      // console.log("from:", start_position);
+      // console.log("to:", finish_posittion);
+      if (start_position == finish_posittion) {
+        // console.log(target_prev);
+        // console.log(target_next);
+      } else {
+        if (prev_ui.length > 0) {
+          next_ui = prev_ui.next();
+          if (next_ui.length > 0) {
+            next_ui_id = next_ui.find(".q-inp-checkbox")[0].id;
           } else {
-              start_position = "left";
+            next_ui_id = prev_ui.find(".q-inp-checkbox")[0].id;
           }
-      },
-      stop: function(event, ui) {
-          var stop_parent = ui.item.parent();
-          var next_ui_id = '';
-          var cur_id = ui.item.find(".q-inp-checkbox")[0].id;
-          var target_prev = ui.item.prev();
-          var target_next = ui.item.next();
-          var dt = $("#" + cur_id.replace("c_", "")).detach();
-          elem_id = cur_id.replace("c_", "");
-          if (stop_parent.hasClass("list-block-right")) {
-              finish_posittion = "right";
+        } else {
+          if (
+            start_parent.find(".inp-check-block-layout").find(".q-inp-checkbox")
+              .length > 0
+          ) {
+            next_ui_id = start_parent
+              .find(".inp-check-block-layout")
+              .find(".q-inp-checkbox")[0].id;
           } else {
-              finish_posittion = "left";
+            next_ui_id = "";
           }
-          // console.log("from:", start_position);
-          // console.log("to:", finish_posittion);
-          if (start_position == finish_posittion) {
-              // console.log(target_prev);
-              // console.log(target_next);
+        }
+      }
+      if (target_prev.length > 0 && target_next.length > 0) {
+        target_next_id = ui.item.next().find(".q-inp-checkbox")[0].id;
+        $("#" + target_next_id.replace("c_", "")).before(dt);
+      } else {
+        if (target_prev.length > 0) {
+          target_prev_id = ui.item.prev().find(".q-inp-checkbox")[0].id;
+          $("#" + target_prev_id.replace("c_", "")).after(dt);
+        }
+        if (target_next.length > 0) {
+          target_next_id = ui.item.next().find(".q-inp-checkbox")[0].id;
+          $("#" + target_next_id.replace("c_", "")).before(dt);
+        }
+        if (target_next.length == 0 && target_prev.length == 0) {
+          if (finish_posittion == "left") {
+            $(".page-0").find("#sortable").append(dt);
+            // console.log($(".page-0").find("#sortable"));
           } else {
-              if (prev_ui.length > 0) {
-                  next_ui = prev_ui.next();
-                  if (next_ui.length > 0) {
-                      next_ui_id = next_ui.find(".q-inp-checkbox")[0].id;
-                  } else {
-                      next_ui_id = prev_ui.find(".q-inp-checkbox")[0].id;
-                  }
-              } else {
-                  if (start_parent.find(".inp-check-block-layout").find(".q-inp-checkbox").length > 0) {
-                      next_ui_id = start_parent.find(".inp-check-block-layout").find(".q-inp-checkbox")[0].id;
-                  } else {
-                      next_ui_id = '';
-                  }
-              }
+            $(".page-1").find("#sort_block").append(dt);
+            // console.log($(".page-1").find("#sort_block"));
           }
-          if (target_prev.length > 0 && target_next.length > 0) {
-              target_next_id = ui.item.next().find(".q-inp-checkbox")[0].id;
-              $("#" + target_next_id.replace("c_", "")).before(dt);
+        }
+      }
+      if (elem_id.substr(0, 3) == "blo") {
+        ui_child = $("#" + elem_id)
+          .find("#experience-table")
+          .children()
+          .toArray();
+        real_ui_child = [];
+        c_ui_length = 0;
+        switch (elem_id) {
+          case "block01":
+            $(".div_edu").each(function () {
+              real_ui_child.push($(this)[0]);
+              c_ui_length += 1;
+            });
+            break;
+          case "block02":
+            $(".div_exp").each(function () {
+              real_ui_child.push($(this)[0]);
+              c_ui_length += 1;
+            });
+            break;
+          case "block03":
+            $(".div_act").each(function () {
+              real_ui_child.push($(this)[0]);
+              c_ui_length += 1;
+            });
+            break;
+          case "block04":
+            $(".div_pro").each(function () {
+              real_ui_child.push($(this)[0]);
+              c_ui_length += 1;
+            });
+            break;
+          case "block05":
+            $(".div_more").each(function () {
+              real_ui_child.push($(this)[0]);
+              c_ui_length += 1;
+            });
+            break;
+          default:
+            break;
+        }
+        if (ui_child.length == c_ui_length) {
+          $("#" + elem_id)
+            .find("#experience-table")
+            .append(ui_child);
+          for (c = 0; c < c_ui_length; c++) {
+            $("#" + elem_id)
+              .find(".exp-content")
+              .keydown();
+          }
+        } else {
+          $("#" + elem_id)
+            .find("#experience-table")
+            .append(real_ui_child);
+          for (c = 0; c < c_ui_length; c++) {
+            $("#" + elem_id)
+              .find(".exp-content")
+              .keydown();
+          }
+        }
+      } else {
+        if (elem_id == "box03") {
+          $("#" + elem_id)
+            .find(".skill-name")
+            .keydown();
+        } else {
+          $("#" + elem_id)
+            .find(".box-content")
+            .keydown();
+        }
+      }
+      if (next_ui_id != "") {
+        if (next_ui_id.replace("c_", "").substring(0, 3) == "blo") {
+          $("#" + next_ui_id.replace("c_", ""))
+            .find(".exp-content")
+            .keydown();
+        } else {
+          if (next_ui_id.replace("c_", "") == "box03") {
+            $("#" + next_ui_id.replace("c_", ""))
+              .find(".skill-name")
+              .keydown();
           } else {
-              if (target_prev.length > 0) {
-                  target_prev_id = ui.item.prev().find(".q-inp-checkbox")[0].id;
-                  $("#" + target_prev_id.replace("c_", "")).after(dt);
-              }
-              if (target_next.length > 0) {
-                  target_next_id = ui.item.next().find(".q-inp-checkbox")[0].id;
-                  $("#" + target_next_id.replace("c_", "")).before(dt);
-              }
-              if (target_next.length == 0 && target_prev.length == 0) {
-                  if (finish_posittion == 'left') {
-                      $(".page-0").find("#sortable").append(dt);
-                      // console.log($(".page-0").find("#sortable"));
-                  } else {
-                      $(".page-1").find("#sort_block").append(dt);
-                      // console.log($(".page-1").find("#sort_block"));
-                  }
-              }
+            $("#" + next_ui_id.replace("c_", ""))
+              .find(".box-content")
+              .keydown();
           }
-          if (elem_id.substr(0, 3) == "blo") {
-              ui_child = $("#" + elem_id).find("#experience-table").children().toArray();
-              real_ui_child = [];
-              c_ui_length = 0;
-              switch (elem_id) {
-                  case "block01":
-                      $(".div_edu").each(function() {
-                          real_ui_child.push($(this)[0]);
-                          c_ui_length += 1;
-                      });
-                      break;
-                  case "block02":
-                      $(".div_exp").each(function() {
-                          real_ui_child.push($(this)[0]);
-                          c_ui_length += 1;
-                      });
-                      break;
-                  case "block03":
-                      $(".div_act").each(function() {
-                          real_ui_child.push($(this)[0]);
-                          c_ui_length += 1;
-                      });
-                      break;
-                  case "block04":
-                      $(".div_pro").each(function() {
-                          real_ui_child.push($(this)[0]);
-                          c_ui_length += 1;
-                      });
-                      break;
-                  case "block05":
-                      $(".div_more").each(function() {
-                          real_ui_child.push($(this)[0]);
-                          c_ui_length += 1;
-                      });
-                      break;
-                  default:
-                      break;
-              }
-              if (ui_child.length == c_ui_length) {
-                  $("#" + elem_id).find("#experience-table").append(ui_child);
-                  for (c = 0; c < c_ui_length; c++) {
-                      $("#" + elem_id).find(".exp-content").keydown();
-                  }
-              } else {
-                  $("#" + elem_id).find("#experience-table").append(real_ui_child);
-                  for (c = 0; c < c_ui_length; c++) {
-                      $("#" + elem_id).find(".exp-content").keydown();
-                  }
-              }
+        }
+      }
+      if (start_position == "left") {
+        arr_page = $(".list-block-left").children().toArray();
+        for (let i = 0; i < arr_page.length; i++) {
+          let id_child = arr_page[i].firstElementChild.id;
+          console.log(id_child);
+          if (id_child.substr(0, 5) == "c_blo") {
+            $("#" + id_child.replace("c_", ""))
+              .find(".exp-content")
+              .keydown();
           } else {
-              if (elem_id == "box03") {
-                  $("#" + elem_id).find(".skill-name").keydown();
-              } else {
-                  $("#" + elem_id).find(".box-content").keydown();
-              }
+            if (id_child.replace("c_", "") == "box03") {
+              $("#" + id_child.replace("c_", ""))
+                .find(".skill-name")
+                .keydown();
+            } else {
+              $("#" + id_child.replace("c_", ""))
+                .find(".box-content")
+                .keydown();
+            }
           }
-          if (next_ui_id != "") {
-              if (next_ui_id.replace("c_", "").substring(0, 3) == "blo") {
-                  $("#" + next_ui_id.replace("c_", "")).find(".exp-content").keydown();
-              } else {
-                  if (next_ui_id.replace("c_", "") == "box03") {
-                      $("#" + next_ui_id.replace("c_", "")).find(".skill-name").keydown();
-                  } else {
-                      $("#" + next_ui_id.replace("c_", "")).find(".box-content").keydown();
-                  }
-              }
-          }
-          if (start_position == "left") {
-              arr_page = $(".list-block-left").children().toArray();
-              for (let i = 0; i < arr_page.length; i++) {
-                  let id_child = arr_page[i].firstElementChild.id;
-                  console.log(id_child);
-                  if (id_child.substr(0, 5) == "c_blo") {
-                      $("#" + id_child.replace("c_", "")).find(".exp-content").keydown();
-                  } else {
-                      if (id_child.replace("c_", "") == "box03") {
-                          $("#" + id_child.replace("c_", "")).find(".skill-name").keydown();
-                      } else {
-                          $("#" + id_child.replace("c_", "")).find(".box-content").keydown();
-                      }
-                  }
-              }
+        }
+      } else {
+        arr_page = $(".list-block-right").children().toArray();
+        for (let i = 0; i < arr_page.length; i++) {
+          let id_child = arr_page[i].firstElementChild.id;
+          console.log(id_child);
+          if (id_child.substr(0, 5) == "c_blo") {
+            $("#" + id_child.replace("c_", ""))
+              .find(".exp-content")
+              .keydown();
           } else {
-              arr_page = $(".list-block-right").children().toArray();
-              for (let i = 0; i < arr_page.length; i++) {
-                  let id_child = arr_page[i].firstElementChild.id;
-                  console.log(id_child);
-                  if (id_child.substr(0, 5) == "c_blo") {
-                      $("#" + id_child.replace("c_", "")).find(".exp-content").keydown();
-                  } else {
-                      if (id_child.replace("c_", "") == "box03") {
-                          $("#" + id_child.replace("c_", "")).find(".skill-name").keydown();
-                      } else {
-                          $("#" + id_child.replace("c_", "")).find(".box-content").keydown();
-                      }
-                  }
-              }
+            if (id_child.replace("c_", "") == "box03") {
+              $("#" + id_child.replace("c_", ""))
+                .find(".skill-name")
+                .keydown();
+            } else {
+              $("#" + id_child.replace("c_", ""))
+                .find(".box-content")
+                .keydown();
+            }
           }
-      },
-      connectWith: ".check-list-block"
+        }
+      }
+    },
+    connectWith: ".check-list-block",
   });
 }
 
@@ -2304,28 +2341,28 @@ function get_user_infor() {
   });
 }
 
-  $(document).mouseup(function (e) {
-    if ($(".form_fillter").css("display") !== "none") {
-      var container = $("#v_cv_with_job");
+$(document).mouseup(function (e) {
+  if ($(".form_fillter").css("display") !== "none") {
+    var container = $("#v_cv_with_job");
 
-      // if the target of the click isn't the container nor a descendant of the container
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $(".form_fillter").hide();
-      }
-    } else {
-      console.log("11");
-      $("#v_cv_with_job").click(function () {
-        $("#v_cv_with_job").css({
-          height: "auto",
-          overflow: "unset",
-        });
-        $(".form_fillter").css({
-          top: "1px",
-          display: "block",
-        });
-      });
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $(".form_fillter").hide();
     }
-  });
+  } else {
+    console.log("11");
+    $("#v_cv_with_job").click(function () {
+      $("#v_cv_with_job").css({
+        height: "auto",
+        overflow: "unset",
+      });
+      $(".form_fillter").css({
+        top: "1px",
+        display: "block",
+      });
+    });
+  }
+});
 
 // xuống dòng page
 $(document).on("keydown", "[contenteditable]", function (e) {
@@ -5811,389 +5848,479 @@ function hide() {
   $(".v-modal").remove(), $(".el-message-box__wrapper").remove();
 }
 
-
 // ----------------
-$(function() {
-  var console = window.console || { log: function() {} };
+$(function () {
+  var console = window.console || { log: function () {} };
   var URL = window.URL || window.webkitURL;
-  var $image = $('#image');
-  var $download = $('.btn-save-image');
-  var $dataX = $('#dataX');
-  var $dataY = $('#dataY');
-  var $dataHeight = $('#dataHeight');
-  var $dataWidth = $('#dataWidth');
-  var $dataRotate = $('#dataRotate');
-  var $dataScaleX = $('#dataScaleX');
-  var $dataScaleY = $('#dataScaleY');
-  var dataTile = $('#dataTile').val();
+  var $image = $("#image");
+  var $download = $(".btn-save-image");
+  var $dataX = $("#dataX");
+  var $dataY = $("#dataY");
+  var $dataHeight = $("#dataHeight");
+  var $dataWidth = $("#dataWidth");
+  var $dataRotate = $("#dataRotate");
+  var $dataScaleX = $("#dataScaleX");
+  var $dataScaleY = $("#dataScaleY");
+  var dataTile = $("#dataTile").val();
   var baseW = $dataWidth.val();
   var baseH = $dataHeight.val();
   var options = {
-      aspectRatio: 1 / dataTile,
-      preview: '.img-edit-preview',
-      dragMode: 'move',
-      crop: function(e) {
-          $dataX.val(Math.round(e.detail.x));
-          $dataY.val(Math.round(e.detail.y));
-          $dataHeight.val(Math.round(e.detail.height));
-          $dataWidth.val(Math.round(e.detail.width));
-          $dataRotate.val(e.detail.rotate);
-          $dataScaleX.val(e.detail.scaleX);
-          $dataScaleY.val(e.detail.scaleY);
-      }
+    aspectRatio: 1 / dataTile,
+    preview: ".img-edit-preview",
+    dragMode: "move",
+    crop: function (e) {
+      $dataX.val(Math.round(e.detail.x));
+      $dataY.val(Math.round(e.detail.y));
+      $dataHeight.val(Math.round(e.detail.height));
+      $dataWidth.val(Math.round(e.detail.width));
+      $dataRotate.val(e.detail.rotate);
+      $dataScaleX.val(e.detail.scaleX);
+      $dataScaleY.val(e.detail.scaleY);
+    },
   };
-  var originalImageURL = $image.attr('src');
-  var uploadedImageName = 'avatar.jpg';
-  var uploadedImageType = 'image/jpeg';
+  var originalImageURL = $image.attr("src");
+  var uploadedImageName = "avatar.jpg";
+  var uploadedImageType = "image/jpeg";
   var uploadedImageURL;
   var is_delete = false;
 
   // Tooltip
   // $('[data-toggle="tooltip"]').tooltip();
 
-
   // Cropper
-  $image.on({
-      ready: function(e) {
-          //console.log(e.type);
+  $image
+    .on({
+      ready: function (e) {
+        //console.log(e.type);
       },
-      cropstart: function(e) {
-          //console.log(e.type, e.detail.action);
+      cropstart: function (e) {
+        //console.log(e.type, e.detail.action);
       },
-      cropmove: function(e) {
-          //console.log(e.type, e.detail.action);
+      cropmove: function (e) {
+        //console.log(e.type, e.detail.action);
       },
-      cropend: function(e) {
-          //console.log(e.type, e.detail.action);
+      cropend: function (e) {
+        //console.log(e.type, e.detail.action);
       },
-      crop: function(e) {
-          //console.log(e.type);
+      crop: function (e) {
+        //console.log(e.type);
       },
-      zoom: function(e) {
-          //console.log(e.type, e.detail.ratio);
-      }
-  }).cropper(options);
-
+      zoom: function (e) {
+        //console.log(e.type, e.detail.ratio);
+      },
+    })
+    .cropper(options);
 
   // Buttons
-  if (!$.isFunction(document.createElement('canvas').getContext)) {
-      $('button[data-method="getCroppedCanvas"]').prop('disabled', true);
-      $('button.btn-save-image').prop('disabled', true);
+  if (!$.isFunction(document.createElement("canvas").getContext)) {
+    $('button[data-method="getCroppedCanvas"]').prop("disabled", true);
+    $("button.btn-save-image").prop("disabled", true);
   }
 
-  if (typeof document.createElement('cropper').style.transition === 'undefined') {
-      $('button[data-method="rotate"]').prop('disabled', true);
-      $('button[data-method="scale"]').prop('disabled', true);
+  if (
+    typeof document.createElement("cropper").style.transition === "undefined"
+  ) {
+    $('button[data-method="rotate"]').prop("disabled", true);
+    $('button[data-method="scale"]').prop("disabled", true);
   }
-
 
   // Download
-  if (typeof $download[0].download === 'undefined') {
-      $download.addClass('disabled');
+  if (typeof $download[0].download === "undefined") {
+    $download.addClass("disabled");
   }
 
-
   // Options
-  $('.docs-toggles').on('change', 'input', function() {
-      var $this = $(this);
-      var name = $this.attr('name');
-      var type = $this.prop('type');
-      var cropBoxData;
-      var canvasData;
+  $(".docs-toggles").on("change", "input", function () {
+    var $this = $(this);
+    var name = $this.attr("name");
+    var type = $this.prop("type");
+    var cropBoxData;
+    var canvasData;
 
-      if (!$image.data('cropper')) {
-          return;
-      }
+    if (!$image.data("cropper")) {
+      return;
+    }
 
-      if (type === 'checkbox') {
-          options[name] = $this.prop('checked');
-          cropBoxData = $image.cropper('getCropBoxData');
-          canvasData = $image.cropper('getCanvasData');
+    if (type === "checkbox") {
+      options[name] = $this.prop("checked");
+      cropBoxData = $image.cropper("getCropBoxData");
+      canvasData = $image.cropper("getCanvasData");
 
-          options.ready = function() {
-              $image.cropper('setCropBoxData', cropBoxData);
-              $image.cropper('setCanvasData', canvasData);
-          };
-      } else if (type === 'radio') {
-          options[name] = $this.val();
-      }
+      options.ready = function () {
+        $image.cropper("setCropBoxData", cropBoxData);
+        $image.cropper("setCanvasData", canvasData);
+      };
+    } else if (type === "radio") {
+      options[name] = $this.val();
+    }
 
-      $image.cropper('destroy').cropper(options);
+    $image.cropper("destroy").cropper(options);
   });
-
 
   // Methods
-  $('.docs-buttons').on('click', '[data-method]', function() {
-      var $this = $(this);
-      var data = $this.data();
-      var cropper = $image.data('cropper');
-      var cropped;
-      var $target;
-      var result;
+  $(".docs-buttons").on("click", "[data-method]", function () {
+    var $this = $(this);
+    var data = $this.data();
+    var cropper = $image.data("cropper");
+    var cropped;
+    var $target;
+    var result;
 
-      if ($this.prop('disabled') || $this.hasClass('disabled')) {
-          return;
+    if ($this.prop("disabled") || $this.hasClass("disabled")) {
+      return;
+    }
+
+    if (cropper && data.method) {
+      data = $.extend({}, data); // Clone a new one
+
+      if (typeof data.target !== "undefined") {
+        $target = $(data.target);
+
+        if (typeof data.option === "undefined") {
+          try {
+            data.option = JSON.parse($target.val());
+          } catch (e) {
+            console.log(e.message);
+          }
+        }
       }
 
-      if (cropper && data.method) {
-          data = $.extend({}, data); // Clone a new one
+      cropped = cropper.cropped;
 
-          if (typeof data.target !== 'undefined') {
-              $target = $(data.target);
-
-              if (typeof data.option === 'undefined') {
-                  try {
-                      data.option = JSON.parse($target.val());
-                  } catch (e) {
-                      console.log(e.message);
-                  }
-              }
+      switch (data.method) {
+        case "rotate":
+          if (cropped && options.viewMode > 0) {
+            $image.cropper("clear");
           }
 
-          cropped = cropper.cropped;
+          break;
 
-          switch (data.method) {
-              case 'rotate':
-                  if (cropped && options.viewMode > 0) {
-                      $image.cropper('clear');
-                  }
+        case "getCroppedCanvas":
+          if (uploadedImageType === "image/jpeg") {
+            if (!data.option) {
+              data.option = {};
+            }
 
-                  break;
-
-              case 'getCroppedCanvas':
-                  if (uploadedImageType === 'image/jpeg') {
-                      if (!data.option) {
-                          data.option = {};
-                      }
-
-                      data.option.fillColor = '#fff';
-                  }
-
-                  break;
+            data.option.fillColor = "#fff";
           }
 
-          result = $image.cropper(data.method, data.option, data.secondOption);
-
-          switch (data.method) {
-              case 'rotate':
-                  if (cropped && options.viewMode > 0) {
-                      $image.cropper('crop');
-                  }
-
-                  break;
-
-              case 'scaleX':
-              case 'scaleY':
-                  $(this).data('option', -data.option);
-                  break;
-
-              case 'getCroppedCanvas':
-                  if (result) {
-                      // Bootstrap's Modal
-                      $('#getCroppedCanvasModal').modal().find('.modal-body').html(result);
-
-                      if (!$download.hasClass('disabled')) {
-                          download.download = uploadedImageName;
-                          $download.attr('href', result.toDataURL(uploadedImageType));
-                      }
-                  }
-
-                  break;
-
-              case 'destroy':
-                  if (uploadedImageURL) {
-                      URL.revokeObjectURL(uploadedImageURL);
-                      uploadedImageURL = '';
-                      $image.attr('src', originalImageURL);
-                  }
-
-                  break;
-          }
-
-          if ($.isPlainObject(result) && $target) {
-              try {
-                  $target.val(JSON.stringify(result));
-              } catch (e) {
-                  console.log(e.message);
-              }
-          }
-
+          break;
       }
+
+      result = $image.cropper(data.method, data.option, data.secondOption);
+
+      switch (data.method) {
+        case "rotate":
+          if (cropped && options.viewMode > 0) {
+            $image.cropper("crop");
+          }
+
+          break;
+
+        case "scaleX":
+        case "scaleY":
+          $(this).data("option", -data.option);
+          break;
+
+        case "getCroppedCanvas":
+          if (result) {
+            // Bootstrap's Modal
+            $("#getCroppedCanvasModal")
+              .modal()
+              .find(".modal-body")
+              .html(result);
+
+            if (!$download.hasClass("disabled")) {
+              download.download = uploadedImageName;
+              $download.attr("href", result.toDataURL(uploadedImageType));
+            }
+          }
+
+          break;
+
+        case "destroy":
+          if (uploadedImageURL) {
+            URL.revokeObjectURL(uploadedImageURL);
+            uploadedImageURL = "";
+            $image.attr("src", originalImageURL);
+          }
+
+          break;
+      }
+
+      if ($.isPlainObject(result) && $target) {
+        try {
+          $target.val(JSON.stringify(result));
+        } catch (e) {
+          console.log(e.message);
+        }
+      }
+    }
   });
 
-
   // Import image
-  var $inputImage = $('#inputImage');
+  var $inputImage = $("#inputImage");
 
   if (URL) {
-      $inputImage.change(function() {
-          is_delete = false;
-          var files = this.files;
-          var file;
-          if (!$image.data('cropper')) {
-              return;
+    $inputImage.change(function () {
+      is_delete = false;
+      var files = this.files;
+      var file;
+      if (!$image.data("cropper")) {
+        return;
+      }
+
+      if (files && files.length) {
+        file = files[0];
+
+        if (/^image\/\w+$/.test(file.type)) {
+          if (file.size < 5 * 1024 * 1024) {
+            uploadedImageName = file.name;
+            uploadedImageType = file.type;
+
+            if (uploadedImageURL) {
+              URL.revokeObjectURL(uploadedImageURL);
+            }
+
+            uploadedImageURL = URL.createObjectURL(file);
+            $image
+              .cropper("destroy")
+              .attr("src", uploadedImageURL)
+              .cropper(options);
+            $inputImage.val("");
+            //Add them
+            $(".imageEditor").show();
+            $(".editorChooseImage").hide();
+            $(".image-controls").show();
+            $(".edit-image-btns").show();
+            $(".tipCompress").hide();
+            $download.removeClass("disabled");
+          } else {
+            window.alert(
+              "Vui lĂ²ng chá»n áº£nh cĂ³ kĂ­ch thÆ°á»›c nhá» hÆ¡n 5MB."
+            );
+            $download.addClass("disabled");
           }
-
-          if (files && files.length) {
-              file = files[0];
-
-              if (/^image\/\w+$/.test(file.type)) {
-                  if (file.size < 5*1024*1024) {
-                      uploadedImageName = file.name;
-                      uploadedImageType = file.type;
-
-                      if (uploadedImageURL) {
-                          URL.revokeObjectURL(uploadedImageURL);
-                      }
-
-                      uploadedImageURL = URL.createObjectURL(file);
-                      $image.cropper('destroy').attr('src', uploadedImageURL).cropper(options);
-                      $inputImage.val('');
-                      //Add them
-                      $('.imageEditor').show();
-                      $('.editorChooseImage').hide();
-                      $('.image-controls').show();
-                      $('.edit-image-btns').show();
-                      $('.tipCompress').hide();
-                      $download.removeClass('disabled');
-                  } else {
-                      window.alert('Vui lĂ²ng chá»n áº£nh cĂ³ kĂ­ch thÆ°á»›c nhá» hÆ¡n 5MB.');
-                      $download.addClass('disabled');
-                  }
-              } else {
-                  window.alert('Vui lĂ²ng chá»n file áº£nh (.png, .gif, .jpeg, .jpg).');
-                  $download.addClass('disabled');
-              }
-          }
-      });
+        } else {
+          window.alert("Vui lĂ²ng chá»n file áº£nh (.png, .gif, .jpeg, .jpg).");
+          $download.addClass("disabled");
+        }
+      }
+    });
   } else {
-      $inputImage.prop('disabled', true).parent().addClass('disabled');
-      $download.addClass('disabled');
+    $inputImage.prop("disabled", true).parent().addClass("disabled");
+    $download.addClass("disabled");
   }
 
   // change image
-  var $inputImage = $('#inputImage1');
+  var $inputImage = $("#inputImage1");
 
   if (URL) {
-      $inputImage.change(function() {
-          is_delete = false;
-          var files = this.files;
-          var file;
-          if (!$image.data('cropper')) {
-              return;
+    $inputImage.change(function () {
+      is_delete = false;
+      var files = this.files;
+      var file;
+      if (!$image.data("cropper")) {
+        return;
+      }
+
+      if (files && files.length) {
+        file = files[0];
+
+        if (/^image\/\w+$/.test(file.type)) {
+          if (file.size < 5 * 1024 * 1024) {
+            uploadedImageName = file.name;
+            uploadedImageType = file.type;
+
+            if (uploadedImageURL) {
+              URL.revokeObjectURL(uploadedImageURL);
+            }
+
+            uploadedImageURL = URL.createObjectURL(file);
+            $image
+              .cropper("destroy")
+              .attr("src", uploadedImageURL)
+              .cropper(options);
+            $inputImage.val("");
+            //Add them
+            $(".imageEditor").show();
+            $(".editorChooseImage").hide();
+            $(".image-controls").show();
+            $(".edit-image-btns").show();
+            $(".tipCompress").hide();
+            $download.removeClass("disabled");
+          } else {
+            window.alert(
+              "Vui lĂ²ng chá»n áº£nh cĂ³ kĂ­ch thÆ°á»›c nhá» hÆ¡n 5MB"
+            );
+            $download.addClass("disabled");
           }
-
-          if (files && files.length) {
-              file = files[0];
-
-              if (/^image\/\w+$/.test(file.type)) {
-                  if (file.size < 5*1024*1024) {
-                      uploadedImageName = file.name;
-                      uploadedImageType = file.type;
-
-                      if (uploadedImageURL) {
-                          URL.revokeObjectURL(uploadedImageURL);
-                      }
-
-                      uploadedImageURL = URL.createObjectURL(file);
-                      $image.cropper('destroy').attr('src', uploadedImageURL).cropper(options);
-                      $inputImage.val('');
-                      //Add them
-                      $('.imageEditor').show();
-                      $('.editorChooseImage').hide();
-                      $('.image-controls').show();
-                      $('.edit-image-btns').show();
-                      $('.tipCompress').hide();
-                      $download.removeClass('disabled');
-                  } else {
-                      window.alert("Vui lĂ²ng chá»n áº£nh cĂ³ kĂ­ch thÆ°á»›c nhá» hÆ¡n 5MB");
-                      $download.addClass('disabled');
-                  }
-                  
-              } else {
-                  window.alert('Vui lĂ²ng chá»n file áº£nh (.png, .gif, .jpeg, .jpg).');
-                  $download.addClass('disabled');
-              }
-          }
-      });
+        } else {
+          window.alert("Vui lĂ²ng chá»n file áº£nh (.png, .gif, .jpeg, .jpg).");
+          $download.addClass("disabled");
+        }
+      }
+    });
   } else {
-      $inputImage.prop('disabled', true).parent().addClass('disabled');
-      $download.addClass('disabled');
+    $inputImage.prop("disabled", true).parent().addClass("disabled");
+    $download.addClass("disabled");
   }
 
-  $('.btn-remove-image').click(function() {
-      is_delete = true;
-      $image.cropper('clear');
-      $(".img-edit-preview").find("img").attr("src","/images/no_avatar.jpg");
-      $(".img-edit-preview").find("img").attr("style","");
-      $("#image").attr("src","/images/no_avatar.jpg");
-      $('.imageEditor').hide();
-      $('.editorChooseImage').show();
-      
+  $(".btn-remove-image").click(function () {
+    is_delete = true;
+    $image.cropper("clear");
+    $(".img-edit-preview").find("img").attr("src", "/images/no_avatar.jpg");
+    $(".img-edit-preview").find("img").attr("style", "");
+    $("#image").attr("src", "/images/no_avatar.jpg");
+    $(".imageEditor").hide();
+    $(".editorChooseImage").show();
   });
-  $('.btn-rotate-right').click(function() {
-      $image.cropper("rotate", 90);
+  $(".btn-rotate-right").click(function () {
+    $image.cropper("rotate", 90);
   });
-  $('.btn-rotate-left').click(function() {
-      $image.cropper("rotate", -90);
+  $(".btn-rotate-left").click(function () {
+    $image.cropper("rotate", -90);
   });
-  $('.btn-zoom-in-image').click(function() {
-      $image.cropper("zoom", 0.2);
+  $(".btn-zoom-in-image").click(function () {
+    $image.cropper("zoom", 0.2);
   });
-  $('.btn-zoom-out-image').click(function() {
-      $image.cropper("zoom", -0.2);
+  $(".btn-zoom-out-image").click(function () {
+    $image.cropper("zoom", -0.2);
   });
 
-  $('.btn-save-image').click(function() {
-      if (is_delete == true) {
-          $('#imageEditorWraper').hide();
-          return;
-      }
-      if ($(this).hasClass('disabled')) {} else {
-          var dataX = $dataX.val();
-          var dataY = $dataY.val();
-          var dataHeight = $dataHeight.val();
-          var dataWidth = $dataWidth.val();
-          var dataRotate = $dataRotate.val();
-          var dataScaleX = $dataScaleX.val();
-          var dataScaleY = $dataScaleY.val();
-          var cropper = $image.data('cropper');
-          var result = $image.cropper('getCroppedCanvas', {
-              width: baseW,
-              height: baseH,
-              minWidth: 100,
-              minHeight: 100,
-              maxWidth: 4000,
-              maxHeight: 4000,
-              fillColor: '#fff',
-              imageSmoothingEnabled: true,
-              imageSmoothingQuality: 'high'
-          });
-          var img = result.toDataURL(uploadedImageType);
-          $.ajax('/upload_avatar_cv', {
-              method: "POST",
-              data: { img64: img },
-              cache: false,
-              success: function(img) {
-                  b = img.trim();
-                  $('#cvo-profile-avatar').attr('src', b);
-                  console.log('Upload success');
-              },
-              error: function() {
-                  console.log('Upload error');
-              }
-          });
-          $('#imageEditorWraper').hide();
-      }
+  $(".btn-save-image").click(function () {
+    if (is_delete == true) {
+      $("#imageEditorWraper").hide();
+      return;
+    }
+    if ($(this).hasClass("disabled")) {
+    } else {
+      var dataX = $dataX.val();
+      var dataY = $dataY.val();
+      var dataHeight = $dataHeight.val();
+      var dataWidth = $dataWidth.val();
+      var dataRotate = $dataRotate.val();
+      var dataScaleX = $dataScaleX.val();
+      var dataScaleY = $dataScaleY.val();
+      var cropper = $image.data("cropper");
+      var result = $image.cropper("getCroppedCanvas", {
+        width: baseW,
+        height: baseH,
+        minWidth: 100,
+        minHeight: 100,
+        maxWidth: 4000,
+        maxHeight: 4000,
+        fillColor: "#fff",
+        imageSmoothingEnabled: true,
+        imageSmoothingQuality: "high",
+      });
+      var img = result.toDataURL(uploadedImageType);
+      $.ajax("/upload_avatar_cv", {
+        method: "POST",
+        data: { img64: img },
+        cache: false,
+        success: function (img) {
+          b = img.trim();
+          $("#cvo-profile-avatar").attr("src", b);
+          console.log("Upload success");
+        },
+        error: function () {
+          console.log("Upload error");
+        },
+      });
+      $("#imageEditorWraper").hide();
+    }
   });
-  $('#cvo-profile-avatar').click(function() {
-      $image.cropper('destroy').cropper(options);
-      $('#imageEditorWraper').show();
+  $("#cvo-profile-avatar").click(function () {
+    $image.cropper("destroy").cropper(options);
+    $("#imageEditorWraper").show();
   });
-  $('.btn-close-image-editor').click(function() {
-      $('#imageEditorWraper').hide();
+  $(".btn-close-image-editor").click(function () {
+    $("#imageEditorWraper").hide();
   });
-  $('.click_hidden').click(function() {
-      $('#cvo-profile-avatar').click();
-  })
+  $(".click_hidden").click(function () {
+    $("#cvo-profile-avatar").click();
+  });
 });
+
+// ---------------
+var PagingSeparator = {
+  px2mmConversionRatio: 0.264583333,
+  pageHeight: 277.54,
+  pageContentHeight: 0,
+  printOptions: null,
+  documentHeight: 0,
+  documentContentHeight: 0,
+  totalPages: 0,
+  pages: [],
+  init: function (t) {
+    return (
+      (this.printOptions = t.printOptions),
+      (this.pageContentHeight =
+        this.pageHeight -
+        this.printOptions.margins.top -
+        this.printOptions.margins.bottom),
+      this.update(),
+      this
+    );
+  },
+  px2mm: function (t) {
+    return t * this.px2mmConversionRatio;
+  },
+  mm2px: function (t) {
+    return t / this.px2mmConversionRatio;
+  },
+  isReady: function () {
+    return null != this.printOptions;
+  },
+  update: function () {
+    this.isReady(),
+      (this.pages = []),
+      (this.documentHeight = this.px2mm($("#form-cv").height())),
+      (this.documentContentHeight =
+        this.documentHeight -
+        this.printOptions.margins.top -
+        this.printOptions.margins.bottom),
+      (this.totalPages = Math.ceil(
+        this.documentContentHeight / this.pageContentHeight
+      ));
+    for (var t = 1; t < this.totalPages; t++) {
+      var i;
+      (i =
+        1 == t
+          ? this.pageContentHeight + this.printOptions.margins.top
+          : this.pages[this.pages.length - 1] + this.pageContentHeight),
+        this.pages.push(i);
+    }
+    return this;
+  },
+  render: function () {
+    if (!this.isReady()) return this;
+    for (
+      this.update(), $("#form-cv .page_end").remove(), i = 0;
+      i < this.pages.length;
+      i++
+    ) {
+      var t = this.pages[i],
+        n = i + 2,
+        e = $("#page_end")
+          .clone()
+          .attr("id", "")
+          .css("top", t + "mm");
+      e
+        .find(".paging-arrow")
+        .text("Trang " + n)
+        .attr("title", "Báº¯t Ä‘áº§u trang sá»‘ " + n)
+        .hover(
+          function () {
+            $(this).parent().css("width", "100%");
+          },
+          function () {
+            $(this).parent().css("width", "1px");
+          }
+        ),
+        e.appendTo($("#form-cv")).show();
+    }
+    return this;
+  },
+};

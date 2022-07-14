@@ -141,7 +141,7 @@
                     <div class="infor_ct">
                         <h1 class="font_s28 line_h33 font_w700 cl_primary pd_b12">Nguyễn Thanh Hằng</h1>
                         <span class="font_s20 line_h23 font_w500 cl_55">Nhân viên thiết kế</span>
-                        <div class="d_flex space_b">
+                        <div class="d_flex space_b flex_w align_c mb_w">
                             <div class="mt_16 d_flex flex_w if_add">
                                 <div class="d_flex">
                                     <div class="d_flex align_c wh_16 mr_8">
@@ -191,11 +191,33 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- controll màn 1024 -->
+                <div class="controll_node">
+                    <div class="ct_phone">
+                        <div class="d_flex align_c">
+                            <img src="../../../images/phone_mb_green.png" alt="">
+                        </div>
+                        <span class="font_s14 line_h16 font_w500 cl_a4">Gọi điện</span>
+                    </div>
+                    <div class="ct_mess">
+                        <div class="d_flex align_c">
+                            <img src="../../../images/sms_green.png" alt="">
+                        </div>
+                        <span class="font_s14 line_h16 font_w500 cl_a4">SMS</span>
+                    </div>
+                    <div class="ct_chat bg096">
+                        <div class="d_flex align_c">
+                            <img src="../../../images/chat_icon_white.png" alt="">
+                        </div>
+                        <span class="font_s14 line_h16 font_w500 cl_white">Chat</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="details_cty mt_48 lr_68 d_flex">
-                <div class="details_cty_left">
-                    <div class="box_cty h_100">
+            <div class="details_cty mt_48 lr_68 d_flex" data-mobile="1024">
+                <div class="details_cty_left" data-id="0">
+                    <div class="box_cty h_100" data-id="0" data-orderOld="0" data-new="1">
                         <div class="nav_details item_box d_flex">
                             <span class="font_s20 line_h23 font_w400 cl_primary">Hồ sơ online</span>
                             <span class="font_s20 line_h23 font_w400 cl_primary">CV xin việc</span>
@@ -510,8 +532,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="details_cty_right">
-                    <div class="box_cty">
+                <div class="details_cty_right" data-id="1">
+                    <div class="box_cty" data-id="1" data-orderOld="0" data-new="0">
                         <h3 class="font_s24 line_h28 font_w700 cl_primary bd_bpr pdb16">Tổng quan</h3>
                         <div class="list_if mt_24">
                             <div class="d_flex align_s">
@@ -621,7 +643,7 @@
                         </div>
                     </div>
 
-                    <div class="box_cty mt_24">
+                    <div class="box_cty mt_24" data-id="1" data-orderOld="0" data-new="2">
                         <h3 class="font_s24 line_h28 font_w700 cl_primary bd_bpr">Giới thiệu ứng viên</h3>
                         <div class="mxh mt_24">
                             <div class="copy_box">
@@ -636,7 +658,7 @@
                         </div>
                     </div>
 
-                    <div class="down_app btn_primary br_16 mt_24">
+                    <div class="down_app btn_primary br_16 mt_24" data-id="1" data-orderOld="0" data-new="3">
                         <div class="d_flex center_center">
                             <svg width="94" height="34" viewBox="0 0 94 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M54.2935 20.7766C54.3083 22.1932 54.0534 23.5997 53.5425 24.9209C53.0804 26.1271 52.3898 27.2327 51.5087 28.1772C50.6499 29.1026 49.6157 29.848 48.4662 30.37C47.3221 30.8741 46.0818 31.1229 44.8317 31.0991C43.6022 31.1152 42.3889 30.8171 41.3069 30.2329C40.4043 29.7402 39.6478 29.0178 39.1141 28.1388H38.7961V29.6463C38.7961 29.8644 38.7095 30.0736 38.5553 30.2278C38.4011 30.382 38.1919 30.4686 37.9739 30.4686H34.9095C35.6379 30.0294 36.3115 29.5049 36.9158 28.9063C37.9266 27.8872 38.7193 26.6729 39.2457 25.3376C39.4223 24.9017 39.5706 24.4549 39.6897 24C39.8841 24.314 40.114 24.6047 40.3749 24.8661C40.8443 25.3379 41.4035 25.7107 42.0195 25.9625C42.6395 26.2127 43.3025 26.3394 43.9711 26.3353C44.6435 26.3385 45.3095 26.2041 45.9281 25.9406C46.5414 25.6837 47.0997 25.3115 47.5727 24.8442C48.0621 24.3446 48.4494 23.7543 48.7129 23.1064C49.2979 21.6367 49.2979 19.9988 48.7129 18.5291C48.4508 17.8804 48.0634 17.2899 47.5727 16.7913C47.1008 16.3226 46.5422 15.9502 45.9281 15.6949C45.3095 15.4314 44.6435 15.297 43.9711 15.3002C43.3021 15.2979 42.6391 15.4264 42.0195 15.6785C41.4013 15.9261 40.8413 16.2994 40.3749 16.7748C40.1157 17.0358 39.8859 17.3244 39.6897 17.6355C39.4651 17.994 39.2812 18.3764 39.1415 18.7757V20.8369C39.1413 21.3869 39.1046 21.9363 39.0319 22.4815C38.9154 23.3355 38.6925 24.1716 38.3686 24.9703C37.8881 26.1889 37.1644 27.2969 36.2416 28.2265C35.5732 28.8945 34.8081 29.4581 33.9721 29.8985C33.6578 30.0706 33.3338 30.2244 33.0018 30.359C30.3469 31.3825 27.4064 31.3825 24.7515 30.359C23.542 29.871 22.4423 29.1459 21.5172 28.2265C20.5927 27.2972 19.8671 26.1892 19.3847 24.9703C18.3613 22.3022 18.3613 19.3498 19.3847 16.6816C19.8698 15.4641 20.595 14.3567 21.5172 13.4254C22.4438 12.5078 23.5431 11.7831 24.7515 11.2929C27.3983 10.277 30.3276 10.277 32.9744 11.2929V17.4382C32.8147 17.1989 32.6311 16.9767 32.4262 16.7748C31.9598 16.2994 31.3998 15.9261 30.7816 15.6785C30.1747 15.4286 29.5247 15.3001 28.8684 15.3002C28.2046 15.2959 27.5466 15.4245 26.9333 15.6785C26.3252 15.9299 25.7749 16.303 25.3162 16.7748C24.8266 17.269 24.444 17.8587 24.1924 18.5071C23.6367 20.0106 23.6367 21.6632 24.1924 23.1667C24.4439 23.8169 24.8264 24.4084 25.3162 24.9045C26.2624 25.8472 27.5437 26.3765 28.8794 26.3765C30.2151 26.3765 31.4963 25.8472 32.4426 24.9045C32.9305 24.4069 33.3128 23.8158 33.5664 23.1667C33.7954 22.5851 33.9305 21.9708 33.9666 21.3468V4.76948C33.9666 4.0847 34.2386 3.42796 34.7228 2.94375C35.207 2.45953 35.8638 2.1875 36.5486 2.1875C37.2333 2.1875 37.8901 2.45953 38.3743 2.94375C38.8585 3.42796 39.1305 4.0847 39.1305 4.76948V13.4364C39.6657 12.5585 40.4218 11.8365 41.3233 11.3423C42.4625 10.7316 43.7428 10.4328 45.0345 10.4761C46.253 10.4735 47.4575 10.7354 48.5649 11.2436C49.6796 11.7573 50.6848 12.4814 51.5251 13.3761C52.404 14.3223 53.0942 15.4274 53.5589 16.6323C54.0632 17.955 54.3125 19.3612 54.2935 20.7766Z" fill="white" />
@@ -646,7 +668,7 @@
                             </svg>
                         </div>
                         <h3 class="font_s24 line_h28 font_w500 cl_white mt_24 txt_center">Tải ngay app tìm việc Job3s.com</h3>
-                        <div class="mt_16 d_flex h_100px flex_center">
+                        <div class="mt_16 d_flex h_100px flex_center down_app1024">
                             <div class="d_flex flex_column space_b">
                                 <a href="" class="h_42 block">
                                     <img src="../../../images/img_app_adroi.png" alt="">
@@ -660,6 +682,12 @@
                             <div class="ml_16">
                                 <img src="../../../images/qc_ap.png" alt="">
                             </div>
+                        </div>
+
+                        <div class="down_1024">
+                            <button class="btn td_btn hover_sv flex_im m_w142 pd_lr24 center_center cl_primary bg_w bg_td br_100">
+                                <span class="font_s16 line_h19 font_w500 currentColor">Tải App tìm việc Job3s</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -731,17 +759,20 @@
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../../images/arrow_prev.png" alt="" class="img_full"></button>`,
             nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`,
             responsive: [{
-                breakpoint: 1025,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    breakpoint: 1066,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
                 },
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            }]
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
+                }
+            ]
         })
 
 
@@ -769,17 +800,10 @@
             navigateContentList: '.nav_content_details',
         })
 
-        // ChangeFiles('.files', '.append', '.close_file', {
-        //     selecter: '.file_drop',
-        //     appendError: '.append_error',
-        //     isDropFile: true,
-        //     isAppenError: true,
-        //     classErorr: 'error_valid',
-        //     isTypeFileVaild: ['doc', 'docx', 'pdf', 'rar'],
-        //     customMessType: (file, type) => `File upload phải là tệp thuộc dạng: ${type.join(', ')}`,
-        //     // customMessSize: '',
-        //     // isMaxSize: 10000,
-        // });
+        responsiveLayout({
+            elemAppenNew: '.details_cty',
+            resize: true
+        })
     </script>
 </body>
 

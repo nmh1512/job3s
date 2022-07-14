@@ -197,6 +197,6 @@ div#block01 .head { padding-top: 12px; }
 }
 .page_end { position: absolute; border-bottom: 2px dashed rgb(3, 168, 78); }
 .paging-arrow { width: 52px; height: 20px; background-color: rgb(3, 168, 78); color: rgb(255, 255, 255); font-size: 12px; line-height: 20px; text-align: center; margin-left: -54px; margin-bottom: -10px; cursor: default; transition: all 0.3s ease 0s; border-radius: 3px; position: relative; }
-.paging-arrow::before { content: ""; position: absolute; height: 19px; left: -31px; width: 26px; background-image: url("/images/cv_com.gif"); }
+.paging-arrow::before { content: ""; position: absolute; height: 19px; left: -31px; width: 26px; background-image: url("https://work247.vn/images/cv_com.gif"); }
 /* // khuôn mẫu cv */
 

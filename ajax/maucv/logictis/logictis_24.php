@@ -1,209 +1,213 @@
 <style>
     #form-cv {
-    width: 100%;
-    float: left;
-    position: relative;
-    font-size: 14px;
-    line-height: 24px;
-}
+        width: 100%;
+        float: left;
+        position: relative;
+        font-size: 14px;
+        line-height: 24px;
+    }
 
-#form-cv p {
-    margin-top: 0;
-}
-.watermark {
-    float: left;
-    width: 100%;
-    height: 22px;
-    color: #999;
-    text-align: right;
-    padding-right: 22px;
-    font-size: 15px;
-    font-family: Courier;
-}
-.fake-img {
-    width: 342px;
-    height: 342px;
-    padding: 0;
-    margin: 0;
-    float: left;
-    display: table;
-    position: absolute;
-    margin-top: -335px;
-    margin-left: 10px;
-    background: url(ava1.png)no-repeat;
-    background-size: 100% 100%;
-    z-index: 1;
-    top: -999px;
-}
+    #form-cv p {
+        margin-top: 0;
+    }
 
-#sortable .cvo-block {
-    margin-top: 0px;
-}
+    .watermark {
+        float: left;
+        width: 100%;
+        height: 22px;
+        color: #999;
+        text-align: right;
+        padding-right: 22px;
+        font-size: 15px;
+        font-family: Courier;
+    }
 
-#cv-top {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    float: left;
-    overflow: hidden !important;
-    height: 504px;
-    position: relative;
-    background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/hd1.png)no-repeat;
-    background-size: 100% 100%;
-}
+    .fake-img {
+        width: 342px;
+        height: 342px;
+        padding: 0;
+        margin: 0;
+        float: left;
+        display: table;
+        position: absolute;
+        margin-top: -335px;
+        margin-left: 10px;
+        background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/ava1.png)no-repeat;
+        background-size: 100% 100%;
+        z-index: 1;
+        top: -999px;
+    }
 
-#cvo-profile {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
+    #sortable .cvo-block {
+        margin-top: 0px;
+    }
 
-#cv-content{
-   padding: 0;
-    margin: 0;
-    width: 47%;
-    float: right;
-    position: relative;
-    /* margin-right: 40px; */
-}
+    #cv-top {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        float: left;
+        overflow: hidden !important;
+        height: 504px;
+        position: relative;
+        background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/hd1.png)no-repeat;
+        background-size: 100% 100%;
+    }
 
-#cv-main {
-   padding: 0;
-    margin: 0;
-    width: 43%;
-    float: left;
-    position: relative;
-    /* margin-left: 43px; */
-}
+    #cvo-profile {
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
 
-#cv-right .ir {
-    padding: 0px !important;
-    float: left;
-    width: 100%;    
-}
+    #cv-content {
+        padding: 0;
+        margin: 0;
+        width: 47%;
+        float: right;
+        position: relative;
+        /* margin-right: 40px; */
+    }
 
-p.skill-name {
-    float: left;
-    width: 100%;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    color: #000;
-}
+    #cv-main {
+        padding: 0;
+        margin: 0;
+        width: 43%;
+        float: left;
+        position: relative;
+        /* margin-left: 43px; */
+    }
 
-p.skill-name input {
-    color: #fff!important;
-}
+    #cv-right .ir {
+        padding: 0px !important;
+        float: left;
+        width: 100%;
+    }
+
+    p.skill-name {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        color: #000;
+    }
+
+    p.skill-name input {
+        color: #fff !important;
+    }
 
 
-/*
+    /*
 fuck
 #cv-right .cvo-block span{
 color: #ccc;
 }*/
 
-#cv-right .ctbx {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
+    #cv-right .ctbx {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
 
-.skill {
-    width: 97%;
-    clear: both;
-    float: left;
-    padding-bottom: 30px;
-    padding: 0 5px 20px 25px;
-}
+    .skill {
+        width: 97%;
+        clear: both;
+        float: left;
+        padding-bottom: 30px;
+        padding: 0 5px 20px 25px;
+    }
 
-div#prof {
-    float: left;
-    width: 92%;
-    margin-left: 27px;
-    padding-top: 15px;
-}
-
-
+    div#prof {
+        float: left;
+        width: 92%;
+        margin-left: 27px;
+        padding-top: 15px;
+    }
 
 
-#cv-top h1 {
-    float: left;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    font-size: 48px !important;
-    line-height: 45px;
-    text-transform: uppercase;
-    text-align: left;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
-h1 #cv-profile-fullname {
-    width: 100%;
-    line-height: 45px;
-    color: #072a5b;
-}
-
-#cv-top h2 {
-    float: left;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 25px !important;
-    font-weight: unset;
-    text-align: left;
-    clear: both;
-    line-height: 30px;
-    /* height: 30px; */
-}
-span#cv-profile-job {
-    color: #072a5b;
-    font-weight: bold;
-}
 
 
-.box-01 p {
-    overflow: hidden;
-}
+    #cv-top h1 {
+        float: left;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        font-size: 48px !important;
+        line-height: 45px;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
 
-.box-01 #box01 {
-    float: right;
-    width: 47%;
-    margin: 0;
-    padding-top: 10px;
-    line-height: unset;
-    margin-right: 40px;
-}
+    h1 #cv-profile-fullname {
+        width: 100%;
+        line-height: 45px;
+        color: #072a5b;
+    }
 
-#cv-content p {
-    float: left;
-    font-size: 14px;
-    margin-bottom: 0;
-}
+    #cv-top h2 {
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 25px !important;
+        font-weight: unset;
+        text-align: left;
+        clear: both;
+        line-height: 30px;
+        /* height: 30px; */
+    }
 
-#cv-content .ir {
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-
-#cv-content .ir a {
-    color: #2ebb2f
-}
-
-#cv-right h3, #cv-content .head {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    /* margin: 0; */
-    padding: 0px 0px;
-}
+    span#cv-profile-job {
+        color: #072a5b;
+        font-weight: bold;
+    }
 
 
-/* #cv-right h3{	
+    .box-01 p {
+        overflow: hidden;
+    }
+
+    .box-01 #box01 {
+        float: right;
+        width: 47%;
+        margin: 0;
+        padding-top: 10px;
+        line-height: unset;
+        margin-right: 40px;
+    }
+
+    #cv-content p {
+        float: left;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    #cv-content .ir {
+        padding: 0;
+        margin: 0;
+        float: left;
+    }
+
+    #cv-content .ir a {
+        color: #2ebb2f
+    }
+
+    #cv-right h3,
+    #cv-content .head {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        /* margin: 0; */
+        padding: 0px 0px;
+    }
+
+
+    /* #cv-right h3{	
 color:#000;
 border-radius: 6px;
 border: 2px solid #00897b;	
@@ -212,439 +216,457 @@ float: left;
 }
 */
 
-#cv-right .head-right {
-    float: left;
-    width: 100%;
-    height: 40px !important;
-    line-height: 25px !important;
-    font-size: 20px !important;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0;
-    text-align: left;
-    padding-left: 30px;
-}
+    #cv-right .head-right {
+        float: left;
+        width: 100%;
+        height: 40px !important;
+        line-height: 25px !important;
+        font-size: 20px !important;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: left;
+        padding-left: 30px;
+    }
 
-#cv-content .head {
-    width: 100%;
-    height: 85px;
-    line-height: 48px;
-    float: left;
-    font-size: 20px;
-    text-align: left;
-    background: url(head1.png)no-repeat;
-    background-size: 100%;
-    background-position: right;
-    /* padding-left: 25px; */
-}
+    #cv-content .head {
+        width: 100%;
+        height: 85px;
+        line-height: 48px;
+        float: left;
+        font-size: 20px;
+        text-align: left;
+        background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/head1.png)no-repeat;
+        background-size: 100%;
+        background-position: right;
+        /* padding-left: 25px; */
+    }
 
-#cv-right .h3 {
-    /* height: 45px; */
-    text-align: center;
-    width: 100%;
-}
+    #cv-right .h3 {
+        /* height: 45px; */
+        text-align: center;
+        width: 100%;
+    }
 
-#cv-content #block02 h3 {
-    font-weight: bold;
-    text-transform: unset;
-}
-#cv-content #block01 h3 {
-    font-weight: bold;
-    text-transform: unset;
-}
-#cv-content h3 {
-    /* line-height: 24px; */
-    font-size: 14px;
-    text-transform: unset;
-    margin-top: 0;
-    margin-bottom: 0;
-    float: left;
-    width: 100%;
-    color: #000;
-    font-weight: unset;
-}
+    #cv-content #block02 h3 {
+        font-weight: bold;
+        text-transform: unset;
+    }
+
+    #cv-content #block01 h3 {
+        font-weight: bold;
+        text-transform: unset;
+    }
+
+    #cv-content h3 {
+        /* line-height: 24px; */
+        font-size: 14px;
+        text-transform: unset;
+        margin-top: 0;
+        margin-bottom: 0;
+        float: left;
+        width: 100%;
+        color: #000;
+        font-weight: unset;
+    }
 
 
 
-p.h3 {
-    font-weight: unset;
-}
+    p.h3 {
+        font-weight: unset;
+    }
 
-#form-cv #cv-content .cvo-block {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    float: left;
-    margin-bottom: 20px;
-}
+    #form-cv #cv-content .cvo-block {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        float: left;
+        margin-bottom: 20px;
+    }
 
-.ctbx {
-    float: left;
-    width: 100%;
-}
-span.exp-subtitle {
-    color: #000;
-}
-#cv-content span {
-    display: inline-block;
-    z-index: 9999;
-    margin-bottom: 0;
-}
-p.h3.h3-title {
-    margin-bottom: 0;
-}
-#cv-right .h3:first-child {
-    margin-top: 0
-}
+    .ctbx {
+        float: left;
+        width: 100%;
+    }
 
-.ctbx {
-    position: relative;
-}
+    span.exp-subtitle {
+        color: #000;
+    }
 
-.ctbx:hover {
-    box-shadow: 0 0 1px #999;
-}
+    #cv-content span {
+        display: inline-block;
+        z-index: 9999;
+        margin-bottom: 0;
+    }
 
-.ctbx:hover .fieldgroup_controls {
-    display: block;
-}
+    p.h3.h3-title {
+        margin-bottom: 0;
+    }
 
-[cvo-form-field] {
-    cursor: text;
-}
+    #cv-right .h3:first-child {
+        margin-top: 0
+    }
 
-#cvo-profile-avatar-wraper {
-    padding: 0;
-    float: left;
-    display: table;
-    padding-top: 85px;
-    padding-left: 37px;
-    overflow: hidden;
-}
+    .ctbx {
+        position: relative;
+    }
 
-#cvo-profile-avatar-wraper img {
-    width: 285px;
-   height: 310px;
-    display: unset !important;
-    border-radius: 45px;
-}
-#border_img {
-    width: 285px;
-    height: 310px;
-    overflow: hidden;
-}
+    .ctbx:hover {
+        box-shadow: 0 0 1px #999;
+    }
 
-#cvo-profile-avatar {
-    width: 285px;
-     height: 310px;
-}
+    .ctbx:hover .fieldgroup_controls {
+        display: block;
+    }
 
-#line-seperate {
-    height: 25px;
-}
+    [cvo-form-field] {
+        cursor: text;
+    }
 
-.bar-exp div {
-    float: left;
-    height: 16px;
-    background-color: #072a5b;
-}
+    #cvo-profile-avatar-wraper {
+        padding: 0;
+        float: left;
+        display: table;
+        padding-top: 85px;
+        padding-left: 37px;
+        overflow: hidden;
+    }
 
-.bar-exp {
-   width: 100%;
-    height: 16px;
-    float: left;
-    margin: 0;
-    background: #fff;
-}
+    #cvo-profile-avatar-wraper img {
+        width: 285px;
+        height: 310px;
+        display: unset !important;
+        border-radius: 45px;
+    }
 
-.exp-fake {
-    float: left;
-    width: 100%;
-    height: 28px;
-    background: url(skill1.png)no-repeat;
-    background-size: 100% 100%;
-    margin-top: -22px;
-    z-index: 2;
-    position: relative;
-}
+    #border_img {
+        width: 285px;
+        height: 310px;
+        overflow: hidden;
+    }
 
-.bar-value-exp input[type="text"] {
-    height: 56px;
-}
+    #cvo-profile-avatar {
+        width: 285px;
+        height: 310px;
+    }
 
-.h3-title {
-    font-size: 14px !important;
-}
+    #line-seperate {
+        height: 25px;
+    }
 
-[cvo-form-field]:hover {
-    outline: 2pt dashed #77a5cc;
-}
+    .bar-exp div {
+        float: left;
+        height: 16px;
+        background-color: #072a5b;
+    }
 
-.bar-value-exp {
-    width: 50%;
-    z-index: 3;
-    position: relative;
-}
+    .bar-exp {
+        width: 100%;
+        height: 16px;
+        float: left;
+        margin: 0;
+        background: #fff;
+    }
 
-.icoweb label {
-    display: block;
-    color: #000;
-}
-.cum {
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    float: left;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    /* background: url(mau1_03.png)no-repeat; */
-    background-size: 100%;
-    background-position: left center;
-    padding-left: 30px;
-    display: none;
-}
-.ic {
-    text-align: left;
-    float: left;
-    width: 100%;
-    height: 40px;
-    line-height: 28px !important;
-    margin: 0;
-}
+    .exp-fake {
+        float: left;
+        width: 100%;
+        height: 28px;
+        background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/skill1.png)no-repeat;
+        background-size: 100% 100%;
+        margin-top: -22px;
+        z-index: 2;
+        position: relative;
+    }
 
-#form-cv .icf {
-    float: left;
-    line-height: 28px !important;
-    font-size: 22px;
-    margin: 0;
-    width: 7%;
-    text-align: left;
-    color: #000;
-}
-.icoweb {
-    float: right;
-    width: 91%;
-    text-align: left !important;
-    line-height: 28px;
-    /* margin-top: 5px; */
-}
+    .bar-value-exp input[type="text"] {
+        height: 56px;
+    }
 
-.icoweb span {
-    float: left;
-    width: 100%;
-    color: #000;
-    line-height: 28px;
-    padding-top: -3px;
-    font-size: 18px;
-}
-.ic3 .icoweb {
-    float: right;
-    width: 91%;
-}
-.icf img {
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-}
+    .h3-title {
+        font-size: 14px !important;
+    }
 
-div .wfa {
-    width: 30px;
-    float: left;
-}
+    [cvo-form-field]:hover {
+        outline: 2pt dashed #77a5cc;
+    }
 
-div#box-hvt {
-    padding: 0;
-    margin: 0;
-    float: left;
-    width: 100%;
-    padding-top: 60px;
-    /* padding-bottom: 27px; */
-}
+    .bar-value-exp {
+        width: 50%;
+        z-index: 3;
+        position: relative;
+    }
 
-.all {
-    float: left;
-    background: url(bd1.png)no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-}
+    .icoweb label {
+        display: block;
+        color: #000;
+    }
 
-#cv-content .cvo-block {
-    padding: 0;
-}
+    .cum {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        float: left;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        /* background: url(mau1_03.png)no-repeat; */
+        background-size: 100%;
+        background-position: left center;
+        padding-left: 30px;
+        display: none;
+    }
 
-#cv-right .block {
-    padding: 0 0px !important;
-}
+    .ic {
+        text-align: left;
+        float: left;
+        width: 100%;
+        height: 40px;
+        line-height: 28px !important;
+        margin: 0;
+    }
 
-#box-content {
-    float: left;
-    clear: both;
-    width: 100%;
-    padding: 0 5px 0 25px;
-}
+    #form-cv .icf {
+        float: left;
+        line-height: 28px !important;
+        font-size: 22px;
+        margin: 0;
+        width: 7%;
+        text-align: left;
+        color: #000;
+    }
 
-div#experience-table {
-    float: left;
-    width: 100%;
-    padding: 0 25px 0 0;
-    margin-top: -40px;
-}
+    .icoweb {
+        float: right;
+        width: 91%;
+        text-align: left !important;
+        line-height: 28px;
+        /* margin-top: 5px; */
+    }
 
-#cv-right .ir #sortable .block {
-    padding: 0;
-    /* margin: 0; */
-    clear: both;
-}
+    .icoweb span {
+        float: left;
+        width: 100%;
+        color: #000;
+        line-height: 28px;
+        padding-top: -3px;
+        font-size: 18px;
+    }
 
-.box-01 {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
+    .ic3 .icoweb {
+        float: right;
+        width: 91%;
+    }
 
-p {
-    margin: 0;
-}
+    .icf img {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
 
-#anh {
-    width: 45%;
-    float: left;
-    overflow: hidden;
-}
+    div .wfa {
+        width: 30px;
+        float: left;
+    }
 
-#chu {
-    float: right;
-    width: 48%;
-    margin-right: 10px;
-}
+    div#box-hvt {
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 100%;
+        padding-top: 60px;
+        /* padding-bottom: 27px; */
+    }
 
-/* .footer {
-    float: left;
-    height: 112px;
-    width: 100%;
-    background: url(ft1.png)no-repeat;
-    background-size: 100% 100%;
-} */
+    .all {
+        float: left;
+        background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/bd1.png)no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+    }
 
-span.exp-title {
-    color: #000;
-}
+    #cv-content .cvo-block {
+        padding: 0;
+    }
 
-#cvo-experience-blocktitle {
-    width: 100%;
-    float: left;
-    font-size: 20px !important;
-    color: #072a5b;
-    text-align: left;
-}
+    #cv-right .block {
+        padding: 0 0px !important;
+    }
 
-.titlecv {
-    float: left;
-    width: 100%;
-    color: #072a5b;
-}
+    #box-content {
+        float: left;
+        clear: both;
+        width: 100%;
+        padding: 0 5px 0 25px;
+    }
 
-#cv-main #cv-right .ir #sortable {
-    padding: 0;
-    margin: 0;
-    float: left;
-    width: 100%;
-}
+    div#experience-table {
+        float: left;
+        width: 100%;
+        padding: 0 25px 0 0;
+        margin-top: -40px;
+    }
 
-#cv-main #cv-right .ir #sortable .block {
-    padding: 0;
-    /* margin: 0; */
-    float: left;
-    width: 100%;
-    position: relative;
-    border-radius: 0;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 20px;
+    #cv-right .ir #sortable .block {
+        padding: 0;
+        /* margin: 0; */
+        clear: both;
+    }
 
-}
+    .box-01 {
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
-#cv-right {
-    padding: 0;
-    margin: 0;
-    float: left;
-    width: 100%;
-}
+    p {
+        margin: 0;
+    }
 
-#sortable #box02 {
-    float: left;
-    padding: 0;
-    width: 100%;
-    /* margin: 0; */
-}
+    #anh {
+        width: 45%;
+        float: left;
+        overflow: hidden;
+    }
 
-.exp-content {
-    width: 100% !important;
-    text-align: justify !important;
-    float: left;
-    margin: 0;
-    color: #000;
-}
+    #chu {
+        float: right;
+        width: 48%;
+        margin-right: 10px;
+    }
 
-.box-content {
-    width: 100% !important;
-    text-align: justify !important;
-    padding: 0;
-    color: #000;
-}
+    .all ~ .footer {
+        float: left;
+        height: 112px;
+        width: 100%;
+        background: url(https://work247.vn/upload/maucv/y-te-duoc-03/css/ft1.png)no-repeat;
+        background-size: 100% 100%;
+    }
 
-#sortable .ic {
-    margin-bottom: 8px;
-}
-#cv-content .exp-date{
-    width: 100%;
-    float: left;
-    color: #85b549;
-    font-weight: bold;
-}
-.block {
-    background: none;
-}
+    span.exp-title {
+        color: #000;
+    }
 
-.ic1 {
-    float: left;
-    width: 49%;
-}
+    #cvo-experience-blocktitle {
+        width: 100%;
+        float: left;
+        font-size: 20px !important;
+        color: #072a5b;
+        text-align: left;
+    }
 
-.ic2 {
-    float: left;
-    width: 50%;
-}
+    .titlecv {
+        float: left;
+        width: 100%;
+        color: #072a5b;
+    }
 
-.icon1{
-    width: 100%;
-    float: left;
-}
-.icon1 .ic{
-    width: 50%;
-    float: left;
-}
-.icon1 .icoweb{
-    width: 80%;
-    margin-top: -2px;
-}
-.icon2{
-    width: 100%;
-    float: left;
-}
-.icon2 .ic{
-    width: 50%;
-    float: left;
-}
-.icon2 .icoweb{
-    width: 80%;
-    margin-top: -2px;
-}
+    #cv-main #cv-right .ir #sortable {
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 100%;
+    }
 
+    #cv-main #cv-right .ir #sortable .block {
+        padding: 0;
+        /* margin: 0; */
+        float: left;
+        width: 100%;
+        position: relative;
+        border-radius: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+    }
+
+    #cv-right {
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 100%;
+    }
+
+    #sortable #box02 {
+        float: left;
+        padding: 0;
+        width: 100%;
+        /* margin: 0; */
+    }
+
+    .exp-content {
+        width: 100% !important;
+        text-align: justify !important;
+        float: left;
+        margin: 0;
+        color: #000;
+    }
+
+    .box-content {
+        width: 100% !important;
+        text-align: justify !important;
+        padding: 0;
+        color: #000;
+    }
+
+    #sortable .ic {
+        margin-bottom: 8px;
+    }
+
+    #cv-content .exp-date {
+        width: 100%;
+        float: left;
+        color: #85b549;
+        font-weight: bold;
+    }
+
+    .block {
+        background: none;
+    }
+
+    .ic1 {
+        float: left;
+        width: 49%;
+    }
+
+    .ic2 {
+        float: left;
+        width: 50%;
+    }
+
+    .icon1 {
+        width: 100%;
+        float: left;
+    }
+
+    .icon1 .ic {
+        width: 50%;
+        float: left;
+    }
+
+    .icon1 .icoweb {
+        width: 80%;
+        margin-top: -2px;
+    }
+
+    .icon2 {
+        width: 100%;
+        float: left;
+    }
+
+    .icon2 .ic {
+        width: 50%;
+        float: left;
+    }
+
+    .icon2 .icoweb {
+        width: 80%;
+        margin-top: -2px;
+    }
 </style>
 
 <div id="page-cv">
@@ -707,11 +729,6 @@ span.exp-title {
                         <!-- add div -->
                         <div class="clr"></div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </div>
@@ -1070,9 +1087,9 @@ span.exp-title {
         <div class="footer"></div>
         <div class="watermark">©work247.vn</div>
         <div class="clr"></div>
+        <div class="resize" style="position:absolute; width:auto; height:auto; top:0; right:0; bottom:0; left:0; margin:0; padding:0; overflow:hidden; visibility:hidden; z-index:-1"><iframe style="width:100%; height:0; border:0; visibility:visible; margin:0"></iframe></div>
         <div id="" class="page_end" style="top: 277.54mm;">
             <div class="paging-arrow" title="Bắt đầu trang số 2">Trang 2</div>
         </div>
-        <div class="resize" style="position:absolute; width:auto; height:auto; top:0; right:0; bottom:0; left:0; margin:0; padding:0; overflow:hidden; visibility:hidden; z-index:-1"><iframe style="width:100%; height:0; border:0; visibility:visible; margin:0"></iframe><iframe style="width:0; height:100%; border:0; visibility:visible; margin:0"></iframe></div>
     </div>
 </div>

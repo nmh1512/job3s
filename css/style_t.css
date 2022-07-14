@@ -301,6 +301,8 @@ label.error {margin-top: 5px;color: #EA4335;}
 .content_news h3,.content_news > span {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 /* ----------- */
 .item_common > .wh_60 {flex-shrink: 0;}
+.controll_node {display: none;}
+.down_1024 {display: none;}
 /* =--------------== */
 /* .table_danh_sach_vanmau thead tr th:nth-child(6) {
     width: 100px;
@@ -329,7 +331,9 @@ th.absolute_option {
 /* =--------------=== */
 
 
-
+.mb_w > *:not(:last-child) {margin-bottom: 24px;}
+.mb_w > .infor_follower > * {margin-left: 0;margin-right: 16px;}
+.mb_w > .infor_follower > *:last-child {margin-right: 0px;}
 .bg_ffa {background-color: #FFA800;}
 /* đang tin tuyển dụng */
 .searching {width: 41.033%;height: 42px;}
@@ -693,7 +697,7 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .ac_color{position: relative;}
 .ac_color::before {content: '';position: absolute;display: block;width: 12px;height: 12px;;top: 50%;left: 50%;transform: translate(-50%,-50%);background: url('../images/check_md_white.png') no-repeat;}
 .item_pdt24.silder_news .slick-list {padding-top: 24px;}
-.is_login {display: block;font-size: 16px;line-height: 19px;font-weight: 500;color: #FF3333;border: 1px dashed currentColor;padding: 12px 24px;border-radius: 100px;width: fit-content;}
+.is_login {text-align: center;display: block;font-size: 16px;line-height: 19px;font-weight: 500;color: #FF3333;border: 1px dashed currentColor;padding: 12px 24px;border-radius: 100px;width: fit-content;}
 .cs_style_dots{position: relative;padding-left: 10px;font-size: 16px;line-height: 20px;font-weight: 400;color: currentColor;}
 .cs_style_dots::before{content: '';top: 8px;left: 0;position: absolute;width: 4px;height: 4px;border-radius: 50%;display: block;background-color: currentColor;}
 /* effect zoom */
@@ -701,6 +705,9 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .animation_zoom_out {animation: zoom_out .2s ease-in-out;}
 @keyframes zoom {from {opacity: 0;transform: scale(0.8); }to {opacity: 1;transform: scale(1); }}
 @keyframes zoom_out {from {opacity: 1;transform: scale(1); }to {opacity: 0;transform: scale(0.8);}}
+.item_news {display: flex;flex-direction: column;}
+/* .item_news_bottom {margin-top: auto;}
+.item_news_top {margin-bottom: 15px;} */
 
 .pd_tlr16_b24 {padding: 16px 16px 24px;}
 
@@ -808,12 +815,31 @@ div#circle {position: relative;width: 50px;height: 50px;}
     .cl_uv_app {flex-direction: row;}
     .cl_uv_app > div {width: 50%;}
     .cl_uv_app > div:last-child{margin-left: 24px;}
+    /*  */
+    .controll_node {z-index: 99;display: flex;position: fixed;bottom: 0;left: 0;right: 0;background-color: #FFFFFF;border-top: 1px solid #DCDCDC;}
+    .controll_node > div {width: calc(100% / 3);display: flex;flex-direction: column;align-items: center;padding: 6px 15px;}
+    .controll_node > div > span {display: block;margin-top: 6px;}
+    .controll_node > div + div {border-left: 1px solid #DCDCDC;}
+
+    .parentNew > * + * {margin-top: 24px;}
+    .down_app1024 {display: none !important;}
+    .down_1024 {display: flex; align-items: center;justify-content: center;margin-top: 24px;}
+
+    .link.mt_16.dt_tin {width: 100%;}
 }
 
 @media screen and (max-width: 858px) {
     .loc_box_search > .searching {width: 46.87%;}
     .box_search {flex-direction: column;width: 100%;flex-shrink: 0;flex-basis: 100%;}
     .box_search .pd_l23_r55 {padding-left: 0;padding-right: 0; margin-top: 24px;}
+
+    /*  */
+    #popup_ut > div {width: 95%;}
+    .nav_popup_ut > div > span {font-size: 18px;line-height: 21px;}
+}
+
+@media screen and (max-width: 780px) {
+    .pd_t49_b47_lr68 {padding-left: 40px;padding-right: 40px;}
 }
 
 @media screen and (max-width: 768px) {
@@ -848,6 +874,17 @@ div#circle {position: relative;width: 50px;height: 50px;}
     /* đánh giá đổi mật khẩu */
     .mb_40 {padding-left: 24px !important;padding-right: 24px !important;padding-top: 48px !important;}
     .lr_68 {padding-left: 24px;padding-right: 24px;}
+    /* -- */
+    .link.mt_16 {width: 100%;}
+    .pd_t49_b47_lr68,.controll_ntd {padding: 48px 24px;}
+
+    .banner_cv {padding-left: 24px;}
+    .mb_ct_colum {flex-direction: column;width: 100%;}
+    .mb_ct_colum > *:first-child {margin-top: 0 !important;}
+    .mb_ct_colum > * + * {margin-top: 24px;}
+    .mb_ct_colum > * {margin-left: 0 !important;margin-right: 0 !important;width: 100% !important;}
+
+    /* .ct_tin .infor_follower > * {margin-bottom: 16p;} */
 }
 
 @media screen and (max-width: 680px) {

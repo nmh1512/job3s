@@ -777,3 +777,76 @@ function scrollXSlider({
   }
 }
 
+
+
+function sort(arr, key) {
+  for (let i = 0; i < arr.length - 1; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+          let s = parseInt(arr[j].dataset[key]);
+          let d = parseInt(arr[i].dataset[key]);
+          if (s < d) {
+              let t = arr[i];
+              arr[i] = arr[j];
+              arr[j] = t;
+          }
+      }
+  }
+
+  return arr;
+}
+
+function responsiveLayout({
+  elemAppenNew,
+  resize = false,
+  customClassName = 'parentNew',
+}) {
+  let elem = document.querySelector(elemAppenNew);
+  let childOld = [...elem.children];
+  let brPoint = parseInt(elem.dataset['mobile']);
+  let divApp = document.createElement('div');
+  let arr = []
+  divApp.className = customClassName;
+
+  appChildren()
+
+  if(resize) {
+      window.onresize = () => {
+          appChildren()
+      }
+  }
+  
+  function appChildren() {
+      let screenClient = window.innerWidth;
+      if (screenClient <= brPoint) {
+          if (!elem.contains(divApp)) {
+              elem.appendChild(divApp)
+          } else {
+              return;
+          }
+
+          childOld.forEach((e) => {
+              arr = [...e.children, ...arr];
+          })
+
+          arr = sort(arr, 'new');
+          arr.forEach((elem) => {
+              divApp.appendChild(elem);
+          })
+
+      } else {
+          if (elem.contains(divApp)) {
+              childOld.forEach((e) => {
+                  let id = e.dataset['id'];
+                  let elems = arr.filter((e) => e.dataset['id'] === id);
+                  elems = sort(elems, 'orderold');
+
+                  elems.forEach((elem) => {
+                      e.appendChild(elem);
+                  })
+              })
+
+              elem.removeChild(divApp);
+          }
+      }
+  }
+}
