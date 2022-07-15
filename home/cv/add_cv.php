@@ -141,11 +141,9 @@
                         <div class="item_control_fuc">
                             <span class="font_s16 line_h19 font_w500 cl_55">Màu sắc</span>
                             <div class="list_color_cv mt_8_i mau_js cusr_p m_wap">
-                                <span class="color_cv ac_color" style="color: #FF823C"></span>
-                                <span class="color_cv" style="color: #40BA77"></span>
-                                <span class="color_cv" style="color: #5D5FEF"></span>
-                                <span class="color_cv" style="color: #5D5FEF"></span>
-                                <span class="color_cv" style="color: #5D5FEF"></span>
+                                <span class="color_cv ac_color" data-color="d8dad2" style="color: #d8dad2"></span>
+                                <span class="color_cv" data-color="cfd9e7" style="color: #cfd9e7"></span>
+                                <span class="color_cv" data-color="95b5a2" style="color: #95b5a2"></span>
                             </div>
                         </div>
 
@@ -203,74 +201,75 @@
                             </div>
 
                             <div class="more_add_muc" style="display: none;">
-                                <?php 
-                                    $arr = [
-                                        [
-                                            'name' => 'Thông tin liên hệ',
-                                            'keyBox' => 'box01'
-                                        ],
+                                <?php
+                                $arr = [
+                                    [
+                                        'name' => 'Thông tin liên hệ',
+                                        'keyBox' => 'box01'
+                                    ],
 
-                                        [
-                                            'name' => 'Mục tiêu nghề nghiệp',
-                                            'keyBox' => 'box02'
-                                        ],
+                                    [
+                                        'name' => 'Mục tiêu nghề nghiệp',
+                                        'keyBox' => 'box02'
+                                    ],
 
-                                        [
-                                            'name' => 'Kỹ năng',
-                                            'keyBox' => 'box03'
-                                        ],
+                                    [
+                                        'name' => 'Kỹ năng',
+                                        'keyBox' => 'box03'
+                                    ],
 
-                                        [
-                                            'name' => 'Giải thưởng',
-                                            'keyBox' => 'box04'
-                                        ],
+                                    [
+                                        'name' => 'Giải thưởng',
+                                        'keyBox' => 'box04'
+                                    ],
 
-                                        [
-                                            'name' => 'Chứng chỉ',
-                                            'keyBox' => 'box05'
-                                        ],
+                                    [
+                                        'name' => 'Chứng chỉ',
+                                        'keyBox' => 'box05'
+                                    ],
 
-                                        [
-                                            'name' => 'Sở thích',
-                                            'keyBox' => 'box06'
-                                        ],
+                                    [
+                                        'name' => 'Sở thích',
+                                        'keyBox' => 'box06'
+                                    ],
 
-                                        [
-                                            'name' => 'Người tham chiếu',
-                                            'keyBox' => 'box07'
-                                        ],
-                                        [
-                                            'name' => 'Trình độ học vấn',
-                                            'keyBox' => 'block01'
-                                        ],
-                                        [
-                                            'name' => 'Kinh nghiệm làm việc',
-                                            'keyBox' => 'block02'
-                                        ],
-                                        [
-                                            'name' => 'Hoạt động',
-                                            'keyBox' => 'block03'
-                                        ],
-                                        [
-                                            'name' => 'Dự án tham gia',
-                                            'keyBox' => 'block04'
-                                        ],
-                                        [
-                                            'name' => 'Thông tin thêm',
-                                            'keyBox' => 'block05'
-                                        ]
-                                        ];
-                                    $i=0;
+                                    [
+                                        'name' => 'Người tham chiếu',
+                                        'keyBox' => 'box07'
+                                    ],
+                                    [
+                                        'name' => 'Trình độ học vấn',
+                                        'keyBox' => 'block01'
+                                    ],
+                                    [
+                                        'name' => 'Kinh nghiệm làm việc',
+                                        'keyBox' => 'block02'
+                                    ],
+                                    [
+                                        'name' => 'Hoạt động',
+                                        'keyBox' => 'block03'
+                                    ],
+                                    [
+                                        'name' => 'Dự án tham gia',
+                                        'keyBox' => 'block04'
+                                    ],
+                                    [
+                                        'name' => 'Thông tin thêm',
+                                        'keyBox' => 'block05'
+                                    ]
+                                ];
+                                $i = 0;
                                 ?>
-                                <?php foreach ($arr as $value): ?>
-                                    <div class="d_flex align_c item_add_muc" data-keybox="<?=$value['keyBox']?>">
+                                <?php foreach ($arr as $value) : ?>
+                                    <div class="d_flex align_c item_add_muc" data-keybox="<?= $value['keyBox'] ?>">
                                         <div class="mr_12">
                                             <input type="checkbox" id="cb_<?= $i ?>" class="d_none cb_cus_ip">
                                             <label for="cb_<?= $i ?>" class="cus_cb"></label>
                                         </div>
-                                        <label for="cb_<?= $i?>" class="font_s16 line_h19 font_w400 cl_a4 white_s_nw"><?=$value['name']?></label>
+                                        <label for="cb_<?= $i ?>" class="font_s16 line_h19 font_w400 cl_a4 white_s_nw"><?= $value['name'] ?></label>
                                     </div>
-                                <?php $i++; endforeach; ?>
+                                <?php $i++;
+                                endforeach; ?>
                                 <div class="d_flex center_center mt_24 poup_more_add">
                                     <button class="update_bc btn h_42 mw_112 br_5 font_s16 line_h19 font_w500 bg_td cl_white btn_primary">Cập nhật</button>
                                     <button class="cancel font_s16 line_h19 font_w500 btn h_42 flex_im mw_112 center_center cl_73 bg_w bg_td bd_73 br_5 ml_16">Hủy</button>
@@ -304,14 +303,15 @@
             </div>
             <div class="cv_warp pd_lr68 mt_24">
                 <!-- <span class="name_cv_box font_s16 line_h19 font_w400 txt_center cl_73 block title_cv_fuc" contenteditable="true">Chưa có tên</span> -->
-                <div class="d_flex mt_24">
+                <div class="d_flex mt_24 mb_rp_cv">
                     <div class="box_cv_flex">
                         <!-- <div class="render_cv">
                             <img src="../../images/cv_dep.png" alt="" class="w_100">
                         </div> -->
+                        <link rel="stylesheet" href="../../maucv/logictis/logictis-20/color/d8dad2.css" id="cv-color-css">
                         <link id="font_change" rel="stylesheet" href="">
 
-                        <? include("../../ajax/maucv/logictis/logictis_24.php") ?>
+                        <? include("../../maucv/logictis/logictis-20/index.php") ?>
                     </div>
                     <div class="box_cv_right flex_1 ml_36">
                         <div class="muc_box">
@@ -491,6 +491,7 @@
     <script src="https://work247.vn/js/jscv/main.js?v=279"></script>
     <script src="https://work247.vn/js/jscv/create.js?v=279" async></script>
     <script src="https://work247.vn/js/jscv/general.js?v=279"></script>
+    <script src="../../js/js_cv.js"></script>
     <!-- <script src="https://work247.vn/js/jscv/edit.js?v=279"></script> -->
     <script src="https://work247.vn/js/jscv/app_cv.js?v=279" type="text/javascript"></script>
     <script src="https://work247.vn/js/jscv/custom_cv.js?v=279" defer></script>
@@ -502,7 +503,7 @@
     <script type="text/javascript" src="https://vieclam123.vn/js/jscv/html2canvas.min.js?v=26"></script>
     <script src="https://vieclam123.vn/js/jscv/editor-control.js?v=26"></script>
     <script type="text/javascript" src="https://vieclam123.vn/js/jscv/render_cv_pdf_2pages.js?v=26"></script>
-    <script src="../../js/js_cv.js"></script>
+
     <script type="text/javascript" src="https://vieclam123.vn/js/jscv/create.js?v=26"></script> -->
     <!-- <script src="https://vieclam123.vn/js/jscv/main1.js?v=26"></script> -->
     <script src="../../js/slick.min.js"></script>
@@ -551,6 +552,28 @@
             // ).css("font-family", array_font[value]);
         });
 
+
+        var printOptions = {
+            "margins": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+            }
+        };
+        PagingSeparator.init({
+            printOptions: printOptions
+        });
+        PagingSeparator.render();
+        $(document).ready(function() {
+            PagingSeparator.init({
+                printOptions: printOptions
+            });
+            $('#form-cv').on('mresize', function() {
+                PagingSeparator.render();
+            });
+        });
+
         // ngôn ngữ
         changeAjax({
             listElem: '.fuc_lange .list_c',
@@ -578,7 +601,10 @@
             classChange: 'ac_color',
             // call ajax
             callBack: function(e, parent, className) {
-                // code call ajax
+                var newcolor = $(e).attr('data-color');
+                var oldlink = $('#cv-color-css').attr('href');
+                var newlink = oldlink.slice(0, oldlink.lastIndexOf("/")) + '/' + newcolor + '.css';
+                $('#cv-color-css').attr('href', newlink);
             }
         })
 
@@ -653,21 +679,21 @@
             });
 
         })
-        $('.more_add_muc .cancel').click(()=>{
+        $('.more_add_muc .cancel').click(() => {
             $('.more_add_muc').slideUp(300);
         })
-        
-        $('.item_add_muc').each(function () {
+
+        $('.item_add_muc').each(function() {
             $(this).find('input')[0].checked = true;
             $(`#${$(this).data('keybox')}`).css('display', 'block');
         })
 
-        $('.update_bc').click(function () {
+        $('.update_bc').click(function() {
             let p = $(this).parents('.more_add_muc').children('.item_add_muc');
-            $(p).each(function () {
+            $(p).each(function() {
                 let ip = $(this).find('input');
                 let isChecked = $(ip)[0].checked;
-                if(isChecked) {
+                if (isChecked) {
                     $(`#${$(this).data('keybox')}`).css('display', 'block');
                 } else {
                     $(`#${$(this).data('keybox')}`).css('display', 'none');
@@ -676,32 +702,10 @@
             $('.more_add_muc').slideUp(300)
         })
 
-        $('.blockControls .an-muc').click(function () {
-           let id = $(this).parent().parent().attr('id');
-           $(`.item_add_muc[data-keybox='${id}']`).find('input')[0].checked = false;
+        $('.blockControls .an-muc').click(function() {
+            let id = $(this).parent().parent().attr('id');
+            $(`.item_add_muc[data-keybox='${id}']`).find('input')[0].checked = false;
         })
-
-        // $('.paging-arrow').each(function() {
-        //     $(this).mouseover(function () {
-        //         $(this).parent().css('width', '100%')
-        //     })
-
-        //     $(this).mouseleave(function () {
-        //         $(this).parent().css('width', '1px')
-        //     })
-        // })
-
-
-        // $('.fieldgroup_controls').each(function () {
-        //     let btnClone = $(this).children('.clone');
-
-        //     $(btnClone).click(() => {
-        //         let elemClone = $(this).parent();
-        //         let cloneEl = elemClone.clone(true);
-
-        //         $(cloneEl).insertAfter(elemClone);
-        //     })
-        // })
     </script>
 </body>
 

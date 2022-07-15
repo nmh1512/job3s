@@ -16,7 +16,7 @@
         <?php include("../../includes/after_header.php") ?>
         <div class="container mt_90 bg_f5 pd_b_48">
             <div class="banner_cv h_400 bg_cv">
-                <div class="content_banner wf_tinhthanh">
+                <div class="content_banner wf_tinhthanh mb_tt">
                     <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm việc làm <span class="cl_oran">Bán hàng</span> trên <span class="cl_oran">toàn quốc</span></h1>
                     <div class="search_kv d_flex mt_24">
                         <div class="d_flex align_c pd_lr15 bg_w w_294 br_5">
@@ -321,7 +321,7 @@
                 <div class="cv_right">
                     <div class="row row_g25">
                         <? for ($i = 0; $i < 20; $i++) : ?>
-                            <div class="col_2 item_news bg_w">
+                            <div class="col_2 item_news bg_w mb_fix">
                                 <div class="item_news_top">
                                     <div class="img_news">
                                         <img src="../../images/img_news_ts.png" alt="">

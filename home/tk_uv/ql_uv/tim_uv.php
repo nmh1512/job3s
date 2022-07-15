@@ -17,7 +17,7 @@
         <?php include("../../../includes/after_header.php") ?>
         <div class="container mt_90 bg_f5 pd_b_48">
             <div class="banner_cv mh_428 bg_cv">
-                <div class="content_banner wf_tinhthanh">
+                <div class="content_banner wf_tinhthanh mb_tt">
                     <!-- <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm ứng viên</h1> -->
                     <!-- <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm ứng viên <span class="cl_oran">Bán hàng</span> trên toàn quốc </h1> -->
                     <h1 class="font_s28 line_h33 font_w700 cl_a4">Tìm kiếm ứng viên <span class="cl_oran">Bán hàng</span> trên <span class="cl_oran">Hà Nội</span></h1>

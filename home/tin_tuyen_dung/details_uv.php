@@ -646,7 +646,7 @@
 
                                 <div class="mxh_box">
                                     <span class="font_s16 line_h19 font_w400 cl_a4">Mạng xã hội</span>
-                                    <div class="list_mxh_big mt_16">
+                                    <div class="list_mxh_big">
                                         <a href="" target="_blank" class="wh_42">
                                             <img src="../../images/facebook_icon.png" alt="" class="img_full">
                                         </a>

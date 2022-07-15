@@ -1,0 +1,616 @@
+#form-cv {
+    width: 100%;
+    float: left;
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#form-cv p {
+    margin-top: 0;
+}
+.watermark {
+    float: left;
+    width: 100%;
+    height: 22px;
+    color: #999;
+    text-align: left;
+    padding-right: 22px;
+    padding-top: 80px;
+    font-size: 15px;
+    font-family: Courier;
+}
+.fake-img {
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: table;
+    position: absolute;
+    margin-top: -291.5px;
+    margin-left: 1px;
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/ava1.png)no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    top: -999px;
+}
+
+#sortable .cvo-block {
+    margin-top: 0px;
+}
+
+#cv-top {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    float: left;
+    overflow: hidden !important;
+    height: 336px;
+    position: relative;
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/hd.png)no-repeat;
+    background-size: 100% 100%;
+}
+
+#cvo-profile {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#cv-content {
+   padding: 0;
+   margin: 0;
+   width: 46%;
+   float: right;
+   position: relative;
+   margin-right: 45px;
+}
+
+#cv-main {
+   padding: 0;
+   margin: 0;
+   width: 41%;
+   float: left;
+   position: relative;
+   margin-left: 20px;
+}
+
+#cv-right .ir {
+    padding: 0px !important;
+    float: left;
+    width: 100%;
+}
+
+p.skill-name {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: #000;
+}
+
+p.skill-name input {
+    color: #fff!important;
+}
+
+
+/*
+fuck
+#cv-right .cvo-block span{
+color: #ccc;
+}*/
+
+#cv-right .ctbx {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.skill {
+    width: 100%;
+    clear: both;
+    float: left;
+    padding-bottom: 30px;
+}
+
+div#prof {
+    float: left;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+
+
+
+#cv-top h1 {
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 38px !important;
+    /* line-height: 45px; */
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h1 #cv-profile-fullname {
+    width: 100%;
+    line-height: 35px;
+    color: #000;
+}
+
+#cv-top h2 {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px !important;
+    font-weight: unset;
+    text-align: left;
+    clear: both;
+    line-height: 30px;
+    height: 30px;
+    border-bottom: 2px solid #fff;
+}
+span#cv-profile-job {
+    color: #000;
+    font-weight: bold;
+}
+
+
+.box-01 p {
+    overflow: hidden;
+}
+
+.box-01 #box01 {
+    float: right;
+    width: 57%;
+    margin: 0;
+    /* padding-top: 10px; */
+    /* margin-left: 15px; */
+    line-height: unset;
+}
+#anh {
+    width: 42%;
+    float: left;
+    /* overflow: hidden; */
+}
+
+#chu {
+    float: right;
+    width: 52%;
+}
+
+#cv-content p {
+    float: left;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#cv-content .ir {
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-top: -50px;
+}
+
+#cv-content .ir a {
+    color: #2ebb2f
+}
+
+#cv-right h3, #cv-content .head {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* margin: 0; */
+    padding: 0px 0px;
+}
+
+
+/* #cv-right h3{	
+color:#000;
+border-radius: 6px;
+border: 2px solid #00897b;	
+width: 78%;
+float: left;
+}
+*/
+
+#cv-right .head-right {
+    float: left;
+    width: 100%;
+    height: 25px !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0;
+    text-align: left;
+    border-bottom: 2px solid #fff;
+}
+
+#cv-content .head {
+    width: 100%;
+    height: 25px;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+}
+
+#cv-right .h3 {
+    /* height: 45px; */
+    text-align: center;
+    width: 100%;
+}
+
+#cv-content #block02 h3 {
+    font-weight: bold;
+    text-transform: unset;
+}
+#cv-content #block01 h3 {
+    font-weight: bold;
+    text-transform: unset;
+}
+#cv-content h3 {
+    /* line-height: 24px; */
+    font-size: 14px;
+    text-transform: unset;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+    color: #000;
+    font-weight: unset;
+}
+
+
+.exp-title {
+    width: 100%;
+    float: left;
+    color: #000;
+}
+p.h3 {
+    font-weight: unset;
+}
+
+#form-cv #cv-content .cvo-block {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    float: left;
+    border-top: 2px solid #d9bd89;
+    width: 100% !important;
+}
+
+.ctbx {
+    float: left;
+    width: 100%;
+}
+span.exp-subtitle {
+    color: #000;
+}
+#cv-content span {
+    display: inline-block;
+    z-index: 9999;
+    margin-bottom: 0;
+}
+p.h3.h3-title {
+    margin-bottom: 0;
+}
+#cv-right .h3:first-child {
+    margin-top: 0
+}
+
+.ctbx {
+    position: relative;
+}
+
+.ctbx:hover {
+    box-shadow: 0 0 1px #999;
+}
+
+.ctbx:hover .fieldgroup_controls {
+    display: block;
+}
+
+[cvo-form-field] {
+    cursor: text;
+}
+
+#cvo-profile-avatar-wraper {
+    padding: 0;
+    float: left;
+    display: table;
+    padding-top: 49px;
+    padding-left: 60px;
+    /* overflow: hidden; */
+}
+
+#cvo-profile-avatar-wraper img {
+    width: 248px;
+    height: 253px;
+    display: unset !important;
+    object-fit: cover;
+    /* border-radius: 25px; */
+}
+#border_img {
+    width: 260px;
+    height: 280px;
+    /* overflow: hidden; */
+    
+    
+}
+
+#cvo-profile-avatar {
+    width: 250px;
+    height: 254px;
+}
+
+#line-seperate {
+    height: 25px;
+}
+
+.bar-exp div {
+    float: left;
+    height: 11px;
+    background-color: #d9bd89;
+    /* margin-top: 1px; */
+}
+
+.bar-exp {
+    width: 100%;
+    height: 12px;
+    float: left;
+    margin: 0;
+    border: 1px solid #d9bd89;
+    background: #fff;
+}
+/* 
+.exp-fake {
+    float: left;
+    width: 100%;
+    height: 25px;
+    background: url(xanhl.png)no-repeat;
+    background-size: 100% 100%;
+    margin-top: -22px;
+    z-index: 2;
+    position: relative;
+} */
+
+.bar-value-exp input[type="text"] {
+    height: 56px;
+}
+
+.h3-title {
+    font-size: 14px !important;
+}
+
+[cvo-form-field]:hover {
+    outline: 2pt dashed #77a5cc;
+}
+
+.bar-value-exp {
+    width: 50%;
+    z-index: 3;
+    position: relative;
+}
+
+.icoweb label {
+    display: block;
+    color: #000;
+}
+
+.ic {
+    text-align: left;
+    float: left;
+    width: 100%;
+    height: 28px;
+    line-height: 28px !important;
+    color: #000;
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/ic.png)no-repeat;
+    background-position: left center;
+}
+
+#form-cv .icf {
+    float: left;
+    line-height: 28px !important;
+    font-size: 18px;
+    width: 8%;
+    text-align: right;
+    /* margin-left: 20px !important; */
+    padding-top: 1px;
+}
+.icoweb {
+    float: right;
+    width: 89%;
+    text-align: left !important;
+    line-height: 28px;
+}
+
+.icoweb span {
+    /* padding-top: 3px; */
+    float: left;
+    width: 100%;
+    color: #000;
+    line-height: 28px;
+}
+.ic3 .icoweb {
+    float: right;
+    width: 91%;
+}
+.icf img {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+div .wfa {
+    width: 30px;
+    float: left;
+}
+
+div#box-hvt {
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+    padding-top: 30px;
+    /* padding-bottom: 35px; */
+}
+
+.all {
+    float: left;
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/main.png)no-repeat;
+    background-size: 100% 100%;
+}
+
+#cv-content .cvo-block {
+    padding: 0;
+}
+
+#cv-right .block {
+    padding-top: 0px 0px !important;
+}
+
+#box-content {
+    float: left;
+    width: 100%;
+    clear: both;
+    font-size: 14px;
+    color: #000;
+}
+
+div#experience-table {
+    float: left;
+    width: 100%;
+    padding: 0 5px 0 5px;
+}
+
+#cv-right .ir #sortable .block {
+    padding: 0;
+    /* margin: 0; */
+    clear: both;
+}
+
+.box-01 {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+.all~ .footer {
+    float: left;
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/ft.png)no-repeat;
+    background-size: 100% 100%;
+    height: 102px;
+    width: 100%;
+}
+
+
+
+#cvo-experience-blocktitle {
+    text-align: left;
+    font-size: 20px !important;
+    background: #f7f2e7;
+    color: #000;
+}
+
+.titlecv {
+    float: left;
+    width: 100%;
+    color: #000;
+    background: #f7f2e7;
+}
+
+#cv-main #cv-right .ir #sortable {
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+#cv-main #cv-right .ir #sortable .block {
+    /* padding: 0; */
+    /* margin: 0; */
+    float: left;
+    width: 100%;
+    position: relative;
+    border-radius: 0;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    border-top: 2px solid #d9bd89;
+    margin-right: 0;
+}
+
+#cv-right {
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+#sortable #box02 {
+    float: left;
+    padding: 0;
+    width: 100%;
+    /* margin: 0; */
+}
+
+.exp-content {
+    width: 100% !important;
+    text-align: justify !important;
+    float: left;
+    margin: 0;
+    color: #000;
+}
+
+.box-content {
+    width: 100% !important;
+    text-align: justify !important;
+    padding: 0;
+    color: #000;
+}
+
+#sortable .ic {
+    margin-bottom: 8px;
+}
+#cv-content .exp-date{
+    float: left;
+    width: 100%;
+    color: #3d3cc2;
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/date1.png)no-repeat;
+    background-position: left;
+    padding-left: 15px;
+}
+.block {
+    background: none;
+}
+
+.ic1 {
+    float: left;
+    width: 49%;
+}
+
+.ic2 {
+    float: left;
+    width: 50%;
+}
+#cv-content span.exp-title {
+    color: #000;
+}
+div#box01{
+    border: unset !important;
+    height: 0;
+    width: 0;
+    /* display: hide; */
+}
