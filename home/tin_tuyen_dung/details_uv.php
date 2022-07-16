@@ -167,12 +167,12 @@
     <div class="popup hidden" id="popup_ut">
         <div class="main_popup bg_white popup_812 br_20 animation_zoom_in drop_poup">
             <div class="header_popup position_r d_flex align_c flex_s pd_19_18 pd_lr16 hd_popup bd_bdc">
-                <h3 class="font_s24 line_h28 font_w500 cl_a4">Ứng tuyển <span class="cl_primary">Trưởng phòng Kinh doanh (thu nhập upto 50 triệu)</span></h3>
+                <h3 class="font_s24 line_h28 font_w500 cl_a4 pp_mb_rp">Ứng tuyển <span class="cl_primary">Trưởng phòng Kinh doanh (thu nhập upto 50 triệu)</span></h3>
                 <div class="close_popup">
                     <img src="../../images/close_red_nobd.png" alt="">
                 </div>
             </div>
-            <div class="conatent_popup pd_tlr16_b24 mt_16chil">
+            <div class="conatent_popup pd_tlr16_b24 mt_16chil pp_ut">
                 <form onsubmit="return false" class="form_check" action="" method="POST" enctype="multipart/form-data">
                     <div>
                         <div class="nav_popup_ut">
@@ -218,38 +218,22 @@
 
                                 <div class="list_file_pc mt_16">
                                     <div class="d_flex space_b align_s">
-                                        <div class="d_flex align_s">
+                                        <div class="d_flex align_s w_100">
                                             <input type="radio" name="test" checked class="mr_8 d_none custom_radio_ip" id="radio_1">
                                             <label for="radio_1" class="custom_radio mr_8"></label>
-                                            <div class="d_flex flex_column">
-                                                <label for="radio_1" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
+                                            <div class="d_flex flex_column w_100">
+                                                <div class="d_flex space_b cv_popup_rd">
+                                                    <label for="radio_1" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
+                                                    <div class="d_flex align_c">
+                                                        <div class="d_flex align_c mr_6"><img src="../../images/time_icon.png" alt=""></div>
+                                                        <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
+                                                    </div>
+                                                </div>
                                                 <div class="d_flex mt_6 btn_xt align_c">
                                                     <div class="d_flex align_c mr_6"><img src="../../images/eve_open.png" alt=""></div>
                                                     <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="d_flex align_c">
-                                            <div class="d_flex align_c mr_6"><img src="../../images/time_icon.png" alt=""></div>
-                                            <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="d_flex space_b align_s">
-                                        <div class="d_flex align_s">
-                                            <input type="radio" name="test" class="mr_8 d_none custom_radio_ip" id="radio_2">
-                                            <label for="radio_2" class="custom_radio mr_8"></label>
-                                            <div class="d_flex flex_column">
-                                                <label for="radio_2" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
-                                                <div class="d_flex mt_6 btn_xt align_c">
-                                                    <div class="d_flex align_c mr_6"><img src="../../images/eve_open.png" alt=""></div>
-                                                    <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d_flex align_c">
-                                            <div class="d_flex align_c mr_6"><img src="../../images/time_icon.png" alt=""></div>
-                                            <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
                                         </div>
                                     </div>
                                 </div>
@@ -270,11 +254,17 @@
                                 <div class="result_cv_online">
                                     <div class="list_file_pc">
                                         <div class="d_flex space_b align_s">
-                                            <div class="d_flex align_s">
+                                            <div class="d_flex align_s w_100">
                                                 <input type="radio" name="test" checked class="mr_8 d_none custom_radio_ip" id="radio_1">
                                                 <label for="radio_1" class="custom_radio mr_8"></label>
-                                                <div class="d_flex flex_column">
-                                                    <label for="radio_1" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
+                                                <div class="d_flex flex_column w_100">
+                                                    <div class="d_flex space_b cv_popup_rd">
+                                                        <label for="radio_1" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
+                                                        <div class="d_flex align_c">
+                                                            <div class="d_flex align_c mr_6"><img src="../../images/time_icon.png" alt=""></div>
+                                                            <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
+                                                        </div>
+                                                    </div>
                                                     <div class="d_flex lis_fuc">
                                                         <div class="d_flex mt_6 btn_xt align_c">
                                                             <div class="d_flex align_c mr_6"><img src="../../images/eve_open.png" alt=""></div>
@@ -287,28 +277,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="d_flex align_c">
-                                                <div class="d_flex align_c mr_6"><img src="../../images/time_icon.png" alt=""></div>
-                                                <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="d_flex space_b align_s">
-                                            <div class="d_flex align_s">
-                                                <input type="radio" name="test" class="mr_8 d_none custom_radio_ip" id="radio_2">
-                                                <label for="radio_2" class="custom_radio mr_8"></label>
-                                                <div class="d_flex flex_column">
-                                                    <label for="radio_2" class="font_s16 line_h19 font_w500 cursor_p cl_oran">CV nhân viên kinh doanh</label>
-                                                    <div class="d_flex mt_6 btn_xt align_c">
-                                                        <div class="d_flex align_c mr_6"><img src="../../images/eve_open.png" alt=""></div>
-                                                        <span class="font_s14 line_h16 font_w500 cl_a4">Xem trước</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d_flex align_c">
-                                                <div class="d_flex align_c mr_6"><img src="../../images/time_icon.png" alt=""></div>
-                                                <span class="font_s16 line_h19 font_w400 cl_a4">20/10/2022 10:10</span>
                                             </div>
                                         </div>
                                     </div>
@@ -714,12 +682,12 @@
             <div class="lr_68 news_recruit mt_48">
                 <div class="box_cty">
                     <div class="item_box">
-                        <div class="d_flex align_c space_b">
+                        <div class="d_flex align_c space_b vl_cty">
                             <h3 class="font_s24 line_h18 font_w500 cl_primary">Việc làm cùng công ty</h3>
                             <a href="" class="font_s16 line_h19 font_w400 cl_primary">Xem nhiều hơn</a>
                         </div>
                         <div class="silder_news details_vl">
-                            <? for ($i = 0; $i < 30; $i++) : ?>
+                            <? for ($i = 0; $i < 15; $i++) : ?>
                                 <div class="item_news details_items bg_w">
                                     <div class="item_news_top">
                                         <div class="img_news">

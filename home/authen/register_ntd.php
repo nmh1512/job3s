@@ -116,7 +116,7 @@
 
                         <div class="form_group">
                             <span class="font_s16 line_h19 font_w500 cl_a4">Địa điểm làm việc<span class="cl_red">*</span></span>
-                            <div class="d_flex w_100">
+                            <div class="d_flex w_100 mb_cl_dd">
                                 <div class="d_flex align_c mt_5 w_100 br_5 custom_select w_50pt">
                                     <select name="" class="select_one" data-placeholder="Chọn tỉnh/thành phố" data-minimum-results-for-search="Infinity">
                                         <option value=""></option>

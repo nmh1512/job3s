@@ -161,6 +161,28 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- controll màn 1024 -->
+                <div class="controll_node">
+                    <div class="ct_phone">
+                        <div class="d_flex align_c">
+                            <img src="../../../images/phone_mb_green.png" alt="">
+                        </div>
+                        <span class="font_s14 line_h16 font_w500 cl_a4">Gọi điện</span>
+                    </div>
+                    <div class="ct_mess">
+                        <div class="d_flex align_c">
+                            <img src="../../../images/sms_green.png" alt="">
+                        </div>
+                        <span class="font_s14 line_h16 font_w500 cl_a4">SMS</span>
+                    </div>
+                    <div class="ct_chat bg096">
+                        <div class="d_flex align_c">
+                            <img src="../../../images/chat_icon_white.png" alt="">
+                        </div>
+                        <span class="font_s14 line_h16 font_w500 cl_white">Chat</span>
+                    </div>
+                </div>
             </div>
 
             <div class="details_cty mt_48 lr_68 d_flex" data-mobile="1024">
@@ -287,7 +309,7 @@
                 <div class="box_cty">
                     <div class="item_box">
                         <h3 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thông tin công ty</h3>
-                        <div class="silder_news mt_24">
+                        <div class="item_pdt24 silder_news">
                             <? for ($i = 0; $i < 50; $i++) : ?>
                                 <div class="item_news">
                                     <div class="item_news_top">
@@ -345,15 +367,13 @@
             slidesToScroll: 2,
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../images/arrow_prev.png" alt=""></button>`,
             nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../images/arrow_next.png" alt=""></button>`,
-            responsive: [
-                {
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
+            responsive: [{
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
-            ]
+            }]
         })
 
 
@@ -370,10 +390,14 @@
 
                 isCheck = true;
             } else {
-                let {infor_menu, cancel, clearAmintions} = viewAndClosePopupUpdate('#unfower_popup', '.main_popup', '.close_popup', '.cancel', '');
-                if(infor_menu) {
+                let {
+                    infor_menu,
+                    cancel,
+                    clearAmintions
+                } = viewAndClosePopupUpdate('#unfower_popup', '.main_popup', '.close_popup', '.cancel', '');
+                if (infor_menu) {
                     let unfow = infor_menu.querySelector('.unfower');
-                    if(unfow) {
+                    if (unfow) {
                         unfow.onclick = () => {
                             clearAmintions();
                             $('.td_btn > span').text('Theo dõi');
@@ -383,7 +407,7 @@
                             })
 
                             isCheck = false;
-                        } 
+                        }
                     }
                 }
             }
@@ -393,6 +417,12 @@
         responsiveLayout({
             elemAppenNew: '.details_cty',
             resize: true
+        })
+
+        scrollControlMobile({
+            elemView: '.controll_node',
+            classActive: 'view_controll',
+            boxCompare: '.infor_controll'
         })
     </script>
 </body>

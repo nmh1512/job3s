@@ -154,7 +154,7 @@
                     <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thông tin điểm tuyển dụng</h2>
                     <div class="bg_w drop_poup br_16 mt_24">
                         <div class="pd_t24_lr26_b25 d_flex flex_w ct_box_sear">
-                            <div class="box_search loc_box_search flex_1 d_flex space_b">
+                            <div class="box_search loc_box_search d_flex flex_start">
                                 <div class="searching d_flex align_c pd_lr15 bd_dc br_8 br_5 bg_white">
                                     <input type="text" class="rs_input ph_fz16 ip_lhd pd_tb11 flex_1 mr_10 font_s16 line_h19 font_w400 cl_73" placeholder="Tìm kiếm tin tuyển dụng">
                                     <div class="d_flex align_c wh_16 cursor_p">
@@ -162,7 +162,7 @@
                                     </div>
                                 </div>
 
-                                <div class="d_flex flex_1 pd_l23_r55 loc_mr">
+                                <div class="d_flex flex_1 pd_l23_r55 loc_mr align_s">
                                     <div class="d_flex align_c">
                                         <span class="font_s16 line_h19 font_w500 cl_55 white_s_nw">Từ ngày:</span>
                                         <div class="d_flex align_c br_5 ml_8 date_loc">
@@ -178,7 +178,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d_flex align_c btn_exe">
+                            <div class="d_flex align_s btn_exe">
                                 <button class="btn flex_im align_c br_8 bg096 btn_primary cl_white pd_t12_b11_lr24">
                                     <span class="font_s16 line_h19 font_w500 currentColor">Xuất excel</span>
                                 </button>
@@ -210,7 +210,7 @@
                                         </tr>
                                     </thead>
                                     <tbody class="tr_wap ">
-                                        <?php for ($i = 0; $i < 2; $i++) :
+                                        <?php for ($i = 0; $i < 0; $i++) :
                                         ?>
                                             <tr class="tr" data-id="">
                                                 <td><?= $i + 1 ?></td>
@@ -288,7 +288,7 @@
                                     </tbody>
                                 </table>
                                 <!-- no result -->
-                                <div class="no_result bg_w br_10" style="display: none;">
+                                <div class="no_result bg_w br_10" style="display: flex;">
                                     <div>
                                         <img src="../../images/no_result.png" alt="">
                                     </div>

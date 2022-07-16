@@ -264,8 +264,9 @@
                                 <div class="mt_16 d_flex">
                                     <div class="d_flex space_b w_100">
                                         <div class="d_flex align_c">
-                                            <input type="checkbox" class="wh23 mr_12">
-                                            <span class="font_s14 line_h19 font_w400 cl_37 pd_t1 el1">Mới nhất</span>
+                                            <input type="checkbox" id="cb_l_sx1" class="cb_cus_ip d_none">
+                                            <label for="cb_l_sx1" class="cus_cb cus_btn_sx mr_12"></label>
+                                            <label for="cb_l_sx1" class="font_s14 line_h19 font_w400 cl_37 pd_t1 el1">Mới nhất</label>
                                         </div>
                                         <span class="font_s12 line_h16 font_w400 d_flex center_center reslt_sapxep fshick0">235</span>
                                     </div>

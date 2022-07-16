@@ -148,6 +148,15 @@
                             </div>
                         </div>
 
+                        <div class="mb_node">
+                            <button class="btn btn_hover_primary flex_im align_c br_100 pd_lr20 shdown_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">
+                                <div class="mr_6 d_flex align_c">
+                                    <img src="../../images/down_icon_white.png" alt="">
+                                </div>
+                                <span>Tải App tìm việc Job3s</span>
+                            </button>
+                        </div>
+                        <!-- 
                         <div class="ml_69">
                             <span class="font_s16 line_h19 font_w500 cl_a4">Tải CV Job3s</span>
                             <div class="mt_16 d_flex h_100px">
@@ -165,7 +174,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -386,7 +395,7 @@
                 </div>
             </div>
 
-            <div class="lr_68 news_recruit mt_48">
+            <div class="lr_68 news_recruit mt_48 tm_uv_mb">
                 <div class="box_cty">
                     <div class="item_box">
                         <div class="d_flex align_c space_b">
@@ -456,12 +465,20 @@
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../../images/arrow_prev.png" alt="" class="img_full"></button>`,
             nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../../images/arrow_next.png" alt="" class="img_full"></button>`,
             responsive: [{
-                breakpoint: 1172,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    breakpoint: 1172,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 723,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
                 }
-            }]
+            ]
         })
     </script>
 </body>
