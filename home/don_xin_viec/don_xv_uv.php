@@ -21,7 +21,7 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Đơn xin việc đã lưu</h2>
                     </div>
                     <div class="mt_24">
-                        <div class="row row_g36">
+                        <div class="row row_g36 ">
                             <?php for ($i = 0; $i < 3; $i++) : ?>
                                 <div class="col_3 txv_item br_16 over_hd">
                                     <div class="txv_img">
@@ -117,7 +117,7 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Việc làm phù hợp</h2>
                     </div>
                     <div class="mt_24">
-                        <div class="row row_g25">
+                        <div class="row row_g25 vl_ut">
                             <? for ($i = 0; $i < 6; $i++) : ?>
                                 <div class="col_2 item_news">
                                     <div class="item_news_top">

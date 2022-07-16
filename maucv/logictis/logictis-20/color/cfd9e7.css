@@ -1,0 +1,33 @@
+#cv-top {
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/hd2.png)no-repeat;
+    background-size: 100% 100%;
+}
+h1 #cv-profile-fullname {
+    color: #db8146;
+}
+.all {
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/main2.png)no-repeat;
+    background-size: 100% 100%;
+}
+.bar-exp{
+    border: 1px solid #db8146;
+}
+.bar-exp div {
+    background-color: #db8146;
+}
+.titlecv{
+    background: #f8e6da;
+}
+#cvo-experience-blocktitle {
+    background: #f8e6da;
+}
+.footer {
+    background: url(https://work247.vn/upload/maucv/it-phan-cung-mang-16/css/ft2.png)no-repeat;
+    background-size: 100% 100%;
+}
+#form-cv #cv-content .cvo-block {
+    border-top: 2px solid #db8146;
+}
+#cv-main #cv-right .ir #sortable .block {
+    border-top: 2px solid #db8146;
+}

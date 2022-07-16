@@ -35,7 +35,7 @@
         <?php include("../../includes/after_header.php"); ?>
         <div class="container bg_fa d_flex flex_end h_100">
             <?php include("../../includes/slider_bar.php"); ?>
-            <div class="content wbjsb mt_90 pd_24 mb_40">
+            <div class="content wbjsb mt_90 pd_24 mb_40 tdmk">
                 <div class="box_form pd_24">
                     <h1 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Đổi mật khẩu</h1>
                     <div class="br_16 d_flex align_c flex_center">

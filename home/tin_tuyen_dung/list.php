@@ -106,7 +106,7 @@
             <?php include("../../includes/slider_bar.php"); ?>
             <div class="content wbjsb mt_90 pd_48_24_91">
                 <h1 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Danh sách tin tuyển dụng</h1>
-                <div class="box_search mt_24 d_flex align_c space_b">
+                <div class="box_search mt_24 d_flex align_c space_b ttd">
                     <div class="searching d_flex align_c pd_lr15 bd_dc br_100 br_5 bg_white">
                         <input type="text" class="rs_input ph_fz16 ip_lhd pd_tb11 flex_1 mr_10 font_s16 line_h19 font_w400 cl_73" placeholder="Tìm kiếm tin tuyển dụng">
                         <div class="d_flex align_c wh_16 cursor_p">
@@ -177,7 +177,7 @@
                                     ]
                                 ];
                                 ?>
-                                <?php for ($i = 0; $i < 10; $i++) :
+                                <?php for ($i = 0; $i < 0; $i++) :
                                     $index = rand(0, count($arrTT) - 1);
                                     $indexs = rand(0, count($att) - 1);
                                 ?>
@@ -219,7 +219,7 @@
 
                                                     <div class="d_flex align_c show_hidden_btn">
                                                         <div class="mr_8 d_flex align_c">
-                                                            <img src="../../images/eye_open_pri.png" alt="" >
+                                                            <img src="../../images/eye_open_pri.png" alt="">
                                                             <img src="../../images/eye_close_pri.png" alt="">
                                                         </div>
                                                         <span class="font_s16 line_h19 font_w500 cl_primary">Ngừng hiển thị</span>
@@ -301,17 +301,19 @@
 
 
                         <!-- no result -->
-                        <div class="no_result bg_w " style="display: none;">
-                            <div>
-                                <img src="../../images/no_result.png" alt="">
-                            </div>
-                            <span class="font_s16 line_h19 font_w400 cl_oran block mt_16">Bạn chưa đăng tin tuyển dụng nào!</span>
-                            <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn mt_24 btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
-                                <div class="mr_6 d_flex align_c">
-                                    <img src="../../images/add_pri.png" alt="">
+                        <div class="no_result table_tdd bg_w resul_tin" style="display: flex;">
+                            <div class="d_flex flex_column align_c">
+                                <div>
+                                    <img src="../../images/no_result.png" alt="">
                                 </div>
-                                <span class="font_s16 line_h19 font_w500 currentColor">Đăng tin ngay </span>
-                            </a>
+                                <span class="font_s16 line_h19 font_w400 cl_oran block mt_16">Bạn chưa đăng tin tuyển dụng nào!</span>
+                                <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn mt_24 btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
+                                    <div class="mr_6 d_flex align_c">
+                                        <img src="../../images/add_pri.png" alt="">
+                                    </div>
+                                    <span class="font_s16 line_h19 font_w500 currentColor">Đăng tin ngay </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -368,11 +370,13 @@
         })
 
         $('.show_hidden_btn').each(function() {
-            $(this).click(()=>{
+            $(this).click(() => {
                 let objectELemet = viewAndClosePopupUpdate('#suss_ws_td', '.main_popup', '.close_popup', '', '', false, true, 1000)
-                let {infor_menu} = objectELemet;
+                let {
+                    infor_menu
+                } = objectELemet;
                 $(this).children('div').toggleClass('show_view');
-                if($(this).children('div').hasClass('show_view')) {
+                if ($(this).children('div').hasClass('show_view')) {
                     $(this).children('span').text('Hiển thị tin');
                     $('.txt_js').text('Ngừng hiển thị tin tuyển dụng thành công!');
                 } else {
@@ -390,12 +394,15 @@
 
         $('.hove_tc').each((i, elem) => {
             $(elem).click(() => {
-                moreShow (elem);
+                moreShow(elem);
             })
         })
 
         // màn 1024
-        sizeChildrenTable(1024)
+        sizeChildrenTable(1024, {
+            tag: 'div',
+            className: 'no_result_table'
+        })
     </script>
 </body>
 

@@ -152,12 +152,29 @@
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Mức lương</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Không yêu cầu" data-minimum-results-for-search="Infinity">
+                                            <select name="" class="select_one ml_change" data-placeholder="Không yêu cầu" data-minimum-results-for-search="Infinity">
                                                 <option value=""></option>
-                                                <option value="0">Nam</option>
-                                                <option value="1">Nữ</option>
-                                                <option value="3">Khác</option>
+                                                <option value="0">Thỏa thuận</option>
+                                                <option value="1">Trong khoảng</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d_flex w_100 none_im ml_tk">
+                                    <div class="w_50pt">
+                                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Từ<span class="cl_red">*</span></span>
+                                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
+                                            <input type="text" autocomplete="off" name="sl_tuyen" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mức lương">
+                                            <span class="font_s15 line_h18 font_w400 cl_a4 block ml_10">VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="w_50pt ml_24">
+                                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Đến<span class="cl_red">*</span></span>
+                                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
+                                            <input type="text" autocomplete="off" name="sl_tuyen" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mức lương">
+                                            <span class="font_s15 line_h18 font_w400 cl_a4 block ml_10">VNĐ</span>
                                         </div>
                                     </div>
                                 </div>
@@ -315,6 +332,15 @@
             customMessSize: (file, size) => `File " ${file.name} " quá lớn. Kích cỡ tối đa được phép tải lên là 100 MB.`,
             isMaxSize: 1000000,
         });
+
+        $('.ml_change').change(function () {
+            let val = $(this).val();
+            if(val == 1) {
+                $('.ml_tk').removeClass('none_im');
+            } else {
+                $('.ml_tk').addClass('none_im');
+            }
+        })
     </script>
 </body>
 

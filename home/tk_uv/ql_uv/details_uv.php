@@ -138,7 +138,7 @@
                         <span class="online is_offline"></span>
                         <img src="../../../images/avt_1.png" alt="avatar_ctytest" class="br_16 img_full">
                     </div>
-                    <div class="infor_ct">
+                    <div class="infor_ct ct_uv">
                         <h1 class="font_s28 line_h33 font_w700 cl_primary pd_b12">Nguyễn Thanh Hằng</h1>
                         <span class="font_s20 line_h23 font_w500 cl_55">Nhân viên thiết kế</span>
                         <div class="d_flex space_b flex_w align_c mb_w">
@@ -461,7 +461,7 @@
 
                             <div class="lis_box_deatls chil_24 mt_24">
                                 <div class="item_box">
-                                    <div class="w_100">
+                                    <div class="w_100 cv_xv_img">
                                         <img src="../../../images/cv_mts.png" alt="" class="w_100">
                                     </div>
 
@@ -803,6 +803,12 @@
         responsiveLayout({
             elemAppenNew: '.details_cty',
             resize: true
+        })
+
+        scrollControlMobile({
+            elemView: '.controll_node',
+            classActive: 'view_controll',
+            boxCompare: '.infor_controll'
         })
     </script>
 </body>

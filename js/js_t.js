@@ -14,6 +14,7 @@ function activeHeader(selector, classActive) {
   }
 }
 
+
 function removeClass(selector, classActive) {
   let element = document.querySelector(selector);
 
@@ -660,9 +661,10 @@ function moreShow(elem) {
   }
 }
 
-function sizeChildrenTable(breackpoint) {
+function sizeChildrenTable(breackpoint, object) {
   let parentTb = document.querySelector(".table_tdd");
   let m = document.querySelector(".tb_ttd");
+  let elemCre;
   let maxW = 0;
   if (parentTb) {
     let winWidth = window.innerWidth;
@@ -684,18 +686,35 @@ function sizeChildrenTable(breackpoint) {
     }
 
     function resizeTable() {
-      td.forEach((e, i) => {
-        let chil = [...e.children];
-        let h = chil[0].getBoundingClientRect().height;
-        let w = chil[chil.length - 1].getBoundingClientRect().width;
 
-        maxW = w > maxW ? w : maxW;
-
-        if (i >= td.length - 1) {
-          h -= 0.5;
+      if(td.length > 0) {
+        td.forEach((e, i) => {
+          let chil = [...e.children];
+          let h = chil[0].getBoundingClientRect().height;
+          let w = chil[chil.length - 1].getBoundingClientRect().width;
+  
+          maxW = w > maxW ? w : maxW;
+  
+          if (i >= td.length - 1) {
+            h -= 0.5;
+          }
+          chil[chil.length - 1].style.height = `${h}px`;
+        });
+      } else {
+        if(!(th[th.length - 1].contains(elemCre))) {
+          // m.classList.add('no_result_parent');
+          let w = th[th.length - 1].getBoundingClientRect().width;
+          let h = th[th.length - 1].getBoundingClientRect().height;
+          let hParent = m.getBoundingClientRect().height;
+          let sr = hParent - (m.scrollHeight);
+          elemCre = document.createElement(object.tag);
+          elemCre.className = object.className;
+          elemCre.style.width = `${w}px`;
+          elemCre.style.top = `${h}px`;
+          elemCre.style.height = `${(hParent - h - 0.5) - (sr)}px`;
+          th[th.length - 1].appendChild(elemCre);
         }
-        chil[chil.length - 1].style.height = `${h}px`;
-      });
+      }
 
       maxW > 0&&(th[th.length - 1].style.width = `${maxW}px`);
       th[th.length - 1].style.height = `${
@@ -705,12 +724,18 @@ function sizeChildrenTable(breackpoint) {
     }
 
     function removeStyle() {
-      td.forEach((e, i) => {
-        let chil = [...e.children];
-
-        chil[chil.length - 1].style.removeProperty("height");
-      });
-
+      if(td.length > 0) {
+        td.forEach((e, i) => {
+          let chil = [...e.children];
+  
+          chil[chil.length - 1].style.removeProperty("height");
+        });
+      } else {
+        if((th[th.length - 1].contains(elemCre))) { 
+          th[th.length - 1].removeChild(elemCre);
+          // parentTb.classList.add('no_result_parent');
+        }
+      }
       th[th.length - 1].style.removeProperty("width");
       m.style.removeProperty("padding-right");
     }
@@ -848,5 +873,32 @@ function responsiveLayout({
               elem.removeChild(divApp);
           }
       }
+  }
+}
+
+function scrollControlMobile ({
+  elemView,
+  classActive,
+  boxCompare
+}) {
+  let elw = document.querySelector(elemView);
+  let compeElem = document.querySelector(boxCompare);
+
+  if(elw && compeElem) {
+
+    function scrollCompare () {
+      let top = compeElem.offsetTop;
+      let maxSc = (compeElem.offsetHeight) + top;
+      let y = window.pageYOffset;
+
+      if(y > maxSc) {
+        elw.classList.add(classActive)
+      } else {
+        elw.classList.remove(classActive)
+      }
+
+    }
+
+    window.addEventListener('scroll', scrollCompare)
   }
 }
