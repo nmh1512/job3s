@@ -57,7 +57,7 @@
                                             </div>
                                         </div>
                                         <div class="txv_content_bottom mt_16 d_flex space_b align_c">
-                                            <div class="d_flex btn_cv pd_r10">
+                                            <div class="d_flex pd_r10">
                                                 <button class="btn flex_im align_c pd_3_8 bg_8d br_100">
                                                     <div class="mr_6 d_flex align_c">
                                                         <img src="../../images/down_icon_white.png" alt="">
@@ -173,7 +173,7 @@
                                             </div>
                                         </div>
                                         <div class="txv_content_bottom mt_16 d_flex space_b align_c">
-                                            <div class="d_flex btn_cv pd_r10">
+                                            <div class="d_flex pd_r10">
                                                 <button class="btn flex_im align_c pd_3_8 bg_8d br_100">
                                                     <div class="mr_6 d_flex align_c">
                                                         <img src="../../images/down_icon_white.png" alt="">
@@ -229,7 +229,7 @@
                                 <span class="font_s16 line_h19 font_w500 cl_73 block mt_8">1 năm kinh nghiệm</span>
 
                                 <div class="d_flex align_c mt_23 list_btn_tt chil_ml0">
-                                    <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
+                                    <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" title="Xem trước" class="btn btn_xemtin btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
                                         <div class="mr_6 d_flex align_c">
                                             <img src="../../images/eye_white_open.png" alt="">
                                         </div>
@@ -244,16 +244,26 @@
                                         <span class="font_s16 line_h19 font_w500 currentColor">Chỉnh sửa</span>
                                     </a>
 
-                                    <button class="btn td_btn btn_loctd flex_im center_center cl_primary bg_w bd_td br_100 pd_t12_b11_lr24">
-                                        <div class="mr_6 d_flex align_c">
-                                            <img src="../../images/start_stro_pri.png" alt="">
-                                        </div>
-                                        <span class="font_s16 line_h19 font_w500 currentColor">Đặt làm CV chính</span>
-                                    </button>
+                                    <div>
+                                        <!-- -->
+                                        <!-- <button class="btn td_btn btn_loctd flex_im center_center cl_primary bg_w bd_td br_100 pd_t12_b11_lr24">
+                                            <div class="mr_6 d_flex align_c">
+                                                <img src="../../images/start_stro_pri.png" alt="">
+                                            </div>
+                                            <span class="font_s16 line_h19 font_w500 currentColor">Đặt làm CV chính</span>
+                                        </button> -->
+
+                                        <button class="btn td_btn h_100 btn_loctd flex_im center_center bd_ff99 cl_oran bg_BF5 br_100 pd_t12_b11_lr24">
+                                            <div class="mr_6 d_flex align_c">
+                                                <img src="../../images/start_oran.png" alt="">
+                                            </div>
+                                            <span class="font_s16 line_h19 font_w500 currentColor">CV chính</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="prossgess_canhan">
-                                <div class="progress"></div>
+                                <div class="progress" data-percent="80"></div>
                             </div>
                         </div>
                     </div>
@@ -263,7 +273,7 @@
                     <div class="d_flex align_c space_b">
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Việc làm phù hợp</h2>
                     </div>
-                    <div class="mt_24">
+                    <div class="mt_24 list_vlph">
                         <div class="row row_g25">
                             <? for ($i = 0; $i < 6; $i++) : ?>
                                 <div class="col_2 item_news">
@@ -323,7 +333,7 @@
     <script>
         new CircleProgress('.progress', {
             max: 100,
-            value: 50,
+            value: $('.progress').data('percent')||0,
             clockwise: false,
             textFormat: 'percent',
         });
@@ -342,9 +352,10 @@
 
         $('.show_upload').click(() => {
             $('.show_upload').addClass('btn_hidden')
-            $('.show_form_upload').slideDown(300, ()=> {
-                $('.btn_huy_upload').click(()=>{
+            $('.show_form_upload').slideDown(300, () => {
+                $('.btn_huy_upload').click(() => {
                     $('.show_form_upload').slideUp(300, () => {
+                        $('.append_error .error_valid').remove();
                         $('.btn_huy_upload').unbind();
                     });
                     $('.show_upload').removeClass('btn_hidden');

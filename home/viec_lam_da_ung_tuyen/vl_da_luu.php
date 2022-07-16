@@ -12,6 +12,28 @@
 </head>
 
 <body>
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="del_new_td">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="header_popup position_r btn_primary d_flex center_center pd_19_18 hd_popup">
+                <h3 class="font_s20 line_h23 cl_white font_w700">Xác nhận</h3>
+                <div class="close_popup">
+                    <img src="../../images/close_white.png" alt="">
+                </div>
+            </div>
+            <div class="conatent_popup">
+                <form onsubmit="return false" action="" method="POST">
+                    <p class="font_s16 line_h19 font_w400 cl_a4 pd_48_24 txt_center">Bạn có chắc chắn muốn <span class="cl_gg">xóa</span> tin này không?</p>
+                    <div class="form_submit d_flex center_center pd_24 pd_t0">
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Hủy</button>
+                        <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68">Đồng ý</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end poup xác nhận -->
+
     <div id="root">
         <?php include("../../includes/after_header.php"); ?>
         <div class="container bg_fa d_flex flex_end">
@@ -33,7 +55,7 @@
                                             <h3 class="font_s16 line_h19 font_w500 cl_primary pd_r23">Nhân viên kinh doanh bất động sản</h3>
                                             <span class="font_s16 line_h19 font_w400 cl_73 block mt_5">Công ty Cổ phần Thanh toán Hưng Hà</span>
 
-                                            <div class="save_new cursor_p">
+                                            <div class="save_new del_news cursor_p">
                                                 <img src="../../images/del_red.png" alt="">
                                             </div>
 
@@ -69,7 +91,7 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Việc làm phù hợp</h2>
                     </div>
                     <div class="mt_24">
-                        <div class="row row_g25">
+                        <div class="row row_g25 vl_ut">
                             <? for ($i = 0; $i < 6; $i++) : ?>
                                 <div class="col_2 item_news">
                                     <div class="item_news_top">
@@ -135,7 +157,20 @@
             slidesToShow: 2,
             slidesToScroll: 2,
             prevArrow: `<button type='button' class='slick-prev pull-left'><img src="../../images/arrow_prev.png" alt=""></button>`,
-            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../images/arrow_next.png" alt=""></button>`
+            nextArrow: `<button type='button' class='slick-next pull-right'><img src="../../images/arrow_next.png" alt=""></button>`,
+            responsive: [
+                {
+                    breakpoint: 859,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        })
+
+        $('.del_news').click(function () {
+            viewAndClosePopupUpdate('#del_new_td', '.main_popup', '.close_popup', '.cancel', '');
         })
     </script>
 </body>

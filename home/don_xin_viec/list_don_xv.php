@@ -67,7 +67,7 @@
 
                         <div class="cv-submit mt_24">
                             <div class="mt_16chil">
-                                <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im center_center h_42 br_5 w_100 btn_primary cl_white pd_t12_b11_lr24">
+                                <a href="/tin-tuyen-dung/dang-tin-tuyen-dung" class="btn btn_hover_primary flex_im center_center h_42 br_5 w_100 btn_primary cl_white pd_t12_b11_lr24">
                                     <div class="mr_6 d_flex align_c">
                                         <img src="../../images/edit_white.png" alt="">
                                     </div>
@@ -187,8 +187,9 @@
                                 <div class="mt_16 d_flex">
                                     <div class="d_flex space_b w_100">
                                         <div class="d_flex align_c">
-                                            <input type="checkbox" class="wh23 mr_12">
-                                            <span class="font_s14 line_h19 font_w400 cl_37 pd_t1 el1">Mới nhất</span>
+                                            <input type="checkbox" id="cb_l_sx1" class="cb_cus_ip d_none">
+                                            <label for="cb_l_sx1" class="cus_cb cus_btn_sx mr_12"></label>
+                                            <label for="cb_l_sx1" class="font_s14 line_h19 font_w400 cl_37 pd_t1 el1">Mới nhất</label>
                                         </div>
                                         <span class="font_s12 line_h16 font_w400 d_flex center_center reslt_sapxep fshick0">235</span>
                                     </div>
@@ -294,7 +295,7 @@
                                                 <span class="font_s16 line_h14 font_w500 currentColor">Xem trước</span>
                                             </button>
 
-                                            <a href="/don-xin-viec/tao-don-xin-viec.html" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white">
+                                            <a href="/don-xin-viec/tao-don-xin-viec" class="btn btn_hover_primary flex_im center_center br_100 btn_primary cl_white">
                                                 <div class="mr_6 d_flex align_c">
                                                     <img src="../../images/edit_white.png" alt="">
                                                 </div>

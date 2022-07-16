@@ -1,11 +1,6 @@
 /* khuôn mẫu cv */
-@font-face {
-  font-family: OpenSans;
-  font-display: swap;
-  src: url(../fonts/OpenSans.ttf) format("woff2");
-  font-weight: 300;
-}
-
+@font-face {font-family: OpenSans;font-display: swap;src: url(../fonts/OpenSans.ttf) format("woff2");font-weight: 300;}
+@font-face {font-family: OpenSans;font-display: swap;src: url(../fonts/OpenSans.ttf) format("woff2");font-weight: 300;}
 @page { size: a4; margin: 0px; padding: 0px; }
 #page-cv  * {font-family: inherit !important;}
 #cvo-profile-avatar-wraper img { display: table !important; }

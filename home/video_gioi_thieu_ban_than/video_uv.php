@@ -42,7 +42,7 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Video giới thiệu bản thân</h2>
                     </div>
 
-                    <div class="video_susses mt_24">
+                    <div class="video_susses mt_24 " style="display: none;">
                         <span class="font_s16 line_h20 font_w400 cl_a4">Video giới thiệu bản thân đã tải lên</span>
                         <div class="video_peolpe mt_16">
                             <video controls class="img_full br_16">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
 
-                    <div class="no_video no_result bg_w " style="display: none;">
+                    <div class="no_video no_result bg_w " >
                         <!--  -->
                         <div>
                             <img src="../../images/no_result.png" alt="">
@@ -104,9 +104,9 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Việc làm phù hợp</h2>
                     </div>
                     <div class="mt_24">
-                        <div class="row row_g25">
+                        <div class="row row_g25 vl_ut">
                             <? for ($i = 0; $i < 6; $i++) : ?>
-                                <div class="col_2 item_news">
+                                <div class="col_2 item_news mb_fix">
                                     <div class="item_news_top">
                                         <div class="img_news">
                                             <img src="../../images/img_news_ts.png" alt="">
