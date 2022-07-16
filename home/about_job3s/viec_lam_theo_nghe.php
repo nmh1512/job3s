@@ -23,7 +23,7 @@
         </div>
       </section>
       <section>
-        <div class="plr_resp ptb_48px d_flex flex_w">
+        <div class="plr_resp ptb_48px d_flex flex_w list_job_area">
           <? for($i = 0; $i < 56; $i++) { ?>
           <div class="w_33pt mb_12">
             <a href="">Bán hàng</a>
@@ -41,13 +41,13 @@
             <p class="mt_12">
               Tải ngay app để đăng tin và tìm việc làm miễn phí
             </p>
-            <div class="d_flex space_b mt_24 box_download_info w_65pt">
+            <div class="d_flex space_b mt_24 box_download_info w_65pt box_download_reverse">
               <div class="text_c">
                 <p class="mb_24">Ứng dụng tìm việc Job3s</p>
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
                   <a
-                    class="btn_bg_white d_flex align_c flex_center border_none shadow_15"
+                    class="btn_bg_white d_flex align_c flex_center border_none shadow_15 p_0_21"
                     href=""
                     >Tải App tìm việc Job3s</a
                   >
@@ -58,9 +58,9 @@
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
                   <a
-                    class="btn_bg_white d_flex align_c flex_center border_none shadow_15"
+                    class="btn_bg_white d_flex align_c flex_center border_none shadow_15 p_0_21"
                     href=""
-                    >Tải App CV365</a
+                    >Tải App CV Job3s</a
                   >
                 </div>
               </div>

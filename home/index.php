@@ -224,9 +224,9 @@
             <h2 class="main_color mb_15 font_s22">Tạo CV online ấn tượng</h2>
             <p class="mb_30">Job3s hiện có 1000+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề.
             </p>
-            <div>
+            <div class="d_flex">
 
-              <a href="" class="btn_main_color">Tạo CV ngay</a>
+              <a href="" class="btn_main_color shadow_15">Tạo CV ngay</a>
             </div>
           </div>
           <div class="banner_create_cv_img d_flex align_c">
@@ -238,9 +238,9 @@
             <h2 class="main_color mb_15 font_s22">Sử dụng CV sẵn có để tìm việc</h2>
             <p class="mb_30">Cách đơn giản để bắt đầu tìm việc làm tại Job3s, Nhà tuyển dụng sẽ nhìn thấy CV
               bạn đã tải lên.</p>
-            <div>
+            <div class="d_flex">
 
-              <a href="" class="btn_main_color">Tải lên CV của bạn</a>
+              <a href="" class="btn_main_color btn_up_cv shadow_15">Tải lên CV của bạn</a>
             </div>
           </div>
           <div class="banner_upload_cv_img position_r">
@@ -561,8 +561,8 @@
         slidesToScroll: data2,
         arrows: true,
         dots: true,
-        centerMode: true,
-        centerPadding: padding1,
+        // centerMode: true,
+        // centerPadding: padding1,
         prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
         nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
       });
@@ -614,7 +614,10 @@
     $('.nav_menu_btn button').click(function() {
       toggleNav()
     })
-
+    var wi = $(window).innerWidth();
+    if (wi <= 480) {
+        $('.btn_up_cv').text('Tải lên CV ngay')
+      }
     $(window).resize(function() {
       var w = $(window).innerWidth();
       var slide = 0;
@@ -627,6 +630,7 @@
       } else {
         slide = 2
       }
+      
       slickSlider(slide)
     })
 

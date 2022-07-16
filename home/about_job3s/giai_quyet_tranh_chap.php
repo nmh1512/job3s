@@ -26,7 +26,7 @@
               <div class="text_c">
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
-                  <a class="btn_bg_white d_flex align_c flex_center" href=""
+                  <a class="btn_bg_white d_flex align_c flex_center p_0_21" href=""
                     >Tải App tìm việc Job3s</a
                   >
                 </div>
@@ -34,7 +34,7 @@
               <div class="text_c">
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
-                  <a class="btn_bg_white d_flex align_c flex_center" href=""
+                  <a class="btn_bg_white d_flex align_c flex_center p_0_21" href=""
                     >Tải App CV365</a
                   >
                 </div>
