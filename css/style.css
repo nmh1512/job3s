@@ -674,4 +674,6 @@ footer h4{font-weight: 500;}
 .footer_download > div > div:last-child{margin: 0;}
 .img_footer_contact{margin-top: 32px !important;}
 .new_works_header .list_works{flex-wrap: wrap;}
+.footer_content + .footer_content{margin-top: 16px;}
+.footer_content:last-child{margin-top: 32px;}
 }

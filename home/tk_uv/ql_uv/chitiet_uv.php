@@ -17,7 +17,7 @@
   include "../../../includes/after_header.php";
   include "../../../includes/slider_bar.php"; ?>
   <div class="main_container pd_24">
-    <div class="box_shadow border_c4 pd_24 d_flex">
+    <div class="box_shadow border_c4 pd_24 d_flex uv_account_top">
       <div class="border_r16 position_r wh_120px avt_uv">
         <img src="../../../images/doggo.jpg" alt="" class="border_r16 wh_120px border_dc" />
         <div hidden class="position_a align_c flex_center update_avt font_w500 cl_white font_s15 cursor_p"><img src="../../../images/cam.png" alt="">Cập nhật</div>
@@ -80,48 +80,48 @@
         </div>
       </div>
       <div class="mt_24 info_ungvien">
-          <div class="d_flex">
-            <h4 class="font_w500">Họ và tên:</h4>
-            <p>Nguyễn Đình Mạnh</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Giới tính:</h4>
-            <p class="gray_c4">Nhập giới tính</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Ngày sinh:</h4>
-            <p class="gray_c4">Nhập ngày sinh</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Tình trạng hôn nhân:</h4>
-            <p class="gray_c4">Nhập tình trạng</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Số điện thoại:</h4>
-            <p class="gray_c4">Nhập số điện thoại</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Email:</h4>
-            <p class="gray_c4">Nhập email</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Địa chỉ:</h4>
-            <p class="gray_c4">Nhập địa chỉ</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Vị trí công việc:</h4>
-            <p class="gray_c4">Nhập vị trí công việc</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Kinh nghiệm làm việc:</h4>
-            <p class="gray_c4">Nhập kinh nghiệm</p>
-          </div>
-          <div class="d_flex mt_16">
-            <h4 class="font_w500">Giới thiệu bản thân:</h4>
-            <p class="gray_c4">Giới thiệu bản thân</p>
-          </div>
+        <div class="d_flex">
+          <h4 class="font_w500">Họ và tên:</h4>
+          <p>Nguyễn Đình Mạnh</p>
         </div>
-      <div class="mt_24 info_ungvien">
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Giới tính:</h4>
+          <p class="gray_c4">Nhập giới tính</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Ngày sinh:</h4>
+          <p class="gray_c4">Nhập ngày sinh</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Tình trạng hôn nhân:</h4>
+          <p class="gray_c4">Nhập tình trạng</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Số điện thoại:</h4>
+          <p class="gray_c4">Nhập số điện thoại</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Email:</h4>
+          <p class="gray_c4">Nhập email</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Địa chỉ:</h4>
+          <p class="gray_c4">Nhập địa chỉ</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Vị trí công việc:</h4>
+          <p class="gray_c4">Nhập vị trí công việc</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Kinh nghiệm làm việc:</h4>
+          <p class="gray_c4">Nhập kinh nghiệm</p>
+        </div>
+        <div class="d_flex mt_16">
+          <h4 class="font_w500">Giới thiệu bản thân:</h4>
+          <p class="gray_c4">Giới thiệu bản thân</p>
+        </div>
+      </div>
+      <!-- <div class="mt_24 info_ungvien">
         <form action="">
           <div class="d_flex">
             <div class="div_input mt-0">
@@ -220,30 +220,30 @@
             <button type="submit" class="btn_xacnhan">Cập nhật</button>
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <div class="d_flex align_c mb_8 space_b">
           <h2 class="main_color font_s20 font_w500">Sở thích</h2>
-          <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p">
+          <!-- <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p">
             <img class="mr_7" src="../../../images/change.svg" alt="" /> Cập
             nhật
-          </div>
-        </div>
-        <!-- <div>
-            <p class="font_s14">
-              Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-              của bạn
-            </p>
-            <button class="btn_bg_white mt_24">Cập nhật</button>
           </div> -->
-        <div class="mt_24">
-          <!-- <ul>
+        </div>
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
+        <!-- <div class="mt_24">
+          <ul>
               <li>Xem phim</li>
               <li>Nghe nhạc</li>
               <li>Du lịch</li>
-            </ul> -->
+            </ul>
           <form action="">
             <div>
               <label for="" class="font_w500">Sở thích<span class="color_red">*</span></label>
@@ -256,28 +256,28 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
-      <img hidden src="../../../images/interests.svg" alt="" />
+      <img src="../../../images/favorite.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <div class="d_flex align_c mb_8 space_b">
           <h2 class="main_color font_s20 font_w500">Mục tiêu</h2>
-          <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p">
+          <!-- <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p">
             <img class="mr_7" src="../../../images/change.svg" alt="" /> Cập
             nhật
-          </div>
+          </div> -->
         </div>
-        <!-- <div>
-          <p class="font_s14">
+        <div>
+          <p class="font_s14 line_h20">
             Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
             của bạn
           </p>
           <button class="btn_bg_white mt_24">Cập nhật</button>
-        </div> -->
-        <div class="mt_24">
-          <!-- Mục tiêu của em là bla bla bla...... -->
+        </div>
+        <!-- <div class="mt_24">
+          Mục tiêu của em là bla bla bla......
 
           <form action="">
             <div>
@@ -291,20 +291,20 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
-      <img hidden src="../../../images/target.svg" alt="" />
+      <img src="../../../images/targetgoal.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Học vấn</h2>
-        <!-- <div>
-            <p class="font_s14">
-              Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-              của bạn
-            </p>
-            <button class="btn_bg_white mt_24">Cập nhật</button>
-          </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="mb_24 info_ungvien_item_box">
             <div class="position_r">
               <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
@@ -355,7 +355,7 @@
           <button class="d_flex align_c flex_center btn_bg_white">
             <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
             Thêm học vấn
-          </button> -->
+          </button>
         <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
@@ -430,21 +430,21 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/education.svg" alt="" />
+      <img src="../../../images/education.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Chứng chỉ</h2>
-        <!-- <div>
-          <p class="font_s14">
+        <div>
+          <p class="font_s14 line_h20">
             Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
             của bạn
           </p>
           <button class="btn_bg_white mt_24">Cập nhật</button>
-        </div> -->
+        </div>
         <!-- <div class="info_ungvien_item_box mb_24">
             <div class="position_r">
               <h4 class="font_w500 mb_8 main_color">
@@ -495,7 +495,7 @@
             <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
             Thêm chứng chỉ
           </button> -->
-        <div class="mt_24">
+        <!-- <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
               <div class="div_input mt-0 w_100 mr_0">
@@ -565,21 +565,21 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/certificate.svg" alt="" />
+      <img src="../../../images/certificate.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Kinh nghiệm</h2>
-        <!-- <div>
-        <p class="font_s14">
-          Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-          của bạn
-        </p>
-        <button class="btn_bg_white mt_24">Cập nhật</button>
-      </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="info_ungvien_item_box mb_24">
             <div class="position_r">
               <h4 class="font_w500 mb_8 main_color">Plus Studio</h4>
@@ -630,7 +630,7 @@
             <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
             Thêm kinh nghiệm
           </button> -->
-        <div class="mt_24">
+        <!-- <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
               <div class="div_input mt-0 w_100 mr_0">
@@ -704,21 +704,21 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/exp.svg" alt="" />
+      <img src="../../../images/exp.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Kỹ năng</h2>
-        <!-- <div>
-      <p class="font_s14">
-        Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-        của bạn
-      </p>
-      <button class="btn_bg_white mt_24">Cập nhật</button>
-    </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="info_ungvien_item_box mb_24">
             <div class="position_r">
               <h4 class="font_w500 mb_8 main_color">After Effect</h4>
@@ -750,7 +750,7 @@
             <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
             Thêm kỹ năng
           </button> -->
-        <div class="mt_24">
+        <!-- <div class="mt_24">
           <form action="">
             <div class="d_flex">
               <div class="div_input mt-0 w_100 mr_0">
@@ -783,21 +783,21 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/certificate.svg" alt="" />
+      <img src="../../../images/skills.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Ngôn ngữ</h2>
-        <!-- <div>
-    <p class="font_s14">
-      Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-      của bạn
-    </p>
-    <button class="btn_bg_white mt_24">Cập nhật</button>
-  </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="mb_24 info_ungvien_item_box">
             <div class="position_r">
               <h4 class="font_w500 mb_8 main_color">Tiếng Anh</h4>
@@ -865,7 +865,7 @@
             <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
             Thêm ngôn ngữ
           </button> -->
-        <div class="mt_24">
+        <!-- <div class="mt_24">
           <form action="">
             <div class="d_flex">
               <div class="div_input mt-0">
@@ -892,21 +892,21 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/certificate.svg" alt="" />
+      <img src="../../../images/language.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Giải thưởng</h2>
-        <!-- <div>
-    <p class="font_s14">
-      Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-      của bạn
-    </p>
-    <button class="btn_bg_white mt_24">Cập nhật</button>
-  </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="info_ungvien_item_box mb_24">
             <div class="position_r">
               <h4 class="font_w500 mb_8 main_color">
@@ -935,7 +935,7 @@
             <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
             Thêm giải thưởng
           </button> -->
-        <div class="mt_24">
+        <!-- <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
               <div class="div_input mt-0 w_100 mr_0">
@@ -980,129 +980,121 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/education.svg" alt="" />
+      <img src="../../../images/cup.png" alt="" />
     </div>
 
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Dự án</h2>
-        <!-- <div>
-    <p class="font_s14">
-      Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-      của bạn
-    </p>
-    <button class="btn_bg_white mt_24">Cập nhật</button>
-  </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Cuộc thi “THE ARTIST AVATAR CHALLENGE”
-              </h4>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Khách hàng:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Số thành viên tham gia:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Vị trí:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Nhiệm vụ:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Công nghệ sử dụng: </span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Thời gian:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Mô tả dự án:</span>
-                <p>VTV 6</p>
-              </div>
+          <div class="position_r">
+            <h4 class="font_w500 mb_8 main_color">
+              Cuộc thi “THE ARTIST AVATAR CHALLENGE”
+            </h4>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Khách hàng:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Số thành viên tham gia:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Vị trí:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Nhiệm vụ:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Công nghệ sử dụng: </span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Thời gian:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Mô tả dự án:</span>
+              <p>VTV 6</p>
+            </div>
 
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img
-                    class="mr_7"
-                    src="../../../images/delete_red.svg"
-                    alt=""
-                  />
-                  Xóa
-                </div>
+            <div class="position_a d_flex edit_info_uv_btn">
+              <div class="d_flex mlr_8 main_color font_w500 cursor_p">
+                <img class="mr_7" src="../../../images/change.svg" alt="" />
+                Sửa
+              </div>
+              |
+              <div class="d_flex mlr_8 color_red font_w500 cursor_p">
+                <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
+                Xóa
               </div>
             </div>
           </div>
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Cuộc thi “THE ARTIST AVATAR CHALLENGE”
-              </h4>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Khách hàng:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Số thành viên tham gia:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Vị trí:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Nhiệm vụ:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Công nghệ sử dụng: </span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Thời gian:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Mô tả dự án:</span>
-                <p>VTV 6</p>
-              </div>
+        </div>
+        <div class="mb_24 info_ungvien_item_box">
+          <div class="position_r">
+            <h4 class="font_w500 mb_8 main_color">
+              Cuộc thi “THE ARTIST AVATAR CHALLENGE”
+            </h4>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Khách hàng:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Số thành viên tham gia:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Vị trí:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Nhiệm vụ:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Công nghệ sử dụng: </span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Thời gian:</span>
+              <p>VTV 6</p>
+            </div>
+            <div class="d_flex mb_8">
+              <span class="mr_8 font_w500">Mô tả dự án:</span>
+              <p>VTV 6</p>
+            </div>
 
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500">
-                  <img
-                    class="mr_7"
-                    src="../../../images/delete_red.svg"
-                    alt=""
-                  />
-                  Xóa
-                </div>
+            <div class="position_a d_flex edit_info_uv_btn">
+              <div class="d_flex mlr_8 main_color font_w500">
+                <img class="mr_7" src="../../../images/change.svg" alt="" />
+                Sửa
+              </div>
+              |
+              <div class="d_flex mlr_8 color_red font_w500">
+                <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
+                Xóa
               </div>
             </div>
           </div>
-          <button class="d_flex align_c flex_center btn_bg_white">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm dự án
-          </button> -->
-        <div class="mt_24">
+        </div>
+        <button class="d_flex align_c flex_center btn_bg_white">
+          <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
+          Thêm dự án
+        </button> -->
+        <!-- <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
               <div class="div_input mt-0 w_100 mr_0">
@@ -1208,74 +1200,66 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/education.svg" alt="" />
+      <img src="../../../images/project.png" alt="" />
     </div>
     <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">
           Hoạt động xã hội và tình nguyện
         </h2>
-        <!-- <div>
-    <p class="font_s14">
-      Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
-      của bạn
-    </p>
-    <button class="btn_bg_white mt_24">Cập nhật</button>
-  </div> -->
+        <div>
+          <p class="font_s14 line_h20">
+            Bạn có thể thêm thông tin cá nhân để chúng tôi hoàn thành hồ sơ
+            của bạn
+          </p>
+          <button class="btn_bg_white mt_24">Cập nhật</button>
+        </div>
         <!-- <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img
-                    class="mr_7"
-                    src="../../../images/delete_red.svg"
-                    alt=""
-                  />
-                  Xóa
-                </div>
+          <div class="position_r">
+            <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
+            <p class="mb_8">Công nghệ thông tin</p>
+            <p class="mb_8">2017 - hiện nay</p>
+            <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
+            <div class="position_a d_flex edit_info_uv_btn">
+              <div class="d_flex mlr_8 main_color font_w500 cursor_p">
+                <img class="mr_7" src="../../../images/change.svg" alt="" />
+                Sửa
+              </div>
+              |
+              <div class="d_flex mlr_8 color_red font_w500 cursor_p">
+                <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
+                Xóa
               </div>
             </div>
           </div>
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img
-                    class="mr_7"
-                    src="../../../images/delete_red.svg"
-                    alt=""
-                  />
-                  Xóa
-                </div>
+        </div>
+        <div class="mb_24 info_ungvien_item_box">
+          <div class="position_r">
+            <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
+            <p class="mb_8">Công nghệ thông tin</p>
+            <p class="mb_8">2017 - hiện nay</p>
+            <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
+            <div class="position_a d_flex edit_info_uv_btn">
+              <div class="d_flex mlr_8 main_color font_w500 cursor_p">
+                <img class="mr_7" src="../../../images/change.svg" alt="" />
+                Sửa
+              </div>
+              |
+              <div class="d_flex mlr_8 color_red font_w500 cursor_p">
+                <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
+                Xóa
               </div>
             </div>
           </div>
-          <button class="d_flex align_c flex_center btn_bg_white">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm học vấn
-          </button> -->
-        <div class="mt_24">
+        </div>
+        <button class="d_flex align_c flex_center btn_bg_white">
+          <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
+          Thêm học vấn
+        </button> -->
+        <!-- <div class="mt_24">
           <form action="" class="form_uv">
             <div class="d_flex">
               <div class="div_input mt-0 w_100 mr_0">
@@ -1350,14 +1334,14 @@
               <button type="submit" class="btn_xacnhan">Cập nhật</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
-      <img hidden src="../../../images/education.svg" alt="" />
+      <img src="../../../images/activity.png" alt="" />
     </div>
   </div>
 
-  <div class="popupContainer popup_chung popup display_none">
+  <!-- <div class="popupContainer popup_chung popup display_none">
     <div id="popupShare" class="animation_zoom_in display_none popupInput popupItem">
       <div class="popup_header_white position_r">
         <h2 class="font_s20 text_c">Chia sẻ hồ sơ</h2>
@@ -1428,9 +1412,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </body>
-<div class="popup_account box_shadow_after_login">
+<!-- <div class="popup_account box_shadow_after_login">
   <div class="popup_account_top pd_24 d_flex">
     <img src="../../../images/doggo.jpg" alt="" class="bd_cicre" />
     <div class="w_80pt">
@@ -1468,7 +1452,7 @@
       <h4>Đăng xuất</h4>
     </a>
   </div>
-</div>
+</div> -->
 <script src="../../../js/jquery-3.4.1.min.js"></script>
 <script src="../../../js/select2.min.js"></script>
 <script src="../../../js/circle-progress.min.js"></script>
@@ -1513,7 +1497,7 @@
     $('.update_avt').addClass('d_flex')
     $('.update_avt').show()
   }, function() {
-    $('.update_avt').removeClass('d_flex')  
+    $('.update_avt').removeClass('d_flex')
     $('.update_avt').hide()
 
   })
