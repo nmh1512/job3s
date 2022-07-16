@@ -15,14 +15,14 @@
   ?>
     <div class="container_about info_com contact_page_container">
       <section>
-        <div class="info_com_banner d_flex plr_resp bg_white space_b">
+        <div class="info_com_banner d_flex plr_resp bg_white space_b download_app">
           <div>
             <h1 class="font_s22 main_color">Ứng dụng di động Job3s miễn phí</h1>
             <p class="mt_12">
               Ứng tuyển, đăng tin tuyển dụng dễ dàng, mọi lúc mọi nơi ngay trên
               thiết bị di động.
             </p>
-            <div class="d_flex space_b mt_48 box_download_info w_85pt">
+            <div class="d_flex space_b mt_48 box_download_info w_85pt box_download_reverse">
               <div class="text_c">
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
@@ -39,7 +39,7 @@
                   <a
                     class="btn_main_color d_flex align_c flex_center shadow_15"
                     href=""
-                    >Tải App CV365</a
+                    >Tải App CV Job3s</a
                   >
                 </div>
               </div>

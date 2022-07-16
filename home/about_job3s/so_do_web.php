@@ -108,12 +108,12 @@
             <p class="mt_12">
                 Tải ngay app để đăng tin và tìm việc làm miễn phí
             </p>
-            <div class="d_flex space_b mt_24 box_download_info w_65pt">
+            <div class="d_flex space_b mt_24 box_download_info w_65pt box_download_reverse">
               <div class="text_c">
                 <p class="mb_24">Ứng dụng tìm việc Job3s</p>
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
-                  <a class="btn_bg_white d_flex align_c flex_center border_none shadow_15" href=""
+                  <a class="btn_bg_white d_flex align_c flex_center border_none shadow_15 p_0_21" href=""
                     >Tải App tìm việc Job3s</a
                   >
                 </div>
@@ -122,8 +122,8 @@
                 <p class="mb_24">Ứng dụng CV Job3s</p>
                 <img src="../../images/app_qr.svg" alt="" />
                 <div class="url_download">
-                  <a class="btn_bg_white d_flex align_c flex_center border_none shadow_15" href=""
-                    >Tải App CV365</a
+                  <a class="btn_bg_white d_flex align_c flex_center border_none shadow_15 p_0_21" href=""
+                    >Tải App CV Job3s</a
                   >
                 </div>
               </div>
