@@ -47,8 +47,8 @@
               </div>
 
               <button class="btn_chung bg_green">Xuất excel</button>
-              <div class="mt_24 d_flex align_c uv_filter">
-                <div>
+              <div class="m-0 d_flex align_c uv_filter flex_w">
+                <div class="mt_24">
                   <select name="" id="" class="_filter filter_box">
                     <option value="1" selected>Tất cả nguồn hồ sơ</option>
                     <option value="2">Ứng tuyển</option>
@@ -56,7 +56,7 @@
                     <option value="4">Hồ sơ tìm kiếm</option>
                   </select>
                 </div>
-                <div>
+                <div class="mt_24">
                   <select name="" id="" class="_filter filter_box">
                     <option value="1" selected>Tất cả trạng thái hồ sơ</option>
                     <option value="2">CV tiếp nhận</option>

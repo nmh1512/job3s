@@ -49,7 +49,7 @@
         </div>
         <div class="thong_ke_table_container">
           <div class="tuyen_dung_filter d_flex align_c flex_w">
-            <div class="position_r">
+            <div class="position_r mr_24">
               <input type="text" class="filter_box" placeholder="Tìm ứng viên" />
               <img src="../images/seach_green.svg" alt="" class="position_a img_search" />
             </div>

@@ -171,6 +171,7 @@
           toolbar: {
             show: false,
           },
+          width: 1171
         },
         plotOptions: {
           bar: {
