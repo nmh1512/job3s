@@ -42,7 +42,7 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Video giới thiệu bản thân</h2>
                     </div>
 
-                    <div class="video_susses mt_24" >
+                    <div class="video_susses mt_24">
                         <span class="font_s16 line_h20 font_w400 cl_a4">Video giới thiệu bản thân đã tải lên</span>
                         <div class="video_peolpe mt_16">
                             <video controls class="img_full br_16">
@@ -161,16 +161,19 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
-        $('.btn_del_video').click(function (e) {
+        $('.btn_del_video').click(function(e) {
             e.preventDefault();
-            let {infor_menu} = viewAndClosePopupUpdate('#del_video', '.main_popup', '.close_popup', '.cancel');
+            let {
+                infor_menu
+            } = viewAndClosePopupUpdate('#del_video', '.main_popup', '.close_popup', '.cancel');
             let dong_y = infor_menu.querySelector('.dong_y');
-            if(dong_y) {
+            if (dong_y) {
                 dong_y.onclick = () => {
                     location.href = this.getAttribute('href');
                 }
             }
         })
+        heightVideo()
     </script>
 </body>
 

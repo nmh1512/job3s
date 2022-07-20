@@ -150,9 +150,6 @@ function validateEmail(email) {
   return emailReg.test(email);
 }
 
-
-
-
 function DropFiles(elementFiles, callBack = () => {}) {
   if (elementFiles) {
     elementFiles.ondrop = function (e) {
@@ -374,9 +371,6 @@ function changeAjax({
   console.log(elemPr);
   if (classChange) {
     let chil = [...elemPr.children];
-
-  console.log(chil);
-
 
     if (chil) {
       chil.forEach((e) => {
@@ -817,4 +811,21 @@ function sliderBarToggle ({
       if(mb) elemClick.parentElement.removeChild(mb)
     }
   }
+}
+
+
+function heightVideo() {
+  let h = $('.video_peolpe').outerHeight();
+  $('.video_peolpe').children().css({
+      'height': `${h}px`
+  })
+
+  $(window).resize(function() {
+      let prop = $('.video_peolpe').children().prop("style");
+      prop.removeProperty("height");
+      h = $('.video_peolpe').outerHeight();
+      $('.video_peolpe').children().css({
+          'height': `${h}px`
+      })
+  })
 }

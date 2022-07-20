@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/style_h.css">
+    <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Danh sách tin tuyển dụng</title>
 </head>
@@ -410,22 +409,6 @@
             classShow: '.menu_moblie',
             breackpoint: 1260
         })
-
-
-        let isClick = false;
-        $('.cl_poup_if').click(function() {
-            if (!isClick) {
-                $('.drop_down').css({
-                    transform: 'rotate(180deg)'
-                })
-            } else {
-                $('.drop_down').css({
-                    transform: 'rotate(0deg)'
-                })
-            }
-            isClick = !isClick;
-            $('.popup_account').slideToggle(300)
-        });
     </script>
 </body>
 
