@@ -188,6 +188,11 @@ function validateEmail(email) {
   return emailReg.test(email);
 }
 
+function isCheckPass (value) {
+  // Tối thiểu 6 ký tự, ít nhất một ký tự hoa, một ký tự viết thường, một số và một ký tự đặc biệt:
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(value);
+}
+
 function viewPopup(selector) {
   let elm = document.querySelector(selector);
 
@@ -513,9 +518,6 @@ function changeAjax({
   console.log(elemPr);
   if (classChange) {
     let chil = [...elemPr.children];
-
-  console.log(chil);
-
 
     if (chil) {
       chil.forEach((e) => {

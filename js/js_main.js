@@ -16,3 +16,4 @@ function toggleNav() {
   $(".nav_menu_btn button").toggleClass("bg_white");
   $(".nav_header").toggleClass("bg_white");
 }
+
