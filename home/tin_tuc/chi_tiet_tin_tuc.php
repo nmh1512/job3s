@@ -21,9 +21,12 @@
   include "../../includes/before_header.php";
   ?>
 
-  <div class="news_wrapper main_container_p0 bg_f5">
-    <div class="news_banner">
+  <div class="news_wrapper main_container_p0 bg_f5 news_detail_container">
+    <div class="news_banner news_banner_pc">
       <img class="w_100" src="../../images/news_banner.png" alt="" />
+    </div>
+    <div class="news_banner news_banner_mb">
+      <img class="w_100" src="../../images/news_banner_big.svg" alt="" />
     </div>
     <div class="news_detail plr_resp pd_t_20 pb_24 bg_f5">
       <div class="d_flex news_detail_content d_flex align_s">
@@ -68,7 +71,7 @@
                   bản, biết cách sử dụng internet một cách hữu ích và sử dụng
                   các phần mềm như Word, Excel, Powerpoint thành thạo…
                 </p>
-                <div style="width: 67%" class="box_center ptb_16">
+                <div class="box_center mtb_16 img_item_detail_news">
                   <img class="w_100" src="../../images/doggo.jpg" alt="" />
                 </div>
                 <p class="gray">
@@ -89,7 +92,7 @@
                   bản, biết cách sử dụng internet một cách hữu ích và sử dụng
                   các phần mềm như Word, Excel, Powerpoint thành thạo…
                 </p>
-                <div style="width: 67%" class="box_center ptb_16">
+                <div class="box_center mtb_16 img_item_detail_news">
                   <img class="w_100" src="../../images/doggo.jpg" alt="" />
                 </div>
                 <p class="gray">
@@ -117,7 +120,7 @@
                   bản, biết cách sử dụng internet một cách hữu ích và sử dụng
                   các phần mềm như Word, Excel, Powerpoint thành thạo…
                 </p>
-                <div style="width: 67%" class="box_center ptb_16">
+                <div class="box_center mtb_16 img_item_detail_news">
                   <img class="w_100" src="../../images/doggo.jpg" alt="" />
                 </div>
                 <p class="gray">
@@ -175,7 +178,7 @@
             <div class="mb_32 position_r text_c">
               <h2 class="font_s24 font_w500">Chia sẻ</h2>
             </div>
-            <div class="d_flex align_c flex_center">
+            <div class="d_flex align_c flex_center flex_w share_news_container">
               <a class="d_flex align_c flex_center mr_16 btn_r100 b_d9 gray" href=""><img class="wh_14 p_0" src="../../images/f_logo.png" alt="">facebook</a>
               <a class="d_flex align_c flex_center mr_16 btn_r100 b_d9 gray" href=""><img class="wh_14 p_0" src="../../images/i_logo.png" alt="">instagram</a>
               <a class="d_flex align_c flex_center btn_r100 b_d9 gray" href=""><img class="wh_14 p_0" src="../../images/t_logo.png" alt="">Twitter</a>
@@ -217,78 +220,29 @@
       </div>
       <div class="pt_24 news_item_list">
         <div class="d_flex flex_w list_news_container">
-          <div class="list_news_container_item">
-            <div>
-              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+          <? for ($i = 0; $i < 10; $i++) { ?>
+            <div class="list_news_container_item">
               <div>
-                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
-                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
-                  Người Nước Ngoài
-                </h3>
-                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
-                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
-                  biết chưa? Nếu bạn đang ...
-                </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Kinh nghiệm tìm việc ★</span>
+                <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
+                <div>
+                  <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
+                    Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
+                    Người Nước Ngoài
+                  </h3>
+                  <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
+                    Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
+                    biết chưa? Nếu bạn đang ...
+                  </p>
+                  <div class="info_news d_flex align_c flex_w">
+                    <p class="line_h26">Nguyễn Lan Anh</p>
+                    <p class="line_h26">01/06/2022</p>
+                    <span class="orange">Kinh nghiệm tìm việc ★</span>
+                  </div>
+
+                </div>
               </div>
             </div>
-          </div>
-          <div class="list_news_container_item">
-            <div>
-              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
-              <div>
-                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
-                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
-                  Người Nước Ngoài
-                </h3>
-                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
-                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
-                  biết chưa? Nếu bạn đang ...
-                </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Kinh nghiệm tìm việc ★</span>
-              </div>
-            </div>
-          </div>
-          <div class="list_news_container_item">
-            <div>
-              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
-              <div>
-                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
-                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
-                  Người Nước Ngoài
-                </h3>
-                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
-                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
-                  biết chưa? Nếu bạn đang ...
-                </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Kinh nghiệm tìm việc ★</span>
-              </div>
-            </div>
-          </div>
-          <div class="list_news_container_item">
-            <div>
-              <img class="border_r16 mb_24 w_100 h_183" src="../../images/doggo.jpg" alt="" />
-              <div>
-                <h3 class="w_100 text_ellipsis ellip_line2 font_w500 font_s16 mb_16 line_h24">
-                  Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho
-                  Người Nước Ngoài
-                </h3>
-                <p class="color_75 text_ellipsis ellip_line2 mb_12 line_h24">
-                  Giấy xác nhận kinh nghiệm làm việc được viết khi nào bạn đã
-                  biết chưa? Nếu bạn đang ...
-                </p>
-                <p class="mb_8 line_h26">Nguyễn Lan Anh</p>
-                <p class="mb_8 line_h26">01/06/2022</p>
-                <span class="orange">Kinh nghiệm tìm việc ★</span>
-              </div>
-            </div>
-          </div>
+          <? } ?>
         </div>
       </div>
 
@@ -304,22 +258,47 @@
   <script type="text/javascript" src="../../js/slick.min.js"></script>
   <script src="../../js/js_h.js"></script>
   <script>
-    $(".list_news_container").slick({
-      // slidesPerRow: 3,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: true,
+    var ww = $(window).innerWidth();
 
-      responsive: [{
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      }, ],
-    });
+    if (ww <= 480) {
+      $('.list_news_container').slick({
+        dots: true,
+        infinite: true,
+        rows: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+      });
+    } else {
+      $('.list_news_container').slick({
+
+        dots: true,
+        // arrows: true,
+        infinite: true,
+        // speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 481,
+            settings: {
+
+              // slidesPerRow: 1,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              rows: 2,
+            },
+          }
+
+        ]
+      });
+    }
   </script>
 </body>
 

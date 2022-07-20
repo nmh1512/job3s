@@ -32,7 +32,7 @@
             </ul>
             <div class="account">
                 <ul>
-                    <li class="login show_popup_choose" onclick="show_popup_choose(this)">
+                    <li class="login show_popup_choose cursor_p" onclick="show_popup_choose(this)">
                         Đăng nhập
                         <div class="popup_choose">
                             <a href="authen/dang-nhap-ung-vien" class="popup_choose_top d_flex align_c">
