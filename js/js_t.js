@@ -150,6 +150,12 @@ function validateEmail(email) {
   return emailReg.test(email);
 }
 
+function isCheckPass (value) {
+  // Tối thiểu 6 ký tự, ít nhất một ký tự hoa, một ký tự viết thường, một số và một ký tự đặc biệt:
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(value);
+}
+
+
 
 
 
@@ -374,9 +380,6 @@ function changeAjax({
   console.log(elemPr);
   if (classChange) {
     let chil = [...elemPr.children];
-
-  console.log(chil);
-
 
     if (chil) {
       chil.forEach((e) => {
@@ -817,4 +820,21 @@ function sliderBarToggle ({
       if(mb) elemClick.parentElement.removeChild(mb)
     }
   }
+}
+
+
+function heightVideo() {
+  let h = $('.video_peolpe').outerHeight();
+  $('.video_peolpe').children().css({
+      'height': `${h}px`
+  })
+
+  $(window).resize(function() {
+      let prop = $('.video_peolpe').children().prop("style");
+      prop.removeProperty("height");
+      h = $('.video_peolpe').outerHeight();
+      $('.video_peolpe').children().css({
+          'height': `${h}px`
+      })
+  })
 }

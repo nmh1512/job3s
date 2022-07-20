@@ -133,10 +133,11 @@
 .cv_select .select2-container .select2-selection--single .select2-selection__rendered {font-size: 14px;line-height: 28px;font-weight: 400;color: #88929B;}
 .cv_select .select2-container--default .select2-selection--single {border-color: rgba(6, 18, 36, 0.1);padding-left: 0;height: 100%;}
 .cv_select .select2-container--default .select2-selection--single .select2-selection__arrow {top: 50%;transform: translateY(-50%);right: 10px;}
+.custom_select .select2-container {width: 100% !important;}
 .list_job {display: flex;flex-wrap: wrap;}
 .job_item {cursor: pointer;margin-bottom: 16px;transition: all .4s ease;border: 1px solid #737373;border-radius: 16px;padding: 7px 15px; width: fit-content;margin-right: 8px;}
 .job_item:hover {border-color: #007580; color: #007580;}
-label.error {margin-top: 5px;color: #EA4335;}
+label.error {margin-top: 5px;color: #EA4335;font-weight: 500;display: inline-block;}
 .tb_diemloc.table.table tbody tr td {border-right: 0;}
 .mb_node {display: none;}
 /* nhà tuyển dụng */
@@ -177,8 +178,9 @@ label.error {margin-top: 5px;color: #EA4335;}
 .cus_cb {position: relative;transition: all .3s ease;display: block;width: 16px;height: 16px;background-color: #D9D9D9;border-radius: 4px; cursor: pointer;}
 .item_add_muc {padding: 12px 16px 11px;}
 .cus_btn_sx {width: 22px;height: 22px;border-radius: 4px;background-color: #FFFFFF;border: 2px solid #D1D1D1}
+.cus_ntd {width: 16px;height: 16px;border-radius: 4px;border: 2px solid #4A4A4A;background-color: #FFFFFF;}
 .cb_cus_ip:checked + label {background-color: #005E66;}
-.cb_cus_ip:checked + label.cus_btn_sx {border-color: #005E66;}
+.cb_cus_ip:checked + label:is(.cus_btn_sx,.cus_ntd) {border-color: #005E66;}
 .cb_cus_ip:checked + label::before {content: '';background: url('../images/check_md_white.png') no-repeat center;width: 12px;height: 12px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9;animation: checked .3s linear;}
 @keyframes checked {from {width: 0;}to {width: 100%; }}
 .more_add_muc {position: absolute;background-color: #FFFFFF;z-index: 998;}
@@ -245,6 +247,9 @@ label.error {margin-top: 5px;color: #EA4335;}
 .pd_24 {padding: 24px;}
 .br_12 {border-radius: 12px;}
 .ml_68 {margin-left: 68px;}
+
+/* ----------------- */
+/* ------------- */
 
 /* tổng quan */
 .wbjsb {width: calc(100% - 253px);}

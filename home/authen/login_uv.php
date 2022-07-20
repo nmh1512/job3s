@@ -35,7 +35,7 @@
                                 <label for="email" class="d_flex align_c mr_10">
                                     <img src="../../images/email_blue.png" alt="">
                                 </label>
-                                <input type="text" id="email" name="email" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
+                                <input type="text" id="email" name="email" class="is_check_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
                             </div>
                         </div>
 
@@ -45,7 +45,7 @@
                                 <label for="password" class="d_flex align_c mr_10">
                                     <img src="../../images/pass_blue.png" alt="">
                                 </label>
-                                <input type="password" autocomplete="off" id="password" name="password" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
+                                <input type="password" autocomplete="off" id="password" name="password" class="is_check_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
                                 <div class="d_flex align_c cursor_p eye_btn">
                                     <img src="../../images/eve_open.png" alt="">
                                     <img src="../../images/eve_close.png" alt="">
@@ -105,14 +105,26 @@
     <script>
         eyeChange('.eye_btn', '#password', 'eye_hidden')
 
+
+        $.validator.addMethod("validatePassword", function (value, element) {
+            return this.optional(element) || /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(value);
+        })
+
+        $(".is_check_space").keypress(function(event) {
+            var character = String.fromCharCode(event.keyCode);
+            console.log(character)
+            return !(/\s/.test(character));
+        });
+
         $('#authe_uv').validate({
             rules: {
                 email: {
                     required: true,
-                    email: true
+                    email: validateEmail($(email).val())
                 },
                 password: {
-                    required: true
+                    required: true,
+                    validatePassword: true
                 }
             },
             messages: {
@@ -121,7 +133,8 @@
                     email: 'Trường này phải là email'
                 },
                 password: {
-                    required: 'Vui lòng nhập mật khẩu'
+                    required: 'Vui lòng nhập mật khẩu',
+                    validatePassword: 'Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số'
                 }
             },
             errorPlacement: function(error, element) {
