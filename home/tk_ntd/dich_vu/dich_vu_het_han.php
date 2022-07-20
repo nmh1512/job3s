@@ -45,11 +45,11 @@
               </div>
               <div class="d_flex align_c space_b select_filter_box filter_my_service">
                 <div class="d_flex align_c">
-                  <p class="font_w500 mr_8">Từ ngày:</p>
+                  <p class="font_w500 mr_8 white_s_nw">Từ ngày:</p>
                   <input type="date" class="choose_date">
                 </div>
                 <div class="d_flex align_c">
-                  <p class="font_w500 mr_8">Đến ngày:</p>
+                  <p class="font_w500 mr_8 white_s_nw">Đến ngày:</p>
                   <input type="date" class="choose_date">
                 </div>
               </div>

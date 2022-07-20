@@ -49,7 +49,7 @@
         </ul>
         <div class="account">
           <ul>
-            <li class="login show_popup_choose" onclick="show_popup_choose(this)">
+            <li class="login show_popup_choose cursor_p" onclick="show_popup_choose(this)">
               Đăng nhập
               <div class="popup_choose">
                 <a href="authen/dang-nhap-ung-vien" class="popup_choose_top d_flex align_c">
@@ -561,8 +561,8 @@
         slidesToScroll: data2,
         arrows: true,
         dots: true,
-        // centerMode: true,
-        // centerPadding: padding1,
+        centerMode: true,
+        centerPadding: padding1,
         prevArrow: "<img class='a-left control-c prev slick-prev img_arrow' src='../images/prev.svg'>",
         nextArrow: "<img class='a-right control-c next slick-next img_arrow' src='../images/next.svg'>",
       });
@@ -570,7 +570,7 @@
 
     $(document).ready(function() {  
       var ww = $(window).innerWidth();
-      console.log(ww);
+     
       var slide = 0
       var slide2 = 0
       var flag = true;
@@ -597,7 +597,7 @@
       } else {
         slide = 1
         padding = '5px'
-        padding1 = '30px'
+        padding1 = '5px'
         slide2 = 1
       }
       slickSlider(slide, padding, slide2, padding1)

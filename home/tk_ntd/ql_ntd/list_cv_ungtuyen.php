@@ -49,7 +49,7 @@
         </div>
         <div class="thong_ke_table_container">
         <div class="tuyen_dung_filter d_flex align_c flex_w">
-            <div class="position_r">
+            <div class="position_r mr_24">
               <input type="text" class="filter_box" placeholder="Tìm ứng viên" />
               <img src="../images/seach_green.svg" alt="" class="position_a img_search" />
             </div>
@@ -293,7 +293,7 @@
           </div>
         </div>
 
-        <div class="mt_24 d_flex align_c flex_center">
+        <div class="mt_24 d_flex align_c flex_center form_btns">
           <button class="btn_bg_white btn_r5 main_color dong_popup">Hủy</button>
           <button class="bg_s_green btn_r5">Cập nhật</button>
         </div>
@@ -332,7 +332,7 @@
           <p>
             Bạn có đồng xóa hồ sơ ứng tuyển của <span class="font_w500">Nguyễn Thị Hoa</span> không?
           </p>
-          <div class="popup_btn">
+          <div class="popup_btn form_btns">
             <button class="btn_popup_huy dong_popup">Hủy</button>
             <button class="btn_popup_xacnhan">Đồng ý</button>
           </div>

@@ -19,43 +19,35 @@
   ?>
 
   <div class="news_wrapper main_container_p0">
-    <div class="news_container pb_48 plr_resp bg_f5 pt_30 d_flex tile">
+    <div class="news_container pb_48 plr_resp bg_f5 pt_30 d_flex tile news_more ds_tintuc">
       <div class="news_container_bottom_left list_news mr_24">
         <div class="news_page_header">
           <div>
             <h2 class="border_0 main_color pb_16">Tin tức tổng hợp</h2>
           </div>
         </div>
-        <div class="pt_24 news_item_list">
-          <div class="border_r16 w_100">
-            <img class="w_100" src="../../images/news1.png" alt="">
-            <h3 class="mb_16 font_s24 font_w500 mt_24">Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho Người Nước Ngoài</h3>
-            <p class="text_ellipsis ellip_line2 line_h24 color_75 mb_16">Ngành kế toán nói riêng hay bất cứ ngành nghề nào nói chung hiện nay đều có những ưu và nhược điểm riêng. Nếu như ưu điểm khá rõ ràng thì nhược điểm của nhân viên kế toán lại là điều mà nhiều người chưa biết tới...</p>
-            <div class="d_flex align_c">
-              <p class="mr_16">Nguyễn Lan Anh</p>
-              <p class="mr_24">01/06/2022</p>
-              <span class="orange">Tin tổng hợp ★</span>
-            </div>
-          </div>
-          <div class="d_flex flex_w">
-            <div class="list_news_item d_flex mt_36">
-              <div class="mr_36">
+        <div class="pt_24 news_item_list _list_news">
+          <? for ($i = 0; $i < 10; $i++) { ?>
+            <div class="d_flex flex_w _list_news_item">
+              <div class="list_news_item d_flex mt_36">
+                <div class="mr_36">
 
-                <h4 class="font_w500 mb_16 text_ellipsis ellip_line1 font_s24">
-                Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho Người Nước Ngoài
-                </h4>
-                <p class="text_ellipsis ellip_line2 line_h24 mb_16">
-                  Ngành kế toán nói riêng hay bất cứ ngành nghề nào nói chung hiện nay đều có những ưu và nhược điểm riêng. Nếu như ưu điểm khá rõ ràng...
-                </p>
-                <div class="d_flex align_c">
-                  <p class="mr_16">Nguyễn Lan Anh</p>
-                  <p class="mr_24">01/06/2022</p>
-                  <span class="orange">Tin tổng hợp ★</span>
+                  <h4 class="font_w500 mb_16 text_ellipsis ellip_line1 font_s24">
+                    Thông Tin Chi Tiết Giấy Xác Nhận Kinh Nghiệm Làm Việc Cho Người Nước Ngoài
+                  </h4>
+                  <p class="text_ellipsis ellip_line2 line_h24 mb_16 color_75 line_h26">
+                    Ngành kế toán nói riêng hay bất cứ ngành nghề nào nói chung hiện nay đều có những ưu và nhược điểm riêng. Nếu như ưu điểm khá rõ ràng...
+                  </p>
+                  <div class="d_flex align_c">
+                    <p class="mr_16 line_h26">Nguyễn Lan Anh</p>
+                    <p class="mr_24 line_h26">01/06/2022</p>
+                    <span class="orange line_h26">Tin tổng hợp ★</span>
+                  </div>
                 </div>
+                <img class="border_r16" src="../../images/doggo.jpg" alt="" />
               </div>
-              <img class="border_r16" src="../../images/doggo.jpg" alt="" />
             </div>
-          </div>
+          <? } ?>
         </div>
       </div>
       <div class="news_container_bottom_right list_news">
@@ -74,7 +66,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -89,7 +81,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -104,7 +96,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -119,7 +111,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -159,7 +151,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -174,7 +166,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -189,7 +181,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>
@@ -204,7 +196,7 @@
                 <h4 class="font_w500 line_h24 mb_12">
                   Bài học kinh nghiệm sau khi đi thực tập, bước đệm cho đi làm
                 </h4>
-               <div class="d_flex align_c mb_8 flex_w info_news">
+                <div class="d_flex align_c mb_8 flex_w info_news">
                   <p class="mr_8 line_h24">Nguyễn Lan Anh</p>
                   <span class="orange line_h24">Kinh nghiệm tìm việc</span>
                   <p class="mt_8">01/06/2022</p>

@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/style_t.css" />
     <link rel="stylesheet" href="../../../css/style_h.css" />
   </head>
 
   <body>
+  <?
+    include "../../../includes/after_header.php";
+    ?>
     <section>
       <div class=" box_center">
         <div class="xacthuc_header bg_wblue">

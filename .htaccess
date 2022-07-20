@@ -38,6 +38,8 @@ RewriteRule ^danh-sach-ung-vien$ /home/tk_ntd/ds_ungvien/list_ungvien.php [NE,L]
 RewriteRule ^dich-vu-dang-chay$ /home/tk_ntd/dich_vu/dich_vu_dang_chay.php [NE,L]
 RewriteRule ^dich-vu-het-han$ /home/tk_ntd/dich_vu/dich_vu_het_han.php [NE,L]
 RewriteRule ^chuyen-vien-cskh$ /home/tk_ntd/cskh/chuyen_vien_cskh.php [NE,L]
+RewriteRule ^xac-thuc-tai-khoan-nha-tuyen-dung$ /home/tk_ntd/ql_ntd/xacthuc_ntd.php [NE,L]
+
 RewriteRule ^chi-tiet-ung-vien$ /home/tk_uv/ql_uv/chitiet_uv.php [NE,L]
 RewriteRule ^gioi-thieu-chung$ /home/about_job3s/gioi_thieu_chung.php [NE,L]
 RewriteRule ^thong-tin-can-biet$ /home/about_job3s/thong_tin_can_biet.php [NE,L]
@@ -133,6 +135,8 @@ RewriteRule ^tin-tuyen-dung/chi-tiet-tin-tuyen-dung$ /home/tin_tuyen_dung/detail
 #
 RewriteRule ^chi-tiet-ung-vien-ntd$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
 RewriteRule ^tim-ung-vien$ /home/tk_uv/ql_uv/tim_uv.php [NE,L]
+RewriteRule ^goi-y-tim-viec$ /home/tk_uv/ql_uv/goi_y_tim_viec.php [NE,L]
+
 
 
 
