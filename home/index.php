@@ -518,8 +518,9 @@
   <a class="back_to_top"><img class="m-0" src="../images/back_to_top.svg" alt="" /></a>
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/select2.min.js"></script>
-  <script type="text/javascript" src="../js/slick.min.js"></script>
+  <script type="text/javascript" src="../js/slick.min.js"></script> 
   <script src="../js/js_h.js"></script>
+  <script src="../js/js_main.js"></script>
   <script>
     $(".select_location").select2({
       placeholder: "Tất cả địa điểm",
@@ -606,14 +607,12 @@
 
 
     });
-    // ScrollReveal().reveal('.tile', {
-    //   interval: 16,
-    //   reset: true
-    // });
+    ScrollReveal().reveal('.tile', {
+      interval: 16,
+      reset: true
+    });
 
-    $('.nav_menu_btn button').click(function() {
-      toggleNav()
-    })
+  
     var wi = $(window).innerWidth();
     if (wi <= 480) {
         $('.btn_up_cv').text('Tải lên CV ngay')
@@ -634,21 +633,7 @@
       slickSlider(slide)
     })
 
-    $('.nav_resp').click(function(e) {
-      var t = $(this).children('div').offset().top
-      var h = $(this).children('div').outerHeight()
-      var y = e.offsetY
-      if (t < y || h > y) {
-        toggleNav()
-      }
-    })
 
-    function toggleNav() {
-      $('.nav_resp').slideToggle();
-      $('.nav_menu_btn button').toggleClass('.bg_e5_86')
-      $('.nav_menu_btn button').toggleClass('bg_white')
-      $('.nav_header').toggleClass('bg_white')
-    }
   </script>
 </body>
 

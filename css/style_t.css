@@ -246,28 +246,7 @@ label.error {margin-top: 5px;color: #EA4335;}
 .pd_24 {padding: 24px;}
 .br_12 {border-radius: 12px;}
 .ml_68 {margin-left: 68px;}
-/* header sau đăng nhập */
-.header_after {z-index: 999;background-color: #FFFFFF;justify-content: space-between;padding: 24px 68px;display: flex; align-items: center;position: fixed;top: 0;left: 0;right: 0;box-shadow: 0px 2px 6px 0px #00000029;}
-.header_after_right, .header_after_left,.infor_people {display: flex;align-items: center;}
-.header_after_left {cursor: pointer;}
-.infor_people {padding-left: 16px;position: relative;}
-.header_after_right .nav_header {margin-right: 31px;}
-.nav_header > :is(a, span, p) {margin-left: 46px;}
-.notification,.inbox_ms {cursor: pointer;display: flex;align-items: center;justify-content: center;width: 42px;height: 42px;background-color: #E5FDFF;border-radius: 50%;}
-.infor_people > div:not(:last-child) {margin-right: 12px;}
-:is(.notification,.inbox_ms) > img {width: 22px;height: 22px;}
-.inf {background-color: #E5FDFF;padding: 4px;border-radius: 100rem;padding-right: 15px;width: 232px;}
-.avt_header {width: 34px;height: 34px;border-radius: 50%;overflow: hidden;margin-right: 8px;flex-shrink: 0;}
-.avt_header > img {width: 100%;height: 100%;border-radius: 50%;}
-.drop_down {margin-left: 15px;flex-shrink: 0;}
-.name_peole {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-.infor_people::before {content: '';position: absolute;height: 24px;width: 1px;top: 50%;transform: translateY(-50%);left: 0;background-color: #007580;}
-/* slider bar */
-.slider_bar {position: fixed;top: 89px;left: 0;bottom: 0;width: 253px;background-color: #FFFFFF;z-index: 11}
-.slider_bar > .scroll_bar > :is(a, span, div) {padding: 15px 16px;cursor: pointer;transition: background-color .5s ease;}
-.slider_bar > .scroll_bar> :is(a, span, div):hover,.slider_bar > .scroll_bar > .active_bar {background-color: #F5FEFF;}
-.scroll_bar {overflow-y: auto;height: 100%;}
-.item_bar > div > img {margin-right: 0;}
+
 /* tổng quan */
 .wbjsb {width: calc(100% - 253px);}
 .mt_90 {margin-top: 90px;}
@@ -726,17 +705,7 @@ div#circle {position: relative;width: 50px;height: 50px;}
 }
 
 @media screen and (max-width: 1260px) {
-    /* headear, slider bar */
-    .header_after {padding: 16px 24px;}
-    .header_after_right .nav_header {display: none;}
-    .header_after_right {position: absolute;right: 16px;}
-    .header_after_left {flex: 1;display: flex;align-items: center;justify-content: center;}
-    .infor_people{padding-left: 0;}
-    .infor_people>div:nth-child(2) {margin-right: 0;}
-    .infor_people::before {content: unset;}
-    .infor_people> div:last-child {display: none !important;}
-    /* .slider_bar {display: none;} */
-    .menu_moblie {display: flex;align-items: center;cursor: pointer;}
+   
     /* tổng quan */
     .mt_90 {margin-top: 74px;}
     .wbjsb {width: 100%;}
