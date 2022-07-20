@@ -11,7 +11,6 @@
             <a href="tin-tuc" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
             <a href="lien-he" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
         </div>
-
     </div>
     <div class="header_after_left">
         <a href="" class="d_flex center_center">
