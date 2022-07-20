@@ -234,8 +234,7 @@ label.error {margin-top: 5px;color: #EA4335;}
 .hover_td,.hover_chat {transition: background-color .4s ease;}
 .hover_td:hover {color: white;background-color: #007580;}
 .hover_chat:hover {color: white;background-color: #009638;}
-.copyeid {position: relative;}
-.message_copytied {white-space: nowrap;position: absolute;top: 0;left: 50%;transform: translate(-50%, -119%);background-color: #6c6c6c85;padding: 10px;color: white;border-radius: 20px;}
+
 .popup_591 {width: 591px;}
 .pd_48_68 {padding: 48px 68px;}
 .pd_19_18 {padding: 19px 10px 18px;}

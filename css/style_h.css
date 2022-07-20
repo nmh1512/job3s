@@ -57,7 +57,7 @@
   .download_container_content ul li::before{content: url('../images/checked_green.svg'); padding-right: 10px; vertical-align: middle;}
   .download_container_content ul li{padding-bottom: 16px;}
   .download_container_content ul {margin-top: 24px;}
-
+  .select_vali {flex-direction: column-reverse; display: flex;}
   .btn_main_color{font-size: 16px;background: #007580;border-radius: 100px; color: #ffffff; font-weight: 500; height: 42px; padding: 0 20px 0 21px; border: 0;}
   .btn_main_color:hover{background: #005E66;}
   .url_download .btn_main_color::before{content: url(../images/download_icon.svg); height: 16px; vertical-align: middle; padding-right: 6px;}
