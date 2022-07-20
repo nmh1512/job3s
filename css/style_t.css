@@ -246,6 +246,7 @@ label.error {margin-top: 5px;color: #EA4335;}
 .pd_24 {padding: 24px;}
 .br_12 {border-radius: 12px;}
 .ml_68 {margin-left: 68px;}
+<<<<<<< HEAD
 /* header sau đăng nhập */
 .header_after {z-index: 999;background-color: #FFFFFF;justify-content: space-between;padding: 24px 68px;display: flex; align-items: center;position: fixed;top: 0;left: 0;right: 0;box-shadow: 0px 2px 6px 0px #00000029;}
 .header_after_right, .header_after_left,.infor_people {display: flex;align-items: center;}
@@ -268,6 +269,9 @@ label.error {margin-top: 5px;color: #EA4335;}
 .slider_bar > .scroll_bar> :is(a, span, div):hover,.slider_bar > .scroll_bar > .active_bar {background-color: #F5FEFF;}
 .scroll_bar {overflow-y: auto;height: 100%;}
 .item_bar > div > img {margin-right: 0;}
+=======
+
+>>>>>>> hung
 /* tổng quan */
 .wbjsb {width: calc(100% - 253px);}
 .mt_90 {margin-top: 90px;}
@@ -726,6 +730,7 @@ div#circle {position: relative;width: 50px;height: 50px;}
 }
 
 @media screen and (max-width: 1260px) {
+<<<<<<< HEAD
     /* headear, slider bar */
     .header_after {padding: 16px 24px;}
     .header_after_right .nav_header {display: none;}
@@ -737,6 +742,9 @@ div#circle {position: relative;width: 50px;height: 50px;}
     .infor_people> div:last-child {display: none !important;}
     /* .slider_bar {display: none;} */
     .menu_moblie {display: flex;align-items: center;cursor: pointer;}
+=======
+   
+>>>>>>> hung
     /* tổng quan */
     .mt_90 {margin-top: 74px;}
     .wbjsb {width: 100%;}

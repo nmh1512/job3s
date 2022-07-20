@@ -1,21 +1,6 @@
   body{color: #4A4A4A;}
   /* h1, h2, h3, h4, h5, h6 {font-weight: 500;} */
-  header#header{background: url(../images/background_header.png) no-repeat; background-size: 100% 100%; height: 625px;}
-  header#header .nav_header{padding: 25px 68px 15px; transition: all .5s ease; background: url(../images/background_header.png) no-repeat; background-size: 100%; position: fixed; width: 100%; z-index: 99999;}
-  header#header nav ul li{display: inline-block; font-weight: 500;}
-  a{color: #4A4A4A;}
-  p{color: #595959;}
-  a img {margin-right: 7px;}
-  .slick-slide[aria-hidden="true"]{opacity: unset !important;}
-  .nav_header_items li {margin-left: 16px;}
-  .nav_header_items {padding-right: 30px;border-right: 1px solid #007580; line-height: 24px;}
-  .nav_header_items a{padding: 12px 15px 11px; border-radius: 100px;}
-  .nav_header_items a:hover{background: rgba(255, 255, 255, 0.68); color: #007580;}
-  .nav_menu_btn, .nav_resp {display: none;}
 
-  header.before_header{background: unset !important; height: 90px !important; position: fixed; z-index: 100; top: 0; width: 100%; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);}
-  header.before_header .nav_header{padding: 24px 68px !important;}
-  header#header .account li{ margin-left: 16px;}
   .container_about {margin-top: 90px;}
   .account .sign_in {color: #007580; border: 1px solid #007580; border-radius: 100px; text-align: center; padding: 11px 20px; cursor: pointer; position: relative;}
   .account .login {padding: 11px 20px; position: relative; border-radius: 100px;}
@@ -679,10 +664,11 @@
   .footer{width: 1230px;}
   .filter_my_service {justify-content: start;}
   .filter_my_service > div:first-child{margin-right: 12px;}
+  .tuyen_dung_table table {width: 100%;}
+
   }
 
   @media screen and (min-width: 1520px) {
-    header#header .nav_header, .banner_header, .footer_container, .new_works_header{padding-left: 145px; padding-right: 145px;}
     .key_trend{padding-left: 145px;}
     .download_container{width: 70%;}
   .new_works_content_item {width: 31.35% !important;}
@@ -701,7 +687,6 @@
   .tamnhin_container > div:last-child{width: 54%;}
   .plr_resp{padding-left: 145px; padding-right: 145px;}
   .contact_us{left: 145px;     width: 32.85%;}
-  .tuyen_dung_table table {width: 100%;}
   .filter_my_service{width: 49%;}
   }
   @media screen and (min-width: 1920px) {
@@ -709,14 +694,7 @@
   }   
 
   @media screen and (max-width: 1024px) {
-    header#header {background: #ffffff;}
-    header#header .nav_header{padding: 16px 24px !important;}
-    header#header .nav_header nav{display: none !important;}
-    header#header .nav_header {justify-content: center;}
-    .nav_menu_btn{left: 24px; display: block;}
-    .nav_menu_btn button {transition: all .5s ease;}
-    .nav_resp a img {padding-right: 11px;}
-    .nav_resp {top: 75px; z-index: 999; background: rgba(0,0,0,.7); height: 100vh;}
+   
     .banner_header_left {width: 100%;}
     .banner_header_right {display: none;}
     .download_container {width: unset; padding-left: 40px; padding-right: 40px;}
@@ -740,8 +718,7 @@
     .news_content .slick-next, .customer .slick-next{right: 40px;}
   .img_footer_contact{margin-top: 32px; flex-wrap: nowrap; display: flex;}
   .img_footer_contact > div:first-child {width: 60%;}
-  .before_header .nav_header{padding-bottom: 12px !important;}
-  header.before_header{height: 78px !important; position: fixed; z-index: 999;}
+
   .gioithieu_header_img {display: none;}
   .plr_resp {padding-left: 40px; padding-right: 40px;}
   .container_about{margin-top: 78px;}
@@ -992,7 +969,6 @@
   .banner_header_search {padding: 0;}
   .search_container > div, .btn_search_job{border-radius: 10px; margin-bottom: 20px; height: 42px; width: 100%;}
   .key_trend{display: none !important;}
-  header#header{height: 450px;}
   .download_container_content{width: 100%;}
   .download_container{padding-left: 24px; padding-right: 23px; padding-bottom: 48px;}
   .download_container_content h1 {font-size: 24px;}
