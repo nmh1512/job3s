@@ -15,7 +15,7 @@
         <div class="authen d_flex bg_white">
             <div class="authen_left pd_25 w_50pt">
                 <div class="fit_content">
-                    <a href="#">
+                    <a href="/">
                         <div class="d_flex align_c">
                             <div class="d_flex align_c mr_5">
                                 <img src="../../images/arr_blue.png" alt="">
@@ -58,9 +58,9 @@
                         </div>
 
                         <div class="authen_extend mt_15 d_flex space_b">
-                            <span class="font_s16 line_h19 font_w400 cl_a4">Bạn chưa có tài khoản? <a href="/authen/dang-ky-ung-vien.html" class="font_w700 cl_oran">Đăng ký ngay</a></span>
+                            <span class="font_s16 line_h19 font_w400 cl_a4">Bạn chưa có tài khoản? <a href="/authen/dang-ky-ung-vien" class="font_w700 cl_oran">Đăng ký ngay</a></span>
 
-                            <a href="/authen/quen-mat-khau-ung-vien.html" class="font_s16 line_h19 font_w700 cl_primary">Quên mật khẩu?</a>
+                            <a href="/authen/quen-mat-khau-ung-vien" class="font_s16 line_h19 font_w700 cl_primary">Quên mật khẩu?</a>
                         </div>
 
                         <div class="authen_other">

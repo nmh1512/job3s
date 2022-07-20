@@ -15,7 +15,7 @@
         <div class="authen d_flex bg_white">
             <div class="authen_left pd_25 w_50pt">
                 <div class="fit_content">
-                    <a href="#">
+                    <a href="/authen/dang-nhap-ung-vien">
                         <div class="d_flex align_c">
                             <div class="d_flex align_c mr_5">
                                 <img src="../../images/arr_blue.png" alt="">

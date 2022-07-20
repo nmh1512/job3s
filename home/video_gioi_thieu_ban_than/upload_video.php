@@ -25,7 +25,7 @@
                             <p class="font_s16 line_h20 font_w500 cl_a4">Đính kèm video giới thiệu bản thân để gây ấn tượng với nhà tuyển dụng</p>
                             <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Video/clip tải lên <span class="font_w400 cl_73">(định dạng mp4)</span></span>
                             <div class="append_error">
-                                <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
+                                <div class="d_flex mt_6 bd_dc w_100 br_5 space_b file_drop upload_vd_ch vd_ul">
                                     <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
                                         <span data-placeholder="Tải lên video từ máy tính của bạn (Dung lượng tối đa 100MB)" class="append">Tải lên video từ máy tính của bạn (Dung lượng tối đa 100MB)</span>
                                         <div class="close_file align_c cursor_p d_none">

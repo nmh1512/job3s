@@ -20,7 +20,7 @@
                         <img src="../../images/check_medium.png" alt="" class="img_full">
                     </div>
                     <h3 class="font_s20 line_h23 font_w700 cl_primary mt_16">Đánh giá thành công</h3>
-                    <p class="font_s16 line_h19 font_w400 cl_55 mt_8">Cảm ơn bạn đã tin tưởng và sử dụng dịch vụ của chúng tôi! </p>
+                    <p class="font_s16 line_h19 font_w400 cl_55 mt_8 txt_center">Cảm ơn bạn đã tin tưởng và sử dụng dịch vụ của chúng tôi! </p>
                     <div class="form_submit d_flex center_center mt_16">
                         <a href="" class="btn flex_im center_center h_42 m_w140 br_5 font_s16 line_h19 font_w700 bg_td cl_white btn_primary">Đóng</a>
                     </div>

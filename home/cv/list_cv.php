@@ -94,8 +94,9 @@
     <div id="root">
         <?php include("../../includes/after_header.php") ?>
         <div class="container mt_90 pd_b48">
-            <div class="banner_cv h_400 bg_cv">
-                <div class="content_banner wf_tinhthanh">
+            <!-- add loại bỏ padding mb_cv_dt -->
+            <div class="banner_cv h_400 bg_cv bn_fuc mb_cv_dt">
+                <div class="content_banner wf_tinhthanh list_cv_banner">
                     <div class="heading_cv">
                         <h1 class="font_s28 line_h33 font_w700 cl_primary">Tạo CV hay nhận ngay việc làm</h1>
                         <p class="font_16 line_h19 font_w400 cl_55 mt_12">1000+ mẫu CV miễn phí đa dạng ngành nghề chỉ có tại Job3S</p>
@@ -181,7 +182,7 @@
                             </button>
                         </div>
                     </div>
-
+                    
                     <div class="mt_32 d_flex">
                         <div>
                             <span class="font_s16 line_h19 font_w500 cl_a4">Tải app tìm việc Job3s</span>
@@ -220,7 +221,40 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="mb_node">
+                            <button class="btn btn_hover_primary flex_im align_c br_100 pd_lr20 shdown_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">
+                                <div class="mr_6 d_flex align_c">
+                                    <img src="../../images/down_icon_white.png" alt="">
+                                </div>
+                                <span>Tải App tìm việc Job3s</span>
+                            </button>
+                        </div>
+
+                        <div class="mb_node">
+                            <button class="btn btn_hover_primary flex_im align_c br_100 pd_lr20 shdown_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">
+                                <div class="mr_6 d_flex align_c">
+                                    <img src="../../images/down_icon_white.png" alt="">
+                                </div>
+                                <span>Tải App CV Job3s</span>
+                            </button>
+                        </div>
                     </div>
+
+                    <!-- mobile 414 -->
+                    <!-- <div class="mb_cv_414">
+                        <div class="heading_mb">
+                            <h1 class="font_s28 line_h33 font_w700 cl_primary">Tạo CV ngay trên điện thoại</h1>
+                            <p class="font_16 line_h19 font_w400 cl_55 mt_12">1000+ mẫu CV miễn phí đa dạng ngành nghề chỉ có tại Job3S</p>
+                            <button class="btn btn_cv hover_oran h_100 flex_im align_c br_6 bg_ff99 cl_white">
+                                <span class="font_s16 line_h19 font_w700 currentColor white_s_nw">Tìm CV</span>
+                            </button>
+                        </div>
+
+                        <div class="mb_images d_flex align_c">
+                            <img src="../../images/mb_banner_cv.png" alt="">
+                        </div>
+                    </div> -->
                 </div>
 
                 <div class="img_tt d_flex align_e">

@@ -42,7 +42,7 @@
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Video giới thiệu bản thân</h2>
                     </div>
 
-                    <div class="video_susses mt_24 " style="display: none;">
+                    <div class="video_susses mt_24" >
                         <span class="font_s16 line_h20 font_w400 cl_a4">Video giới thiệu bản thân đã tải lên</span>
                         <div class="video_peolpe mt_16">
                             <video controls class="img_full br_16">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
 
-                    <div class="no_video no_result bg_w " >
+                    <div class="no_video no_result bg_w " style="display: none;">
                         <!--  -->
                         <div>
                             <img src="../../images/no_result.png" alt="">

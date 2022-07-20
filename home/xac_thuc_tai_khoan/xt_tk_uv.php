@@ -14,12 +14,12 @@
     <div id="root">
         <?php include("../../includes/after_header.php"); ?>
         <div class="container bg_fa d_flex flex_end">
-            <div class="content mt_90 pd_48_24_91 bg_f5fff w_100 d_flex flex_center">
+            <div class="content mt_90 pd_48_24_91 bg_f5fff w_100 d_flex flex_center xt_tk">
                 <div class="box_xt ">
-                    <!-- error cl_ff33 bg_ffe5 -->
-                    <div class="mess_box cl_green bg_e5" style="display: none;">
+                    <!-- error: cl_ff33 bg_ffe5 -->
+                    <div class="mess_box cl_green bg_e5" style="display: flex;">
                         <span class="font_s18 line_h21 font_w400 currentColor">Hoàn thành! Gửi email xác thực thành công.</span>
-                        <div class="cursor_p close">
+                        <div class="cursor_p close d_flex align_c">
                             <img src="../../images/close_gray.png" alt="">
                         </div>
                     </div>

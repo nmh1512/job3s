@@ -510,8 +510,12 @@ function changeAjax({
   callBack = () => {},
 }) {
   let elemPr = document.querySelector(listElem);
+  console.log(elemPr);
   if (classChange) {
     let chil = [...elemPr.children];
+
+  console.log(chil);
+
 
     if (chil) {
       chil.forEach((e) => {
@@ -701,8 +705,8 @@ function sizeChildrenTable(breackpoint, object) {
           chil[chil.length - 1].style.height = `${h}px`;
         });
       } else {
+        // m.classList.add('no_result_parent');
         if(!(th[th.length - 1].contains(elemCre))) {
-          // m.classList.add('no_result_parent');
           let w = th[th.length - 1].getBoundingClientRect().width;
           let h = th[th.length - 1].getBoundingClientRect().height;
           let hParent = m.getBoundingClientRect().height;
@@ -900,5 +904,56 @@ function scrollControlMobile ({
     }
 
     window.addEventListener('scroll', scrollCompare)
+  }
+}
+
+
+function sliderBarToggle ({
+  slideBar,
+  classShow,
+  breackpoint,
+}) {
+  let elemSlide = document.querySelector(slideBar);
+  let elemClick = document.querySelector(classShow);
+  let isClick = true;
+  if(elemSlide&&elemClick) {
+    let div = document.createElement('div');
+    div.className = 'overlay_mb';
+
+    elemClick.onclick = function () {
+      if(isClick) {
+        elemSlide.style.left='0';
+        isClick = false;
+        elemSlide.parentElement.appendChild(div);
+        if(div) {
+          div.onclick = function () {
+            elemSlide.style.left='-100%';
+            elemSlide.parentElement.removeChild(div);
+            div.onclick = null;
+            isClick = true;
+          }
+        }
+      }else {
+        elemSlide.style.left='-100%';
+        isClick = true;
+        if(div) {
+          elemSlide.parentElement.removeChild(div);
+        }
+      }
+    }
+
+    document.onresize = () => {
+      let w = window.innerWidth;
+
+      if(w > breackpoint) {
+        elemSlide.style.left='0';
+        isClick = false;
+      } else {
+        elemSlide.style.left='-100%';
+        isClick = true;
+      }
+      let mb = elemClick.parentElement.querySelector(`.overlay_mb`);
+      if(mb) elemClick.parentElement.removeChild(mb)
+    }
   }
 }
