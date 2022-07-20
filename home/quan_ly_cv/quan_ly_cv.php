@@ -17,7 +17,7 @@
             <?php include("../../includes/slider_bar.php"); ?>
             <div class="content wbjsb mt_90 pd_24 chil_24">
                 <div class="box_cty">
-                    <div class="d_flex align_c space_b">
+                    <div class="d_flex align_c space_b box_txt">
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">CV đã tạo trên Job3S</h2>
                         <div>
                             <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="box_cty">
-                    <div class="d_flex align_c space_b">
+                    <div class="d_flex align_c space_b box_txt">
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">CV đã tải lên Job3S</h2>
 
                         <div>
@@ -117,7 +117,7 @@
                             <p class="font_s16 line_h19 font_w400 cl_a4">Bạn đã có sẵn CV của mình, chỉ cần tải CV lên, hệ thống sẽ tự động đề xuất CV của bạn tới những nhà tuyển dụng uy tín. Tiết kiệm thời gian, tìm việc thông minh, nắm bắt cơ hội và làm chủ đường đua nghề nghiệp của chính mình.</p>
                             <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Tải CV <span class="font_w400 cl_73">(Files hỗ trợ: PDF, DOC, DOCX)</span></span>
                             <div class="append_error">
-                                <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
+                                <div class="d_flex mt_6 bd_dc w_100 br_5 space_b file_drop upload_vd_ch">
                                     <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
                                         <span data-placeholder="Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn" class="append">Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn</span>
                                         <div class="close_file align_c cursor_p d_none">
@@ -228,7 +228,7 @@
                                 <span class="font_s16 line_h19 font_w500 cl_73 block mt_8">Nhân viên bảo hiểm</span>
                                 <span class="font_s16 line_h19 font_w500 cl_73 block mt_8">1 năm kinh nghiệm</span>
 
-                                <div class="d_flex align_c mt_23 list_btn_tt chil_ml0">
+                                <div class="d_flex align_c mt_23 list_btn_tt chil_ml0 mb_btn_infor">
                                     <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" title="Xem trước" class="btn btn_xemtin btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">
                                         <div class="mr_6 d_flex align_c">
                                             <img src="../../images/eye_white_open.png" alt="">
@@ -343,7 +343,7 @@
             appendError: '.append_error',
             isDropFile: true,
             isAppenError: true,
-            classErorr: 'error_valid',
+            classErorr: 'is_valid_erorr',
             isTypeFileVaild: ['pdf', 'doc', 'docx'],
             customMessType: (file, type) => `File upload phải là tệp thuộc dạng: ${type.join(', ')}`,
             // customMessSize: '',
@@ -355,7 +355,7 @@
             $('.show_form_upload').slideDown(300, () => {
                 $('.btn_huy_upload').click(() => {
                     $('.show_form_upload').slideUp(300, () => {
-                        $('.append_error .error_valid').remove();
+                        $('.append_error .is_valid_erorr').remove();
                         $('.btn_huy_upload').unbind();
                     });
                     $('.show_upload').removeClass('btn_hidden');

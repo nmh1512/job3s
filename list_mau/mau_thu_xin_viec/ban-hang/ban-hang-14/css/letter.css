@@ -1,0 +1,198 @@
+#form-letter{
+	width: 100%;
+	height: 1130px;
+	float: left;	
+	color:#000000;
+	position: relative;
+	background: url(https://timviec365.vn/cv365/upload/letter/marketing-06/css/bg1.png)no-repeat bottom;
+	background-size: 100% 100%;
+}
+#lt-content{		
+    position: relative;
+    width: 86%;
+    float: left;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    padding-left: 55px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+#lt-top{		
+	color: #000000;
+	position: relative;
+	float: left;
+	width: 100%;
+	text-align: left;
+	padding-top: 60px;
+}
+
+#bg{
+	float: left;
+	width: 100%;
+
+}
+
+#lt-right{
+    margin: 0;
+    width: 100%;
+    position: relative;
+    float: left;
+}
+.ir{
+	float: left;
+}
+.box-hvt{
+    width: 95%;
+	float: right;
+}
+#title-name {
+	width: 65%;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	display: block;
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-align: left;
+	color: #208099;
+	float: left;
+	padding-left: 50px;
+	padding-top: 75px;
+}
+#lt-top h2{
+font-size: 14px;
+line-height: 18px;
+text-transform: capitalize;
+font-weight: bold;
+text-align: left;
+margin-bottom: 10px;
+float: right;
+width: 63%;
+clear: both;
+margin-top: -70px;
+color: #208099;
+}
+.box-01{
+	padding-top: 10px;
+	font-size: 14px;
+	width:100%;
+	float: left;
+	color: #ffffff
+}
+
+#lto-about{
+	margin: 5px 20px;
+	text-align: justify;
+}
+#lt-content .ir{
+	padding-top: 0;
+	
+}
+#lt-content p{
+	margin-bottom: 20px
+}
+#lt-content .ir a{
+	color: #323033
+}
+
+#lt-right .info{
+	background: #898989
+}
+#lt-right .box-02{	
+    width: 96%;
+    float: left;
+	padding-left: 53px;
+	padding-top: 10px;
+}
+#cvo-profile-avatar-wraper {
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 160px;
+    height: 180px;
+    cursor: pointer;
+    margin-left: 56px;
+    border: 4px solid #208099;
+    z-index: 99;
+}
+img#cvo-profile-avatar{
+	width: 160px;	
+	height: 180px;	
+	float: left;
+}
+#lto-name{
+	padding-right: 20px;
+}
+span#lto-day{
+	background: #fff;
+	border-left: 25px solid #fff;
+}
+.lto-day {
+	margin: 0;
+	padding: 0px 0px;
+	position: relative;
+	clear: both;
+	text-align: right;
+	width: 90%;
+	float: left;
+	margin-left: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	color: #000;
+}
+#lto-content{
+	line-height: 28px;
+}
+.ic{
+	float: left;
+	width: 80%;
+	margin: 0;
+	padding: 0;	
+
+}
+#form-letter .icf{
+float: left;
+font-size: 18px;
+height: 26px;
+width: 20px;
+text-align: left;
+line-height: 24px;
+margin: 0;
+padding: 0;
+display: flex;
+margin-bottom: 10px;
+justify-content: center;
+}
+.ic .icoweb{
+float: left;
+width: 60%;
+line-height: 24px;
+text-align: left;
+padding: 0;
+margin: 0;
+padding-left: 10px;
+color: #fff;
+}
+.icf .fa{
+	font-size: 18px;	
+	color:#fff;
+	font-weight: normal;
+	margin-top: 0;	
+	float: left
+}
+#form-letter p {
+    margin-top: 0;
+}
+
+#content{
+padding-top: 30px;
+padding-bottom: 10px;
+float: left;
+}
+#cvo-profile-avatar-wraper #cvo-profile-avatar{
+	width: 160px;
+	height: 180px;
+}

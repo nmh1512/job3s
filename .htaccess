@@ -139,4 +139,8 @@ RewriteRule ^goi-y-tim-viec$ /home/tk_uv/ql_uv/goi_y_tim_viec.php [NE,L]
 
 
 
+RewriteRule ^404$ /home/404.php [NE,L]
+
+
+
 

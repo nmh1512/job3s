@@ -39,22 +39,22 @@
           <h4 class="pd_b_20">Về Job3s</h4>
           <ul>
             <li>
-              <a href="gioi-thieu-chung">Giới thiệu chung</a>
+              <a href="/gioi-thieu-chung">Giới thiệu chung</a>
             </li>
             <li>
-              <a href="thong-tin-can-biet">Thông tin cần biết</a>
+              <a href="/thong-tin-can-biet">Thông tin cần biết</a>
             </li>
             <li>
-              <a href="thoa-thuan-su-dung">Thỏa thuận sử dụng</a>
+              <a href="/thoa-thuan-su-dung">Thỏa thuận sử dụng</a>
             </li>
             <li>
-              <a href="quy-dinh-bao-mat">Quy định bảo mật</a>
+              <a href="/quy-dinh-bao-mat">Quy định bảo mật</a>
             </li>
             <li>
-              <a href="giai-quyet-tranh-chap">Quy trình giải quyết tranh chấp</a>
+              <a href="/giai-quyet-tranh-chap">Quy trình giải quyết tranh chấp</a>
             </li>
             <li>
-              <a href="so-do-web">Sơ đồ Website</a>
+              <a href="/so-do-web">Sơ đồ Website</a>
             </li>
           </ul>
         </div>

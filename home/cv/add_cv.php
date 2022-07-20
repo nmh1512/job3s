@@ -116,7 +116,7 @@
         <?php include("../../includes/after_header.php") ?>
         <div class="container mt_90 pd_b48">
             <div class="fuc_controll">
-                <div class="align_c btn_prev">
+                <div class="align_c btn_prev is_disable">
                     <img src="../../images/arrow_prev.png" alt="">
                 </div>
                 <div class="ovex_x">
@@ -308,10 +308,10 @@
                         <!-- <div class="render_cv">
                             <img src="../../images/cv_dep.png" alt="" class="w_100">
                         </div> -->
-                        <link rel="stylesheet" href="../../maucv/logictis/logictis-20/color/d8dad2.css" id="cv-color-css">
+                        <link rel="stylesheet" href="../../list_mau/maucv/logictis/color/d8dad2.css" id="cv-color-css">
                         <link id="font_change" rel="stylesheet" href="">
 
-                        <? include("../../maucv/logictis/logictis-20/index.php") ?>
+                        <? include("../../list_mau/maucv/logictis/logictis-24/index.php") ?>
                     </div>
                     <div class="box_cv_right flex_1 ml_36">
                         <div class="muc_box">
@@ -481,8 +481,6 @@
     <script src="../../js/select2.min.js"></script>
 
     <script src="https://work247.vn/js/custom.js?v=280" defer></script>
-    <script src="https://work247.vn/js/mresize.min.js"></script>
-    <script src="https://work247.vn/js/cv_page.js"></script>
     <script src="https://work247.vn/js/jscv/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://work247.vn/js/validate_cv.js?v=279"></script>
     <script src="https://work247.vn/js/jscv/jquery.validate.min.js"></script>
@@ -492,6 +490,8 @@
     <script src="https://work247.vn/js/jscv/create.js?v=279" async></script>
     <script src="https://work247.vn/js/jscv/general.js?v=279"></script>
     <script src="../../js/js_cv.js"></script>
+    <script src="https://work247.vn/js/mresize.min.js"></script>
+    <script src="https://work247.vn/js/cv_page.js"></script>
     <!-- <script src="https://work247.vn/js/jscv/edit.js?v=279"></script> -->
     <script src="https://work247.vn/js/jscv/app_cv.js?v=279" type="text/javascript"></script>
     <script src="https://work247.vn/js/jscv/custom_cv.js?v=279" defer></script>

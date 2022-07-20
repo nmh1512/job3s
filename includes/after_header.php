@@ -33,15 +33,15 @@
             <a href="" class="font_s16 line_h19 font_w500 cl_a4">Báo giá dịch vụ</a>
         </nav>
         <div class="infor_people">
-            <div class="notification">
+            <div class="notification view_num" data-infor="0">
                 <img src="../images/notifi_pri.png" alt="">
             </div>
 
-            <div class="inbox_ms">
+            <div class="inbox_ms view_num" data-infor="99">
                 <img src="../images/inbox_pri.png" alt="">
             </div>
 
-            <div class="d_flex align_c inf space_b position_r showPopup">
+            <div class="d_flex align_c inf space_b cl_poup_if position_r showPopup cursor_p">
                 <div class="avt_header show_popup_choose">
                     <img src="../images/av_t.png" alt="">
                 </div>
