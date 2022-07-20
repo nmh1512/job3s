@@ -2,6 +2,17 @@
     <div class="menu_moblie d_none">
         <img src="../images/menu_moblie.png" alt="menu">
     </div>
+    <div hidden class="nav_resp position_a w_100">
+        <div class="bg_fa pd_20">
+            <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/change_large.svg" alt="">Đăng ký</a>
+            <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/logout.svg" alt="">Đăng nhập</a>
+            <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/hoso.svg" alt="">Hồ sơ & CV</a>
+            <a href="tim-ung-vien" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/seach_green.svg" alt="">Tìm ứng viên</a>
+            <a href="tin-tuc" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
+            <a href="lien-he" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
+        </div>
+
+    </div>
     <div class="header_after_left">
         <a href="" class="d_flex center_center">
             <svg width="116" height="42" viewBox="0 0 116 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +56,7 @@
                             <h4 class="main_color font_w500 mb_18">Cậu Vàng</h4>
                             <div class="d_flex align_c mb_16">
                                 <label class="toggle_checkbox">
-                                    <input class="slider_check" type="checkbox" id="trangthai_timviec"/>
+                                    <input class="slider_check" type="checkbox" id="trangthai_timviec" />
                                     <div class="slider round"></div>
                                 </label>
                                 <div class="d_flex align_c">
