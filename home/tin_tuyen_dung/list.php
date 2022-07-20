@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/style_h.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Danh sách tin tuyển dụng</title>
 </head>
@@ -426,6 +425,7 @@
             isClick = !isClick;
             $('.popup_account').slideToggle(300)
         });
+
     </script>
 </body>
 

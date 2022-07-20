@@ -957,3 +957,20 @@ function sliderBarToggle ({
     }
   }
 }
+
+
+function heightVideo() {
+  let h = $('.video_peolpe').outerHeight();
+  $('.video_peolpe').children().css({
+      'height': `${h}px`
+  })
+
+  $(window).resize(function() {
+      let prop = $('.video_peolpe').children().prop("style");
+      prop.removeProperty("height");
+      h = $('.video_peolpe').outerHeight();
+      $('.video_peolpe').children().css({
+          'height': `${h}px`
+      })
+  })
+}
