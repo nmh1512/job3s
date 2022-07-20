@@ -664,6 +664,8 @@
   .footer{width: 1230px;}
   .filter_my_service {justify-content: start;}
   .filter_my_service > div:first-child{margin-right: 12px;}
+  .tuyen_dung_table table {width: 100%;}
+
   }
 
   @media screen and (min-width: 1520px) {
@@ -685,7 +687,6 @@
   .tamnhin_container > div:last-child{width: 54%;}
   .plr_resp{padding-left: 145px; padding-right: 145px;}
   .contact_us{left: 145px;     width: 32.85%;}
-  .tuyen_dung_table table {width: 100%;}
   .filter_my_service{width: 49%;}
   }
   @media screen and (min-width: 1920px) {

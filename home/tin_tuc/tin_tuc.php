@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../../css/style_t.css" />
   <link rel="stylesheet" href="../../css/style_h.css" />
   <script src="../../js/scrollreveal.min.js"></script>
+  <script src="../../js/jquery-3.4.1.min.js"></script>
 
 </head>
 
@@ -738,7 +739,6 @@
   </div>
   <? include "../../includes/footer.php" ?>
 
-  <script src="../../js/jquery-3.4.1.min.js"></script>
   <script src="../../js/select2.min.js"></script>
   <script type="text/javascript" src="../../js/slick.min.js"></script>
   <script src="../../js/js_h.js"></script>

@@ -1,16 +1,57 @@
 <header class="header_after">
-    <div class="menu_moblie d_none">
-        <img src="../images/menu_moblie.png" alt="menu">
+    <div class="nav_menu_btn position_a">
+        <button class="d_flex align_c flex_center bd_cicre wh_42px border_0 bg_wblue"><img src="../images/nav_menu.png" alt=""></button>
     </div>
     <div hidden class="nav_resp position_a w_100">
-        <div class="bg_fa pd_20">
-            <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/change_large.svg" alt="">Đăng ký</a>
-            <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/logout.svg" alt="">Đăng nhập</a>
-            <a href="" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/hoso.svg" alt="">Hồ sơ & CV</a>
-            <a href="tim-ung-vien" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/seach_green.svg" alt="">Tìm ứng viên</a>
-            <a href="tin-tuc" class="d_flex bg_white border_r16 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
-            <a href="lien-he" class="d_flex bg_white border_r16 p_16 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
+        <div class="bg_fa nav_after nav_resp">
+            <div class="br_5 bg_white nav_after_item mb_10 pb_7">
+                <div class="d_flex align_c space_b cl_poup_if position_r cursor_p ">
+                    <div class="avt_header ">
+                        <img src="../images/av_t.png" alt="">
+                    </div>
+                    <span class="font_s16 line_h19 font_w500 cl_a4 name_peole flex_1">Nguyễn Đình Trang</span>
+                    <div class="drop_down d_flex align_c ">
+                        <img src="../images/drop_pri.png" alt="">
+                    </div>
+                </div>
+                <div hidden class="mt_16">
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/avartar_green.png" alt="">Cài đặt tài khoản</a>
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/add_files_green.png" alt="">Quản lý CV</a>
+                    <a href="tim-ung-vien" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/vid_icon.png" alt="">Video giới thiệu bản thân</a>
+                    <a href="tin-tuc" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/add_files_green.png" alt="">Đơn xin việc</a>
+                    <a href="lien-he" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/change_large.svg" alt="">Thư xin việc</a>
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/hoso.svg" alt="">Sơ yếu lý lịch</a>
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/check_icon.png" alt="">Việc làm đã ứng tuyển</a>
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/heart_icon.png" alt="">Việc làm đã lưu</a>
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/setting_list.png" alt="">Gợi ý việc làm</a>
+                    <a href="tim-ung-vien" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/khoa_icon.png" alt="">Đổi mật khẩu</a>
+                    <a href="tin-tuc" class="d_flex bg_fa br_5 p_16 font_w500"><img src="../images/edit_pen_green.png" alt="">Đánh giá</a>
+                </div>
+            </div>
+            <div class="br_5 bg_white nav_after_item mb_10">
+                <div class="d_flex align_c space_b cl_poup_if position_r cursor_p mt_10">
+                    <div class="mr_12">
+                        <img src="../images/hoso.svg" alt="">
+                    </div>
+                    <span class="font_s16 line_h19 font_w500 cl_a4 name_peole flex_1">Hồ sơ & CV</span>
+                    <div class="drop_down d_flex align_c ">
+                        <img src="../images/drop_pri.png" alt="">
+                    </div>
+                </div>
+                <div hidden class="mt_16">
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/add_files_green.png" alt="">CV</a>
+                    <a href="" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/add_files_green.png" alt="">Đơn xin việc</a>
+                    <a href="tim-ung-vien" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/change_large.svg" alt="">Thư xin việc</a>
+                    <a href="tin-tuc" class="d_flex bg_fa br_5 p_16 mb_16 font_w500"><img src="../images/hoso.svg" alt="">Sơ yếu lý lịch</a>
+                </div>
+            </div>
+            <a href="" class="d_flex bg_white br_5 p_16 mb_10 font_w500"><img src="../images/bag_green.png" alt="">Tìm việc làm</a>
+            <a href="" class="d_flex bg_white br_5 p_16 mb_10 font_w500"><img src="../images/news.svg" alt="">Tin tức</a>
+            <a href="tim-ung-vien" class="d_flex bg_white br_5 p_16 mb_10 font_w500"><img src="../images/phone_green.svg" alt="">Liên hệ</a>
+            <a href="tin-tuc" class="d_flex bg_white br_5 p_16 font_w500"><img src="../images/log_out_red.png" alt="">Đăng xuất</a>
+
         </div>
+
     </div>
     <div class="header_after_left">
         <a href="" class="d_flex center_center">
@@ -43,11 +84,11 @@
             </div>
 
             <div class="d_flex align_c inf space_b cl_poup_if position_r showPopup cursor_p">
-                <div class="avt_header show_popup_choose">
+                <div class="avt_header ">
                     <img src="../images/av_t.png" alt="">
                 </div>
                 <span class="font_s16 line_h19 font_w500 cl_a4 name_peole flex_1">Nguyễn Đình Trang</span>
-                <div class="drop_down d_flex align_c show_popup_choose">
+                <div class="drop_down d_flex align_c ">
                     <img src="../images/drop_pri.png" alt="">
                 </div>
                 <div class="popup_account box_shadow_after_login position_a">
@@ -55,7 +96,7 @@
                         <img src="../../../images/doggo.jpg" alt="" class="bd_cicre" />
                         <div class="w_80pt">
                             <h4 class="main_color font_w500 mb_18">Cậu Vàng</h4>
-                            <div class="d_flex align_c mb_16">
+                            <div class="d_flex align_c mb_10">
                                 <label class="toggle_checkbox">
                                     <input class="slider_check" type="checkbox" id="trangthai_timviec" />
                                     <div class="slider round"></div>
@@ -106,3 +147,4 @@
         </div>
     </div>
 </header>
+<script src="../js/js_main.js"></script>
