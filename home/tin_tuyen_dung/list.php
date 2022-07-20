@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style_h.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Danh sách tin tuyển dụng</title>
 </head>
@@ -144,7 +145,7 @@
                                     <th>Ngày cập nhật<span class="span_thead"></span></th>
                                     <th>Trạng thái<span class="span_thead"></span></th>
                                     <th>Dịch vụ đang sử dụng<span class="span_thead"></span></th>
-                                    <th class="mb_1024th">Chức năng</th>
+                                    <th class="mb_1024th th_fuc">Chức năng</th>
                                 </tr>
                             </thead>
                             <tbody class="tr_wap">
@@ -403,6 +404,28 @@
             tag: 'div',
             className: 'no_result_table'
         })
+
+        sliderBarToggle({
+            slideBar: '.slider_bar',
+            classShow: '.menu_moblie',
+            breackpoint: 1260
+        })
+
+
+        let isClick = false;
+        $('.cl_poup_if').click(function() {
+            if (!isClick) {
+                $('.drop_down').css({
+                    transform: 'rotate(180deg)'
+                })
+            } else {
+                $('.drop_down').css({
+                    transform: 'rotate(0deg)'
+                })
+            }
+            isClick = !isClick;
+            $('.popup_account').slideToggle(300)
+        });
     </script>
 </body>
 

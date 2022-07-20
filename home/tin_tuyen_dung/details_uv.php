@@ -202,7 +202,7 @@
                             <div class="item_navigate_uploade d_none">
                                 <span class="font_s16 line_h19 font_w500 cl_a4 block">Tải lên CV của bạn <span class="font_w400 cl_73 font_s15 line_h18">(File hỗ trợ: .doc, .docx, .pdf, .rar dung lượng tối đa 5 MB)</span></span>
                                 <div class="append_error">
-                                    <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
+                                    <div class="d_flex mt_6 bd_dc w_100 br_5 space_b file_drop upload_vd_ch">
                                         <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
                                             <span data-placeholder="Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn" class="append">Kéo CV của bạn vào đây hoặc bấm để chọn file CV của bạn</span>
                                             <div class="close_file align_c cursor_p d_none">
@@ -296,7 +296,7 @@
                             <div class="item_navigate_uploade">
                                 <span class="font_s16 line_h19 font_w500 cl_a4 block">Tải lên video giới thiệu của bạn <span class="font_w400 cl_73 font_s15 line_h18">(File hỗ trợ: .mp4 dung lượng tối đa 100 MB)</span></span>
                                 <div class="append_error">
-                                    <div class="d_flex align_c mt_6 bd_dc w_100 br_5 space_b file_drop">
+                                    <div class="d_flex mt_6 bd_dc w_100 br_5 space_b file_drop upload_vd_ch">
                                         <span class="d_flex space_b flex_1 align_c font_s15 line_h18 font_w400 cl_73 pd_11_14 br_5">
                                             <span data-placeholder="Tải lên video giới thiệu của bạn" class="append">Tải lên video giới thiệu của bạn</span>
                                             <div class="close_file align_c cursor_p d_none">

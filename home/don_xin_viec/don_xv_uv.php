@@ -38,7 +38,7 @@
                                             </div>
                                         </div>
                                         <div class="txv_content_bottom mt_16 d_flex space_b align_c">
-                                            <div class="d_flex btn_cv pd_r10">
+                                            <div class="d_flex pd_r10">
                                                 <button class="btn flex_im align_c pd_3_8 bg_8d br_100">
                                                     <div class="mr_6 d_flex align_c">
                                                         <img src="../../images/down_icon_white.png" alt="">

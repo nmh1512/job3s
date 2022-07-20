@@ -22,15 +22,15 @@
             <a href="" class="font_s16 line_h19 font_w500 cl_a4">Báo giá dịch vụ</a>
         </nav>
         <div class="infor_people">
-            <div class="notification">
+            <div class="notification view_num" data-infor="0">
                 <img src="../images/notifi_pri.png" alt="">
             </div>
 
-            <div class="inbox_ms">
+            <div class="inbox_ms view_num" data-infor="99">
                 <img src="../images/inbox_pri.png" alt="">
             </div>
 
-            <div class="d_flex align_c inf space_b">
+            <div class="d_flex align_c inf space_b cl_poup_if cursor_p">
                 <div class="avt_header">
                     <img src="../images/av_t.png" alt="">
                 </div>
@@ -42,3 +42,44 @@
         </div>
     </div>
 </header>
+
+
+<div class="popup_account box_shadow_after_login">
+    <div class="popup_account_top pd_24 d_flex">
+        <img src="../../../images/doggo.jpg" alt="" class="bd_cicre" />
+        <div class="w_80pt">
+            <h4 class="main_color font_w500 mb_18">Cậu Vàng</h4>
+            <div class="d_flex align_c">
+                <label class="toggle_checkbox" for="toggle_contact">
+                    <input type="checkbox" id="toggle_contact" />
+                    <div class="slider"></div>
+                </label>
+
+                <p>Cho phép NTD liên hệ bạn qua</p>
+            </div>
+            <div class="d_flex align_c mt_16 choose_contact">
+                <label class="container_radio">
+                    <input type="radio" name="radio" id="1" checked />
+                    <span class="checkmark"></span>
+                    CV online
+                </label>
+                <label class="container_radio ml_16">
+                    <input type="radio" name="radio" id="2" />
+                    <span class="checkmark"></span>
+                    Job3S profile
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="popup_account_bot pd_24">
+        <a href="" class="d_flex popup_account_bot_item cursor_p mb_8">
+            <img src="../../../images/avartar_green.png" alt="" />
+            <h4>Quản lý tài khoản</h4>
+        </a>
+
+        <a href="" class="d_flex popup_account_bot_item cursor_p">
+            <img src="../../../images/logout.svg" alt="" />
+            <h4>Đăng xuất</h4>
+        </a>
+    </div>
+</div>

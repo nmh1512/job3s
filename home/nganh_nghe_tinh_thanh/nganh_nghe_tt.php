@@ -163,6 +163,24 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="mb_node">
+                            <button class="btn btn_hover_primary flex_im align_c br_100 pd_lr20 shdown_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">
+                                <div class="mr_6 d_flex align_c">
+                                    <img src="../../images/down_icon_white.png" alt="">
+                                </div>
+                                <span>Tải App tìm việc Job3s</span>
+                            </button>
+                        </div>
+
+                        <div class="mb_node">
+                            <button class="btn btn_hover_primary flex_im align_c br_100 pd_lr20 shdown_btn btn_primary font_s16 line_h19 font_w500 cl_white pd_t12_b11_lr24">
+                                <div class="mr_6 d_flex align_c">
+                                    <img src="../../images/down_icon_white.png" alt="">
+                                </div>
+                                <span>Tải App CV Job3s</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -319,7 +337,7 @@
                     </div>
                 </div>
                 <div class="cv_right">
-                    <div class="row row_g25">
+                    <div class="row row_g25 br_mb0">
                         <? for ($i = 0; $i < 20; $i++) : ?>
                             <div class="col_2 item_news bg_w mb_fix">
                                 <div class="item_news_top">

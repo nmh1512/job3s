@@ -1087,9 +1087,9 @@ float: left;
         <div class="footer"></div>
         <div class="watermark">©work247.vn</div>
         <div class="clr"></div>
-        <div class="resize" style="position:absolute; width:auto; height:auto; top:0; right:0; bottom:0; left:0; margin:0; padding:0; overflow:hidden; visibility:hidden; z-index:-1"><iframe style="width:100%; height:0; border:0; visibility:visible; margin:0"></iframe></div>
-        <div id="" class="page_end" style="top: 277.54mm;">
-            <div class="paging-arrow" title="Bắt đầu trang số 2">Trang 2</div>
+        <!-- <div class="resize" style="position:absolute; width:auto; height:auto; top:0; right:0; bottom:0; left:0; margin:0; padding:0; overflow:hidden; visibility:hidden; z-index:-1"><iframe style="width:100%; height:0; border:0; visibility:visible; margin:0"></iframe></div> -->
+        <div id="page_end" class="page_end">
+            <div class="paging-arrow"></div>
         </div>
     </div>
 </div>

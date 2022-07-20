@@ -135,4 +135,8 @@ RewriteRule ^chi-tiet-ung-vien-ntd$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
 RewriteRule ^tim-ung-vien$ /home/tk_uv/ql_uv/tim_uv.php [NE,L]
 
 
+RewriteRule ^404$ /home/404.php [NE,L]
+
+
+
 

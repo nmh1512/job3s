@@ -17,7 +17,7 @@
             <?php include("../../includes/slider_bar.php"); ?>
             <div class="content wbjsb mt_90 pd_24 chil_24">
                 <div class="box_cty">
-                    <div class="d_flex align_c space_b">
+                    <div class="d_flex align_c space_b box_txt">
                         <h2 class="font_s24 line_h28 font_w700 cl_primary bd_l4 pd_l8">Thư xin việc đã lưu</h2>
                         <div>
                             <a href="/tin-tuyen-dung/dang-tin-tuyen-dung.html" class="btn btn_hover_primary flex_im align_c br_100 btn_primary cl_white pd_t12_b11_lr24">

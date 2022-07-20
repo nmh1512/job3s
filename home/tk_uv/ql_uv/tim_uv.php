@@ -331,7 +331,7 @@
                     </div>
                 </div>
                 <div class="cv_right">
-                    <div class="row row_g25">
+                    <div class="row row_g25 br_mb0">
                         <? for ($i = 0; $i < 20; $i++) : ?>
                             <div class="col_2 item_news bg_w">
                                 <div class="item_news_top">
