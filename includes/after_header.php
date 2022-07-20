@@ -30,56 +30,67 @@
                 <img src="../images/inbox_pri.png" alt="">
             </div>
 
-            <div class="d_flex align_c inf space_b cl_poup_if cursor_p">
-                <div class="avt_header">
+            <div class="d_flex align_c inf space_b cl_poup_if position_r showPopup cursor_p">
+                <div class="avt_header show_popup_choose">
                     <img src="../images/av_t.png" alt="">
                 </div>
                 <span class="font_s16 line_h19 font_w500 cl_a4 name_peole flex_1">Nguyễn Đình Trang</span>
-                <div class="drop_down d_flex align_c">
+                <div class="drop_down d_flex align_c show_popup_choose">
                     <img src="../images/drop_pri.png" alt="">
+                </div>
+                <div class="popup_account box_shadow_after_login position_a">
+                    <div class="popup_account_top pd_24 d_flex">
+                        <img src="../../../images/doggo.jpg" alt="" class="bd_cicre" />
+                        <div class="w_80pt">
+                            <h4 class="main_color font_w500 mb_18">Cậu Vàng</h4>
+                            <div class="d_flex align_c mb_16">
+                                <label class="toggle_checkbox">
+                                    <input class="slider_check" type="checkbox" id="trangthai_timviec"/>
+                                    <div class="slider round"></div>
+                                </label>
+                                <div class="d_flex align_c">
+                                    <p class="text_job mr_8">Trạng thái tìm việc đang tắt</p>
+                                    <img class="img_edit_job" src="../images/edit_job.png" alt="">
+                                </div>
+                            </div>
+                            <div class="d_flex align_c">
+                                <label class="toggle_checkbox">
+                                    <input class="slider_check" type="checkbox" id="toggle_contact" />
+                                    <div class="slider round"></div>
+                                </label>
+
+                                <p class="text_contact">Cho phép NTD liên hệ bạn qua</p>
+                            </div>
+                            <div class="d_flex align_c mt_16 choose_contact">
+                                <label class="container_radio">
+                                    <input type="radio" name="radio" id="1" checked />
+                                    <span class="checkmark"></span>
+                                    CV online
+                                </label>
+                                <label class="container_radio ml_16">
+                                    <input type="radio" name="radio" id="2" />
+                                    <span class="checkmark"></span>
+                                    Job3S profile
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_account_bot pd_24">
+                        <a href="" class="d_flex popup_account_bot_item cursor_p mb_8">
+                            <img src="../../../images/avartar_green.png" alt="" />
+                            <h4>Quản lý tài khoản</h4>
+                        </a>
+                        <a href="" class="d_flex popup_account_bot_item cursor_p mb_8">
+                            <img src="../../../images/setting_list.png" alt="" />
+                            <h4>Gợi ý tìm việc làm</h4>
+                        </a>
+                        <a href="" class="d_flex popup_account_bot_item cursor_p">
+                            <img src="../../../images/logout.svg" alt="" />
+                            <h4>Đăng xuất</h4>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
-
-<div class="popup_account box_shadow_after_login">
-    <div class="popup_account_top pd_24 d_flex">
-        <img src="../../../images/doggo.jpg" alt="" class="bd_cicre" />
-        <div class="w_80pt">
-            <h4 class="main_color font_w500 mb_18">Cậu Vàng</h4>
-            <div class="d_flex align_c">
-                <label class="toggle_checkbox" for="toggle_contact">
-                    <input type="checkbox" id="toggle_contact" />
-                    <div class="slider"></div>
-                </label>
-
-                <p>Cho phép NTD liên hệ bạn qua</p>
-            </div>
-            <div class="d_flex align_c mt_16 choose_contact">
-                <label class="container_radio">
-                    <input type="radio" name="radio" id="1" checked />
-                    <span class="checkmark"></span>
-                    CV online
-                </label>
-                <label class="container_radio ml_16">
-                    <input type="radio" name="radio" id="2" />
-                    <span class="checkmark"></span>
-                    Job3S profile
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="popup_account_bot pd_24">
-        <a href="" class="d_flex popup_account_bot_item cursor_p mb_8">
-            <img src="../../../images/avartar_green.png" alt="" />
-            <h4>Quản lý tài khoản</h4>
-        </a>
-
-        <a href="" class="d_flex popup_account_bot_item cursor_p">
-            <img src="../../../images/logout.svg" alt="" />
-            <h4>Đăng xuất</h4>
-        </a>
-    </div>
-</div>

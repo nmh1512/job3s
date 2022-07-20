@@ -16,15 +16,15 @@
 </head>
 
 <body>
-<?
-    include "../../../includes/after_header.php";
-    include "../../../includes/slider_bar.php"; ?>
+  <?
+  include "../../../includes/after_header.php";
+  include "../../../includes/slider_bar.php"; ?>
   <section>
     <div class="setting_container main_container">
       <div class="info_company box_shadow_after_login">
-        <div class="info_company_header d_flex align_c space_b">
-          <h1 class="main_color">Thông tin công ty</h1>
-          <a id="editCom" class="main_color d_flex align_c space_b btn_bg_white"><img src="../images/change.svg" alt="" /> Chỉnh sửa</a>
+        <div class="info_company_header d_flex align_c space_b flex_w">
+          <h1 class="main_color pb_16">Thông tin công ty</h1>
+          <a id="editCom" class="main_color d_flex align_c space_b btn_bg_white pb_16"><img src="../images/change.svg" alt="" /> Chỉnh sửa</a>
         </div>
         <div class="info_company_content">
           <div class="info_company_content_header d_flex">
@@ -32,7 +32,7 @@
               <img src="../images/doggo.jpg" alt="" />
             </div>
             <div class="info_company_content_header_text">
-              <h2 class="font_s22 pd_tb5 font_w500 border_0">
+              <h2 class="font_s22 pd_tb5 border_0">
                 Công ty TNHH sàn giao dịch bất động sản TLH
               </h2>
               <h4 class="pd_tb5 font_w500">
@@ -81,26 +81,33 @@
                 thành Nhà cung cấp tóc lớn nhất Việt Nam và là một nhà cung
                 cấp những sản phẩm về tóc tốt nhất trên thế giới .</span>
             </div>
-          </div>
-        </div>
-      
-      </div>
-      <div class="info_account box_shadow_after_login">
-        <div class="info_account_header d_flex align_c space_b">
-          <h1 class="main_color">Thông tin tài khoản</h1>
-          <a id="editAccount" class="main_color d_flex align_c space_b btn_bg_white"><img src="../images/change.svg" alt="" /> Chỉnh sửa</a>
-        </div>
-        <div class="info_account_content">
-          <form action="">
-            <div class="avatar_account">
-              <div class="input_container d_flex">
-                <img src="../images/img_logo.svg" alt="" />
-                <div class="mt_5 ml_16">
-                  <h2 class="font_s22 mb_10 border_0 font_w500">Trần Tiger</h2>
-                  <h4 class="font_w500">Trưởng phòng</h4>
-                </div>
+            <div class="d_flex">
+              <div class="d_flex info_item">
+                <p>Video giới thiệu công ty:</p>
+                <span class="gray">Chưa cập nhật</span>
               </div>
             </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="info_account box_shadow_after_login">
+        <div class="info_account_header d_flex align_c space_b flex_w">
+          <h1 class="main_color pb_16">Thông tin tài khoản</h1>
+          <a id="editAccount" class="main_color d_flex align_c space_b btn_bg_white pb_16"><img src="../images/change.svg" alt="" /> Chỉnh sửa</a>
+        </div>
+        <div class="info_account_content">
+
+          <div class="avatar_account">
+            <div class="input_container d_flex">
+              <img src="../images/img_logo.svg" alt="" />
+              <div class="mt_5 ml_16">
+                <h2 class="font_s22 mb_10 border_0 font_w500">Trần Tiger</h2>
+                <h4 class="font_w500">Trưởng phòng</h4>
+              </div>
+            </div>
+          </div>
+          <div>
             <div class="d_flex">
               <div class="div_input d_flex">
                 <p>Email:</p>
@@ -121,7 +128,9 @@
                 <span class="font_w500">Chưa cập nhật</span>
               </div>
             </div>
-          </form>
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -174,8 +183,6 @@
       }
     })
   })
-
-
 </script>
 
 </html>
