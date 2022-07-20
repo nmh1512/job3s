@@ -57,19 +57,19 @@ $("#trangthai_timviec").change(function() {
 //   }
   
 // });
-$(window).click(function (e) {
-  if (!$(e.target).is(".show_popup")) {
-    $(".popup").addClass('display_none');
+// $(window).click(function (e) {
+//   if (!$(e.target).is(".show_popup")) {
+//     $(".popup").addClass('display_none');
 
-  }
-});
+//   }
+// });
 $(".login").click(function () {
   $(this).toggleClass("bg_s_green");
 });
 
-function showPopup(ele) {
-  $(ele).removeClass("display_none");
-}
+// function showPopup(ele) {
+//   $(ele).removeClass("display_none");
+// }
 $(".dong_popup").each(function () {
   $(this).click(function () {
     var ele = $(this).parents(".popupItem");

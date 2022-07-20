@@ -380,6 +380,7 @@ img {object-fit: cover;}
 .pd_t_6 {padding-top: 6px;}
 .pd_t_50 {padding-top: 50px;}
 .pd_t_10 {padding-top: 10px;}
+.t_24{top: 24px;}
 .pd_4_5 {padding: 4px 5px;}
 .pd_tlrb_7_15_8 {padding: 7px 15px 8px;}
 .br_10 {border-radius: 10px;}
@@ -501,6 +502,8 @@ input[readonly] {background-color: var(--cl-cc);}
 .container_radio input:checked ~ .checkmark{border: 1px dashed #009638; background: #ffffff;}
 .container_radio input:checked ~ .checkmark:after{display:block}
 
+.copyeid {position: relative;}
+.message_copytied {white-space: nowrap;position: absolute;top: 0;left: 50%;transform: translate(-50%, -119%);background-color: #6c6c6c85;padding: 10px;color: white;border-radius: 20px;}
 table.table {width: 100%;border-collapse: collapse;border-radius: 10px;box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);background: #FFFFFF;}
 table.table thead tr th {
     background: #EAEAEA;
@@ -648,7 +651,7 @@ header#header .account li{ margin-left: 16px;}
 
 
 /* header sau đăng nhập */
-.header_after {z-index: 999;background-color: #FFFFFF;justify-content: space-between;padding: 24px 68px;display: flex; align-items: center;position: fixed;top: 0;left: 0;right: 0;box-shadow: 0px 2px 6px 0px #00000029;}
+.header_after {z-index: 99;background-color: #FFFFFF;justify-content: space-between;padding: 24px 68px;display: flex; align-items: center;position: fixed;top: 0;left: 0;right: 0;box-shadow: 0px 2px 6px 0px #00000029;}
 .header_after_right, .header_after_left,.infor_people {display: flex;align-items: center;}
 .header_after_left {cursor: pointer;}
 .infor_people {padding-left: 16px;position: relative;}

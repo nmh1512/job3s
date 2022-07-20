@@ -135,7 +135,7 @@ RewriteRule ^tin-tuyen-dung/chi-tiet-tin-tuyen-dung$ /home/tin_tuyen_dung/detail
 #
 RewriteRule ^chi-tiet-ung-vien-ntd$ /home/tk_uv/ql_uv/details_uv.php [NE,L]
 RewriteRule ^tim-ung-vien$ /home/tk_uv/ql_uv/tim_uv.php [NE,L]
-RewriteRule ^goi-y-tim-viec$ /home/tk_uv/ql_uv/goi_y_tim_viec.php [NE,L]
+RewriteRule ^goi-y-viec-lam$ /home/tk_uv/ql_uv/goi_y_viec_lam.php [NE,L]
 
 
 
