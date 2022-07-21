@@ -13,7 +13,7 @@
             <div class="div_input">
                 <label for="" class="font_w500">Họ và tên<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập họ và tên" name="ho_ten" />
+                    <input type="text" placeholder="Nhập họ và tên" name="ho_ten" class="is_check_first_space"/>
                 </div>
             </div>
             <div class="div_input">
@@ -32,13 +32,13 @@
             <div class="div_input">
                 <label for="" class="font_w500">Email</label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập email" />
+                    <input type="text" placeholder="Nhập email" class="is_check_space" name="email"/>
                 </div>
             </div>
             <div class="div_input">
                 <label for="" class="font_w500">Số điện thoại<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập số điện thoại" name="sdt" />
+                    <input type="text" placeholder="Nhập số điện thoại" name="sdt" class="is_check_number" />
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="div_input">
                 <label for="" class="font_w500">Skype</label>
                 <div class="input_container">
-                    <input type="text" placeholder="Tài khoản Skype" />
+                    <input type="text" placeholder="Tài khoản Skype" class="is_check_first_space" />
                 </div>
             </div>
         </div>
@@ -72,7 +72,12 @@
         rules: {
             ho_ten: "required",
             gioi_tinh: "required",
-            sdt: "required",
+            email: "email",
+            sdt: {
+                required: true,
+                minlength: 10,
+                maxlength: 15
+            },
             vi_tri_ct: "required",
 
 
@@ -80,9 +85,26 @@
         messages: {
             ho_ten: "Vui lòng nhập họ tên",
             gioi_tinh: "Vui lòng chọn giới tính",
-            sdt: "Vui lòng nhập số điện thoại",
+            email: "Vui lòng nhập đúng định dạng email",
+            sdt: {
+                required: "Vui lòng nhập số điện thoại",
+                minlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số",
+                maxlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số"
+            },
             vi_tri_ct: "Vui lòng chọn vị trí công tác",
 
         }
     })
+    $(".is_check_space").keypress(function(event) {
+        var character = String.fromCharCode(event.keyCode);
+        return !(/\s/.test(character));
+    });
+    $(".is_check_first_space").on('input', (function(event) {
+        var value = ($(this).val()).trimStart();
+        $(this).val(value);
+    }));
+    $('.is_check_number').keypress(function(event) {
+        var character = String.fromCharCode(event.keyCode);
+        return (/[0-9]/.test(character));
+    });
 </script>

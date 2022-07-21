@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/select2.min.css" />
+    <link rel="stylesheet" href="../css/style_t.css" />
+    <link rel="stylesheet" href="../css/style_h.css" />
+    <script src="../js/jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <div class="popupContainer popup_chung popup">
+      <div id="popupWish" class="animation_zoom_in popupItem">
+        <div class="popup_header_white position_r text_c">
+          <h2 class="font_s22 font_w500 mb_6">
+            Hãy để Job3s hiểu mong muốn của bạn?
+          </h2>
+          <p>Job3s sẽ kết nối bạn với những cơ hội việc làm phù hợp nhất</p>
+          <img
+            src="../../../images/close_gray.png"
+            alt=""
+            class="position_a dong_popup cursor_p t_24"
+          />
+        </div>
+        <div class="popup_body pd_24">
+          <form id="formWishJob" action="">
+            <div class="d_flex">
+              <div class="w_50pt mr_24">
+                <div class="div_input w_100 mt-0 text_l">
+                  <label for="" class="font_w500"
+                    >Ngành nghề bạn quan tâm<span class="color_red"
+                      >*</span
+                    ></label
+                  >
+                  <div class="input_container select_vali">
+                    <select
+                      class="select_wish"
+                      name="nganh_nghe"
+                      data-placeholder="Chọn ngành nghề"
+                    >
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="div_input w_100 text_l">
+                  <label for="" class="font_w500"
+                    >Vị trí công việc mong muốn<span class="color_red"
+                      >*</span
+                    ></label
+                  >
+                  <div class="input_container select_vali">
+                    <select
+                      class="select_wish"
+                      name="vi_tri"
+                      data-placeholder="Chọn vị trí công việc"
+                    >
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="div_input w_100 text_l">
+                  <label for="" class="font_w500"
+                    >Địa điểm làm việc<span class="color_red">*</span></label
+                  >
+                  <div class="input_container select_vali">
+                    <select
+                      class="select_wish"
+                      name="dia_diem"
+                      data-placeholder="Chọn địa điểm"
+                    >
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="div_input w_100 text_l">
+                  <label for="" class="font_w500"
+                    >Kinh nghiệm làm việc<span class="color_red">*</span></label
+                  >
+                  <div class="input_container select_vali">
+                    <select
+                      class="select_wish"
+                      name="kinh_nghiem"
+                      data-placeholder="Chọn kinh nghiệm làm việc"
+                    >
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="w_50pt text_l">
+                <label for="" class="font_w500"
+                  >Chọn CV bật tìm việc<span class="color_red">*</span></label
+                >
+                <div class="mt_16">
+                  <div class="d_flex mt_8">
+                    <label class="container_checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <p class="font_s14 line_h20">
+                      CV Xin Việc Thiết kế Web
+                      <a href="" class="main_color">[Xem CV]</a>
+                    </p>
+                  </div>
+                  <div class="d_flex mt_8">
+                    <label class="container_checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <p class="font_s14 line_h20">
+                      CV Xin Việc Thiết kế Web, CV Xin Việc Thiết kế Web
+                      <a href="" class="main_color">[Xem CV]</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="mt_16 mb_24">
+                  <span class="color_red font_st_i font_s14"
+                    >Hãy chọn ít nhất 1 CV</span
+                  >
+                </div>
+                <div class="text_c">
+                  <p class="font_s14">Bạn chưa có CV nào trên Job3s.com</p>
+                  <div class="d_flex flex_center mt_16">
+                    <a href="" class="btn_main_color d_flex align_c flex_center"
+                      ><img src="../images/plus.svg" alt="" /> Tạo CV ngay</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d_flex flex_center mt_32 mb_24">
+              <button
+                type="button"
+                class="mr_24 br_5 btn_bg_white w_180px cursor_p"
+              >
+                Không có nhu cầu
+              </button>
+              <button
+                type="submit"
+                class="ml_24 br_5 btn_main_color w_180px cursor_p"
+              >
+                Bật tìm việc ngay
+              </button>
+            </div>
+          </form>
+
+          <div class="p_16 br_5 dash_red text_l">
+            <p class="color_red font_s15">
+              Lưu ý: Khi bật tính năng này, Nhà tuyển dụng trên JOB3S sẽ chủ
+              động liên hệ với bạn, hãy sẵn sàng
+              <span class="font_w500">nghe điện thoại</span> để nhận cơ hội tốt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/select2.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
+  <script>
+    $(".select_wish").select2();
+    $("#formWishJob").validate({
+      rules: {
+        nganh_nghe: "required",
+        vi_tri: "required",
+        dia_diem: "required",
+        kinh_nghiem: "required",
+      },
+      messages: {
+        nganh_nghe: "Vui lòng chọn ngành nghề",
+        vi_tri: "Vui lòng chọn vị trí bạn mong muốn",
+        dia_diem: "Vui lòng chọn địa điểm làm việc",
+        kinh_nghiem: "Vui lòng chọn kinh nghiệm làm việc của bạn",
+      },
+    });
+  </script>
+</html>

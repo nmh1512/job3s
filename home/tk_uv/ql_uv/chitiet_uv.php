@@ -74,63 +74,52 @@
         </div>
       </div>
     </div>
-    <div class="box_shadow pd_24 mt_24 info_ungvien_item" data-form="thong_tin_co_ban">
+    <div class="box_shadow pd_24 mt_24 info_ungvien_item position_r" data-form="thong_tin_co_ban">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="d_flex space_b">
         <h1 class="main_color font_s20 font_w500">Thông tin cơ bản</h1>
-        <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p" onclick="getForm(this)">
+        <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p btn_sua" onclick="getForm(this)">
           <img class="mr_7" src="../../../images/change.svg" alt="" /> Cập
           nhật
         </div>
       </div>
       <div id="thong_tin_co_ban" class="mt_24 info_ungvien">
-        <div class="d_flex">
-          <h4 class="font_w500">Họ và tên:</h4>
-          <p>Nguyễn Đình Mạnh</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Giới tính:</h4>
-          <p class="gray_c4">Nhập giới tính</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Ngày sinh:</h4>
-          <p class="gray_c4">Nhập ngày sinh</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Tình trạng hôn nhân:</h4>
-          <p class="gray_c4">Nhập tình trạng</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Số điện thoại:</h4>
-          <p class="gray_c4">Nhập số điện thoại</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Email:</h4>
-          <p class="gray_c4">Nhập email</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Địa chỉ:</h4>
-          <p class="gray_c4">Nhập địa chỉ</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Vị trí công việc:</h4>
-          <p class="gray_c4">Nhập vị trí công việc</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Kinh nghiệm làm việc:</h4>
-          <p class="gray_c4">Nhập kinh nghiệm</p>
-        </div>
-        <div class="d_flex mt_16">
-          <h4 class="font_w500">Giới thiệu bản thân:</h4>
-          <p class="gray_c4">Giới thiệu bản thân</p>
-        </div>
+
       </div>
 
     </div>
-    <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item" data-form="so_thich">
+    <div class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r btn_sua" data-form="so_thich">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <div class="d_flex align_c mb_8 space_b">
           <h2 class="main_color font_s20 font_w500">Sở thích</h2>
-          <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p" onclick="getForm(this)">
+          <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p btn_sua" onclick="getForm(this)">
             <img class="mr_7" src="../../../images/change.svg" alt="" /> Cập
             nhật
           </div>
@@ -143,20 +132,30 @@
           <button class="btn_bg_white mt_24">Cập nhật</button>
         </div> -->
         <div class="mt_24" id="so_thich">
-          <ul>
-            <li>Xem phim</li>
-            <li>Nghe nhạc</li>
-            <li>Du lịch</li>
-          </ul>
+
         </div>
       </div>
       <!-- <img src="../../../images/favorite.png" alt="" /> -->
     </div>
-    <div data-form="muc_tieu" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="muc_tieu" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <div class="d_flex align_c mb_8 space_b">
           <h2 class="main_color font_s20 font_w500">Mục tiêu</h2>
-          <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p" onclick="getForm(this)">
+          <div class="d_flex align_c flex_center font_s18 main_color font_w500 cursor_p btn_sua" onclick="getForm(this)">
             <img class="mr_7" src="../../../images/change.svg" alt="" /> Cập
             nhật
           </div>
@@ -169,12 +168,25 @@
           <button class="btn_bg_white mt_24">Cập nhật</button>
         </div> -->
         <div class="mt_24" id="muc_tieu">
-          Mục tiêu của em là bla bla bla......
         </div>
       </div>
       <!-- <img src="../../../images/targetgoal.png" alt="" /> -->
     </div>
-    <div data-form="hoc_van" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="hoc_van" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Học vấn</h2>
 
@@ -186,56 +198,28 @@
           <button class="btn_bg_white mt_24">Cập nhật</button>
         </div> -->
         <div id="hoc_van" class="mt_24">
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
 
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm học vấn
-          </button>
         </div>
 
       </div>
 
       <!-- <img src="../../../images/education.png" alt="" /> -->
     </div>
-    <div data-form="chung_chi" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="chung_chi" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Chứng chỉ</h2>
         <!-- <div>
@@ -246,54 +230,27 @@
           <button class="btn_bg_white mt_24">Cập nhật</button>
         </div> -->
         <div id="chung_chi" class="mt_24">
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Test of English for International Communication( TOEIC)
-              </h4>
-              <p class="mb_8">2021- 2023</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Test of English for International Communication( TOEIC)
-              </h4>
-              <p class="mb_8">Không có thời hạn</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button data-form="chung_chi" class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm chứng chỉ
-          </button>
+
         </div>
       </div>
 
       <!-- <img src="../../../images/certificate.png" alt="" /> -->
     </div>
-    <div data-form="kinh_nghiem" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="kinh_nghiem" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Kinh nghiệm</h2>
         <!-- <div>
@@ -304,54 +261,27 @@
           <button class="btn_bg_white mt_24">Cập nhật</button>
         </div> -->
         <div id="kinh_nghiem" class="mt_24">
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Plus Studio</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm kinh nghiệm
-          </button>
+
         </div>
       </div>
 
       <!-- <img src="../../../images/exp.png" alt="" /> -->
     </div>
-    <div data-form="ky_nang" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="ky_nang" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Kỹ năng</h2>
         <!-- <div>
@@ -363,39 +293,27 @@
         </div> -->
         <div id="ky_nang" class="mt_24">
 
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">After Effect</h4>
-              <div class="d_flex">
-                <img class="mr_8" src="../../../images/star.svg" alt="" />
-                <img class="mr_8" src="../../../images/star.svg" alt="" />
-                <img class="mr_8" src="../../../images/star.svg" alt="" />
-                <img class="mr_8" src="../../../images/star.svg" alt="" />
-                <img src="../../../images/star_gray.svg" alt="" />
-              </div>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm kỹ năng
-          </button>
+
         </div>
       </div>
 
       <!-- <img src="../../../images/skills.png" alt="" /> -->
     </div>
-    <div data-form="ngon_ngu" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="ngon_ngu" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Ngôn ngữ</h2>
         <!-- <div>
@@ -407,67 +325,27 @@
         </div> -->
         <div id="ngon_ngu" class="mt_24">
 
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Tiếng Anh</h4>
-              <p class="mb_8">Cơ bản</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Tiếng Đức</h4>
-              <p class="mb_8">Thành thạo</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Tiếng Đức</h4>
-              <p class="mb_8">Thành thạo</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm ngôn ngữ
-          </button>
+
         </div>
       </div>
 
       <!-- <img src="../../../images/language.png" alt="" /> -->
     </div>
-    <div data-form="giai_thuong" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="giai_thuong" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Giải thưởng</h2>
         <!-- <div>
@@ -479,30 +357,7 @@
         </div> -->
         <div id="giai_thuong" class="mt_24">
 
-          <div class="info_ungvien_item_box mb_24">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Cuộc thi “THE ARTIST AVATAR CHALLENGE”
-              </h4>
-              <p class="mb_8">Trung tâm nghệ thuật quốc gia</p>
-              <p class="mb_8">03/2021</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm giải thưởng
-          </button>
+
         </div>
 
       </div>
@@ -510,7 +365,21 @@
       <!-- <img src="../../../images/cup.png" alt="" /> -->
     </div>
 
-    <div data-form="du_an" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="du_an" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">Dự án</h2>
         <!-- <div>
@@ -522,110 +391,27 @@
         </div> -->
         <div id="du_an" class="mt_24">
 
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Cuộc thi “THE ARTIST AVATAR CHALLENGE”
-              </h4>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Khách hàng:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Số thành viên tham gia:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Vị trí:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Nhiệm vụ:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Công nghệ sử dụng: </span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Thời gian:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Mô tả dự án:</span>
-                <p>VTV 6</p>
-              </div>
 
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">
-                Cuộc thi “THE ARTIST AVATAR CHALLENGE”
-              </h4>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Khách hàng:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Số thành viên tham gia:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Vị trí:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Nhiệm vụ:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Công nghệ sử dụng: </span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Thời gian:</span>
-                <p>VTV 6</p>
-              </div>
-              <div class="d_flex mb_8">
-                <span class="mr_8 font_w500">Mô tả dự án:</span>
-                <p>VTV 6</p>
-              </div>
-
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm dự án
-          </button>
         </div>
       </div>
 
       <!-- <img src="../../../images/project.png" alt="" /> -->
     </div>
-    <div data-form="hoat_dong" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item">
+    <div data-form="hoat_dong" class="box_shadow pd_24 mt_24 d_flex space_b align_c info_ungvien_item position_r">
+      <div class="load_data position_a align_c flex_center">
+        <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+          <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+            <div class="ldio-0q6g6j8frqsd">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="w_100">
         <h2 class="main_color font_s20 font_w500 mb_8">
           Hoạt động xã hội và tình nguyện
@@ -639,48 +425,7 @@
         </div> -->
         <div id="hoat_dong" class="mt_24">
 
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb_24 info_ungvien_item_box">
-            <div class="position_r">
-              <h4 class="font_w500 mb_8 main_color">Đại học Hoa Sen</h4>
-              <p class="mb_8">Công nghệ thông tin</p>
-              <p class="mb_8">2017 - hiện nay</p>
-              <p class="min_h60">Mô tả quá trình học tập: abcxyz</p>
-              <div class="position_a d_flex edit_info_uv_btn">
-                <div class="d_flex mlr_8 main_color font_w500 cursor_p" onclick="getForm(this)">
-                  <img class="mr_7" src="../../../images/change.svg" alt="" />
-                  Sửa
-                </div>
-                |
-                <div class="d_flex mlr_8 color_red font_w500 cursor_p">
-                  <img class="mr_7" src="../../../images/delete_red.svg" alt="" />
-                  Xóa
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="d_flex align_c flex_center btn_bg_white" onclick="getForm(this)">
-            <img class="mr_7" src="../../../images/plus_green.svg" alt="" />
-            Thêm học vấn
-          </button>
+
         </div>
       </div>
 
@@ -774,7 +519,7 @@
         <p class="font_s16 line_h19 font_w400 cl_a4 pd_48_24 txt_center">Bạn có đồng ý hủy cập nhật thông tin <span class="font_w500 info_type"></span>, mọi dữ liệu vừa nhập sẽ không được lưu lại ?</p>
         <div class="form_submit d_flex center_center pd_24 pd_t0">
           <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_12">Hủy</button>
-          <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68">Đồng ý</button>
+          <button class="btn h_42 m_w140 br_12 font_s16 line_h19 font_w700 bg_td cl_white btn_primary ml_68 btn_xacnhan">Đồng ý</button>
         </div>
       </form>
     </div>
@@ -797,10 +542,22 @@
 
   })
 
-  function showPopup(ele) {
+  function showPopup(ele, text) {
     var type = $(ele).data('type');
+    var parent = $(ele).parents('.info_ungvien_item')
+    var text = parent.data('form');
     $('.info_type').text(type);
-    viewAndClosePopupUpdate('.popupXacNhan', '.main_popup', '.close_popup', '.cancel', '', )
+    let {
+      infor_menu,
+      clearAmintions
+    } = viewAndClosePopupUpdate('.popupXacNhan', '.main_popup', '.close_popup', '.cancel', '', )
+    $(infor_menu).find('.btn_xacnhan').click(function() {
+      clearAmintions()
+      getTT(text)
+      parent.find('.btn_sua').removeClass('display_none')
+    })
+
+
   }
   $('.avt_uv').hover(function() {
     $('.update_avt').addClass('d_flex')
@@ -812,8 +569,9 @@
   })
 
   function getForm(ele) {
+    var parent = $(ele).parents('.info_ungvien_item');
+    parent.find('.load_data').css('display', 'flex');
     var text = $(ele).parents('.info_ungvien_item').data('form');
-    $(ele).addClass('display_none');
     $.ajax({
       type: 'GET',
       url: '../../../render/form_uv.php',
@@ -822,10 +580,36 @@
       },
       success: function(data) {
         $('#' + text).html(data);
+        if ($(ele).hasClass('btn_sua')) {
+          $(ele).addClass('display_none')
+        }
+        parent.find('.load_data').css('display', 'none');
+
       }
     })
   }
-  
+
+  function getTT(type) {
+    var find = $('#' + type).parents('.info_ungvien_item').find('.load_data');
+    find.css('display', 'flex');
+    $.ajax({
+      type: 'GET',
+      url: '../../../render/render_info_uv.php',
+      data: {
+        type: type,
+      },
+      success: function(data) {
+        $('#' + type).html(data);
+        find.css('display', 'none');
+
+      }
+
+    })
+  }
+  $('.info_ungvien_item').each(function() {
+    var type = $(this).data('form');
+    getTT(type);
+  })
 </script>
 
 </html>

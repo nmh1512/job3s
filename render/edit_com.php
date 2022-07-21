@@ -13,13 +13,13 @@
       <div class="div_input">
         <label for="" class="font_w500">Tên công ty<span class="color_red">*</span></label>
         <div class="input_container">
-          <input type="text" placeholder="Nhập tên công ty" name="ten_cty"/>
+          <input type="text" placeholder="Nhập tên công ty" name="ten_cty" class="is_check_first_space"/>
         </div>
       </div>
       <div class="div_input">
         <label for="" class="font_w500">Mã số thuế</label>
         <div class="input_container">
-          <input type="text" placeholder="Nhập mã số thuế" />
+          <input type="text" placeholder="Nhập mã số thuế" class="is_check_number"/>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <div class="div_input">
         <label for="" class="font_w500">Số điện thoại<span class="color_red">*</span></label>
         <div class="input_container">
-          <input type="text" placeholder="Nhập số điện thoại" name="sdt_cty"/>
+          <input type="text" placeholder="Nhập số điện thoại" name="sdt_cty" class="is_check_number"/>
         </div>
       </div>
       <div class="div_input">
@@ -43,13 +43,13 @@
       <div class="div_input">
         <label for="" class="font_w500">Email<span class="color_red">*</span></label>
         <div class="input_container">
-          <input type="text" placeholder="Nhập email công ty" name="email_cty"/>
+          <input type="text" placeholder="Nhập email công ty" name="email_cty" class="is_check_space"/>
         </div>
       </div>
       <div class="div_input">
         <label for="" class="font_w500">Website</label>
         <div class="input_container">
-          <input type="text" placeholder="Nhập website công ty" />
+          <input type="text" placeholder="Nhập website công ty" class="is_check_first_space"/>
         </div>
       </div>
     </div>
@@ -70,19 +70,19 @@
         </div>
       </div>
       <div class="w_100 mt_16">
-        <textarea name="dia_chi" id="" cols="30" rows="3" placeholder="Địa chỉ chi tiết"></textarea>
+        <textarea name="dia_chi" id="" cols="30" rows="3" placeholder="Địa chỉ chi tiết" class="is_check_first_space"></textarea>
       </div>
     </div>
     <div class="mt_16">
       <label for="" class="font_w500">Mô tả công ty<span class="color_red">*</span></label>
-      <textarea class="mt_8" name="mo_ta" id="" cols="30" rows="5" placeholder="Nhập mô tả công ty (tối thiểu 150 ký tự)"></textarea>
+      <textarea class="mt_8 is_check_first_space" name="mo_ta" id="" cols="30" rows="5" placeholder="Nhập mô tả công ty (tối thiểu 150 ký tự)"></textarea>
     </div>
     <div class="mt_16">
       <label for="">Video giới thiệu công ty (định dạng mp4)</label>
       <div class="mt_8 d_flex border_gray upload_vid_container position_r h_42px">
         <div id="filename" class="d_flex align_c w_100 position_r">
           <p class="gray ellipsis">Tải lên video giới thiệu công ty <span>(Dung lượng tối đa 100MB)</span></p>
-          <img hidden src="../images/x_red.svg" alt="" class="position_a remove_vid">
+          <img hidden src="../images/x_red.svg" alt="" class="position_a remove_vid cursor_p">
         </div>
         <div class="upload_video_container d_flex align_c flex_center position_a">
           <label class="upload_vid" for="upload_vid"><img src="../images/add_file.svg" alt=""></label>
@@ -119,8 +119,15 @@
   $('#formThongTinCty').validate({
     rules: {
       ten_cty: "required",
-      sdt_cty: "required",
-      email_cty: "required",
+      sdt_cty: {
+        required: true,
+        minlength: 10,
+        maxlength: 15
+      },
+      email_cty: {
+        required: true,
+        email: true
+      },
       tinh_thanh: "required",
       quan_huyen: "required",
       dia_chi: "required",
@@ -129,12 +136,31 @@
     },
     messages: {
       ten_cty: "Vui lòng nhập tên công ty",
-      sdt_cty: "Vui lòng nhập số điện thoại",
-      email_cty: "Vui lòng nhập email công ty",
+      sdt_cty: {
+        required: "Vui lòng nhập số điện thoại",
+        minlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số",
+        maxlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số"
+      },
+      email_cty: {
+        required: "Vui lòng nhập email công ty",
+        email: "Vui lòng nhập đúng định dạng email"
+      },
       tinh_thanh: "Vui lòng chọn tỉnh thành",
       quan_huyen: "Vui lòng chọn quận huyện",
       dia_chi: "Vui lòng nhập địa chỉ chi tiết",
       mo_ta: "Vui lòng nhập mô tả về công ty",
     }
   })
+  $(".is_check_space").keypress(function(event) {
+    var character = String.fromCharCode(event.keyCode);
+    return !(/\s/.test(character));
+  });
+  $(".is_check_first_space").on('input', (function(event) {
+    var value = ($(this).val()).trimStart();
+    $(this).val(value);
+  }));
+  $('.is_check_number').keypress(function(event) {
+    var character = String.fromCharCode(event.keyCode);
+    return (/[0-9]/.test(character));
+  });
 </script>

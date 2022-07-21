@@ -10,7 +10,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0">
                 <label for="" class="font_w500">Họ và tên<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập họ tên" name="ho_ten" />
+                    <input type="text" placeholder="Nhập họ tên" name="ho_ten" class="is_check_first_space"/>
                 </div>
             </div>
             <div class="div_input mt-0">
@@ -64,13 +64,13 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input">
                 <label for="" class="font_w500">Số điện thoại<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập số điện thoại" name="sdt" class="is_check_number"/>
+                    <input type="text" placeholder="Nhập số điện thoại" name="sdt" class="is_check_number" />
                 </div>
             </div>
             <div class="div_input">
                 <label for="" class="font_w500">Email<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập email" name="email" />
+                    <input type="text" placeholder="Nhập email" name="email" class="is_check_space"/>
                 </div>
             </div>
         </div>
@@ -111,7 +111,11 @@ if ($text == 'thong_tin_co_ban') {
                 tinh_thanh: "required",
                 quan_huyen: "required",
                 dia_chi: "required",
-                sdt: "required",
+                sdt: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 15
+                },
                 email: {
                     required: true,
                     email: true
@@ -127,7 +131,11 @@ if ($text == 'thong_tin_co_ban') {
                 tinh_thanh: "Vui lòng chọn tỉnh thành",
                 quan_huyen: "Vui lòng chọn quận huyện",
                 dia_chi: "Vui lòng nhập địa chỉ chi tiết",
-                sdt: "Vui lòng nhập số điện thoại",
+                sdt: {
+                    required: "Vui lòng nhập số điện thoại",
+                    minlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số",
+                    maxlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số"
+                },
                 email: {
                     required: "Vui lòng nhập email",
                     email: "Vui lòng nhập đúng định dạng email"
@@ -195,7 +203,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Trường học<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập trường học" name="truong_hoc" />
+                    <input type="text" placeholder="Nhập trường học" name="truong_hoc" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -203,7 +211,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Chuyên ngành<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập chuyên ngành" name="chuyen_nganh" />
+                    <input type="text" placeholder="Nhập chuyên ngành" name="chuyen_nganh" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -287,7 +295,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên chứng chỉ<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập tên chứng chỉ" name="chung_chi" />
+                    <input type="text" placeholder="Nhập tên chứng chỉ" name="chung_chi" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -295,7 +303,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tổ chức</label>
                 <div class="input_container">
-                    <input type="text" placeholder="Tổ chức" />
+                    <input type="text" placeholder="Tổ chức" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -375,7 +383,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Công ty<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập tên công ty" name="ten_cty" />
+                    <input type="text" placeholder="Nhập tên công ty" name="ten_cty" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -383,7 +391,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Chức vụ<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập chức vụ" name="chuc_vu" />
+                    <input type="text" placeholder="Nhập chức vụ" name="chuc_vu" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -469,7 +477,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên kỹ năng<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập kỹ năng" name="ten_kynang" />
+                    <input type="text" placeholder="Nhập kỹ năng" name="ten_kynang" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -555,7 +563,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên giải thưởng<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập tên giải thưởng" name="giai_thuong" />
+                    <input type="text" placeholder="Nhập tên giải thưởng" name="giai_thuong" class="is_check_first_space" />
                 </div>
             </div>
         </div>
@@ -563,7 +571,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tổ chức</label>
                 <div class="input_container">
-                    <input type="text" placeholder="Tổ chức" />
+                    <input type="text" placeholder="Tổ chức" class="is_check_first_space" />
                 </div>
             </div>
         </div>
@@ -612,7 +620,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên dự án<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập tên dự án" name="du_an" />
+                    <input type="text" placeholder="Nhập tên dự án" name="du_an" class="is_check_first_space" />
                 </div>
             </div>
         </div>
@@ -620,7 +628,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Khách hàng<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhập tên khách hàng" name="khach_hang" />
+                    <input type="text" placeholder="Nhập tên khách hàng" name="khach_hang" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -628,7 +636,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100">
                 <label for="" class="font_w500 mr_0">Số thành viên<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Số thành viên tham gia dự án" name="so_thanhvien" class="is_check_number"/>
+                    <input type="text" placeholder="Số thành viên tham gia dự án" name="so_thanhvien" class="is_check_number" />
                 </div>
             </div>
         </div>
@@ -636,7 +644,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Vị trí<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Vị trí của bạn trong dự án" name="vi_tri_duan" />
+                    <input type="text" placeholder="Vị trí của bạn trong dự án" name="vi_tri_duan" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -644,7 +652,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Nhiệm vụ<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="Nhiệm vụ của bạn trong dự án" name="nhiem_vu" />
+                    <input type="text" placeholder="Nhiệm vụ của bạn trong dự án" name="nhiem_vu" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -652,7 +660,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Công nghệ sử dụng</label>
                 <div class="input_container">
-                    <input type="text" placeholder="Công nghệ sử dụng trong dự án" />
+                    <input type="text" placeholder="Công nghệ sử dụng trong dự án" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -742,7 +750,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Tên tổ chức<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="VD: CLB Tình Nguyện Hà Nội" name="to_chuc" />
+                    <input type="text" placeholder="VD: CLB Tình Nguyện Hà Nội" name="to_chuc" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -750,7 +758,7 @@ if ($text == 'thong_tin_co_ban') {
             <div class="div_input mt-0 w_100 mr_0">
                 <label for="" class="font_w500">Vị trí tham gia<span class="color_red">*</span></label>
                 <div class="input_container">
-                    <input type="text" placeholder="VD: Thành viên" name="vi_tri" />
+                    <input type="text" placeholder="VD: Thành viên" name="vi_tri" class="is_check_first_space"/>
                 </div>
             </div>
         </div>
@@ -833,7 +841,7 @@ if ($text == 'thong_tin_co_ban') {
 
 <script>
     $(".select_form").select2();
-    $("input").keypress(function(event) {
+    $(".is_check_space").keypress(function(event) {
         var character = String.fromCharCode(event.keyCode);
         return !(/\s/.test(character));
     });

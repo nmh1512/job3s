@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../css/slick-theme.css" />
   <link rel="stylesheet" href="../css/style_t.css" />
   <link rel="stylesheet" href="../css/style_h.css" />
+  <script src="../js/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <body>
@@ -74,13 +76,13 @@
               <div class="div_input w_100">
                 <label for="" class="font_w500">Tiêu đề<span class="color_red">*</span></label>
                 <div class="input_container">
-                  <input type="text" placeholder="Bạn đang thắc mắc?" />
+                  <input type="text" placeholder="Bạn đang thắc mắc?" name="tieu_de" class="is_check_first_space" />
                 </div>
               </div>
               <div class="div_input w_100">
                 <label for="" class="font_w500">Nội dung<span class="color_red">*</span></label>
                 <div class="input_container">
-                  <textarea name="" id="" cols="30" rows="5" placeholder="Nội dung bạn muốn góp ý hoặc yêu cầu"></textarea>
+                  <textarea name="noi_dung" id="" cols="30" rows="5" placeholder="Nội dung bạn muốn góp ý hoặc yêu cầu" class="is_check_first_space"></textarea>
                 </div>
               </div>
               <div class="div_input w_100">
@@ -103,7 +105,7 @@
                   ( Hỗ trợ tải lên file: GIF, JPEG, JPG, PNG, BMP, DOC, PDF )
                 </p>
               </div>
-              <button type="submit" class="mt_24 see_all btn_xacnhan">
+              <button type="submit" class="mt_24 btn_submit btn_xacnhan">
                 Gửi yêu cầu
               </button>
             </form>
@@ -164,11 +166,12 @@
 
     </div>
   </div>
-  <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/select2.min.js"></script>
   <script type="text/javascript" src="../js/slick.min.js"></script>
   <script src="../js/js_h.js"></script>
   <script src="../js/js_t.js"></script>
+  <script src="../js/js_main.js"></script>
+  <script src="../../../js/jquery.validate.min.js"></script>
   <script>
     $("._filter").select2();
     $(".select_popup").select2();
@@ -202,6 +205,19 @@
     }
     let fileContainer = document.querySelector('.file_container');
     DropFiles(fileContainer, (f) => getFileName(f.name));
+
+    $('.form_cskh').validate({
+      rules: {
+        tieu_de: "required",
+        noi_dung: "required",
+
+      },
+      messages: {
+        tieu_de: "Vui lòng nhập tiêu đề",
+        noi_dung: "Vui lòng nhập nội dung",
+
+      }
+    })
   </script>
 </body>
 

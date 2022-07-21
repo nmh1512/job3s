@@ -100,6 +100,7 @@
   .new_works_content_container .slick-next{padding: 11px 15px 11px 16px; right: -8px;}
   .list_news_container_1024 .slick-dots li,.new_works_content_container .slick-dots li, .news_item .slick-dots li, .list_news_container .slick-dots li,.slide_bottom_news .slick-dots li{height: 12px; width: 12px; background: #EEEEEE; border-radius: 50%;}
   .list_news_container_1024 .slick-dots .slick-active, .new_works_content_container .slick-dots .slick-active, .news_item .slick-dots .slick-active, .list_news_container .slick-dots .slick-active, .slide_bottom_news .slick-dots .slick-active{background: #007580; }
+  .btn_submit {border: 1px solid #007580;border-radius: 100px; width: 140px; height: 42px; margin: 0 auto;}
   .see_all {border: 1px solid #007580;border-radius: 100px; width: 140px; height: 42px; margin: 0 auto;}
   .see_all::after{content: url(../images/next_small.svg); margin-left: 11px; height: 16.5px; vertical-align: middle;}
   .see_all_container{padding-top: 15px;}
@@ -660,6 +661,12 @@
   .goi_y_viec_container > div > div:first-child > ul > li {padding-left: 24px; padding-bottom: 6px;}
   .goi_y_viec_container > div > div:first-child > ul > li:last-child{padding-bottom: 0;}
  
+  #popupWish{width: 708px;}
+  #popupWish .dong_popup {top: 16px;}
+  #popupWish .popup_header_white{padding-bottom: 0;}
+  .w_180px{width: 180px !important;}
+  .dash_red{border: 1px dashed #FF3333;}
+  #popupWish label.error{font-style: italic; font-size: 14px; font-weight: 400;}
   @media screen and (min-width: 1367px) {
   .footer{width: 1230px;}
   .filter_my_service {justify-content: start;}
