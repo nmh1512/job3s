@@ -163,3 +163,16 @@ function viewAndClosePopupUpdate(
   };
 }
 
+$(".is_check_space").keypress(function(event) {
+  var character = String.fromCharCode(event.keyCode);
+  return !(/\s/.test(character));
+});
+$(".is_check_first_space").on('input', (function(event) {
+  var value = ($(this).val()).trimStart();
+  $(this).val(value);
+}));
+$('.is_check_number').keypress(function(event) {
+  var character = String.fromCharCode(event.keyCode);
+  return (/[0-9]/.test(character));
+});
+

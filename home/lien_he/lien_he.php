@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/style_t.css" />
   <link rel="stylesheet" href="../../css/style_h.css" />
+  <script src="../js/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <body>
@@ -49,12 +52,12 @@
         <div class="form_contact">
           <h2 class="main_color font_s22">Gửi phản hồi tới Job3s</h2>
           <div class="mt_24">
-            <form action="">
+            <form action="" id="formLienHe">
               <div class="d_flex">
                 <div class="div_input mt-0 w_100 m-0">
                   <label for="" class="font_w500">Họ và tên<span class="color_red">*</span></label>
                   <div class="input_container">
-                    <input type="text" placeholder="Nhập họ tên" />
+                    <input class="is_check_first_space" type="text" placeholder="Nhập họ tên" name="ho_ten"/>
                   </div>
                 </div>
               </div>
@@ -62,13 +65,13 @@
                 <div class="div_input mt-0 mt_24">
                   <label for="" class="font_w500">Email<span class="color_red">*</span></label>
                   <div class="input_container">
-                    <input type="text" placeholder="Nhập email của bạn" />
+                    <input class="is_check_space" type="text" placeholder="Nhập email của bạn" name="email"/>
                   </div>
                 </div>
                 <div class="div_input mt-0 mt_24">
                   <label for="" class="font_w500">Số điện thoại<span class="color_red">*</span></label>
                   <div class="input_container">
-                    <input type="text" placeholder="Nhập số điện thoại của bạn" />
+                    <input class="is_check_number" type="text" placeholder="Nhập số điện thoại của bạn" name="sdt"/>
                   </div>
                 </div>
               </div>
@@ -77,14 +80,14 @@
                 <div class="div_input mt-0 w_100 m-0">
                   <label for="" class="font_w500">Tiêu đề<span class="color_red">*</span></label>
                   <div class="input_container">
-                    <input type="text" placeholder="Nhập tiêu đề cho nội dung phản hồi" />
+                    <input class="is_check_first_space" type="text" placeholder="Nhập tiêu đề cho nội dung phản hồi" name="tieu_de"/>
                   </div>
                 </div>
               </div>
 
               <div class="mt_24">
                 <label for="" class="font_w500">Nội dung<span class="color_red">*</span></label>
-                <textarea class="mt_8" name="" id="" cols="30" rows="10" placeholder="Nội dung phản hồi của bạn"></textarea>
+                <textarea class="mt_8 is_check_first_space" name="noi_dung" id="" cols="30" rows="10" placeholder="Nội dung phản hồi của bạn"></textarea>
               </div>
               <div class="mt_24">
                 <button type="submit" class="btn_main_color cursor_p">Gửi phản hồi</button>
@@ -152,5 +155,41 @@
   include "../../includes/footer.php";
   ?>
 </body>
+<script src="../../js/js_main.js"></script>
+<script src="../../../js/jquery.validate.min.js"></script>
+<script>
+  $('#formLienHe').validate({
+    rules: {
+      ho_ten: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      sdt: {
+        required: true,
+        minlength: 10,
+        maxlength: 15
+      },
+      tieu_de: "required",
+      noi_dung: "required",
+
+    },
+    messages: {
+      ho_ten: "Vui lòng nhập họ tên",
+      email: {
+        required: "Vui lòng nhập email",
+        email: "Vui lòng nhập đúng định dạng email"
+      },
+      sdt: {
+        required: "Vui lòng nhập số điện thoại",
+        minlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số",
+        maxlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số"
+      },
+      tieu_de: "Vui lòng nhập tiêu đề",
+      noi_dung: "Vui lòng nhập nội dung",
+
+    }
+  })
+</script>
 
 </html>
