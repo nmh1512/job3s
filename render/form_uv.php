@@ -484,12 +484,12 @@ if ($text == 'thong_tin_co_ban') {
         <div class="d_flex mt_16">
             <div class="div_input mt-0 w_100">
                 <label for="" class="font_w500">Đánh giá</label>
-                <div class="d_flex mt_8">
-                    <img class="mr_8" src="../../../images/star.svg" alt="" />
-                    <img class="mr_8" src="../../../images/star.svg" alt="" />
-                    <img class="mr_8" src="../../../images/star.svg" alt="" />
-                    <img class="mr_8" src="../../../images/star.svg" alt="" />
-                    <img src="../../../images/star_gray.svg" alt="" />
+                <div class="d_flex mt_8 rate_star_skill">
+                    <img data-id="1" class="mr_8 cursor_p" src="../../../images/star.svg" alt="" />
+                    <img data-id="2" class="mr_8 cursor_p" src="../../../images/star.svg" alt="" />
+                    <img data-id="3" class="mr_8 cursor_p" src="../../../images/star.svg" alt="" />
+                    <img data-id="4" class="mr_8 cursor_p" src="../../../images/star.svg" alt="" />
+                    <img data-id="5" class="cursor_p" src="../../../images/star_gray.svg" alt="" />
                 </div>
             </div>
         </div>
@@ -512,6 +512,18 @@ if ($text == 'thong_tin_co_ban') {
             messages: {
                 ten_kynang: "Vui lòng nhập tên kỹ năng",
             }
+        })
+        $('.rate_star_skill img').click(function() {
+            $('.rate_star_skill img').each(function() {
+                $(this).attr('src','../../../images/star_gray.svg')
+            })
+            var x = $(this).data('id');
+            $('.rate_star_skill img').each(function() {
+                if($(this).data('id') > x) {
+                    return;
+                }
+                $(this).attr('src','../../../images/star.svg')
+            })
         })
     </script>
 <?
