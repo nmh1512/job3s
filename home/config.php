@@ -3,21 +3,24 @@ session_start();
 
 require_once("../../functions/functions.php");
 ob_start();
+
 require_once("../../functions/function_rewrite.php");
 require_once("../../classes/database.php");
+
 require_once("../../functions/pagebreak.php");
 require_once("../../functions/simple_html_dom.php");
 // require_once("../data/array_font_end.php");
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 // $domain = "https://dev7.tinnhanh365.vn";
 
+
 $ver = 1;
 
 //print_r($_SESSION);
 
 if (!isset($_COOKIE['acc_token']) || !isset($_COOKIE['role']) || !isset($_COOKIE['rf_token'])) {
-    header('Location: /dang-xuat.html');
-    exit;
+    // header('Location: /dang-xuat.html');
+    // exit;
 }
 // Tài khoản quyền nhân viên
 if ( isset($_COOKIE['role']) && $_COOKIE['role'] == 2) {
@@ -447,15 +450,15 @@ if ($data_list_nv == '') {
 }
 
 // PHÒNG BAN
-$curl_dep = curl_init();
-curl_setopt($curl_dep, CURLOPT_URL, "https://chamcong.24hpay.vn/service/list_department.php?id_com=".$usc_id);
-curl_setopt($curl_dep, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($curl_dep, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-curl_setopt($curl_dep, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$token));
-$res_dep = curl_exec($curl_dep);
-curl_close($curl_dep);
-$dep_this_cty = json_decode($res_dep,true);
-$arr_dep = $dep_this_cty['data']['items'];
+// $curl_dep = curl_init();
+// curl_setopt($curl_dep, CURLOPT_URL, "https://chamcong.24hpay.vn/service/list_department.php?id_com=".$usc_id);
+// curl_setopt($curl_dep, CURLOPT_RETURNTRANSFER, 1);
+// curl_setopt($curl_dep, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+// curl_setopt($curl_dep, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$token));
+// $res_dep = curl_exec($curl_dep);
+// curl_close($curl_dep);
+// $dep_this_cty = json_decode($res_dep,true);
+// $arr_dep = $dep_this_cty['data']['items'];
 
 
 ?>

@@ -857,3 +857,29 @@ valuedd = format(values);
 
 element.value = valuedd.toLocaleString();
 }
+
+function findResultJob({
+  append,
+  valueFind,
+  keyFind,
+  keyApp,
+  arrayFind = []
+}) {
+  if(arrayFind.length < 0) return;
+  let elem = document.querySelector(append);
+  let option = document.createElement('option');
+  option.innerText = '';
+
+  if(elem) {
+      let newResult = arrayFind.filter((e) => e[keyFind] != valueFind);
+
+      if(newResult.length > 0) {
+          newResult.forEach((e) => {
+              let newClone = option.cloneNode(true);
+              newClone.innerText = e[keyApp];
+              newClone.setAttribute('value', e[keyFind])
+              elem.appendChild(newClone);
+          })
+      }
+  }
+}

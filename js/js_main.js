@@ -143,11 +143,21 @@ function viewAndClosePopupUpdate(
     function resertForm(element) {
       if (element) {
         element.reset();
+        let erorrDiv = element.querySelectorAll('.form_group');
         let fiels = element.querySelectorAll("select[name]");
         if (fiels) {
           fiels.forEach((e) => {
             $(e).val(null).trigger("change");
           });
+        }
+
+        if(erorrDiv) {
+          erorrDiv.forEach((e)=>{
+            let erorr = e.querySelector('.error');
+            if(erorr) {
+              e.removeChild(erorr);
+            }
+          })
         }
       }
     }

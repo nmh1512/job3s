@@ -204,6 +204,13 @@ function gethumbnailuv($url,$nameimg,$timeimage,$width2,$height2,$optimize)
    }
    return $linkimg;
 }
+
+function sql_injection_rp($string) {
+    $arr_s = array('UNION','echo','CASE',';','$','"','script','drop','delete','*',"'");
+    $str = str_replace($arr_s,'',$string);
+    return $str;
+ }
+
 function gethumbnail58($url,$nameimg,$timeimage,$width2,$height2,$optimize)
 {
    $url = str_replace("..","",$url);
