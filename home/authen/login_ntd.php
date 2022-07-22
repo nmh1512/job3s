@@ -78,48 +78,10 @@
     </div>
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/jquery.validate.min.js"></script>
+    <script src="../../js/validate_t.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
         eyeChange('.eye_btn', '#password', 'eye_hidden');
-
-
-        $.validator.addMethod("validatePassword", function(value, element) {
-            return this.optional(element) || /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(value);
-        })
-
-        $(".is_check_space").keypress(function(event) {
-            var character = String.fromCharCode(event.keyCode);
-            return !(/\s/.test(character));
-        });
-
-        $('#from_login_ntd').validate({
-            rules: {
-                email: {
-                    required: true,
-                    email: validateEmail($(email).val())
-                },
-                password: {
-                    required: true,
-                    validatePassword: true
-                }
-            },
-            messages: {
-                email: {
-                    required: 'Vui lòng nhập email',
-                    email: 'Trường này phải là email'
-                },
-                password: {
-                    required: 'Vui lòng nhập mật khẩu',
-                    validatePassword: 'Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số'
-                }
-            },
-            errorPlacement: function(error, element) {
-                let parent = $(element).parents('.form_group');
-                if (parent.length > 0) {
-                    $(parent).append(error);
-                }
-            },
-        });
     </script>
 </body>
 

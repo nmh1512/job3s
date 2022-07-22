@@ -84,11 +84,7 @@
             </div>
 
             <div class="d_flex align_c inf space_b cl_poup_if position_r showPopup cursor_p">
-<<<<<<< HEAD
                 <div class="avt_header show_popup_choose">
-=======
-                <div class="avt_header ">
->>>>>>> hung
                     <img src="../images/av_t.png" alt="">
                 </div>
                 <span class="font_s16 line_h19 font_w500 cl_a4 name_peole flex_1">Nguyễn Đình Trang</span>
@@ -151,7 +147,5 @@
         </div>
     </div>
 </header>
-<<<<<<< HEAD
-=======
 <script src="../js/js_main.js"></script>
->>>>>>> hung
+

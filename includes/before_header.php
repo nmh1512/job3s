@@ -20,7 +20,7 @@
         <nav class="d_flex align_c">
             <ul class="nav_header_items">
                 <li>
-                    <a href="">Hồ sơ & CV</a>
+                    <a href="/mau-cv/">Hồ sơ & CV</a>
                 </li>
                 <li>
                     <a href="tim-ung-vien">Tìm ứng viên</a>

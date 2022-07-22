@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="https://vieclam123.vn/css/cv_css/cropper.css?v=26">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
+    <script src="../../js/jquery-3.4.1.min.js"></script>
     <title>Danh sách mẫu thư xin việc đẹp nhất hiện nay</title>
 </head>
 
@@ -111,6 +112,24 @@
         </div>
     </div>
     <!-- end poup xác nhận -->
+
+    <!-- poup xác nhận -->
+    <div class="popup hidden" id="popup_error_cv">
+        <div class="main_popup bg_white popup_500 br_20 animation_zoom_in">
+            <div class="conatent_popup pd_t32_lrb24">
+                <div class="d_flex flex_column">
+                    <h3 class="font_s20 line_h23 font_w700 cl_primary txt_left">Thông báo</h3>
+                    <div class="list_erorr mt_24"></div>
+                    <!-- <p class="font_s16 line_h19 font_w400 cl_55 mt_8 mt_24">Bạn chưa điền đầy đủ các trường: <span class="list_erorr"></span></p> -->
+                    <div class="form_submit d_flex center_center mt_48">
+                        <button class="cancel font_s16 line_h19 font_w700 btn h_42 flex_im m_w140 center_center cl_primary bg_w bg_td bd_td br_5 ml_36">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end poup xác nhận -->
+
 
     <div id="root">
         <?php include("../../includes/after_header.php") ?>
@@ -477,7 +496,6 @@
     </div>
 
 
-    <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/select2.min.js"></script>
 
     <script src="https://work247.vn/js/custom.js?v=280" defer></script>
@@ -496,38 +514,12 @@
     <script src="https://work247.vn/js/jscv/app_cv.js?v=279" type="text/javascript"></script>
     <script src="https://work247.vn/js/jscv/custom_cv.js?v=279" defer></script>
 
-
-    <!-- <script src="/js/cv_page.js"></script>
-    <script type="text/javascript" src="https://vieclam123.vn/js/jqueryui/jquery-ui.js?v=26"></script>
-    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/cropper.js?v=26"></script>
-    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/html2canvas.min.js?v=26"></script>
-    <script src="https://vieclam123.vn/js/jscv/editor-control.js?v=26"></script>
-    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/render_cv_pdf_2pages.js?v=26"></script>
-
-    <script type="text/javascript" src="https://vieclam123.vn/js/jscv/create.js?v=26"></script> -->
-    <!-- <script src="https://vieclam123.vn/js/jscv/main1.js?v=26"></script> -->
     <script src="../../js/slick.min.js"></script>
+    <script src="../../js/validate_cv.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
         $('.select_one').select2({
             width: '100%'
-        })
-
-        $('.save_xv').click(function() {
-            let objectELemet = viewAndClosePopupUpdate('#save_xv', '.main_popup', '.close_popup', '.cancel', '.form_check');
-            let {
-                infor_menu,
-                box_popup_infor_menu,
-                clearAmintions
-            } = objectELemet;
-            let dong_y = infor_menu.querySelector('.dong_y');
-
-            if (dong_y) {
-                dong_y.onclick = () => {
-                    clearAmintions();
-                    viewAndClosePopupUpdate('#popup_ss', '.main_popup', '', '.cancel', '', false);
-                }
-            }
         })
 
         $("#font-selector").change(function() {
@@ -542,14 +534,7 @@
             value = $("#font-selector").val();
             // let namFont = array_font[value];
 
-            $('#page-cv').css('font-family', array_font[value])
-
-            // $(
-            //     "#cv-profile-fullname, #cv-profile-job, #cv-boxtitle, #cv-profile-birthday, #cv-profile-sex, #cv-profile-phone, #cv-profile-email, #cv-profile-address"
-            // ).css("font-family", array_font[value]);
-            // $(
-            //     ".titlecv, .box-title, .skill-name, .box-content, .block-title, .exp-title, .exp-subtitle, .exp-content, .exp-date"
-            // ).css("font-family", array_font[value]);
+            $('#page-cv').css('font-family', array_font[value]);
         });
 
 

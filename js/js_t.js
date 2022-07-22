@@ -145,10 +145,7 @@ function eyeChange(selector, selectorInput, classEye) {
   }
 }
 
-function validateEmail(email) {
-  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  return emailReg.test(email);
-}
+
 
 function DropFiles(elementFiles, callBack = () => {}) {
   if (elementFiles) {
@@ -368,7 +365,6 @@ function changeAjax({
   callBack = () => {},
 }) {
   let elemPr = document.querySelector(listElem);
-  console.log(elemPr);
   if (classChange) {
     let chil = [...elemPr.children];
 
@@ -828,4 +824,30 @@ function heightVideo() {
           'height': `${h}px`
       })
   })
+}
+
+
+function format(value) {
+Number.prototype.format = function (n, x) {
+  var re = "\\d(?=(\\d{" + (x || 3) + "})+" + (n > 0 ? "\\." : "$") + ")";
+  return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, "g"), "$&.");
+};
+
+return value.format();
+}
+
+function formatMoney(element) {
+let values = element.value;
+let pos = values.indexOf(".");
+if (values == "") {
+  values = 0;
+}
+if (pos != -1) {
+  values = values.replaceAll(".", "");
+}
+values = parseFloat(values);
+
+valuedd = format(values);
+
+element.value = valuedd.toLocaleString();
 }

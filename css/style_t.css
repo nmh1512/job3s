@@ -69,8 +69,15 @@
 .custom_select .select2-container--default .select2-selection--multiple {padding: 10.5px 14px;}
 .custom_select .select2-container--default .select2-search--inline .select2-search__field {margin-top: 0;margin-left: 0;}
 .select2-results__option { color: #4A4A4A;}
+
+.custom_select .select2-container--default .select2-selection--multiple .select2-selection__choice {margin-top: 0;margin-left: 0;margin-right: 10px;}
+.custom_select .select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__display {font-size: 14px;line-height: 16px;}
+.custom_select .select2-container .select2-selection--multiple .select2-selection__rendered {position: absolute;}
+
 .box_main_table_list::-webkit-scrollbar-thumb, .khoi_bang::-webkit-scrollbar-thumb, .khoi_bang_tt_thanh_toan .khoi_thongtin::-webkit-scrollbar-thumb, .form_kh_infor::-webkit-scrollbar-thumb, .main_details_step_mission::-webkit-scrollbar-thumb, .box_main .col_l::-webkit-scrollbar-thumb, .select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb {background-color: #007580;}
 .box_main_table_list::-webkit-scrollbar-track, .khoi_bang::-webkit-scrollbar-track, .khoi_bang_tt_thanh_toan .khoi_thongtin::-webkit-scrollbar-track, .form_kh_infor::-webkit-scrollbar-track, .main_details_step_mission::-webkit-scrollbar-track, .box_main .col_l::-webkit-scrollbar-track, .select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-track {background-color: #E7F1FE;}
+.list_erorr > span {font-size: 16px;line-height: 19px;font-weight: 400;color: #4A4A4A;}
+
 .flex_im {display: flex !important;}
 .pd_lr68 {padding-left: 68px;padding-right: 68px;}
 .mt_138 {margin-top: 138px;}

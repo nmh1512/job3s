@@ -181,6 +181,7 @@ div#block01 .head { padding-top: 12px; }
 .paging-arrow { width: 52px; height: 20px; background-color: rgb(3, 168, 78); color: rgb(255, 255, 255); font-size: 12px; line-height: 20px; text-align: center; margin-left: -54px; margin-bottom: -10px; cursor: default; transition: all 0.3s ease 0s; border-radius: 3px; position: relative; }
 .A4 { background: white; width: 21cm; height: 29.7cm; padding: 10px 25px; margin-bottom: 0.5cm; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0.5cm; box-sizing: border-box; font-size: 12pt; float: left; position: relative; }
 .page { width: 50%; }
+.is_valid {border: 1px dashed red;}
 @media print {
   .page-break { display: block; break-before: page; }
 }
