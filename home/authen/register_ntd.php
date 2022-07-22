@@ -173,111 +173,14 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/jquery.validate.min.js"></script>
     <script src="../../js/select2.min.js"></script>
+    <script src="../../js/validate_t.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
         $('.select_one').select2({
             width: '100%'
         })
-
         eyeChange('.eye_btn', '#password', 'eye_hidden')
         eyeChange('.eyecf_btn', '#confirm_password', 'eye_hidden')
-
-
-        $.validator.addMethod("validatePassword", function(value, element) {
-            return this.optional(element) || /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(value);
-        })
-
-        $(".is_check_space").keypress(function(event) {
-            var character = String.fromCharCode(event.keyCode);
-            return !(/\s/.test(character));
-        });
-
-        $(".is_check_first_space").on('input', (function(event) {
-            var value = ($(this).val()).trimStart();
-            $(this).val(value);
-        }));
-
-        $('.is_check_number').keypress(function(event) {
-            var character = String.fromCharCode(event.keyCode);
-            return (/[0-9]/.test(character));
-        });
-
-        $('#from_resgiter_ntd').validate({
-            rules: {
-                fullname: "required",
-                gender: "required",
-                workplace: "required",
-                company: "required",
-                city: "required",
-                district: "required",
-                phone_number: {
-                    required: true,
-                },
-                email: {
-                    required: true,
-                    email: validateEmail($(email).val())
-                },
-                password: {
-                    required: true,
-                    validatePassword: true
-                },
-                confirm_password: {
-                    required: true,
-                    validatePassword: true,
-                    equalTo: "#password"
-                }
-            },
-            messages: {
-                fullname: {
-                    required: 'Vui lòng nhập họ và tên',
-                },
-                gender: {
-                    required: 'Vui lòng chọn giới tính',
-                },
-                phone_number: {
-                    required: 'Vui lòng nhập số điện thoại cá nhân'
-                },
-                workplace: {
-                    required: 'Vui lòng chọn vị trí công tác'
-                },
-                city: {
-                    required: 'Vui lòng chọn tỉnh thành phố'
-                },
-                district: {
-                    required: 'Vui lòng chọn quận huyện'
-                },
-                company: {
-                    required: 'Vui lòng chọn tên công ty'
-                },
-                email: {
-                    required: 'Vui lòng nhập email',
-                    email: 'Trường này phải là email'
-                },
-                password: {
-                    required: 'Vui lòng nhập mật khẩu',
-                    validatePassword: 'Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số'
-                },
-                confirm_password: {
-                    required: 'Vui lòng nhập xác nhận mật khẩu',
-                    validatePassword: `Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số`,
-                    equalTo: 'Mật khẩu nhập lại chưa chính xác'
-                }
-            },
-            errorPlacement: function(error, element) {
-                let parent = $(element).parents('.form_group');
-                var elem = $(element);
-                if (elem.hasClass("select2-hidden-accessible")) {
-                    element = $(element).parents('.custom_select').parent();
-                    $(element).append(error);
-                } else {
-                    $(parent).append(error);
-                }
-            }
-        });
-
-        $('select').select2().on("change", function(e) {
-            $(this).valid()
-        });
     </script>
 </body>
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
+    <script src="../../js/jquery-3.4.1.min.js"></script>
     <title>Đăng tin tuyển dụng</title>
 </head>
 
@@ -31,13 +32,13 @@
                         <h1 class="font_s24 line_h28 font_w700 cl_white">Đăng tin tuyển dụng</h1>
                     </div>
                     <div class="box_form_content">
-                        <form action="" method="post" class="chilfr_mt24" enctype='multipart/form-data'>
+                        <form action="" method="post" class="chilfr_mt24" enctype='multipart/form-data' id="add_tuyen_dung">
                             <p class="font_s16 line_h19 font_w400 cl_55">Tin tuyển dụng của bạn sẽ được kiểm duyệt trước khi chính thức hiển thị với các ứng viên tiềm năng. Tìm hiểu về <a href="" class="cl_primary">Quy định đăng tin tại Job3s.</a></p>
                             <div class="form_group">
                                 <h2 class="font_s20 line_h23 font_w700 cl_primary bd_l4 pd_l8">Tiêu đề tin tuyển dụng</h2>
                                 <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Tiêu đề tin tuyển dụng<span class="cl_red">*</span></span>
                                 <div class="d_flex align_c mt_8 bd_dc w_100 br_5">
-                                    <textarea name="title" id="" class="resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Ví dụ: Tuyển dụng nhân viên kinh doanh"></textarea>
+                                    <textarea name="title_recruit" id="" class="is_check_first_space resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Ví dụ: Tuyển dụng nhân viên kinh doanh"></textarea>
                                 </div>
                             </div>
 
@@ -47,7 +48,7 @@
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Ngành nghề chính</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Chọn ngành nghề" data-minimum-results-for-search="Infinity">
+                                            <select name="main_job" class="select_one" data-placeholder="Chọn ngành nghề" data-minimum-results-for-search="Infinity">
                                                 <option value=""></option>
                                                 <option value="0">Hà Nội</option>
                                                 <option value="1">Hồ Chí Minh</option>
@@ -61,7 +62,7 @@
                                     <div class="w_50pt ml_24">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Ngành nghề phụ</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Chọn tối đa 2 ngành nghề phụ" multiple="multiple" data-minimum-results-for-search="Infinity">
+                                            <select name="professions" class="select_max" data-placeholder="Chọn tối đa 2 ngành nghề phụ" multiple="multiple" data-minimum-results-for-search="Infinity">
                                                 <option value=""></option>
                                                 <option value="0">Hà Nội</option>
                                                 <option value="1">Hồ Chí Minh</option>
@@ -79,16 +80,16 @@
                                 <h2 class="font_s20 line_h23 font_w700 cl_primary bd_l4 pd_l8">Thông tin chung</h2>
                                 <div class="d_flex w_100">
                                     <div class="w_50pt">
-                                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Số lượng tuyển</span>
+                                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Số lượng tuyển<span class="cl_red">*</span> </span>
                                         <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                            <input type="text" autocomplete="off" name="sl_tuyen" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập số lượng ứng viên cần tuyển" />
+                                            <input type="text" autocomplete="off" name="sl_tuyen" class="is_check_number rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập số lượng ứng viên cần tuyển" />
                                         </div>
                                     </div>
 
                                     <div class="w_50pt ml_24">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Hình thức làm việc</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Chọn tối đa 2 ngành nghề phụ" data-minimum-results-for-search="Infinity">
+                                            <select name="working_form" class="select_one" data-placeholder="Chọn tối đa 2 ngành nghề phụ" data-minimum-results-for-search="Infinity">
                                                 <option value="0">Toàn thời gian cố định</option>
                                             </select>
                                         </div>
@@ -100,7 +101,7 @@
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Giới tính</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Không yêu cầu" data-minimum-results-for-search="Infinity">
+                                            <select name="gender" class="select_one" data-placeholder="Chọn giới tính" data-minimum-results-for-search="Infinity">
                                                 <option value=""></option>
                                                 <option value="0">Nam</option>
                                                 <option value="1">Nữ</option>
@@ -112,9 +113,9 @@
                                     <div class="w_50pt ml_24">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Cấp bậc</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Cấp bậc" data-minimum-results-for-search="Infinity">
+                                            <select name="rank" class="select_one" data-placeholder="Cấp bậc" data-minimum-results-for-search="Infinity">
                                                 <option value="0">Nhân viên</option>
-                                                <option value="1">Nữ</option>
+                                                <option value="1">Trưởng nhóm</option>
                                                 <option value="3">Khác</option>
                                             </select>
                                         </div>
@@ -126,9 +127,8 @@
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Kinh nghiệm</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Không yêu cầu" data-minimum-results-for-search="Infinity">
-                                                <option value=""></option>
-                                                <option value="0">Nam</option>
+                                            <select name="exp_work" class="select_one" data-placeholder="Không yêu cầu" data-minimum-results-for-search="Infinity">
+                                                <option value="0">Không yêu cầu</option>
                                                 <option value="1">Nữ</option>
                                                 <option value="3">Khác</option>
                                             </select>
@@ -138,7 +138,7 @@
                                     <div class="w_50pt ml_24">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Bằng cấp</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one" data-placeholder="Cấp bậc" data-minimum-results-for-search="Infinity">
+                                            <select name="degree" class="select_one" data-placeholder="Cấp bậc" data-minimum-results-for-search="Infinity">
                                                 <option value="0">Nhân viên</option>
                                                 <option value="1">Nữ</option>
                                                 <option value="3">Khác</option>
@@ -148,33 +148,32 @@
 
                                 </div>
 
-                                <div class="d_flex w_100">
+                                <div class="d_flex w_100 ml_tl_pr">
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Mức lương</span>
                                         <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                            <select name="" class="select_one ml_change" data-placeholder="Không yêu cầu" data-minimum-results-for-search="Infinity">
-                                                <option value=""></option>
+                                            <select name="wage" class="select_one ml_change" data-minimum-results-for-search="Infinity">
                                                 <option value="0">Thỏa thuận</option>
                                                 <option value="1">Trong khoảng</option>
                                             </select>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="d_flex w_100 none_im ml_tk">
-                                    <div class="w_50pt">
-                                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Từ<span class="cl_red">*</span></span>
-                                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                            <input type="text" autocomplete="off" name="sl_tuyen" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mức lương">
-                                            <span class="font_s15 line_h18 font_w400 cl_a4 block ml_10">VNĐ</span>
+                                    <div class="d_flex w_50pt none_im ml_tk ml_24">
+                                        <div class="w_50pt">
+                                            <span class="font_s16 line_h19 font_w500 cl_a4 block">Từ<span class="cl_red">*</span></span>
+                                            <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
+                                                <input type="text" autocomplete="off" data-erorr="Vui lòng nhập mức lương từ" data-min="ml_tk_end" name="ml_tk_start" oninput="formatMoney(this)" class="is_check_number is_error rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mức lương">
+                                                <span class="font_s15 line_h18 font_w400 cl_a4 block ml_10">VNĐ</span>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="w_50pt ml_24">
-                                        <span class="font_s16 line_h19 font_w500 cl_a4 block">Đến<span class="cl_red">*</span></span>
-                                        <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                            <input type="text" autocomplete="off" name="sl_tuyen" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mức lương">
-                                            <span class="font_s15 line_h18 font_w400 cl_a4 block ml_10">VNĐ</span>
+                                        <div class="w_50pt ml_24">
+                                            <span class="font_s16 line_h19 font_w500 cl_a4 block">Đến<span class="cl_red">*</span></span>
+                                            <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
+                                                <input type="text" autocomplete="off" name="ml_tk_end" data-min="ml_tk_start" data-erorr="Vui lòng nhập mức lương đến" oninput="formatMoney(this)" class="is_check_number is_error rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mức lương">
+                                                <span class="font_s15 line_h18 font_w400 cl_a4 block ml_10">VNĐ</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +214,7 @@
                                 <div>
                                     <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Địa chỉ chi tiết</span>
                                     <div class="d_flex align_c mt_8 bd_dc w_100 br_5">
-                                        <textarea name="title" id="" class="resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập địa chỉ chi tiết"></textarea>
+                                        <textarea name="title" id="" class="resert_txt is_check_first_space w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập địa chỉ chi tiết"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -225,21 +224,21 @@
                                 <div>
                                     <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Mô tả công việc<span class="cl_red">*</span></span>
                                     <div class="d_flex align_c mt_8 bd_dc w_100 br_5">
-                                        <textarea name="title" id="" class="resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập nội dung mô tả công việc"></textarea>
+                                        <textarea name="job_description" id="" class="is_check_first_space resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập nội dung mô tả công việc"></textarea>
                                     </div>
                                 </div>
 
                                 <div>
                                     <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Yêu cầu công việc</span>
                                     <div class="d_flex align_c mt_8 bd_dc w_100 br_5">
-                                        <textarea name="title" id="" class="resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập nội dung yêu cầu ứng viên"></textarea>
+                                        <textarea name="title" id="" class="is_check_first_space resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập nội dung yêu cầu ứng viên"></textarea>
                                     </div>
                                 </div>
 
                                 <div>
                                     <span class="font_s16 line_h19 font_w500 cl_a4 mt_16 block">Quyền lợi được hưởng</span>
                                     <div class="d_flex align_c mt_8 bd_dc w_100 br_5">
-                                        <textarea name="title" id="" class="resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập nội dung quyền lợi của ứng viên"></textarea>
+                                        <textarea name="title" id="" class="is_check_first_space resert_txt w_100 h_100 pd_11_14 br_5 h_84" placeholder="Nhập nội dung quyền lợi của ứng viên"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -269,14 +268,14 @@
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Hạn nộp hồ sơ</span>
                                         <div class="d_flex align_c mt_5 w_100">
-                                            <input type="date" name="fullname" class="custom_ipdate" placeholder="Tài khoản Skype" />
+                                            <input type="date" name="submission" class="custom_ipdate" />
                                         </div>
                                     </div>
 
                                     <div class="w_50pt ml_24">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Người liên hệ</span>
                                         <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                            <input type="text" value="Nguyễn Thị Hoa" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Tài khoản Skype" />
+                                            <input type="text" value="Nguyễn Thị Hoa" class="is_check_first_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập người liên hệ" />
                                         </div>
                                     </div>
                                 </div>
@@ -285,14 +284,14 @@
                                     <div class="w_50pt">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Số điện thoại</span>
                                         <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                            <input type="text" value="0987654144" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Tài khoản Skype" />
+                                            <input type="text" value="0987654144" class="rs_input is_check_number ip_lhd pd_tb11 flex_1" placeholder="Nhập số điện thoại" />
                                         </div>
                                     </div>
 
                                     <div class="w_50pt ml_24">
                                         <span class="font_s16 line_h19 font_w500 cl_a4 block">Email</span>
                                         <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                            <input type="text" value="nguyenhoa@gmail.com" class="rs_input ip_lhd pd_tb11 flex_1" placeholder="Tài khoản Skype" />
+                                            <input type="text" value="nguyenhoa@gmail.com" class="is_check_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email" />
                                         </div>
                                     </div>
                                 </div>
@@ -303,7 +302,7 @@
                                     <span class="font_s16 line_h19 font_w500 currentColor">Hủy</span>
                                 </a>
 
-                                <button class="btn btn_hover_primary mw_120 flex_im center_center br_8 btn_primary cl_white pd_t12_b11_lr24">
+                                <button type="submit" class="btn btn_hover_primary mw_120 flex_im center_center br_8 btn_primary cl_white pd_t12_b11_lr24">
                                     <span class="font_s16 line_h19 font_w500 currentColor">Đăng tin</span>
                                 </button>
                             </div>
@@ -313,12 +312,18 @@
             </div>
         </div>
     </div>
-    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
     <script src="../../js/select2.min.js"></script>
+    <script src="../../js/validate_t.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
         $('.select_one').select2({
             width: '100%',
+        })
+
+        $('.select_max').select2({
+            width: '100%',
+            maximumSelectionLength: 2
         })
 
         ChangeFiles('.files', '.append', '.close_file', {
@@ -328,19 +333,10 @@
             isAppenError: true,
             classErorr: 'error_valid_cus',
             isTypeFileVaild: ['mp4'],
-            customMessType: (file, type) => `File upload phải là tệp thuộc định dạng: ${type.join(', ')}`,
-            customMessSize: (file, size) => `File " ${file.name} " quá lớn. Kích cỡ tối đa được phép tải lên là 100 MB.`,
+            customMessType: (file, type) => {error=true;return `File upload phải là tệp thuộc định dạng: ${type.join(', ')}`},
+            customMessSize: (file, size) => {error=true;return `File " ${file.name} " quá lớn. Kích cỡ tối đa được phép tải lên là 100 MB.`},
             isMaxSize: 1000000,
         });
-
-        $('.ml_change').change(function () {
-            let val = $(this).val();
-            if(val == 1) {
-                $('.ml_tk').removeClass('none_im');
-            } else {
-                $('.ml_tk').addClass('none_im');
-            }
-        })
     </script>
 </body>
 

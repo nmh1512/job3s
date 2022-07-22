@@ -463,7 +463,7 @@ $(function () {
 //       .clone()
 //       .attr("id", "")
 //       .css("top", t + "mm");
-      
+
 //       console.log($("#form-cv .page_end"));
 //       e
 //         .find(".paging-arrow")
@@ -482,3 +482,178 @@ $(function () {
 //     return this;
 //   },
 // };
+
+$("#btn-save-cv").on("click", function () {
+  $(window).scrollTop(0);
+  $(window).scrollLeft(0);
+
+  var phone = $("#cv-profile-phone").text();
+  var email = $("#cv-profile-email").text();
+  var address = $("#cv-profile-address").text();
+  var fname = $("#cv-profile-fullname").text();
+  if (phone == "" || email == "" || fname == "" || address == "") {
+    if (fname == "") {
+      document.getElementById("cv-profile-fullname").style.outline =
+        "1px dashed red";
+    }
+    if (phone == "") {
+      document.getElementById("cv-profile-phone").style.outline =
+        "1px dashed red";
+    }
+    if (email == "") {
+      document.getElementById("cv-profile-email").style.outline =
+        "1px dashed red";
+    }
+    if (address == "") {
+      document.getElementById("cv-profile-address").style.outline =
+        "1px dashed red";
+    }
+    var msg =
+      '<div class="v-modal" style="z-index: 2009;"></div><div tabindex="-1" class="el-message-box__wrapper" style="z-index: 2010;">';
+    msg +=
+      '<div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title">ThĂ´ng bĂ¡o</div></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message" style="margin-left: 50px;">';
+    var text_mis = "";
+    if ("" == fname) {
+      text_mis += "Há» tĂªn,";
+    }
+    if ("" == email) {
+      text_mis += "Email,";
+    }
+    if ("" == phone) {
+      text_mis += "Sá»‘ Ä‘iá»‡n thoáº¡i,";
+    }
+    if ("" == address) {
+      text_mis += "Äá»‹a chá»‰,";
+    }
+    text_mis = text_mis.substring(0, text_mis.length - 1);
+    msg +=
+      'Báº¡n chÆ°a Ä‘iá»n Ä‘áº§y Ä‘á»§ cĂ¡c trÆ°á»ng: <span style="color:red">' +
+      text_mis +
+      "</span></div></div>";
+    msg += '<div class="el-message-box__btns">';
+    msg +=
+      '<button type="button" onclick="hide()" class="el-button el-button--default"><span>Há»§y bá»</span></button>';
+    $("body").append(msg);
+    return false;
+  }
+
+  if (!/^[0-9]+$/.test(phone)) {
+    var msg =
+      '<div class="v-modal" style="z-index: 2009;"></div><div tabindex="-1" class="el-message-box__wrapper" style="z-index: 2010;">';
+    msg +=
+      '<div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title">ThĂ´ng bĂ¡o</div></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message" style="margin-left: 50px;">';
+    msg += "Sá»‘ Ä‘iá»‡n thoáº¡i khĂ´ng há»£p lá»‡</div></div>";
+    msg += '<div class="el-message-box__btns">';
+    msg +=
+      '<button type="button" onclick="hide()" class="el-button el-button--default"><span>Há»§y bá»</span></button>';
+    $("body").append(msg);
+    return false;
+  }
+
+  if (!/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email)) {
+    var msg =
+      '<div class="v-modal" style="z-index: 2009;"></div><div tabindex="-1" class="el-message-box__wrapper" style="z-index: 2010;">';
+    msg +=
+      '<div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title">ThĂ´ng bĂ¡o</div></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message" style="margin-left: 50px;">';
+    msg += "Email khĂ´ng há»£p lá»‡</div></div>";
+    msg += '<div class="el-message-box__btns">';
+    msg +=
+      '<button type="button" onclick="hide()" class="el-button el-button--default"><span>Há»§y bá»</span></button>';
+    $("body").append(msg);
+    return false;
+  }
+  if (phone.length < 10) {
+    var msg =
+      '<div class="v-modal" style="z-index: 2009;"></div><div tabindex="-1" class="el-message-box__wrapper" style="z-index: 2010;">';
+    msg +=
+      '<div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title">ThĂ´ng bĂ¡o</div></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message" style="margin-left: 50px;">';
+    msg += "Sá»‘ Ä‘iá»‡n thoáº¡i tá»‘i thiá»ƒu 10 kĂ½ tá»±</div></div>";
+    msg += '<div class="el-message-box__btns">';
+    msg +=
+      '<button type="button" onclick="hide()" class="el-button el-button--default"><span>Há»§y bá»</span></button>';
+    $("body").append(msg);
+    return false;
+  }
+
+  $("#cvo-toolbar").removeClass("fx");
+  $("body").append(
+    '<div class="bg-spinner"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>'
+  );
+  $.exportData();
+
+  var ckcook = $("#ckcook").val();
+  if (ckcook == 1) {
+    var x = $("#cv-profile-phone").text();
+    var y = $("#cv-profile-email").text();
+    $("#cv-profile-phone").text("Xem á»Ÿ trĂªn");
+    $("#cv-profile-email").text("Xem á»Ÿ trĂªn");
+  }
+
+  // html2canvas($("#form-cv"), {
+  //   onrendered: function (canvas) {
+  //     var img_val = canvas.toDataURL("image/png", 1.0);
+  //     var cvid = $("#cvid").val();
+  //     var uid = $("#uid_cv").val();
+
+  //     if (ckcook == 1) {
+  //       $("#cv-profile-phone").text(x);
+  //       $("#cv-profile-email").text(y);
+  //     }
+
+  //     if (is_busy == true) {
+  //       return false;
+  //     }
+
+  //     $.ajax({
+  //       cache: false,
+  //       type: "POST",
+  //       url: "save.php",
+  //       async: false,
+  //       data: { img_val: img_val, uid: uid, cvid: cvid },
+  //       beforeSend: function (response) {
+  //         $(".bg-spinner").remove();
+  //         $("body").append(
+  //           '<div class="bg-spinner"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>'
+  //         );
+  //       },
+  //       success: function (html) {
+  //         if (ckcook == 1) {
+  //           var img_val2 = canvas.toDataURL("image/png", 1.0);
+  //           if (html > 0) {
+  //             $.ajax({
+  //               cache: false,
+  //               type: "POST",
+  //               url: "save_img_dk.php",
+  //               async: false,
+  //               data: { img_val: img_val2, uid: html, cvid: cvid },
+  //               success: function (html) {},
+  //             });
+  //           }
+  //           window.location.href =
+  //             "https://timviec365.vn/xac-thuc-tai-khoan-ung-vien.html";
+  //         } else {
+  //           window.location.href =
+  //             "https://timviec365.vn/cv365/download-cvpdf/cv.php?cvid=" +
+  //             cvid +
+  //             "&uid=" +
+  //             uid;
+  //           var msg =
+  //             '<div class="v-modal" style="z-index: 2009;"></div><div tabindex="-1" class="el-message-box__wrapper" style="z-index: 2010;">';
+  //           msg +=
+  //             '<div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title">ThĂ´ng bĂ¡o</div></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message" style="margin-left: 50px;">';
+  //           msg +=
+  //             "CV cá»§a báº¡n sáº½ Ä‘Æ°á»£c lÆ°u sau 5s - Báº¡n cháº¯c cháº¯n CV nĂ y Ä‘Ă£ Ä‘Æ°á»£c hoĂ n thĂ nh?</div></div>";
+  //           msg += '<div class="el-message-box__btns">';
+  //           msg +=
+  //             '<button type="button" onclick="update_cv(' +
+  //             uid +
+  //             ')" class="el-button el-button--default el-button--primary "><span>Äá»“ng Ă½</span></button></div></div></div>';
+  //           $("body").append(msg);
+  //         }
+  //         $(".bg-spinner").remove();
+  //         is_busy = false;
+  //       },
+  //     });
+  //   },
+  // });
+});

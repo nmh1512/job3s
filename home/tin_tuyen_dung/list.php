@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style_t.css">
+    <script src="../../js/jquery-3.4.1.min.js"></script>
     <title>Danh sách tin tuyển dụng</title>
 </head>
 
@@ -353,7 +354,6 @@
             </div>
         </div>
     </div>
-    <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/select2.min.js"></script>
     <script src="../../js/js_t.js"></script>
     <script>
