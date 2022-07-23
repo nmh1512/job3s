@@ -1,5 +1,5 @@
 <?
-require_once("config.php");
+// require_once("../config.php");
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*                                                  CLASS                                                              */
@@ -40,9 +40,9 @@ class db_init
 
 		// Khai bao Server localhost day
 		$this->server = 'localhost';
-		$this->username = 'qlgroto365_365vn';
-		$this->database = 'qlgroto365_365vn';
-		$this->password = 'Hhp123988!@#123';
+		$this->username = 'root';
+		$this->database = 'job3s';
+		$this->password = '';
 
 		//Khai báo slave server
 		$this->slave_username = $this->username;

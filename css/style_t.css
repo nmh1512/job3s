@@ -687,7 +687,7 @@ div#circle {position: relative;width: 50px;height: 50px;}
 .upload_vd_ch > label {background-color: #E5FDFF;}
 .vd_ul > span > span {white-space: normal;}
 /* ----account */
-.popup_account {position: fixed;right: 63px;top: 74px;z-index: 999;background-color: #FFFFFF;display: none;}
+.popup_account {position: fixed;right: 63px;top: 74px;z-index: 999;background-color: #FFFFFF;}
 .drop_down {transition: all .3s ease;}
 @media screen and (min-width: 1519px) {
     .banner_cv {padding-left: 145px;}

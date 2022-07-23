@@ -1,10 +1,19 @@
+<?
+include '../config.php';
+
+$queryCity = new db_query("SELECT * FROM city2");
+$dataCity = $queryCity->result_array();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+
     <link rel="stylesheet" href="../../css/select2.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
@@ -27,7 +36,7 @@
                 </div>
 
                 <div class="mt_42 pd_lr89 d_flex flex_center">
-                    <form id="from_resgiter_ntd" action="" method="POST" class="bg_white pd_40 br_20 drop_shadow form_ntd">
+                    <form onsubmit="return false" id="from_resgiter_ntd" action="" method="POST" class="bg_white pd_40 br_20 drop_shadow form_ntd">
                         <h1 class="font_s24 line_h28 font_w700 cl_primary txt_center">Đăng ký tài khoản Nhà tuyển dụng</h1>
                         <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_40 txt_center">Cùng tạo dựng lợi thế cho Doanh nghiệp từ hàng triệu ứng viên tiềm năng.</p>
 
@@ -38,12 +47,13 @@
                             <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
                                 <input type="text" id="email" name="email" class="is_check_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
                             </div>
+                            <label for="" class="error_trungemail error_custom mt_5 color_red font_s16 font_w500"></label>
                         </div>
 
                         <div class="form_group">
                             <span class="font_s16 line_h19 font_w500 cl_a4">Mật khẩu<span class="cl_red">*</span></span>
                             <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
-                                <input type="password" autocomplete="off" id="password" name="password" class="is_check_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
+                                <input type="password" autocomplete="off" id="password" name="password" class="is_check_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập mật khẩu" />
                                 <div class="d_flex align_c cursor_p eye_btn">
                                     <img src="../../images/eve_open.png" alt="">
                                     <img src="../../images/eve_close.png" alt="">
@@ -83,8 +93,8 @@
                             <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
                                 <select name="gender" class="select_one" data-placeholder="Chọn giới tính" data-minimum-results-for-search="Infinity">
                                     <option value=""></option>
-                                    <option value="0">Nam</option>
-                                    <option value="1">Nữ</option>
+                                    <option value="1">Nam</option>
+                                    <option value="2">Nữ</option>
                                     <option value="3">Khác</option>
                                 </select>
                             </div>
@@ -95,15 +105,16 @@
                             <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
                                 <input type="text" id="company" name="company" class="is_check_first_space rs_input ip_lhd pd_tb11 flex_1" placeholder="Tên công ty" />
                             </div>
+                            <label for="" class="error_trungcty error_custom mt_5 color_red font_s16 font_w500"></label>
                         </div>
 
                         <div class="form_group">
                             <span class="font_s16 line_h19 font_w500 cl_a4">Vị trí công tác<span class="cl_red">*</span></span>
                             <div class="d_flex align_c mt_5 w_100 br_5 custom_select">
-                                <select name="workplace" class="select_one" data-placeholder="Chọn vị trí công tác" data-minimum-results-for-search="Infinity">
+                                <select id="workplace" name="workplace" class="select_one" data-placeholder="Chọn vị trí công tác" data-minimum-results-for-search="Infinity">
                                     <option value=""></option>
-                                    <option value="0">Nhân viên</option>
-                                    <option value="1">Trưởng nhóm</option>
+                                    <option value="1">Nhân viên</option>
+                                    <option value="2">Trưởng nhóm</option>
                                     <option value="3">Phó phòng</option>
                                     <option value="4">Trưởng phòng</option>
                                     <option value="5">Phó giám đốc</option>
@@ -119,26 +130,19 @@
                             <div class="d_flex w_100 mb_cl_dd">
                                 <div class="mt_5 w_100 br_5 w_50pt">
                                     <div class="custom_select d_flex align_c w_100">
-                                        <select name="city" class="select_one" data-placeholder="Chọn tỉnh/thành phố" data-minimum-results-for-search="Infinity">
+                                        <select id="city" name="city" class="select_one" data-placeholder="Chọn tỉnh/thành phố" data-minimum-results-for-search="Infinity">
                                             <option value=""></option>
-                                            <option value="0">Hà Nội</option>
-                                            <option value="1">Hồ Chí Minh</option>
-                                            <option value="3">Đà Nẵng</option>
-                                            <option value="3">Bắc Ninh</option>
-                                            <option value="3">Cà Mau</option>
+                                            <? foreach ($dataCity as $city) { ?>
+                                                <option value="<?= $city['cit_id'] ?>"><?= $city['cit_name'] ?></option>
+                                            <? } ?>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="mt_5 w_100 br_5 w_50pt ml_20">
                                     <div class="custom_select d_flex align_c w_100">
-                                        <select name="district" class="select_one" data-placeholder="Chọn quận/huyện" data-minimum-results-for-search="Infinity">
+                                        <select id="district" name="district" class="select_one" data-placeholder="Chọn quận/huyện" data-minimum-results-for-search="Infinity">
                                             <option value=""></option>
-                                            <option value="0">Hà Nội</option>
-                                            <option value="1">Hồ Chí Minh</option>
-                                            <option value="3">Đà Nẵng</option>
-                                            <option value="3">Bắc Ninh</option>
-                                            <option value="3">Cà Mau</option>
                                         </select>
                                     </div>
                                 </div>
@@ -158,8 +162,21 @@
                             <label for="cb_1" class="font_s16 line_h22 font_w400 cl_a4 block ml_10 cursor_p">Tôi đồng ý với <a href="#" class="cl_primary">Điều khoản dịch vụ</a> của Timviec365.net.</label>
                         </div>
 
-                        <div class="form_submit mt_25">
-                            <button class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng ký</button>
+                        <div class="form_submit mt_25 position_r">
+                            <div class="load_data position_a align_c flex_center">
+                                <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+                                    <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+                                        <div class="ldio-0q6g6j8frqsd">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" name="submit" class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary btn_register">Đăng ký</button>
                         </div>
 
                         <div class="authen_extend mt_15 d_flex flex_center">
@@ -181,6 +198,29 @@
         })
         eyeChange('.eye_btn', '#password', 'eye_hidden')
         eyeChange('.eyecf_btn', '#confirm_password', 'eye_hidden')
+        $('.cb_cus_ip').change(function() {
+            if ($(this).is(':checked')) {
+                $('.btn_register').prop('disabled', false);
+            } else {
+                $('.btn_register').prop('disabled', true);
+            }
+        })
+        $('#city').change(function() {
+            var city = $(this).val();
+            $.ajax({
+                type: 'GET',
+                url: "../../ajax/district.php",
+                data: {
+                    city: city,
+                },
+                success: function(data) {
+                    $('#district').html(data)
+                }
+            })
+        })
+        $("input").keyup(function() {
+            $(this).parents('.form_group').find('.error_custom').text('');
+        })
     </script>
 </body>
 

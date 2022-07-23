@@ -1,10 +1,17 @@
+<?
+include '../config.php';
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
     <title>Đăng ký ứng viên</title>
@@ -26,7 +33,7 @@
                 </div>
 
                 <div class="mt_42 pd_lr89">
-                    <form id="register_uv" action="" method="POST">
+                    <form id="register_uv" method="POST" onsubmit="return false">
                         <h1 class="font_s24 line_h28 font_w700 cl_primary">Đăng ký tài khoản Ứng viên</h1>
                         <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_30">Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội việc làm lý tưởng.</p>
 
@@ -81,7 +88,20 @@
                         <p class="font_s16 line_h22 font_w400 cl_a4 mt_25">Bằng việc đăng ký tài khoản, bạn đã đồng ý với <a class="cl_primary">Điều khoản dịch vụ</a> và <a class="cl_primary">Chính sách bảo mật</a> của chúng tôi.</p>
 
                         <div class="form_submit mt_15">
-                            <button type="submit" class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng ký</button>
+                            <div class="load_data position_a align_c flex_center">
+                                <div class="loadingio-spinner-ellipsis-hwg8bfn38dq">
+                                    <div class="loadingio-spinner-ellipsis-g5flt5ae9q8">
+                                        <div class="ldio-0q6g6j8frqsd">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn_register btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng ký</button>
                         </div>
 
                         <div class="authen_extend mt_15 d_flex space_b">

@@ -65,7 +65,7 @@
         </a>
     </div>
     <div class="header_after_right">
-        <nav class="nav_header">
+        <nav class="nav_header_after">
             <a href="/" class="font_s16 line_h19 font_w500 cl_a4">Trang chủ</a>
             <a href="/tim-ung-vien" class="font_s16 line_h19 font_w500 cl_a4">Tìm ứng viên</a>
             <a href="/tin-tuc" class="font_s16 line_h19 font_w500 cl_a4">Tin tức</a>
@@ -91,7 +91,7 @@
                 <div class="drop_down d_flex align_c ">
                     <img src="../images/drop_pri.png" alt="">
                 </div>
-                <div class="popup_account box_shadow_after_login position_a">
+                <div class="popup_account_ box_shadow_after_login position_a">
                     <div class="popup_account_top pd_24 d_flex">
                         <img src="../../../images/doggo.jpg" alt="" class="bd_cicre" />
                         <div class="w_80pt">
