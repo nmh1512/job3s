@@ -109,6 +109,32 @@ if ($("#register_uv").length > 0) {
         $(parent).append(error);
       }
     },
+    submitHandler: function () {
+      var email = $("#email").val();
+      var password = $("#password").val();
+      var fullname = $("#fullname").val();
+      $(".btn_register").prop("disabled", true);
+      $(".load_data").css("display", "flex");
+      $.ajax({
+        type: "POST",
+        url: "../ajax/dangky_uv.php",
+        data: {
+          email: email,
+          password: password,
+          fullname: fullname,
+        },
+        success: function (data) {
+          $(".load_data").css("display", "none");
+          $(".btn_register").prop("disabled", false);
+          if (data == 1) {
+            $(".error_trungemail").text("Email này đã được đăng ký tài khoản");
+          } else {
+            alert("Tạo tài khoản ứng viên thành công!");
+            location.href = "http://localhost:8825/";
+          }
+        },
+      });
+    },
   });
 }
 
@@ -116,31 +142,52 @@ if ($("#register_uv").length > 0) {
 if ($("#from_login_ntd").length > 0) {
   $("#from_login_ntd").validate({
     rules: {
-      email: {
-        required: true,
-        email: validateEmail($(email).val()),
-      },
-      password: {
-        required: true,
-        validatePassword: true,
-      },
+      // email: {
+      //   email: validateEmail($(email).val()),
+      // },
+      // password: {
+      //   validatePassword: true,
+      // },
     },
     messages: {
-      email: {
-        required: "Vui lòng nhập email",
-        email: "Trường này phải là email",
-      },
-      password: {
-        required: "Vui lòng nhập mật khẩu",
-        validatePassword:
-          "Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số",
-      },
+      // email: {
+      //   email: "Trường này phải là email",
+      // },
+      // password: {
+      //   validatePassword:
+      //     "Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số",
+      // },
     },
     errorPlacement: function (error, element) {
       let parent = $(element).parents(".form_group");
       if (parent.length > 0) {
         $(parent).append(error);
       }
+    },
+    submitHandler: function () {
+      var account = $("#account").val();
+      var password = $("#password").val();
+      var type = 2;
+      $.ajax({
+        type: "POST",
+        url: "../ajax/login.php",
+        data: {
+          account: account,
+          password: password,
+          type: type,
+        },
+        success: function (data) {
+          console.log(data);
+          if (data == 1) {
+            $(".error_account").text(
+              "Tài khoản hoặc mật khẩu không chính xác!"
+            );
+            $(".error_account").removeClass("hidden");
+          } else {
+            location.href = "http://localhost:8825/";
+          }
+        },
+      });
     },
   });
 }
@@ -157,6 +204,8 @@ if ($("#from_resgiter_ntd").length > 0) {
       district: "required",
       phone_number: {
         required: true,
+        minlength: 10,
+        maxlength: 15,
       },
       email: {
         required: true,
@@ -168,7 +217,6 @@ if ($("#from_resgiter_ntd").length > 0) {
       },
       confirm_password: {
         required: true,
-        validatePassword: true,
         equalTo: "#password",
       },
     },
@@ -181,6 +229,8 @@ if ($("#from_resgiter_ntd").length > 0) {
       },
       phone_number: {
         required: "Vui lòng nhập số điện thoại cá nhân",
+        minlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số",
+        maxlength: "Số điện thoại có tối thiểu 10 số và nhiều nhất là 15 số",
       },
       workplace: {
         required: "Vui lòng chọn vị trí công tác",
@@ -205,8 +255,7 @@ if ($("#from_resgiter_ntd").length > 0) {
       },
       confirm_password: {
         required: "Vui lòng nhập xác nhận mật khẩu",
-        validatePassword: `Nhập mật khẩu tối thiểu 6 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số`,
-        equalTo: "Mật khẩu nhập lại chưa chính xác",
+        equalTo: "Mật khẩu không trùng khớp",
       },
     },
     errorPlacement: function (error, element) {
@@ -218,6 +267,51 @@ if ($("#from_resgiter_ntd").length > 0) {
       } else {
         $(parent).append(error);
       }
+    },
+    submitHandler: function () {
+      var email = $("#email").val();
+      var password = $("#password").val();
+      var fullname = $("#fullname").val();
+      var phone_number = $("#phone_number").val();
+      var gender = $("#gender").val();
+      var company = $("#company").val();
+      var workplace = $("#workplace").val();
+      var city = $("#city").val();
+      var district = $("#district").val();
+      var skype = $("#skype").val();
+      $(".btn_register").prop("disabled", true);
+      $(".load_data").css("display", "flex");
+      $.ajax({
+        type: "POST",
+        url: "../ajax/dangky_nth.php",
+        data: {
+          email: email,
+          password: password,
+          fullname: fullname,
+          phone_number: phone_number,
+          gender: gender,
+          company: company,
+          workplace: workplace,
+          city: city,
+          district: district,
+          skype: skype,
+        },
+        success: function (data) {
+          $(".load_data").css("display", "none");
+          $(".btn_register").prop("disabled", false);
+          if (data == 1) {
+            $(".error_trungcty").text("Công ty này đã được đăng ký tài khoản");
+          } else if (data == 2) {
+            $(".error_trungemail").text("Email này đã được đăng ký tài khoản");
+          } else if (data == 3) {
+            $(".error_trungcty").text("Công ty này đã đăng ký tài khoản");
+            $(".error_trungemail").text("Email này đã được đăng ký tài khoản");
+          } else {
+            alert("Tạo tài khoản nhà tuyển dụng thành công!");
+            location.href = "http://localhost:8825/";
+          }
+        },
+      });
     },
   });
 }
@@ -258,7 +352,7 @@ if ($("#add_tuyen_dung").length > 0) {
     submitHandler: function (form) {
       $(".is_error").each(function () {
         appendErorr(this);
-      })
+      });
 
       if (error) return false;
       form.submit();
@@ -291,7 +385,7 @@ if ($("#add_tuyen_dung").length > 0) {
   }
 
   $(".is_error").blur(function () {
-    appendErorr(this)
+    appendErorr(this);
   });
 
   $(".is_error").on("input", function () {

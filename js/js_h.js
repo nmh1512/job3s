@@ -40,36 +40,36 @@ function checkJob() {
 $("#trangthai_timviec").change(function() {
   checkJob();
 });
-// $(".inf").click(function () {
-//   $(".popup_account").slideToggle(1);
-// });
+$(".inf").click(function () {
+  $(".popup_account_").slideToggle(0.5);
+});
 
-// var header_icon_remind = $(".inf");
-// var popup_remind_acount = $(".popup_account");
-// $(window).click(function (e) {
-//   if (
-//     !header_icon_remind.is(e.target) &&
-//     header_icon_remind.has(e.target).length == 0 &&
-//     !popup_remind_acount.is(e.target) &&
-//     popup_remind_acount.has(e.target).length == 0
-//   ) {
-//     popup_remind_acount.hide();
-//   }
+var header_icon_remind = $(".inf");
+var popup_remind_acount = $(".popup_account_");
+$(window).click(function (e) {
+  if (
+    !header_icon_remind.is(e.target) &&
+    header_icon_remind.has(e.target).length == 0 &&
+    !popup_remind_acount.is(e.target) &&
+    popup_remind_acount.has(e.target).length == 0
+  ) {
+    popup_remind_acount.hide();
+  }
   
-// });
-// $(window).click(function (e) {
-//   if (!$(e.target).is(".show_popup")) {
-//     $(".popup").addClass('display_none');
+});
+$(window).click(function (e) {
+  if (!$(e.target).is(".show_popup")) {
+    $(".popup").addClass('display_none');
 
-//   }
-// });
+  }
+});
 $(".login").click(function () {
   $(this).toggleClass("bg_s_green");
 });
 
-// function showPopup(ele) {
-//   $(ele).removeClass("display_none");
-// }
+function showPopup(ele) {
+  $(ele).removeClass("display_none");
+}
 $(".dong_popup").each(function () {
   $(this).click(function () {
     var ele = $(this).parents(".popupItem");

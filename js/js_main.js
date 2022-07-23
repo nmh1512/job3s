@@ -73,7 +73,8 @@ function viewAndClosePopupUpdate(
   resertForm,
   isCloseMain = true,
   hiddenTime = false,
-  timeHidden = 1000
+  timeHidden = 1000,
+
 ) {
   viewPopup(idPopup, "hidden");
   let infor_menu = document.querySelector(idPopup);

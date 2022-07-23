@@ -1,9 +1,16 @@
+<?
+include '../config.php';
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_t.css">
@@ -26,16 +33,19 @@
                 </div>
 
                 <div class="mt_42 pd_lr89">
-                    <form action="" method="POST" id="from_login_ntd">
+                    <form action="" method="POST" id="from_login_ntd" onsubmit="return false">
                         <h1 class="font_s24 line_h28 font_w700 cl_primary">Đăng nhập tài khoản Nhà tuyển dụng</h1>
                         <p class="font_s16 line_h19 font_w400 cl_55 mt_15 mb_30">Cùng tạo dựng lợi thế cho Doanh nghiệp từ hàng triệu ứng viên tiềm năng.</p>
+                        <div class="d_flex flex_center mb_10">
+                            <span class="text_c error_account color_red font_s16 hidden font_w500"></span>
+                        </div>
                         <div class="form_group">
-                            <span class="font_s16 line_h19 font_w500 cl_a4">Email</span>
+                            <span class="font_s16 line_h19 font_w500 cl_a4">Tài khoản</span>
                             <div class="d_flex align_c mt_5 pd_lr15 bd_dc w_100 br_5">
                                 <label for="email" class="d_flex align_c mr_10">
                                     <img src="../../images/email_blue.png" alt="">
                                 </label>
-                                <input type="text" id="email" name="email" class="is_check_space  rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email của bạn" />
+                                <input type="text" id="account" name="email" class="is_check_space  rs_input ip_lhd pd_tb11 flex_1" placeholder="Nhập email hoặc số điện thoại của bạn" />
                             </div>
                         </div>
 
@@ -54,7 +64,7 @@
                         </div>
 
                         <div class="form_submit mt_25">
-                            <button class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng nhập</button>
+                            <button disabled id="login" class="btn btn_hover_primary w_100 br_100 pd_t12_b11_lr10 font_s16 line_h19 font_w700 cl_white btn_primary">Đăng nhập</button>
                         </div>
 
                         <div class="authen_extend mt_15 d_flex space_b">
@@ -82,6 +92,25 @@
     <script src="../../js/js_t.js"></script>
     <script>
         eyeChange('.eye_btn', '#password', 'eye_hidden');
+
+        (function() {
+            
+            $(".rs_input").keyup(function() {
+                var empty = false;
+                $('.error_account').text('');
+                $('.error_account').addClass('hidden')
+                $(".rs_input").each(function() {
+                    if ($(this).val() == "") {
+                        empty = true;
+                    }
+                });
+                if (empty) {
+                    $("#login").attr("disabled", "disabled");
+                } else {
+                    $("#login").removeAttr("disabled");
+                }
+            });
+        })();
     </script>
 </body>
 
