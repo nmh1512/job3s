@@ -227,24 +227,24 @@ if ($("#add_tuyen_dung").length > 0) {
   var error = false;
 
   $("#add_tuyen_dung").validate({
-    // rules: {
-    //   title_recruit: "required",
-    //   main_job: "required",
-    //   professions: "required",
-    //   sl_tuyen: "required",
-    //   working_form: "required",
-    //   gender: "required",
-    //   job_description: "required",
-    // },
-    // messages: {
-    //   title_recruit: "Vui lòng nhập tiêu đề tin tuyển dụng",
-    //   main_job: "Vui lòng chọn ngành nghề chính",
-    //   professions: "Vui lòng chọn ngành nghề phụ",
-    //   sl_tuyen: "Vui lòng nhập số lượng cần tuyển",
-    //   working_form: "Vui lòng chọn hình thức làm việc",
-    //   gender: "Vui lòng chọn giới tính",
-    //   job_description: "Vui lòng nhập mô tả công việc",
-    // },
+    rules: {
+      title_recruit: "required",
+      main_job: "required",
+      professions: "required",
+      sl_tuyen: "required",
+      working_form: "required",
+      gender: "required",
+      job_description: "required",
+    },
+    messages: {
+      title_recruit: "Vui lòng nhập tiêu đề tin tuyển dụng",
+      main_job: "Vui lòng chọn ngành nghề chính",
+      professions: "Vui lòng chọn ngành nghề phụ",
+      sl_tuyen: "Vui lòng nhập số lượng cần tuyển",
+      working_form: "Vui lòng chọn hình thức làm việc",
+      gender: "Vui lòng chọn giới tính",
+      job_description: "Vui lòng nhập mô tả công việc",
+    },
     errorPlacement: function (error, element) {
       let parent = $(element).parent().parent();
       var elem = $(element);

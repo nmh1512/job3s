@@ -1,3 +1,9 @@
+<?
+include "../config.php";
+
+$list_new = new db_query("SELECT new_id, new_title, new_update_time FROM new")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

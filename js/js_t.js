@@ -863,6 +863,7 @@ function findResultJob({
   valueFind,
   keyFind,
   keyApp,
+  keyID = '',
   arrayFind = []
 }) {
   if(arrayFind.length < 0) return;
@@ -877,9 +878,66 @@ function findResultJob({
           newResult.forEach((e) => {
               let newClone = option.cloneNode(true);
               newClone.innerText = e[keyApp];
-              newClone.setAttribute('value', e[keyFind])
+              newClone.setAttribute('value', e[keyID||keyFind])
               elem.appendChild(newClone);
           })
       }
   }
+}
+
+
+function createELement(tag, prop, text_node, parentApp = '') {
+  let el = document.createElement(tag);
+  if (prop) {
+      let keys = Object.keys(prop);
+      if (keys.length > 0) keys.forEach((e) => el.setAttribute(e, prop[e]))
+  }
+  el.innerText = text_node;
+
+  if (parentApp) {
+      parentApp.appendChild(el);
+  }
+
+  return el;
+}
+
+function FindKey({
+  arr,
+  key,
+  value,
+  selectApp,
+  selecteChild,
+  keyName,
+  keyID
+}) {
+  let elmPr = document.querySelector(selectApp);
+  let elmChil = document.querySelector(selecteChild);
+  if (elmPr && elmChil) {
+      createELement('option', null, '', elmPr);
+      let arrTinh = [];
+      if (arr.length > 0) arrTinh = arr.filter((e) => e[key] == value);
+      if (arrTinh.length > 0) {
+          arrTinh.forEach(e => {
+              createELement('option', {
+                  value: e[keyID]
+              }, e[keyName], elmPr);
+          })
+
+          elmPr.onchange = function() {
+              let value = elmPr.value;
+              let quan = arr.filter((e) => e[key] == value);
+              elmChil.innerHTML = null;
+              createELement('option', null, '', elmChil);
+              if (quan.length > 0) {
+                  quan.forEach((e) => {
+                    console.log(e)
+                      createELement('option', {
+                          value: e[keyID]
+                      }, e[keyName], elmChil);
+                  })
+              }
+          }
+      }
+  }
+
 }
